@@ -1,0 +1,3 @@
+0 0 * * * wget -O /dev/null http://remaxthai.azurewebsites.net/cron/get_advice_barcode.php
+*/5 * * * * wget -O /dev/null http://remaxthai.azurewebsites.net/cron/delete_no_stock.php
+0 10 * * * wget -O /dev/null http://remaxthai.azurewebsites.net/cron/delete_update_product.php
