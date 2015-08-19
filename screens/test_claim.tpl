@@ -17,6 +17,7 @@
 	</div>
 	
 	{include file='check_warranty_box.tpl'}
+	{include file='check_claimstatus_box.tpl'}
 	
 	{section name=idx loop=$category.id}
 		{if $category.id[idx] != '2-7'}
