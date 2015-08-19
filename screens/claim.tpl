@@ -79,7 +79,6 @@
 		</div>
 		&nbsp;
 		<div id="dv-claim_info" class="hidden">
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<strong class="margin-top-15">รายละเอียดสินค้าเคลม</strong>
 			<form id="customer_address" class="form-horizontal" role="form">
 				<div class="form-group">
@@ -103,9 +102,7 @@
 					<input id="file4" type="file" class="form-control" placeholder="">
 				</div>
 			</form>
-		</div>
 			&nbsp;
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<strong class="margin-top-15">ที่อยู่ในการจัดส่งสินค้าเคลม</strong>
 			<form id="customer_address" class="form-horizontal" role="form">
 				<div class="form-group">
