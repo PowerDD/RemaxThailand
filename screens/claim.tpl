@@ -28,7 +28,7 @@
 		<form>
 			<div class="form-group text-danger">
 				<label for="input">ตรวจสอบข้อมูลประกันสินค้า</label>
-				<input id="barcode" type="text" class="form-control required" placeholder="กรุณาระบุ Barcode">
+				<input id="txt-barcode" type="text" class="form-control required" placeholder="กรุณาระบุ Barcode">
 				<div class="text-center">
 				<span id="btn-barcode" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
 				</div>
@@ -39,13 +39,43 @@
 		<form>
 			<div class="form-group text-danger">
 				<label for="input">ตรวจสอบสถานะการเคลม</label>
-				<input id="claimno" type="text" class="form-control required" placeholder="กรุณาระบุ เลขที่เคลม">
+				<input id="txt-claimno" type="text" class="form-control required" placeholder="กรุณาระบุ เลขที่เคลม">
 				<div class="text-center">
 				<span id="btn-claimno" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
 				</div>
 			</div>
 		</form>
 	    </div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div id="tab-warranty-not_exist" role="alert" class="alert alert-danger text-center hidden margin-bottom-30 padding-top-5 padding-bottom-5"> ไม่พบข้อมูลสินค้าค่ะ										
+		</div>
+		<div id="tab-warranty-info" class="panel panel-success hidden">
+			<div class="panel-heading">ผลการตรวจสอบ</div>
+			<div class="panel-body">
+				<p id="tab-ProductName"></p>
+				<p id="tab-Barcode"></p><br/>
+				<div class="col-md-12 col-sm-12">
+					<div class="box-body table-responsive no-padding">
+						<table class="table table-bordered">
+							<tr class="active">
+								<th>ชื่อตัวแทนจำหน่าย</th>
+								<th>สถานะ</th>
+								<th>วันที่ซื้อ</th>
+								<th>วันที่หมดประกัน</th>
+							</tr>
+							<tr>
+								<td id="tab-CustomerName"></td>
+								<td id="tab-warrantyStatus"></td>
+								<td id="tab-SellDate"></td>
+								<td id="tab-ExpireDate"></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			 </div>
+		</div>
+		<div id="tab-warranty-load" class="text-center margin-bottom-30 hidden"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ</div>
 	</div>
 	</div>
 	
