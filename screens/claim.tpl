@@ -85,13 +85,15 @@
 					<label for="textarea">กรุณาระบุอาการของสินค้าเคลม *</label>
 					<textarea id="descripttion" type="text" class=" fixed form-control required" rows="5" value=""></textarea>
 				</div>
-				<div class="form-group text-danger">					
-					<div class="form-group">
-						<label for="input">กรุณาแนบภาพสินค้าเคลม *</label>
-						<input id="file1" type="file" placeholder="">
-					</div>
-					
-				</div> 
+				<div class="input-group">
+					<span class="input-group-btn">
+						<span class="btn btn-default btn-file">
+							Browse…
+						<input type="file" multiple="">
+						</span>
+					</span>
+					<input class="form-control" type="text" readonly="">
+				</div>
 			</form>
 			&nbsp;
 			&nbsp;
