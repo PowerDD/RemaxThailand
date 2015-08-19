@@ -88,20 +88,9 @@
 				<div class="form-group text-danger">					
 					<div class="form-group">
 						<label for="input">กรุณาแนบภาพสินค้าเคลม *</label>
-						<input id="file1" type="file" class="form-control" placeholder="">
+						<input id="file1" type="file" placeholder="">
 					</div>
-					<div class="form-group">
-						<label for="input"> &nbsp;</label>
-						<input id="file2" type="file" class="form-control" placeholder="">
-					</div>
-					<div class="form-group">
-						<label for="input"> &nbsp;</label>
-						<input id="file3" type="file" class="form-control" placeholder="">
-					</div>
-					<div class="form-group">
-						<label for="input"> &nbsp;</label>
-						<input id="file4" type="file" class="form-control" placeholder="">
-					</div>
+					
 				</div> 
 			</form>
 			&nbsp;
