@@ -35,6 +35,14 @@ $(function() {
 			$("#btn-check_barcode").hide();
 		}
 	});
+	$(".back-check_warranty").click(function(){
+		$("#warranty-info").slideUp();
+		$("#txt-barcode").slideDown();
+		$("#btn-check_barcode").slideDown();		
+		$(".back-check_warranty").hide();
+		$("#warranty-not_exist").hide();
+		$("#warranty-info").hide();
+	});
 	
 });
 
