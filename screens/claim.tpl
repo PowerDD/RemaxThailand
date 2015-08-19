@@ -86,7 +86,7 @@
 					<textarea id="descripttion" type="text" class=" fixed form-control required" rows="5" value=""></textarea>
 				</div>
 				<div class="input-group">
-					<label for="input">กรุณาแนบภาพสินค้าเคลม *</label>
+					<label for="span">กรุณาแนบภาพสินค้าเคลม *</label>
 					<span class="input-group-btn">
 						<span class="btn btn-default btn-file">
 							Browse…
