@@ -1,9 +1,9 @@
 <div class="pinItem">
 	<div class="pinBox pinWell margin-bottom-15">
 		<a href="{$system_url}/product/category/new">
-			<img src="https://cdn24fin.blob.core.windows.net/img/products/1/D-New Arrivals/1.jpg"  class="img-responsive">
+			<img src="https://cdn24fin.blob.core.windows.net/img/products/1/D-New Arrivals/1.jpg"  width="60" class="img-responsive">
 		</a>
-		<div id="check_warranty">
+		<div id="check_warranty" class="padding-15">
 			<form id="f_warranty" class="form-horizontal">
 				<input id="txt-barcode" type="text" placeholder="Barcode" class="form-control"/>
 				<button id="btn-check_barcode" type="button" class="form-control btn btn-warning btn-block margin-top-5 margin-bottom-5"> ตรวจสอบ</button>
