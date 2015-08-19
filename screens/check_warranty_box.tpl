@@ -1,8 +1,6 @@
 <div class="pinItem">
 	<div class="pinBox pinWell margin-bottom-15">
-		<a href="{$system_url}/product/category/new">
-			<img src="https://cdn24fin.blob.core.windows.net/img/products/1/D-New Arrivals/1.jpg" class="img-responsive">
-		</a>
+		<img src="https://cdn24fin.blob.core.windows.net/img/products/1/D-New Arrivals/1.jpg" class="img-responsive">
 		<div id="check_warranty" class="padding-15">
 			<form id="f_warranty" class="form-horizontal">
 				<input id="txt-barcode" type="text" placeholder="Barcode" class="form-control"/>
