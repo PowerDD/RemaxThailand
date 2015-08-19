@@ -23,6 +23,7 @@
 		    </div>
 	    </div>
 	</div>
+	
 	<div id="form-input" class="row margin-bottom-15">
 	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-15">
 		<form>
@@ -78,17 +79,16 @@
 		</div>
 		&nbsp;
 		<div id="dv-claim_info" class="hidden">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<strong class="margin-top-15">รายละเอียดสินค้าเคลม</strong>
 			<form id="customer_address" class="form-horizontal" role="form">
 				<div class="form-group">
 					<label class="col-sm-3 control-label" for="txt-name">รายละเอีดการเคลม</label>
-					<div class="col-sm-6">
-					<input id="txt-firstname" class="form-control txt-input txt-require" type="text" value="">
-					</div>
+					<textarea id="txt-firstname" rows="5" class="form-control txt-input txt-require" type="text" value="">
 				</div>
 				<div class="form-group col-sm-3">
-						<label for="input">แนบภาพถ่ายสินค้าเคลม(ถ้ามี)</label>
-						<input id="file1" type="file" class="form-control" placeholder="">
+					<label for="input">แนบภาพถ่ายสินค้าเคลม(ถ้ามี)</label>
+					<input id="file1" type="file" class="form-control" placeholder="">
 				</div>
 				<div class="form-group col-sm-3">
 					<label for="input"> &nbsp;</label>
@@ -103,7 +103,9 @@
 					<input id="file4" type="file" class="form-control" placeholder="">
 				</div>
 			</form>
+		</div>
 			&nbsp;
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<strong class="margin-top-15">ที่อยู่ในการจัดส่งสินค้าเคลม</strong>
 			<form id="customer_address" class="form-horizontal" role="form">
 				<div class="form-group">
@@ -161,6 +163,7 @@
 					</div>
 				</div>
 			</form>
+		</div>
 		</div>
 	</div>
 	</div>
