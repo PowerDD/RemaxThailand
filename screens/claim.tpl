@@ -24,21 +24,21 @@
 	    </div>
 	</div>
 	<div id="form-input" class="row margin-bottom-15">
-	    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-15">
+	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-15">
 		<form>
 			<div class="form-group col-sm-6 text-danger">
 				<label for="input">ตรวจสอบข้อมูลประกันสินค้า</label>
-				<input id="firstname" type="text" class="form-control required" placeholder="กรุณาระบุ Barcode">
-				<span id="btn-register" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
+				<input id="barcode" type="text" class="form-control required" placeholder="กรุณาระบุ Barcode">
+				<span id="btn-barcode" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
 			</div>
 		</form>
 	    </div>
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-15">
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-15">
 		<form>
 			<div class="form-group col-sm-6 text-danger">
-				<label for="input">ตรวจสอบข้อมูลประกันสินค้า</label>
-				<input id="firstname" type="text" class="form-control required" placeholder="กรุณาระบุ Barcode">
-				<span id="btn-register" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
+				<label for="input">ตรวจสอบสถาระการเคลม</label>
+				<input id="claimno" type="text" class="form-control required" placeholder="กรุณาระบุ เลขที่เคลม">
+				<span id="btn-claimno" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
 			</div>
 		</form>
 	    </div>
