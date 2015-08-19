@@ -36,9 +36,9 @@ $(function() {
 		}
 	});
 	$(".back-check_warranty").click(function(){
-		$("#warranty-info").slideUp();
-		$("#txt-barcode").slideDown();
-		$("#btn-check_barcode").slideDown();		
+		$("#warranty-info").fadeOut();
+		$("#txt-barcode").fadeIn();
+		$("#btn-check_barcode").fadeIn();		
 		$(".back-check_warranty").hide();
 		$("#warranty-not_exist").hide();
 		$("#warranty-info").hide();
