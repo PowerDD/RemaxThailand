@@ -82,7 +82,7 @@
 			<strong class="margin-top-15">รายละเอียดสินค้าเคลม</strong>
 			<form id="customer_address" class="form-horizontal" role="form">
 				<div class="form-group">
-					<label for="textarea" class="text-danger">อาการสินค้าเคลม</label>
+					<label for="textarea" class="text-danger">กรุณาระบุอาการสินค้าเคลม</label>
 					<textarea id="txt-firstname" rows="5" class="form-controltxt-input txt-require" class="resize:none" type="text" value=""></textarea>
 				</div>
 				<div class="form-group col-sm-3">
