@@ -25,6 +25,17 @@ $(function() {
 
 	$('#newsModal').modal();
 	
+	$("#btn-check_barcode").click(function(){
+		if($('#txt-barcode').val() == ''){
+			$('#txt-barcode').focus();
+		}else{
+			warrantyInfo(0);
+			$("#warranty-load").show();
+			$("#txt-barcode").hide();
+			$("#btn-check_barcode").hide();
+		}
+	});
+	
 });
 
 function alertTimeout(obj, wait){
@@ -109,4 +120,60 @@ function getPoint(isCheck){
 			$('#no-data').show();
 		});
 	}
-}
+};
+function warrantyInfo(i){
+	if(i < 4 ){
+		$.post($('#apiUrl').val()+'/warranty/info', {
+			apiKey: $('#apiKey').val(),
+			barcode: $.trim($('#txt-barcode').val())
+		}, function(data){
+			i++;
+				if (data.success) {
+					if ( typeof data.result == '' || typeof data.result == 'undefined' || data.result.length == 0){
+						warrantyInfo(i);
+					}
+					else{					
+						$('#ProductName').html(data.result.ProductName);
+						var sellDateYearTH = parseInt(moment(data.result.SellDate).lang('th').add(3600*7, 'seconds').format('YYYY'))+543;
+						var sellDateMM = moment(data.result.SellDate).locale('th').add(3600*7, 'seconds').format('DD MMMM'); 
+						$('#tab-SellDate').html(sellDateMM+' '+sellDateYearTH);
+						var expireDateYearTH = parseInt(moment(data.result.ExpireDate).lang('th').add(3600*7, 'seconds').format('YYYY'))+543;
+						var expireDateMM = moment(data.result.ExpireDate).locale('th').add(3600*7, 'seconds').format('DD MMMM');
+						if(data.result.Warranty == 0){
+							$('#warrantyStatus').html('<b>สถานะ : <u>สินค้าไม่มีประกัน</u><b>');
+							$('#ExpireDate').html('');
+							$('#warranty-info').removeClass('alert-success');
+							$('#warranty-info').removeClass('alert-danger');
+							$('#warranty-info').addClass('alert-warning');
+						}
+						else if(data.result.Warranty > 0 && data.result.DaysRemaining <= 0){					
+							$('#warrantyStatus').html('<b>สถานะ : <u>หมดประกัน</u><b>');
+							$('#ExpireDate').html('<b>วันที่หมดประกัน : </b>'+expireDateMM+' '+expireDateYearTH);
+							$('#warranty-info').removeClass('alert-success');
+							$('#warranty-info').removeClass('alert-warning');
+							$('#warranty-info').addClass('alert-danger');
+						}
+						else{
+							$('#warrantyStatus').html('<b>สถานะ : <u>อยู่ในประกัน</u><b>');						
+							$('#ExpireDate').html('<b>วันที่หมดประกัน : </b>'+expireDateMM+' '+expireDateYearTH);
+							$('#warranty-info').removeClass('alert-danger');
+							$('#warranty-info').removeClass('alert-warning');
+							$('#warranty-info').addClass('alert-success');
+						}							
+						$('#warranty-info').fadeIn();
+						$("#warranty-load").hide();
+						$(".back-check_warranty").show();				
+				}else{
+					$('#warranty-not_exist').show();
+					$("#warranty-load").hide();
+					$(".back-check_warranty").show();
+					
+				}
+			
+		},'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
+	}else if( i = 4){
+		$('#warranty-not_exist').show();
+		$("#warranty-load").hide();
+		$(".back-check_warranty").show();		
+	}
+};
