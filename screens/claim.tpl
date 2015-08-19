@@ -1,6 +1,8 @@
 <div class="pinBox pinWell padding-10">
 	<h1 class="page-header font-28 margin-top-10">เคลมสินค้า</h1>
 
+	
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 	<div id="form-loading" class="row hidden">
 	    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10">	    
 		    <div class="alert alert-info text-center margin-bottom-0">			
@@ -20,20 +22,25 @@
 			ขอบคุณสำหรับข้อมูล จะมีเจ้าหน้าที่พิจารณา และติดต่อท่านกลับไปค่ะ
 		    </div>
 	    </div>
-	 </div>
-	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	</div>
 	<div id="form-input" class="row margin-bottom-15">
-	    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-bottom-15">
+	    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-15">
 		<form>
 			<div class="form-group col-sm-6 text-danger">
-				<label for="input">Barcode * </label>
-				<input id="firstname" type="text" class="form-control required" placeholder="Barcode">
+				<label for="input">ตรวจสอบข้อมูลประกันสินค้า</label>
+				<input id="firstname" type="text" class="form-control required" placeholder="กรุณาระบุ Barcode">
+				<span id="btn-register" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
 			</div>
 		</form>
 	    </div>
-
-	    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-		<span id="btn-register" class="btn btn-warning btn-lg">ตรวจสอบ</span>
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-15">
+		<form>
+			<div class="form-group col-sm-6 text-danger">
+				<label for="input">ตรวจสอบข้อมูลประกันสินค้า</label>
+				<input id="firstname" type="text" class="form-control required" placeholder="กรุณาระบุ Barcode">
+				<span id="btn-register" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
+			</div>
+		</form>
 	    </div>
 	</div>
 	</div>
