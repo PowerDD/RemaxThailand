@@ -1,6 +1,13 @@
 $(function() {
 	$("#btn-barcode").click(function(){
-		warrantyInfo(0);
+		if($('#txt-barcode').val() == ''){
+			$('#txt-barcode').focus();
+		}else{
+			warrantyInfo(0); 
+			$("#tab-warranty-not_exist").hide();
+			$("#tab-warranty-info").hide();
+			$("#tab-warranty-load").show();
+		}
 	});
 
 });
