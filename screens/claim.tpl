@@ -29,7 +29,7 @@
 			<div class="form-group text-danger">
 				<label for="input">ตรวจสอบข้อมูลประกันสินค้า</label>
 				<input id="barcode" type="text" class="form-control required" placeholder="กรุณาระบุ Barcode">
-				<span id="btn-barcode" class="btn btn-warning center-block margin-top-5">ตรวจสอบ</span>
+				<span id="btn-barcode" class="btn btn-warning col-xs-6 center-block margin-top-5">ตรวจสอบ</span>
 			</div>
 		</form>
 	    </div>
@@ -38,7 +38,7 @@
 			<div class="form-group text-danger">
 				<label for="input">ตรวจสอบสถานะการเคลม</label>
 				<input id="claimno" type="text" class="form-control required" placeholder="กรุณาระบุ เลขที่เคลม">
-				<span id="btn-claimno" class="btn btn-warning center-block margin-top-5">ตรวจสอบ</span>
+				<span id="btn-claimno" class="btn btn-warning col-xs-6 center-block margin-top-5">ตรวจสอบ</span>
 			</div>
 		</form>
 	    </div>
