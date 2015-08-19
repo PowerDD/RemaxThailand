@@ -82,12 +82,12 @@
 			<strong class="margin-top-15">รายละเอียดสินค้าเคลม</strong>
 			<form id="claim_info">
 				<div class="form-group text-danger">
-					<label for="textarea">กรุณาระบุอาการของสินค้าเคลม</label>
-					<textarea id="descripttion" type="text" class="form-control required" rows="5" value=""></textarea>
+					<label for="textarea">กรุณาระบุอาการของสินค้าเคลม *</label>
+					<textarea id="descripttion" type="text" class=" fixed form-control required" rows="5" value=""></textarea>
 				</div>
 				<div class="form-group text-danger">					
 					<div class="form-group">
-						<label for="input">กรุณาแนบภาพสินค้าเคลม</label>
+						<label for="input">กรุณาแนบภาพสินค้าเคลม *</label>
 						<input id="file1" type="file" class="form-control" placeholder="">
 					</div>
 					<div class="form-group">
@@ -104,6 +104,7 @@
 					</div>
 				</div> 
 			</form>
+			&nbsp;
 			&nbsp;
 			<strong class="margin-top-15">ที่อยู่ในการจัดส่งสินค้าเคลม</strong>
 			<form id="customer_address" class="form-horizontal" role="form">
