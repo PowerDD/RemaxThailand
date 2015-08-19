@@ -80,30 +80,33 @@
 		&nbsp;
 		<div id="dv-claim_info" class="hidden">
 			<strong class="margin-top-15">รายละเอียดสินค้าเคลม</strong>
-			<form id="claim_info" class="form-horizontal" role="form">
+			<form id="claim_info">
 				<div class="form-group text-danger">
 					<label for="textarea">กรุณาระบุอาการของสินค้าเคลม</label>
 					<textarea id="descripttion" type="text" class="form-control required" rows="5" value=""></textarea>
 				</div>
-				<div class="form-group text-danger">
-					<strong class="margin-top-15">กรุณาแนบภาพสินค้าเคลม</strong>
+				<div class="form-group text-danger">					
 					<div class="form-group col-sm-3">
+						<label for="input">กรุณาแนบภาพสินค้าเคลม</label>
 						<input id="file1" type="file" class="form-control" placeholder="">
 					</div>
 					<div class="form-group col-sm-3">
+						<label for="input"> &nbsp;</label>
 						<input id="file2" type="file" class="form-control" placeholder="">
 					</div>
 					<div class="form-group col-sm-3">
+						<label for="input"> &nbsp;</label>
 						<input id="file3" type="file" class="form-control" placeholder="">
 					</div>
 					<div class="form-group col-sm-3">
+						<label for="input"> &nbsp;</label>
 						<input id="file4" type="file" class="form-control" placeholder="">
 					</div>
-				</div>
+				</div> 
 			</form>
 			&nbsp;
 			<strong class="margin-top-15">ที่อยู่ในการจัดส่งสินค้าเคลม</strong>
-			<form id="customer_address" class="form-horizontal" role="form">
+			<form id="customer_address">
 				<div class="form-group">
 					<label class="col-sm-3 control-label" for="txt-name">ชื่อ</label>
 					<div class="col-sm-6">
