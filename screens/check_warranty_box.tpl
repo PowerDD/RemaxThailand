@@ -1,7 +1,6 @@
-<div class="pinItem">
+<div class="pinItem dv-thumb">
 	<div class="pinBox pinWell margin-bottom-15">
 		<img src="https://lh3.googleusercontent.com/2HKvk9TTq4IE5P6GMVbUKbklXXk_0OHKg3mzP4k2bqo=w448-h187-no" class="img-responsive">
-		<input id="txt-barcode" type="text" placeholder="Barcode" class="form-control"/>
 		<div class="text-center">
 			<div id="check_warranty" class="padding-15">
 				<form id="f_warranty" class="form-horizontal">
