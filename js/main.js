@@ -123,8 +123,8 @@ function getPoint(isCheck){
 };
 function warrantyInfo(i){
 	if(i < 4 ){
-		$.post($('#apiUrl').val()+'/warranty/info', {
-			apiKey: $('#apiKey').val(),
+		$.post('http://power-api-test.azurewebsites.net/warranty/info', {
+			apiKey: 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8',
 			barcode: $.trim($('#txt-barcode').val())
 		}, function(data){
 			i++;
