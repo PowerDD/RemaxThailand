@@ -83,7 +83,7 @@
 			<form id="customer_address" class="form-horizontal" role="form">
 				<div class="form-group">
 					<label class="col-sm-3 control-label" for="txt-name">รายละเอีดการเคลม</label>
-					<textarea id="txt-firstname" rows="5" class="form-control txt-input txt-require" type="text" value="">
+					<textarea id="txt-firstname" rows="5" class="form-control txt-input txt-require" type="text" value=""></textarea>
 				</div>
 				<div class="form-group col-sm-3">
 					<label for="input">แนบภาพถ่ายสินค้าเคลม(ถ้ามี)</label>
