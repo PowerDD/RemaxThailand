@@ -36,7 +36,7 @@
 		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-15">
 		<form>
 			<div class="form-group text-danger">
-				<label for="input">ตรวจสอบสถาระการเคลม</label>
+				<label for="input">ตรวจสอบสถานะการเคลม</label>
 				<input id="claimno" type="text" class="form-control required" placeholder="กรุณาระบุ เลขที่เคลม">
 				<span id="btn-claimno" class="btn btn-warning text-center margin-top-5">ตรวจสอบ</span>
 			</div>
