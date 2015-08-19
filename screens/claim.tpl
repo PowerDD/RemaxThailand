@@ -48,6 +48,7 @@
 	    </div>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div id="tab-warranty-load" class="text-center margin-bottom-30 hidden"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ</div>
 		<div id="tab-warranty-not_exist" role="alert" class="alert alert-danger text-center hidden margin-bottom-30 padding-top-5 padding-bottom-5"> ไม่พบข้อมูลสินค้าค่ะ										
 		</div>
 		<div id="tab-warranty-info" class="panel panel-success hidden">
@@ -75,7 +76,92 @@
 				</div>
 			 </div>
 		</div>
-		<div id="tab-warranty-load" class="text-center margin-bottom-30 hidden"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ</div>
+		&nbsp;
+		<div id="dv-claim_info" class="hidden">
+			<strong class="margin-top-15">รายละเอียดสินค้าเคลม</strong>
+			<form id="customer_address" class="form-horizontal" role="form">
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="txt-name">รายละเอีดการเคลม</label>
+					<div class="col-sm-6">
+					<input id="txt-firstname" class="form-control txt-input txt-require" type="text" value="">
+					</div>
+				</div>
+				<div class="form-group col-sm-3">
+						<label for="input">แนบภาพถ่ายสินค้าเคลม(ถ้ามี)</label>
+						<input id="file1" type="file" class="form-control" placeholder="">
+				</div>
+				<div class="form-group col-sm-3">
+					<label for="input"> &nbsp;</label>
+					<input id="file2" type="file" class="form-control" placeholder="">
+				</div>
+				<div class="form-group col-sm-3">
+					<label for="input"> &nbsp;</label>
+					<input id="file3" type="file" class="form-control" placeholder="">
+				</div>
+				<div class="form-group col-sm-3">
+					<label for="input"> &nbsp;</label>
+					<input id="file4" type="file" class="form-control" placeholder="">
+				</div>
+			</form>
+			&nbsp;
+			<strong class="margin-top-15">ที่อยู่ในการจัดส่งสินค้าเคลม</strong>
+			<form id="customer_address" class="form-horizontal" role="form">
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="txt-name">ชื่อ</label>
+					<div class="col-sm-6">
+					<input id="txt-firstname" class="form-control txt-input txt-require" type="text" value="" placeholder="ชื่อ">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="txt-name">นามสกุล</label>
+					<div class="col-sm-6">
+					<input id="txt-lastname" class="form-control txt-input txt-require" type="text" value="" placeholder="นามสกุล">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="txt-name">ชื่อผู้ติดต่อ</label>
+					<div class="col-sm-6">
+					<input id="txt-nickname" class="form-control txt-input" type="text" value="" placeholder="ชื่อผู้ติดต่อ">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="txt-name">ที่อยู่</label>
+					<div class="col-sm-6">
+					<input id="txt-address" class="form-control txt-input txt-require" type="text" value="" placeholder="ที่อยู่">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="txt-name">ที่อยู่ (ต่อ)</label>
+					<div class="col-sm-6">
+					<input id="txt-address2" class="form-control txt-input txt-require" type="text" value="" placeholder="ที่อยู่ (ต่อ)">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="txt-name">จังหวัด</label>
+					<div class="col-sm-6">
+					<select id="province" class="form-control" data-selected="">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="txt-name">เขต/อำเภอ</label>
+					<div class="col-sm-6">
+					<select id="district" class="form-control" data-zipcode="" data-selected="">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="txt-name">แขวง/ตำบล</label>
+					<div class="col-sm-6">
+					<input id="txt-sub_district" class="form-control txt-input txt-require" type="text" value="" placeholder="แขวง/ตำบล">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="txt-name">รหัสไปรษณีย์</label>
+					<div class="col-sm-6">
+					<input id="txt-zipcode" class="form-control txt-input txt-require" type="text" placeholder="รหัสไปรษณีย์">
+					</div>
+				</div>
+			</form>
+		</div>
 	</div>
 	</div>
 	

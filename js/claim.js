@@ -6,6 +6,7 @@ $(function() {
 			warrantyInfo(0); 
 			$("#tab-warranty-not_exist").hide();
 			$("#tab-warranty-info").hide();
+			$('#dv-claim_info').hide();
 			$("#tab-warranty-load").show();
 		}
 	});
@@ -62,6 +63,7 @@ function warrantyInfo(i){
 						$('#tab-warranty-info').addClass('panel-success');
 					}
 					$('#tab-warranty-info').fadeIn();
+					$('#dv-claim_info').fadeIn();
 					$("#tab-warranty-load").hide();						
 				}
 				
