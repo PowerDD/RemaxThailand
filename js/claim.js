@@ -8,7 +8,7 @@ function warrantyInfo(i){
 	if(i < 4 ){
 		$.post('http://power-api-test.azurewebsites.net/warranty/info', {
 			apiKey: 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8',
-			barcode: $.trim($('#txt-barcode').val()
+			barcode: $.trim($('#txt-barcode').val())
 		}, function(data){
 			i++
 			if (data.success) {
