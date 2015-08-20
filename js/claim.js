@@ -1,6 +1,7 @@
 $(function() {
 	loadProvince();
-	
+	$('#txt-tel').ForceNumericOnly();
+	$('#txt-zipcode').ForceNumericOnly();
 	$(document).on('change', '#province', function(){
 		loadDistrict();
 	});
