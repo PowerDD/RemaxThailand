@@ -81,7 +81,7 @@
 		<div id="dv-claim_info" class="hidden">
 			<strong class="margin-top-15">รายละเอียดสินค้าเคลม</strong>
 			<form id="claim_info">
-				<div class="form-group>
+				<div class="form-group">
 					<label for="textarea" class="text-danger">กรุณาระบุอาการของสินค้าเคลม *</label>
 					<textarea id="descripttion" type="text" class=" fixed form-control required" rows="5" value=""></textarea>				
 					<label for="input" class="text-danger">กรุณาแนบภาพสินค้าเคลม *</label>
