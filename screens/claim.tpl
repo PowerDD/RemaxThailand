@@ -83,24 +83,12 @@
 			<form id="claim_info">
 				<div class="form-group text-danger">
 					<label for="textarea">กรุณาระบุอาการของสินค้าเคลม *</label>
-					<textarea id="descripttion" type="text" class=" fixed form-control required" rows="5" value=""></textarea>
-				
-					<div class="form-group col-sm-3">
-						<label for="input">กรุณาแนบภาพสินค้าเคลม *</label>
-						<input id="file1" type="file" class="form-control" placeholder="">
-					</div>
-					<div class="form-group col-sm-3">
-						<label for="input"> &nbsp;</label>
-						<input id="file2" type="file" class="form-control" placeholder="">
-					</div>
-					<div class="form-group col-sm-3">
-						<label for="input"> &nbsp;</label>
-						<input id="file3" type="file" class="form-control" placeholder="">
-					</div>
-					<div class="form-group col-sm-3">
-						<label for="input"> &nbsp;</label>
-						<input id="file4" type="file" class="form-control" placeholder="">
-					</div>
+					<textarea id="descripttion" type="text" class=" fixed form-control required" rows="5" value=""></textarea>				
+					<label for="input">กรุณาแนบภาพสินค้าเคลม *</label>
+					<input id="file1" type="file" placeholder="">
+					<input id="file2" type="file" placeholder="">
+					<input id="file3" type="file" placeholder="">
+					<input id="file4" type="file" placeholder="">
 				</div>
 			</form>
 			&nbsp;
