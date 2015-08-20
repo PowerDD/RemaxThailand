@@ -81,28 +81,27 @@
 		<div id="dv-claim_info" class="hidden">
 			<strong class="margin-top-15">รายละเอียดสินค้าเคลม</strong>
 			<form id="claim_info">
-				<div class="form-group text-danger">
-					<label for="textarea">กรุณาระบุอาการของสินค้าเคลม *</label>
+				<div class="form-group>
+					<label for="textarea" class="text-danger">กรุณาระบุอาการของสินค้าเคลม *</label>
 					<textarea id="descripttion" type="text" class=" fixed form-control required" rows="5" value=""></textarea>				
-					<label for="input">กรุณาแนบภาพสินค้าเคลม *</label>
+					<label for="input" class="text-danger">กรุณาแนบภาพสินค้าเคลม *</label>
 					<input id="file1" type="file" class="margin-bottom-10" placeholder="">
 					<input id="file2" type="file" class="margin-bottom-10" placeholder="">
 					<input id="file3" type="file" class="margin-bottom-10" placeholder="">
 					<input id="file4" type="file" class="margin-bottom-10" placeholder="">
 				</div>
 			</form>
-			&nbsp;
-			&nbsp;
+
 			<strong class="margin-top-15">ที่อยู่ในการจัดส่งสินค้าเคลม</strong>
 			<form id="customer_address" class="form-horizontal" role="form">
 				<div class="form-group">
-					<label class="col-sm-3 control-label" for="txt-name">ชื่อ</label>
+					<label class="col-sm-3 control-label text-danger" for="txt-name">ชื่อ *</label>
 					<div class="col-sm-6">
 					<input id="txt-firstname" class="form-control txt-input txt-require" type="text" value="" placeholder="ชื่อ">
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-sm-3 control-label" for="txt-name">นามสกุล</label>
+					<label class="col-sm-3 control-label text-danger" for="txt-name">นามสกุล *</label>
 					<div class="col-sm-6">
 					<input id="txt-lastname" class="form-control txt-input txt-require" type="text" value="" placeholder="นามสกุล">
 					</div>
@@ -114,7 +113,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-sm-3 control-label" for="txt-name">ที่อยู่</label>
+					<label class="col-sm-3 control-label text-danger" for="txt-name">ที่อยู่ *</label>
 					<div class="col-sm-6">
 					<input id="txt-address" class="form-control txt-input txt-require" type="text" value="" placeholder="ที่อยู่">
 					</div>
@@ -126,27 +125,33 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-sm-3 control-label" for="txt-name">จังหวัด</label>
+					<label class="col-sm-3 control-label text-danger" for="txt-name">จังหวัด *</label>
 					<div class="col-sm-6">
 					<select id="province" class="form-control" data-selected="">
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-sm-3 control-label" for="txt-name">เขต/อำเภอ</label>
+					<label class="col-sm-3 control-label text-danger" for="txt-name">เขต/อำเภอ *</label>
 					<div class="col-sm-6">
 					<select id="district" class="form-control" data-zipcode="" data-selected="">
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-sm-3 control-label" for="txt-name">แขวง/ตำบล</label>
+					<label class="col-sm-3 control-label text-danger" for="txt-name">แขวง/ตำบล *</label>
 					<div class="col-sm-6">
 					<input id="txt-sub_district" class="form-control txt-input txt-require" type="text" value="" placeholder="แขวง/ตำบล">
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-sm-3 control-label" for="txt-name">รหัสไปรษณีย์</label>
+					<label class="col-sm-3 control-label text-danger" for="txt-name">รหัสไปรษณีย์ *</label>
 					<div class="col-sm-6">
 					<input id="txt-zipcode" class="form-control txt-input txt-require" type="text" placeholder="รหัสไปรษณีย์">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label text-danger" for="txt-name">เบอร์โทรศัพท์ *</label>
+					<div class="col-sm-6">
+					<input id="txt-tel" class="form-control txt-input txt-require" type="text" placeholder="เบอร์โทรศัพท์">
 					</div>
 				</div>
 			</form>
