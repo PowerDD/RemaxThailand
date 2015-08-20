@@ -19,6 +19,11 @@ $(function() {
 			$("#tab-warranty-load").show();
 		}
 	});
+	$("#txt-barcode").keyup(function(event){
+		if(event.keyCode == 13){
+			$("#btn-barcode").click();
+		}
+	});
 
 });
 function warrantyInfo(i){
