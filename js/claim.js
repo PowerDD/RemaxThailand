@@ -168,6 +168,6 @@ function submitClaim(){
 	}else{
 		$("#alert-claim_info").fadeIn();		
 		setTimeout('$("#alert-claim_info").fadeOut()',3000);
-		$(document).scrollTop();
+		window.scrollTo(0, 0);
 	}
 };
