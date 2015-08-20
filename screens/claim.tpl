@@ -61,7 +61,7 @@
 		<div id="dv-claim_info" class="panel panel-success hidden">
 			<div class="panel-heading">รายละเอียด</div>
 			<div class="panel-body">
-				<p id="claim-Massage"></p>
+				<div id="claim-Massage" role="alert" class="alert alert-success text-center"></div>
 				<p id="claim-ClaimNo"></p>
 				<p id="claim-ClaimStatus"></p>
 				<p id="claim-ProductName"></p>
