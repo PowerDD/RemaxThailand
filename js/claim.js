@@ -166,6 +166,8 @@ function submitClaim(){
 				alert('It Okey');
 			}
 	}else{
-		alert('กรุณาระบุอาการของสินค้าเคลม และแนบรูปภาพค่ะ');
+		$("#alert-claim_info").fadeIn();
+		$("#alert-claim_info").focus();
+		setTimeout('$("#alert-claim_info").fadeOut()',3000);
 	}
 };

@@ -49,7 +49,7 @@
 	    </div>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<div id="tab-warranty-load" class="text-center margin-bottom-30 hidden"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ</div>
+		<div id="tab-warranty-load" role="alert" class="alert alert-info text-center hidden margin-bottom-30"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ</div>
 		<div id="tab-warranty-not_exist" role="alert" class="alert alert-danger text-center hidden margin-bottom-30"> ไม่พบข้อมูลสินค้าค่ะ										
 		</div>
 		<div id="tab-warranty-info" class="panel panel-success hidden">
@@ -79,7 +79,8 @@
 				</div>
 			 </div>
 		</div>
-		&nbsp;
+		<div id="alert-claim_info" role="alert" class="alert alert-danger text-center hidden margin-bottom-30"> กรุณาระบุอาการของสินค้าเคลม และแนบรูปภาพค่ะ										
+		</div>
 		<div id="dv-claim_info" class="hidden">
 			<strong class="margin-top-15">รายละเอียดสินค้าเคลม</strong>
 			<form id="claim_info">
