@@ -99,7 +99,8 @@ function loadProvince(){
 						((result.Name == $('#province').attr('data-selected') || ($('#province').attr('data-selected') == '' && result.ID == '1')) ? ' selected' : '')
 						+'>'+ result.Name +'</option>';
 				}
-				$('#province').html( html );				
+				$('#province').html( html );
+				loadDistrict()				
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
@@ -108,7 +109,7 @@ function loadProvince(){
 function loadDistrict(){
 	$.post('http://power-api-test.azurewebsites.net/province/district', {
 		apiKey: 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8',
-		province: $('#province :selected').val(),
+		province: $('#province').val(),
 	}, function(data){
 			if (data.success) {
 				var html = '';
