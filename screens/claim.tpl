@@ -66,6 +66,12 @@
 				<p id="claim-ClaimStatus"></p>
 				<p id="claim-ProductName"></p>
 				<p id="claim-Barcode"></p>
+				<div class="col-md-6 col-md-offset-3">
+					<p id="">dgsdghdf</p>
+					<p id="">fghdfgh</p>
+					<p id="">ghfdghdf</p>
+					<p id="">dfghdfghdfdrftu</p>
+				</div>
 			 </div>
 		</div>
 		<div id="alert-claim_info" role="alert" class="alert alert-danger text-center hidden margin-bottom-30"> กรุณาระบุอาการของสินค้าเคลม และแนบรูปภาพค่ะ										
