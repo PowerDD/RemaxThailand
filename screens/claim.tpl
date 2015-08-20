@@ -124,16 +124,11 @@
 					<input id="txt-address2" class="form-control txt-input txt-require" type="text" value="" placeholder="ที่อยู่ (ต่อ)">
 					</div>
 				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label text-danger" for="txt-name">จังหวัด *</label>
-					<div class="col-sm-6">
-					<select id="province" class="form-control" data-selected="">
-					</div>
-				</div>
+				
 				<div class="form-group">
 					<label class="col-sm-3 control-label text-danger" for="txt-name">เขต/อำเภอ *</label>
 					<div class="col-sm-6">
-					<select id="district" class="form-control" data-zipcode="" >
+					<select id="district" class="form-control" data-zipcode="" data-selected="">
 					</div>
 				</div>
 				<div class="form-group">
