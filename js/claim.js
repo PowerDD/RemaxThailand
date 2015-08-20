@@ -1,3 +1,6 @@
+var shop = '09A3C5B1-EBF7-443E-B620-48D3B648294E';
+var apiKey = 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8'
+
 var fileCount = 0;
 var fileProgress = {};
 var fileName = '';
@@ -29,7 +32,7 @@ $(function() {
 			warrantyInfo(0); 
 			$("#tab-warranty-not_exist").hide();
 			$("#tab-warranty-info").hide();
-			$('#dv-claim_info').hide();
+			$('#dv-claim').hide();
 			$('#form-success').hide();
 			$("#tab-warranty-load").show();
 		}
@@ -51,7 +54,7 @@ $(function() {
 function warrantyInfo(i){
 	if(i < 4 ){
 		$.post('http://power-api-test.azurewebsites.net/warranty/info', {
-			apiKey: 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8',
+			apiKey: apiKey,
 			barcode: $.trim($('#txt-barcode').val())
 		}, function(data){
 			i++
@@ -99,9 +102,10 @@ function warrantyInfo(i){
 						$('#tab-warranty-info').removeClass('panel-danger');
 						$('#tab-warranty-info').removeClass('panel-warning');
 						$('#tab-warranty-info').addClass('panel-success');
+						
+						$('#dv-claim').show();
 					}
-					$('#tab-warranty-info').show();
-					$('#dv-claim_info').show();
+					$('#tab-warranty-info').show();					
 					$("#tab-warranty-load").hide();						
 				}
 				
@@ -118,7 +122,7 @@ function warrantyInfo(i){
 };
 function loadProvince(){
 	$.post('http://power-api-test.azurewebsites.net/province/list', {
-		apiKey: 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8'
+		apiKey: apiKey
 	}, function(data){
 			if (data.success) {
 				var html = '';
@@ -135,7 +139,7 @@ function loadProvince(){
 };
 function loadDistrict(){
 	$.post('http://power-api-test.azurewebsites.net/province/district', {
-		apiKey: 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8',
+		apiKey: apiKey,
 		province: $('#province').val(),
 	}, function(data){
 			if (data.success) {
@@ -158,7 +162,7 @@ function loadZipCode(){
 
 function uploadFile(){
 	
-	$('#dv-claim_info').slideUp();
+	$('#dv-claim').slideUp();
 	$('#tab-warranty-info').slideUp();
 	$('#form-loading').fadeIn();
 
@@ -239,9 +243,9 @@ function submitClaim(){
 };
 
 function addClaim(){
-	var shop = '09A3C5B1-EBF7-443E-B620-48D3B648294E'; 
+	 
 	$.post('http://power-api-test.azurewebsites.net/claim/add', {
-		apiKey: 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8',
+		apiKey: apiKey,
 		shop: shop,
 		type: 'web',
 		barcode: $('#barcode').html(),
@@ -261,6 +265,7 @@ function addClaim(){
 		images: fileName
 	}, function(data){
 			if (data.success) {
+				
 				$('#form-loading').slideUp();
 				$('#form-success').slideDown();
 			}
