@@ -133,7 +133,7 @@
 				<div class="form-group">
 					<label class="col-sm-3 control-label text-danger" for="txt-name">เขต/อำเภอ *</label>
 					<div class="col-sm-6">
-					<select id="district" class="form-control" data-zipcode="" data-selected="">
+					<select id="district" class="form-control" data-zipcode="" >
 					</div>
 				</div>
 				<div class="form-group">
