@@ -18,6 +18,14 @@ $(function() {
 		if($('#txt-barcode').val() == ''){
 			$('#txt-barcode').focus();
 		}else{
+			$('#customer_address .txt-input').each(function(){
+				$(this).val("") 
+			});
+			$('#claim_description').val("");
+			$('#file1').val("");
+			$('#file2').val("");
+			$('#file3').val("");
+			$('#file4').val("");
 			warrantyInfo(0); 
 			$("#tab-warranty-not_exist").hide();
 			$("#tab-warranty-info").hide();
