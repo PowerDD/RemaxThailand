@@ -1,5 +1,12 @@
 $(function() {
 	loadProvince();
+	$(document).on('change', '#province', function(){
+		loadDistrict();
+	});
+
+	$(document).on('change', '#district', function(){
+		loadZipCode();
+	});
 	$("#btn-barcode").click(function(){
 		if($('#txt-barcode').val() == ''){
 			$('#txt-barcode').focus();
@@ -91,8 +98,7 @@ function loadProvince(){
 						((result.Name == $('#province').attr('data-selected') || ($('#province').attr('data-selected') == '' && result.ID == '1')) ? ' selected' : '')
 						+'>'+ result.Name +'</option>';
 				}
-				$('#province').html( html );
-				loadAddress();				
+				$('#province').html( html );			
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
