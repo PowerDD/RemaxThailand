@@ -265,9 +265,23 @@ function addClaim(){
 		images: fileName
 	}, function(data){
 			if (data.success) {
+				$('#claim-Massage').html('กำลังดำเนินการตรวจสอบข้อมูล ท่านสามารถตรวจสอบสถานะการดำเนินการได้จากเลขที่การเคลม').addClass('text-success');
+				$('#claim-ClaimNo').html('<b>Claim No. </b>'+ data.result.ClaimNo);
+				$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+ (data.result.Status == 'CI' ? 'ตรวจสอบข้อมูล' : '-'));
+				$('#claim-ProductName').html($('#tab-ProductName').html());
+				$('#claim-Barcode').html($('#tab-Barcode').html());
+				/*var isBkk = $('#province :selected').val() == '1';
+				$('.txt-sub_district').text( ((isBkk) ? $('#msg-kwang').val() : $('#msg-tambon').val() ) + (( $('#language').val() == 'en' ) ? ' ' : '') + $('.txt-sub_district').text() );
+				$('.txt-district').text( ((isBkk) ? $('#msg-khet').val() : $('#msg-amphoe').val()) + (( $('#language').val() == 'en' ) ? ' ' : '') + $('#district :selected').text() );
+				$('.txt-province').text( ((isBkk) ? '' : (( $('#language').val() == 'en' ) ? $('#province :selected').text()+' '+$('#msg-province').val() : $('#msg-province').val() + $('#province :selected').text()) ) );
+				if ( $('.txt-tel').text().length == 10 ) {
+					var mobile = $('.txt-tel').text();
+					$('.txt-tel').html( mobile.substr(0, 3)+'-'+mobile.substr(3, 4)+'-'+mobile.substr(7, 3) );
+				}*/
 				
 				$('#form-loading').slideUp();
-				$('#form-success').slideDown();
+				$('#dv-claim_info').slideDown();
+				
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };

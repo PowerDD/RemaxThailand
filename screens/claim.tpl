@@ -37,7 +37,7 @@
 				<p id="product" class="hidden"></p>
 				<p id="barcode" class="hidden"></p>
 				<p id="tab-ProductName"></p>
-				<p id="tab-Barcode"></p><br/>
+				<p id="tab-Barcode"></p>
 				<div class="col-md-12 col-sm-12">
 					<div class="box-body table-responsive no-padding">
 						<table class="table table-bordered">
@@ -58,9 +58,19 @@
 				</div>
 			 </div>
 		</div>
+		<div id="dv-claim_info" class="panel panel-success hidden">
+			<div class="panel-heading">รายละเอียด</div>
+			<div class="panel-body">
+				<p id="claim-Massage"></p>
+				<p id="claim-ClaimNo"></p>
+				<p id="claim-ClaimStatus"></p>
+				<p id="claim-ProductName"></p>
+				<p id="claim-Barcode"></p>
+			 </div>
+		</div>
 		<div id="alert-claim_info" role="alert" class="alert alert-danger text-center hidden margin-bottom-30"> กรุณาระบุอาการของสินค้าเคลม และแนบรูปภาพค่ะ										
 		</div>
-		<div id="dv-claim_info" class="hidden">
+		<div id="dv-claim" class="hidden">
 			<strong class="margin-top-15">รายละเอียดสินค้าเคลม</strong>
 			<form id="claim_info">
 				<div class="form-group">
