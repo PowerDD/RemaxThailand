@@ -173,7 +173,7 @@ function upload(file, index){
 	fd.append("file", file);
 	fd.append("index", index);
 	fd.append("mobile", $.trim($('#mobile').val()));
-	fd.append("tags", 'claim,'+$.trim($('#firstname').val())+','+$.trim($('#lastname').val())+','+$('#province :selected').val()+','+$.trim($('#mobile').val()) );
+	fd.append("tags", 'claim,'+$.trim($('#firstname').val())+','+$.trim($('#lastname').val())+','+$('#province :selected').html()+','+$.trim($('#mobile').val()) );
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', 'https://powerupload.azurewebsites.net', true);
 
@@ -183,7 +183,6 @@ function upload(file, index){
 			fileProgress[index] = percentComplete;
 			allProgress = (fileProgress[1]+fileProgress[2]+fileProgress[3]+fileProgress[4])/fileCount;
 			$('#progress').css('width', allProgress+'%').attr('aria-valuenow', allProgress);
-			//console.log(percentComplete + '% uploaded -> total = ' + (allProgress/fileCount) );
 		}
 	};
 
