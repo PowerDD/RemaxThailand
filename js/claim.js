@@ -167,7 +167,7 @@ function submitClaim(){
 			}
 	}else{
 		$("#alert-claim_info").fadeIn();
-		$("#alert-claim_info").focus();
+		$("#claim_description").focus();
 		setTimeout('$("#alert-claim_info").fadeOut()',3000);
 	}
 };
