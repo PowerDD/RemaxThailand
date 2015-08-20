@@ -144,20 +144,28 @@ function loadZipCode(){
 
 function submitClaim(){
 	var isComplete = true;
-		$('#customer_address .txt-require').each(function(){
-			$(this).val( $.trim($(this).val()) );
-			if ( $(this).val() == '' ) {
-				$(this).parents('.form-group').addClass('has-error');
-				$(this).focus();
-				isComplete = false;
-				return false;
-			}
-			else {
-				$(this).parents('.form-group').removeClass('has-error');
-			}
-		});
+	if ($('#claim_description').val() != '' &&  
+		$('#file1').val() != '' || 
+		$('#file2').val() != '' || 
+		$('#file3').val() != '' ||
+		$('#file4').val() != ''){
+			$('#customer_address .txt-require').each(function(){
+				$(this).val( $.trim($(this).val()) );
+				if ( $(this).val() == '' ) {
+					$(this).parents('.form-group').addClass('has-error');
+					$(this).focus();
+					isComplete = false;
+					return false;
+				}
+				else {
+					$(this).parents('.form-group').removeClass('has-error');
+				}
+			});
 
-		if (isComplete) {
-			alert('It Okey');
-		}
+			if (isComplete) {
+				alert('It Okey');
+			}
+	}else{
+		alert('กรุณาระบุอาการของสินค้าเคลม และแนบรูปภาพค่ะ');
+	}
 };

@@ -85,7 +85,7 @@
 			<form id="claim_info">
 				<div class="form-group">
 					<label for="textarea" class="text-danger">กรุณาระบุอาการของสินค้าเคลม *</label>
-					<textarea id="descripttion" type="text" class=" fixed form-control required" rows="5" value=""></textarea>				
+					<textarea id="claim_description" type="text" class=" fixed form-control required" rows="5" value=""></textarea>				
 					<label for="input" class="text-danger">กรุณาแนบภาพสินค้าเคลม *</label>
 					<input id="file1" type="file" class="margin-bottom-10" placeholder="">
 					<input id="file2" type="file" class="margin-bottom-10" placeholder="">
