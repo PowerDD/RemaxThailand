@@ -115,8 +115,6 @@ function loadProvince(){
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
-
-
 function loadDistrict(){
 	$.post('http://power-api-test.azurewebsites.net/province/district', {
 		apiKey: 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8',
@@ -135,9 +133,27 @@ function loadDistrict(){
 				
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
-}
-
-
+};
 function loadZipCode(){
 	$('#txt-zipcode').val( $('#district :selected').attr('data-zipcode') );
+};
+
+function submitClaim(){
+	var isComplete = true;
+		$('#customer_address .txt-require').each(function(){
+			$(this).val( $.trim($(this).val()) );
+			if ( $(this).val() == '' ) {
+				$(this).parents('.form-group').addClass('has-error');
+				$(this).focus();
+				isComplete = false;
+				return false;
+			}
+			else {
+				$(this).parents('.form-group').removeClass('has-error');
+			}
+		});
+
+		if (isComplete) {
+			alert('It Okey');
+		}
 };
