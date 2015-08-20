@@ -55,6 +55,8 @@
 		<div id="tab-warranty-info" class="panel panel-success hidden">
 			<div class="panel-heading">ผลการตรวจสอบ</div>
 			<div class="panel-body">
+				<p id="product" class="hidden"></p>
+				<p id="barcode" class="hidden"></p>
 				<p id="tab-ProductName"></p>
 				<p id="tab-Barcode"></p><br/>
 				<div class="col-md-12 col-sm-12">

@@ -33,6 +33,8 @@ function warrantyInfo(i){
 					warrantyInfo(i);
 				}
 				else{
+					$('#product').html(data.result.ProductID);
+					$('#barcode').html(data.result.Barcode);
 					$('#tab-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.ProductName);
 					$('#tab-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.Barcode);
 					$('#tab-CustomerName').html(data.result.CustomerName);
@@ -116,7 +118,7 @@ function loadDistrict(){
 				for( i=0; i<data.result.length; i++ ) {
 					var result = data.result[i];
 					html += '<option value="'+ result.ID +'" data-zipcode="'+ result.Zipcode +'"'+ 
-						((result.ID == $('#district').attr('data-selected') && result.Zipcode == $('#district').attr('data-Zipcode')) ? ' selected' : '')
+						((result.ID == $('#district').attr('data-selected') && result.Zipcode == $('#district').attr('data-zipcode')) ? ' selected' : '')
 						+'>'+ result.Name +'</option>';
 				}
 				$('#district').html( html );
