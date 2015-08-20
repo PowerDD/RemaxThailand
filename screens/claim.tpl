@@ -154,8 +154,10 @@
 					<input id="txt-tel" class="form-control txt-input txt-require" type="text" placeholder="เบอร์โทรศัพท์"></input>
 					</div>
 				</div>
-				<div class="col-sm-6">
-					<span id="btn-submit_claiminfo" class="btn btn-warning">ยืนยันข้อมูล</span>
+				<div class="form-group">
+					<div class="col-sm-6">
+						<span id="btn-submit_claiminfo" class="btn btn-warning">ยืนยันข้อมูล</span>
+					</div>
 				</div>
 			</form>
 		</div>
