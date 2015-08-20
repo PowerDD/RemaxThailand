@@ -1,3 +1,8 @@
+var fileCount = 0;
+var fileProgress = {};
+var fileName = '';
+var allProgress = 0;
+
 $(function() {
 	loadProvince();
 	$('#txt-tel').ForceNumericOnly();
@@ -142,6 +147,59 @@ function loadZipCode(){
 	$('#txt-zipcode').val( $('#district :selected').attr('data-zipcode') );
 };
 
+function uploadFile(){
+	
+	$('#dv-claim_info').slideUp();
+	$('#tab-warranty-info').slideUp();
+	$('#form-loading').fadeIn();
+
+	fileCount = 0;
+	allProgress = 0;
+	fileName = '';
+	for(i=1; i<=4; i++) {
+		fileProgress[i] = 0;
+		if (typeof document.getElementById('file'+i).files[0] != 'undefined') {
+			upload(document.getElementById('file'+i).files[0], i);
+			fileCount++;
+		}
+	}
+
+	if ( fileCount == 0 ) register();
+};
+
+function upload(file, index){	
+	var fd = new FormData();
+	fd.append("file", file);
+	fd.append("index", index);
+	fd.append("mobile", $.trim($('#mobile').val()));
+	fd.append("tags", 'claim,'+$.trim($('#firstname').val())+','+$.trim($('#lastname').val())+','+$('#province :selected').val()+','+$.trim($('#mobile').val()) );
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST', 'https://powerupload.azurewebsites.net', true);
+
+	xhr.upload.onprogress = function(e) {
+		if (e.lengthComputable) {
+			var percentComplete = (e.loaded / e.total) * 100;
+			fileProgress[index] = percentComplete;
+			allProgress = (fileProgress[1]+fileProgress[2]+fileProgress[3]+fileProgress[4])/fileCount;
+			$('#progress').css('width', allProgress+'%').attr('aria-valuenow', allProgress);
+			//console.log(percentComplete + '% uploaded -> total = ' + (allProgress/fileCount) );
+		}
+	};
+
+	xhr.onload = function() {
+		if (this.status == 200) {
+			var json = JSON.parse(this.response);
+			if ( json.success ) {
+				fileName += json.filename + '|';
+				if (allProgress == 100){
+					addClaim();
+				}
+			}
+		};
+	};
+	xhr.send(fd);
+};
+
 function submitClaim(){
 	var isComplete = true;
 	if ($('#claim_description').val() != '' &&  
@@ -163,11 +221,48 @@ function submitClaim(){
 			});
 
 			if (isComplete) {
-				alert('It Okey');
+				uploadFile();
 			}
 	}else{
 		$("#alert-claim_info").fadeIn();		
 		setTimeout('$("#alert-claim_info").fadeOut()',3000);
 		window.scrollTo(0, 0);
 	}
+};
+
+function addClaim(){
+	var shop = '09A3C5B1-EBF7-443E-B620-48D3B648294E'; 
+	$.post('http://power-api-test.azurewebsites.net/claim/add', {
+		apiKey: 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8',
+		shop: shop,
+		type: 'web',
+		barcode: $('#barcode').html(),
+		product: $('#product').html(), 
+		description: $('#claim_description').val(),
+		firstname: $('#txt-firstname').val(),
+		lastname: $('#txt-lastname').val(), 
+		nickname: $('#txt-nickname').val(),
+		address: $('#txt-address').val(),
+		address2: $('#txt-address').val(),
+		province: $('#province').html(),
+		district: $('#district').html(),
+		sub_district: $('#txt-sub_district').val(),
+		zipcode: $('#txt-zipcode').val(),
+		tel: $('#txt-tel').val(),
+		email: $('#txt-email').val(), 
+		images: fileName
+	}, function(data){
+			if (data.success) {
+				var html = '';
+				for( i=0; i<data.result.length; i++ ) {
+					var result = data.result[i];
+					html += '<option value="'+ result.ID +'" data-zipcode="'+ result.Zipcode +'"'+ 
+						((result.ID == $('#district').attr('data-selected') && result.Zipcode == $('#district').attr('data-zipcode')) ? ' selected' : '')
+						+'>'+ result.Name +'</option>';
+				}
+				$('#district').html( html );
+				loadZipCode();
+				
+			}
+	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };

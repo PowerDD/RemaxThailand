@@ -2,28 +2,7 @@
 	<h1 class="page-header font-28 margin-top-10">เคลมสินค้า</h1>
 
 	
-	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-	<div id="form-loading" class="row hidden">
-	    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10">	    
-		    <div class="alert alert-info text-center margin-bottom-0">			
-			<div class="progress margin-bottom-5">
-				<div id="progress" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-					<span class="sr-only"></span>
-				</div>
-			</div>
-			<i class="fa fa-cog fa-spin"></i> กำลังส่งข้อมูลเข้าระบบ กรุณารอสักครู่ค่ะ
-		    </div>
-	    </div>
-	 </div>
-
-	<div id="form-success" class="row hidden">
-	    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10">	    
-		    <div class="alert alert-info text-center margin-bottom-0">
-			ขอบคุณสำหรับข้อมูล จะมีเจ้าหน้าที่พิจารณา และติดต่อท่านกลับไปค่ะ
-		    </div>
-	    </div>
-	</div>
-	
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">	
 	<div id="form-input" class="row margin-bottom-15">
 	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-15">
 		<form>
@@ -157,10 +136,36 @@
 					<input id="txt-tel" class="form-control txt-input txt-require" type="text" placeholder="เบอร์โทรศัพท์"></input>
 					</div>
 				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="txt-name">อีเมล</label>
+					<div class="col-sm-6">
+					<input id="txt-email" class="form-control txt-input" type="text" placeholder="อีเมล"></input>
+					</div>
+				</div>
 				<div class="form-group text-center">
 					<span id="btn-submit_claiminfo" class="btn btn-warning">ยืนยันข้อมูล</span>
 				</div>
 			</form>
+		</div>
+		<div id="form-loading" class="row hidden">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10">	    
+				<div class="alert alert-info text-center margin-bottom-0">			
+				<div class="progress margin-bottom-5">
+					<div id="progress" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+						<span class="sr-only"></span>
+					</div>
+				</div>
+				<i class="fa fa-cog fa-spin"></i> กำลังส่งข้อมูลเข้าระบบ กรุณารอสักครู่ค่ะ
+				</div>
+			</div>
+		 </div>
+
+		<div id="form-success" class="row hidden">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10">	    
+				<div class="alert alert-info text-center margin-bottom-0">
+				ขอบคุณสำหรับข้อมูล จะมีเจ้าหน้าที่พิจารณา และติดต่อท่านกลับไปค่ะ
+				</div>
+			</div>
 		</div>
 	</div>
 	</div>
