@@ -192,7 +192,8 @@ function upload(file, index){
 			if ( json.success ) {
 				fileName += json.filename + '|';
 				if (allProgress == 100){
-					addClaim();
+					alert('on load');
+					//addClaim();
 				}
 			}
 		};
