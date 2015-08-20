@@ -62,8 +62,8 @@ function warrantyInfo(i){
 						$('#tab-warranty-info').removeClass('panel-warning');
 						$('#tab-warranty-info').addClass('panel-success');
 					}
-					$('#tab-warranty-info').fadeIn();
-					$('#dv-claim_info').fadeIn();
+					$('#tab-warranty-info').show();
+					$('#dv-claim_info').show();
 					$("#tab-warranty-load").hide();						
 				}
 				
