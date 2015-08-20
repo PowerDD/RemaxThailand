@@ -22,6 +22,7 @@ $(function() {
 			$("#tab-warranty-not_exist").hide();
 			$("#tab-warranty-info").hide();
 			$('#dv-claim_info').hide();
+			$('#form-success').hide();
 			$("#tab-warranty-load").show();
 		}
 	});
@@ -243,9 +244,9 @@ function addClaim(){
 		lastname: $('#txt-lastname').val(), 
 		nickname: $('#txt-nickname').val(),
 		address: $('#txt-address').val(),
-		address2: $('#txt-address').val(),
-		province: $('#province').html(),
-		district: $('#district').html(),
+		address2: $('#txt-address2').val(),
+		province: $('#province :select').html(),
+		district: $('#district :select').html(),
 		sub_district: $('#txt-sub_district').val(),
 		zipcode: $('#txt-zipcode').val(),
 		tel: $('#txt-tel').val(),
@@ -253,16 +254,8 @@ function addClaim(){
 		images: fileName
 	}, function(data){
 			if (data.success) {
-				var html = '';
-				for( i=0; i<data.result.length; i++ ) {
-					var result = data.result[i];
-					html += '<option value="'+ result.ID +'" data-zipcode="'+ result.Zipcode +'"'+ 
-						((result.ID == $('#district').attr('data-selected') && result.Zipcode == $('#district').attr('data-zipcode')) ? ' selected' : '')
-						+'>'+ result.Name +'</option>';
-				}
-				$('#district').html( html );
-				loadZipCode();
-				
+				$('#form-loading').slideUp();
+				$('#form-success').slideDown();
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
