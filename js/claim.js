@@ -127,7 +127,4 @@ function loadDistrict(){
 
 function loadZipCode(){
 	$('#txt-zipcode').val( $('#district :selected').attr('data-zipcode') );
-	if (firstLoad) {
-		getAddress();
-	}
 };
