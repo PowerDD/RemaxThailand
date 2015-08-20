@@ -108,7 +108,7 @@ function loadProvince(){
 function loadDistrict(){
 	$.post('http://power-api-test.azurewebsites.net/province/district', {
 		apiKey: 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8',
-		provinceCode: $('#province :selected').val(),
+		province: $('#province :selected').val(),
 	}, function(data){
 			if (data.success) {
 				var html = '';
