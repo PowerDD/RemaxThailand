@@ -50,7 +50,7 @@
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div id="tab-warranty-load" class="text-center margin-bottom-30 hidden"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ</div>
-		<div id="tab-warranty-not_exist" role="alert" class="alert alert-danger text-center hidden margin-bottom-30 padding-top-5 padding-bottom-5"> ไม่พบข้อมูลสินค้าค่ะ										
+		<div id="tab-warranty-not_exist" role="alert" class="alert alert-danger text-center hidden margin-bottom-30"> ไม่พบข้อมูลสินค้าค่ะ										
 		</div>
 		<div id="tab-warranty-info" class="panel panel-success hidden">
 			<div class="panel-heading">ผลการตรวจสอบ</div>
