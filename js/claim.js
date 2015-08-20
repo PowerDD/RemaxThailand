@@ -1,4 +1,5 @@
 $(function() {
+	loadProvince();
 	$("#btn-barcode").click(function(){
 		if($('#txt-barcode').val() == ''){
 			$('#txt-barcode').focus();
@@ -76,5 +77,51 @@ function warrantyInfo(i){
 	}else if( i = 4){
 			$('#tab-warranty-not_exist').show();
 			$("#tab-warranty-load").hide();
+	}
+};
+function loadProvince(){
+	$.post('http://power-api-test.azurewebsites.net/province/list', {
+		apiKey: 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8'
+	}, function(data){
+			if (data.success) {
+				var html = '';
+				for( i=0; i<data.result.length; i++ ) {
+					var result = data.result[i];
+					html += '<option value="'+ result.ID +'"'+ 
+						((result.Name == $('#province').attr('data-selected') || ($('#province').attr('data-selected') == '' && result.ID == '1')) ? ' selected' : '')
+						+'>'+ result.Name +'</option>';
+				}
+				$('#province').html( html );
+				loadAddress();				
+			}
+	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
+};
+
+
+function loadDistrict(){
+	$.post('http://power-api-test.azurewebsites.net/province/list', {
+		apiKey: 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8',
+		provinceCode: $('#province :selected').val(),
+	}, function(data){
+			if (data.success) {
+				var html = '';
+				for( i=0; i<data.result.length; i++ ) {
+					var result = data.result[i];
+					html += '<option value="'+ result.ID +'" data-zipcode="'+ result.Zipcode +'"'+ 
+						((result.ID == $('#district').attr('data-selected') && result.Zipcode == $('#district').attr('data-Zipcode')) ? ' selected' : '')
+						+'>'+ result.Name +'</option>';
+				}
+				$('#district').html( html );
+				loadZipCode();
+				
+			}
+	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
+}
+
+
+function loadZipCode(){
+	$('#txt-zipcode').val( $('#district :selected').attr('data-zipcode') );
+	if (firstLoad) {
+		getAddress();
 	}
 };
