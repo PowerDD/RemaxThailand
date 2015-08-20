@@ -166,8 +166,8 @@ function submitClaim(){
 				alert('It Okey');
 			}
 	}else{
-		$("#alert-claim_info").fadeIn();
-		$("#claim_description").focus();
+		$("#alert-claim_info").fadeIn();		
 		setTimeout('$("#alert-claim_info").fadeOut()',3000);
+		$("#alert-claim_info").focus();
 	}
 };
