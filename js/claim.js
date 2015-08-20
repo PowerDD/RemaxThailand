@@ -24,6 +24,10 @@ $(function() {
 			$("#btn-barcode").click();
 		}
 	});
+	
+	$("#form-input").submit(function(e){
+		return false;
+	});
 
 });
 function warrantyInfo(i){
