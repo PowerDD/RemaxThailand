@@ -97,56 +97,61 @@
 				<div class="form-group">
 					<label class="col-sm-3 control-label text-danger" for="txt-name">ชื่อ *</label>
 					<div class="col-sm-6">
-					<input id="txt-firstname" class="form-control txt-input txt-require" type="text" value="" placeholder="ชื่อ">
+					<input id="txt-firstname" class="form-control txt-input txt-require" type="text" value="" placeholder="ชื่อ"></input>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label text-danger" for="txt-name">นามสกุล *</label>
 					<div class="col-sm-6">
-					<input id="txt-lastname" class="form-control txt-input txt-require" type="text" value="" placeholder="นามสกุล">
+					<input id="txt-lastname" class="form-control txt-input txt-require" type="text" value="" placeholder="นามสกุล"></input>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label" for="txt-name">ชื่อผู้ติดต่อ</label>
 					<div class="col-sm-6">
-					<input id="txt-nickname" class="form-control txt-input" type="text" value="" placeholder="ชื่อผู้ติดต่อ">
+					<input id="txt-nickname" class="form-control txt-input" type="text" value="" placeholder="ชื่อผู้ติดต่อ"></input>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label text-danger" for="txt-name">ที่อยู่ *</label>
 					<div class="col-sm-6">
-					<input id="txt-address" class="form-control txt-input txt-require" type="text" value="" placeholder="ที่อยู่">
+					<input id="txt-address" class="form-control txt-input txt-require" type="text" value="" placeholder="ที่อยู่"></input>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label" for="txt-name">ที่อยู่ (ต่อ)</label>
 					<div class="col-sm-6">
-					<input id="txt-address2" class="form-control txt-input txt-require" type="text" value="" placeholder="ที่อยู่ (ต่อ)">
+					<input id="txt-address2" class="form-control txt-input txt-require" type="text" value="" placeholder="ที่อยู่ (ต่อ)"></input>
 					</div>
 				</div>
-				
+				<div class="form-group">
+					<label class="col-sm-3 control-label text-danger" for="txt-name">จังหวัด *</label>
+					<div class="col-sm-6">
+					<select id="province" class="form-control" data-selected=""></select>
+					</div>
+				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label text-danger" for="txt-name">เขต/อำเภอ *</label>
 					<div class="col-sm-6">
-					<select id="district" class="form-control" data-zipcode="" data-selected="">
+					<select id="district" class="form-control" data-zipcode="" data-selected=""></select>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label text-danger" for="txt-name">แขวง/ตำบล *</label>
 					<div class="col-sm-6">
-					<input id="txt-sub_district" class="form-control txt-input txt-require" type="text" value="" placeholder="แขวง/ตำบล">
+					<input id="txt-sub_district" class="form-control txt-input txt-require" type="text" value="" placeholder="แขวง/ตำบล"></input>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label text-danger" for="txt-name">รหัสไปรษณีย์ *</label>
 					<div class="col-sm-6">
-					<input id="txt-zipcode" class="form-control txt-input txt-require" type="text" placeholder="รหัสไปรษณีย์">
+					<input id="txt-zipcode" class="form-control txt-input txt-require" type="text" placeholder="รหัสไปรษณีย์"></input>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label text-danger" for="txt-name">เบอร์โทรศัพท์ *</label>
 					<div class="col-sm-6">
-					<input id="txt-tel" class="form-control txt-input txt-require" type="text" placeholder="เบอร์โทรศัพท์">
+					<input id="txt-tel" class="form-control txt-input txt-require" type="text" placeholder="เบอร์โทรศัพท์"></input>
 					</div>
 				</div>
 			</form>
