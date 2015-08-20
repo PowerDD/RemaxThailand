@@ -19,16 +19,19 @@ $(function() {
 			$("#tab-warranty-load").show();
 		}
 	});
-	$("#txt-barcode").keyup(function(event){
+	$("#txt-barcode").keyup(function(event){ 
 		if(event.keyCode == 13){
 			$("#btn-barcode").click();
 		}
 	});
 	
-	$("#form-input").submit(function(e){
+	$("#form-input").submit(function(e){ // Disable Enter Key //
 		return false;
 	});
-
+	
+	$("#btn-submit_claiminfo").click(function(){
+		submitClaim();
+	});
 });
 function warrantyInfo(i){
 	if(i < 4 ){
