@@ -5,7 +5,7 @@ var fileCount = 0;
 var fileProgress = {};
 var fileName = '';
 var allProgress = 0;
-var json;
+
 $(function() {
 	loadProvince();
 	$('#txt-tel').ForceNumericOnly();
@@ -283,13 +283,14 @@ function addClaim(){
 				$('#sum-email').html($('#txt-email').val())
 				
 				var modal = $('#dv-claim_info');
-				if (typeof json.fileName != 'undefined') {
+				var file = JSON.parse(fileName);
+				if (typeof file != 'undefined') {
 					for(i=0; i<=3; i++) {
 						modal.find('.img'+i+' img').attr('src', 'https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg');
 						modal.find('.img'+i+' a').attr('href', '#');
-						if (typeof json.fileName[i] != 'undefined' && json.fileName[i] != '') {
-							modal.find('.img'+i).show().find('img').attr('src', json.fileName[i]);
-							modal.find('.img'+i).show().find('a').attr('href', json.fileName[i]);
+						if (typeof file[i] != 'undefined' && file[i] != '') {
+							modal.find('.img'+i).show().find('img').attr('src', file[i]);
+							modal.find('.img'+i).show().find('a').attr('href', file[i]);
 						}
 						else {
 							modal.find('.img'+i).hide();
