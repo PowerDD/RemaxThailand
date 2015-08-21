@@ -278,9 +278,9 @@ function addClaim(){
 				$('#sum-location').html('แขวง/ตำบล'+$('#txt-sub_district').val()+' '+'เขต/อำเภอ'+$('#district :selected').html()+' '+'จังหวัด'+$('#province :selected').html()+' '+$('#txt-zipcode').val())
 				if ( $('#txt-tel').val().length == 10 ) {
 					var mobile = $('#txt-tel').val();
-					$('#sum-tel').html('<b>เบอร์โทร </b>'+ mobile.substr(0, 3)+'-'+mobile.substr(3, 4)+'-'+mobile.substr(7, 3) );
-				}else{$('#sum-tel').html('<b>เบอร์โทร </b>'+$('#txt-tel').val())}
-				$('#sum-email').html('<b>อีเมล </b>'+$('#txt-email').val())
+					$('#sum-tel').html('เบอร์โทร '+ mobile.substr(0, 3)+'-'+mobile.substr(3, 4)+'-'+mobile.substr(7, 3) );
+				}else{$('#sum-tel').html('เบอร์โทร '+$('#txt-tel').val())}
+				$('#sum-email').html($('#txt-email').val() != '' ? 'อีเมล '+$('#txt-email').val() : '')
 				
 				var modal = $('#dv-claim_info');
 				var file = convertDataToArray('|', fileName);
