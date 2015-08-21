@@ -88,8 +88,8 @@
 						</a>
 					</div>
 				</div>
-				<div class="col-md-6 col-md-offset-2 margin-top-15"><strong class="margin-top-15">ที่อยู่</strong></div>
-				<div class="col-md-6 col-md-offset-3">
+				<p class="margin-top-15"><strong>ที่อยู่</strong></p>
+				<div class="margin-left-5">
 					<p id="sum-name"></p>
 					<p id="sum-address"></p>
 					<p id="sum-address2"></p>
