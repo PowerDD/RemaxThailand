@@ -275,12 +275,30 @@ function addClaim(){
 				$('#sum-name').html('คุณ '+$('#txt-firstname').val()+' '+$('#txt-lastname').val()+($('#txt-nickname').val() != '' ? + ' ('+$('#txt-nickname').val()+')' : ''));
 				$('#sum-address').html($('#txt-address').val())
 				$('#sum-address2').html($('#txt-address2').val())
-				$('#sum-location').html('แขวง/ตำบล '+$('#txt-sub_district').val()+' '+'เขต/อำเภอ '+$('#district :selected').html()+' '+'จังหวัด '+$('#province :selected').html()+' '+$('#txt-zipcode').val())
+				$('#sum-location').html('แขวง/ตำบล'+$('#txt-sub_district').val()+' '+'เขต/อำเภอ'+$('#district :selected').html()+' '+'จังหวัด'+$('#province :selected').html()+' '+$('#txt-zipcode').val())
 				if ( $('#txt-tel').val().length == 10 ) {
 					var mobile = $('#txt-tel').val();
 					$('#sum-tel').html( mobile.substr(0, 3)+'-'+mobile.substr(3, 4)+'-'+mobile.substr(7, 3) );
 				}
 				$('#sum-email').html($('#txt-email').val())
+				
+				var modal = $('#dv-claim_info');
+				if (typeof fileName != 'undefined') {
+					for(i=0; i<=3; i++) {
+						modal.find('.img'+i+' img').attr('src', 'https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg');
+						modal.find('.img'+i+' a').attr('href', '#');
+						if (typeof fileName[i] != 'undefined' && fileName[i] != '') {
+							modal.find('.img'+i).show().find('img').attr('src', fileName[i]);
+							modal.find('.img'+i).show().find('a').attr('href', fileName[i]);
+						}
+						else {
+							modal.find('.img'+i).hide();
+						}
+					}
+				}
+				else {
+					for(i=0; i<=3; i++) modal.find('.img'+i).hide();
+				}
 				
 				$('#form-loading').slideUp();
 				$('#dv-claim_info').slideDown();

@@ -66,10 +66,28 @@
 				<p id="claim-ClaimStatus"></p>
 				<p id="claim-ProductName"></p>
 				<p id="claim-Barcode"></p>
-				<img src="https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg" alt="..." class="img-rounded">
-				<img src="https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg" alt="..." class="img-rounded">
-				<img src="https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg" alt="..." class="img-rounded">
-				<img src="https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg" alt="..." class="img-rounded">
+				<div class="row">
+					 <div class="col-xs-3 col-md-3 img0">
+						<a href="">
+						<img src="" class="img-responsive img-rounded">
+						</a>
+					</div>
+					<div class="col-xs-3 col-md-3 img1">
+						<a href="">
+						<img src="" class="img-responsive img-rounded">
+						</a>
+					</div>
+					<div class="col-xs-3 col-md-3 img2">
+						<a href="">
+						<img src="" class="img-responsive img-rounded">
+						</a>
+					</div>
+					<div class="col-xs-3 col-md-3 img3">
+						<a href="">
+						<img src="" class="img-responsive img-rounded">
+						</a>
+					</div>
+				</div>
 				<div class="col-md-6 col-md-offset-2"><strong class="margin-top-15">ที่อยู่</strong></div>
 				<div class="col-md-6 col-md-offset-3">
 					<p id="sum-name"></p>
