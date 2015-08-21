@@ -35,7 +35,7 @@ $(function() {
 			$('#dv-claim').hide();
 			$('#form-success').hide();
 			$('#dv-claim_info').hide();
-			$("#tab-warranty-load").show();
+			$("#tab-warranty-load").slideDown();
 		}
 	});
 	$("#txt-barcode").keyup(function(event){ 
