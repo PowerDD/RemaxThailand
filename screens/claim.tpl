@@ -66,11 +66,14 @@
 				<p id="claim-ClaimStatus"></p>
 				<p id="claim-ProductName"></p>
 				<p id="claim-Barcode"></p>
+				<div class="col-md-6 col-md-offset-2"><strong class="margin-top-15">ที่อยู่</strong></div>
 				<div class="col-md-6 col-md-offset-3">
-					<p id="">dgsdghdf</p>
-					<p id="">fghdfgh</p>
-					<p id="">ghfdghdf</p>
-					<p id="">dfghdfghdfdrftu</p>
+					<p id="sum-name"></p>
+					<p id="sum-address"></p>
+					<p id="sum-address2"></p>
+					<p id="sum-location"></p>
+					<p id="sum-tel"></p>
+					<p id="sum-email"></p>
 				</div>
 			 </div>
 		</div>
@@ -90,7 +93,7 @@
 				</div>
 			</form>
 
-			<strong class="margin-top-15">ที่อยู่ในการจัดส่งสินค้าเคลม</strong>
+			<strong class="margin-top-15">ที่อยู่</strong>
 			<form id="customer_address" class="form-horizontal" role="form">
 				<div class="form-group">
 					<label class="col-sm-3 control-label" for="txt-name">ชื่อ</label>

@@ -24,16 +24,17 @@ $(function() {
 			$('#customer_address .txt-input').each(function(){
 				$(this).val("") 
 			});
-			$('#claim_description').val("");
-			$('#file1').val("");
-			$('#file2').val("");
-			$('#file3').val("");
-			$('#file4').val("");
+			$('#claim_description').val('');
+			$('#file1').val('');
+			$('#file2').val('');
+			$('#file3').val('');
+			$('#file4').val('');
 			warrantyInfo(0); 
 			$("#tab-warranty-not_exist").hide();
 			$("#tab-warranty-info").hide();
 			$('#dv-claim').hide();
 			$('#form-success').hide();
+			$('#dv-claim_info').hide();
 			$("#tab-warranty-load").show();
 		}
 	});
@@ -161,11 +162,11 @@ function loadZipCode(){
 };
 
 function uploadFile(){
-	
+	window.scrollTo(0 ,0);
 	$('#dv-claim').slideUp();
 	$('#tab-warranty-info').slideUp();
 	$('#form-loading').fadeIn();
-
+	
 	fileCount = 0;
 	allProgress = 0;
 	fileName = '';
@@ -267,17 +268,19 @@ function addClaim(){
 			if (data.success) {
 				$('#claim-Massage').html('กำลังดำเนินการตรวจสอบข้อมูล ท่านสามารถตรวจสอบสถานะการดำเนินการได้จากเลขที่การเคลม').addClass('text-success');
 				$('#claim-ClaimNo').html('<b>Claim No. </b>'+ data.result.ClaimNo);
-				$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+ (data.result.Status == 'CI' ? 'ตรวจสอบข้อมูล' : '-'));
+				$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+ (data.result.Status == 'CI' ? ' <u>ตรวจสอบข้อมูล </u>' : '-'));
 				$('#claim-ProductName').html($('#tab-ProductName').html());
 				$('#claim-Barcode').html($('#tab-Barcode').html());
-				/*var isBkk = $('#province :selected').val() == '1';
-				$('.txt-sub_district').text( ((isBkk) ? $('#msg-kwang').val() : $('#msg-tambon').val() ) + (( $('#language').val() == 'en' ) ? ' ' : '') + $('.txt-sub_district').text() );
-				$('.txt-district').text( ((isBkk) ? $('#msg-khet').val() : $('#msg-amphoe').val()) + (( $('#language').val() == 'en' ) ? ' ' : '') + $('#district :selected').text() );
-				$('.txt-province').text( ((isBkk) ? '' : (( $('#language').val() == 'en' ) ? $('#province :selected').text()+' '+$('#msg-province').val() : $('#msg-province').val() + $('#province :selected').text()) ) );
-				if ( $('.txt-tel').text().length == 10 ) {
-					var mobile = $('.txt-tel').text();
-					$('.txt-tel').html( mobile.substr(0, 3)+'-'+mobile.substr(3, 4)+'-'+mobile.substr(7, 3) );
-				}*/
+
+				$('#sum-name').html('คุณ '+$('#txt-firstname').val()+' '+$('#txt-lastname').val()+($('#txt-nickname').val() != '' ? + ' ('+$('#txt-nickname').val()+')' : ''));
+				$('#sum-address').html($('#txt-address').val())
+				$('#sum-address2').html($('#txt-address2').val())
+				$('#sum-location').html('แขวง/ตำบล '+$('#txt-sub_district').val()+' '+'เขต/อำเภอ '+$('#district :selected').html()+' '+'จังหวัด '+$('#province :selected').html()+' '+$('#txt-zipcode').val())
+				if ( $('#txt-tel').val().length == 10 ) {
+					var mobile = $('#txt-tel').val();
+					$('#sum-tel').html( mobile.substr(0, 3)+'-'+mobile.substr(3, 4)+'-'+mobile.substr(7, 3) );
+				}
+				$('#sum-email').html($('#txt-email').val())
 				
 				$('#form-loading').slideUp();
 				$('#dv-claim_info').slideDown();
