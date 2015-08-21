@@ -68,27 +68,27 @@
 				<p id="claim-Barcode"></p>
 				<div class="row">
 					 <div class="col-xs-3 col-md-3 img0">
-						<a href="">
+						<a target="_blank" href="">
 						<img src="" class="img-responsive img-rounded">
 						</a>
 					</div>
 					<div class="col-xs-3 col-md-3 img1">
-						<a href="">
+						<a target="_blank" href="">
 						<img src="" class="img-responsive img-rounded">
 						</a>
 					</div>
 					<div class="col-xs-3 col-md-3 img2">
-						<a href="">
+						<a target="_blank" href="">
 						<img src="" class="img-responsive img-rounded">
 						</a>
 					</div>
 					<div class="col-xs-3 col-md-3 img3">
-						<a href="">
+						<a target="_blank" href="">
 						<img src="" class="img-responsive img-rounded">
 						</a>
 					</div>
 				</div>
-				<div class="col-md-6 col-md-offset-2"><strong class="margin-top-15">ที่อยู่</strong></div>
+				<div class="col-md-6 col-md-offset-2 margin-top-15"><strong class="margin-top-15">ที่อยู่</strong></div>
 				<div class="col-md-6 col-md-offset-3">
 					<p id="sum-name"></p>
 					<p id="sum-address"></p>
