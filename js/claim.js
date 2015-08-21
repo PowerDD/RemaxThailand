@@ -104,21 +104,21 @@ function warrantyInfo(i){
 						$('#tab-warranty-info').removeClass('panel-warning');
 						$('#tab-warranty-info').addClass('panel-success');
 						
-						$('#dv-claim').show();
+						$('#dv-claim').slideDown();
 					}
-					$('#tab-warranty-info').show();					
-					$("#tab-warranty-load").hide();						
+					$('#tab-warranty-info').slideDown();					
+					$("#tab-warranty-load").slideUp();						
 				}
 				
 			}else{
-				$('#tab-warranty-not_exist').show();
-				$("#tab-warranty-load").hide();
+				$('#tab-warranty-not_exist').slideDown();
+				$("#tab-warranty-load").slideUp();
 			}
 			
 		},'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 	}else if( i = 4){
-			$('#tab-warranty-not_exist').show();
-			$("#tab-warranty-load").hide();
+			$('#tab-warranty-not_exist').slideDown();
+			$("#tab-warranty-load").slideUp();
 	}
 };
 function loadProvince(){
