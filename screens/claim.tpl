@@ -66,6 +66,10 @@
 				<p id="claim-ClaimStatus"></p>
 				<p id="claim-ProductName"></p>
 				<p id="claim-Barcode"></p>
+				<img src="https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg" alt="..." class="img-rounded">
+				<img src="https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg" alt="..." class="img-rounded">
+				<img src="https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg" alt="..." class="img-rounded">
+				<img src="https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg" alt="..." class="img-rounded">
 				<div class="col-md-6 col-md-offset-2"><strong class="margin-top-15">ที่อยู่</strong></div>
 				<div class="col-md-6 col-md-offset-3">
 					<p id="sum-name"></p>

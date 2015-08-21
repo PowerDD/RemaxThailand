@@ -185,8 +185,8 @@ function upload(file, index){
 	var fd = new FormData();
 	fd.append("file", file);
 	fd.append("index", index);
-	fd.append("mobile", $.trim($('#mobile').val()));
-	fd.append("tags", 'claim,'+$.trim($('#firstname').val())+','+$.trim($('#lastname').val())+','+$('#province :selected').html()+','+$.trim($('#mobile').val()) );
+	fd.append("mobile", $.trim($('#txt-tel').val()));
+	fd.append("tags", 'claim,'+$.trim($('#txt-firstname').val())+','+$.trim($('#txt-lastname').val())+','+$('#province :selected').html()+','+$.trim($('#txt-tel').val()) );
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', 'https://powerupload.azurewebsites.net', true);
 
