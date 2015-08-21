@@ -283,14 +283,13 @@ function addClaim(){
 				$('#sum-email').html($('#txt-email').val())
 				
 				var modal = $('#dv-claim_info');
-				var file = $.parseJSON(fileName);
-				if (typeof file != 'undefined') {
+				if (typeof data.Images != 'undefined') {
 					for(i=0; i<=3; i++) {
 						modal.find('.img'+i+' img').attr('src', 'https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg');
 						modal.find('.img'+i+' a').attr('href', '#');
-						if (typeof file[i] != 'undefined' && file[i] != '') {
-							modal.find('.img'+i).show().find('img').attr('src', file[i]);
-							modal.find('.img'+i).show().find('a').attr('href', file[i]);
+						if (typeof data.Images[i] != 'undefined' && data.Images[i] != '') {
+							modal.find('.img'+i).show().find('img').attr('src', data.Images[i]);
+							modal.find('.img'+i).show().find('a').attr('href', data.Images[i]);
 						}
 						else {
 							modal.find('.img'+i).hide();
