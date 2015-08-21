@@ -5,7 +5,8 @@ var fileCount = 0;
 var fileProgress = {};
 var fileName = '';
 var allProgress = 0;
-
+var chkClaim = false;
+var claimInfo;
 $(function() {
 	loadProvince();
 	$('#txt-tel').ForceNumericOnly();
@@ -51,12 +52,27 @@ $(function() {
 	$("#btn-submit_claiminfo").click(function(){
 		submitClaim();
 	});
+	
+	$("#btn-claimno").click(function(){
+		if($('#txt-claimno').val() == ''){
+			$('#txt-claimno').focus();
+		}else{
+			chkClaim = true;
+			claimInfo();
+			$("#tab-warranty-not_exist").hide();
+			$("#tab-warranty-info").hide();
+			$('#dv-claim').hide();
+			$('#form-success').hide();
+			$('#dv-claim_info').hide();
+			$("#tab-warranty-load").slideDown();
+		}
+	});
 });
-function warrantyInfo(i){
+function warrantyInfo(i, Barcode){
 	if(i < 4 ){
 		$.post('http://power-api-test.azurewebsites.net/warranty/info', {
 			apiKey: apiKey,
-			barcode: $.trim($('#txt-barcode').val())
+			barcode: typeof Barcode != 'undefined' && Barcode != '' ? Barcode : $.trim($('#txt-barcode').val());
 		}, function(data){
 			i++
 			if (data.success) {
@@ -64,50 +80,90 @@ function warrantyInfo(i){
 					warrantyInfo(i);
 				}
 				else{
-					$('#product').html(data.result.ProductID);
-					$('#barcode').html(data.result.Barcode);
-					$('#tab-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.ProductName);
-					$('#tab-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.Barcode);
-					$('#tab-CustomerName').html(data.result.CustomerName);
-					var sellDateYearTH = parseInt(moment(data.result.SellDate).lang('th').add(3600*7, 'seconds').format('YYYY'))+543;
-					var sellDateMM = moment(data.result.SellDate).locale('th').add(3600*7, 'seconds').format('DD MMMM'); 
-					$('#tab-SellDate').html(sellDateMM+' '+sellDateYearTH);
-					var expireDateYearTH = parseInt(moment(data.result.ExpireDate).lang('th').add(3600*7, 'seconds').format('YYYY'))+543;
-					var expireDateMM = moment(data.result.ExpireDate).locale('th').add(3600*7, 'seconds').format('DD MMMM');
-					if(data.result.Warranty == 0){
-						$('#tab-warrantyStatus').html('<b><u>สินค้าไม่มีประกัน</u><b>');
-						$('#tab-warrantyStatus').removeClass('text-success');
-						$('#tab-warrantyStatus').removeClass('text-danger');
-						$('#tab-warrantyStatus').addClass('text-warning');
-						$('#tab-ExpireDate').html('');
-						$('#tab-warranty-info').removeClass('panel-success');
-						$('#tab-warranty-info').removeClass('panel-danger');
-						$('#tab-warranty-info').addClass('panel-warning');
-					}
-					else if(data.result.Warranty > 0 && data.result.DaysRemaining <= 0){					
-						$('#tab-warrantyStatus').html('<b><u>หมดประกัน</u><b>');
-						$('#tab-warrantyStatus').removeClass('text-success');
-						$('#tab-warrantyStatus').removeClass('text-warning');
-						$('#tab-warrantyStatus').addClass('text-danger');
-						$('#tab-ExpireDate').html(expireDateMM+' '+expireDateYearTH);
-						$('#tab-warranty-info').removeClass('panel-success');
-						$('#tab-warranty-info').removeClass('panel-warning');
-						$('#tab-warranty-info').addClass('panel-danger');
-					}
-					else{
-						$('#tab-warrantyStatus').html('<b><u>อยู่ในประกัน</u><b>');
-						$('#tab-warrantyStatus').removeClass('text-danger');
-						$('#tab-warrantyStatus').removeClass('text-warning');
-						$('#tab-warrantyStatus').addClass('text-success');							
-						$('#tab-ExpireDate').html(expireDateMM+' '+expireDateYearTH);
-						$('#tab-warranty-info').removeClass('panel-danger');
-						$('#tab-warranty-info').removeClass('panel-warning');
-						$('#tab-warranty-info').addClass('panel-success');
+					if (chkClaim){
+						$('#claim-Massage').html('ข้อมูลล่าสุด ').addClass('text-success');
+						$('#claim-ClaimNo').html('<b>Claim No. </b>'+ claimInfo.ClaimNo);
+						$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+ (claimInfo.Status == 'CI' ? ' <u>ตรวจสอบข้อมูล </u>' : '-'));
+						$('#claim-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.ProductName);
+						$('#claim-Barcode').html($('<b>หมายเลข Barcode : </b>'+data.result.Barcode);
+
+						$('#sum-name').html('คุณ 'claimInfo.Firstname+' '+claimInfo.Lastname+(typeof claimInfo.Nickname != 'undefined' && claimInfo.Nickname != '' ? ' ('+claimInfo.Nickname+')' : ''));
+						$('#sum-address').html(claimInfo.Address)
+						$('#sum-address2').html(claimInfo.Address2)
+						$('#sum-location').html('แขวง/ตำบล'+claimInfo.Sub_District+' '+'เขต/อำเภอ'+claimInfo.district+' '+'จังหวัด'+claimInfo.Province+' '+claimInfo.Zipcode)
+						if ( claimInfo.Tel.length == 10 ) {
+							var mobile = claimInfo.Tel;
+							$('#sum-tel').html('เบอร์โทร '+ mobile.substr(0, 3)+'-'+mobile.substr(3, 4)+'-'+mobile.substr(7, 3) );
+						}else{$('#sum-tel').html('เบอร์โทร '+claimInfo.Tel)}
+						$('#sum-email').html(typeof claimInfo.Email != 'undefined' && claimInfo.Email != ''? 'อีเมล '+claimInfo.Email : '')
 						
-						$('#dv-claim').slideDown();
-					}
-					$('#tab-warranty-info').slideDown();					
-					$("#tab-warranty-load").slideUp();						
+						var modal = $('#dv-claim_info');
+						var file = convertDataToArray('|', claimInfo.images);
+						if (typeof file != 'undefined') {
+							for(i=0; i<=3; i++) {
+								modal.find('.img'+i+' img').attr('src', 'https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg');
+								modal.find('.img'+i+' a').attr('href', '#');
+								if (typeof file[i] != 'undefined' && file[i] != '') {
+									modal.find('.img'+i).show().find('img').attr('src', file[i]);
+									modal.find('.img'+i).show().find('a').attr('href', file[i]);
+								}
+								else {
+									modal.find('.img'+i).hide();
+								}
+							}
+						}
+						else {
+							for(i=0; i<=3; i++) modal.find('.img'+i).hide();
+						}
+						
+						$('#form-loading').slideUp();
+						$('#dv-claim_info').slideDown();
+					}else{
+						$('#product').html(data.result.ProductID);
+						$('#barcode').html(data.result.Barcode);
+						$('#tab-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.ProductName);
+						$('#tab-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.Barcode);
+						$('#tab-CustomerName').html(data.result.CustomerName);
+						var sellDateYearTH = parseInt(moment(data.result.SellDate).lang('th').add(3600*7, 'seconds').format('YYYY'))+543;
+						var sellDateMM = moment(data.result.SellDate).locale('th').add(3600*7, 'seconds').format('DD MMMM'); 
+						$('#tab-SellDate').html(sellDateMM+' '+sellDateYearTH);
+						var expireDateYearTH = parseInt(moment(data.result.ExpireDate).lang('th').add(3600*7, 'seconds').format('YYYY'))+543;
+						var expireDateMM = moment(data.result.ExpireDate).locale('th').add(3600*7, 'seconds').format('DD MMMM');
+						if(data.result.Warranty == 0){
+							$('#tab-warrantyStatus').html('<b><u>สินค้าไม่มีประกัน</u><b>');
+							$('#tab-warrantyStatus').removeClass('text-success');
+							$('#tab-warrantyStatus').removeClass('text-danger');
+							$('#tab-warrantyStatus').addClass('text-warning');
+							$('#tab-ExpireDate').html('');
+							$('#tab-warranty-info').removeClass('panel-success');
+							$('#tab-warranty-info').removeClass('panel-danger');
+							$('#tab-warranty-info').addClass('panel-warning');
+						}
+						else if(data.result.Warranty > 0 && data.result.DaysRemaining <= 0){					
+							$('#tab-warrantyStatus').html('<b><u>หมดประกัน</u><b>');
+							$('#tab-warrantyStatus').removeClass('text-success');
+							$('#tab-warrantyStatus').removeClass('text-warning');
+							$('#tab-warrantyStatus').addClass('text-danger');
+							$('#tab-ExpireDate').html(expireDateMM+' '+expireDateYearTH);
+							$('#tab-warranty-info').removeClass('panel-success');
+							$('#tab-warranty-info').removeClass('panel-warning');
+							$('#tab-warranty-info').addClass('panel-danger');
+						}
+						else{
+							$('#tab-warrantyStatus').html('<b><u>อยู่ในประกัน</u><b>');
+							$('#tab-warrantyStatus').removeClass('text-danger');
+							$('#tab-warrantyStatus').removeClass('text-warning');
+							$('#tab-warrantyStatus').addClass('text-success');							
+							$('#tab-ExpireDate').html(expireDateMM+' '+expireDateYearTH);
+							$('#tab-warranty-info').removeClass('panel-danger');
+							$('#tab-warranty-info').removeClass('panel-warning');
+							$('#tab-warranty-info').addClass('panel-success');
+							
+							$('#dv-claim').slideDown();
+						}
+						$('#tab-warranty-info').slideDown();					
+						$("#tab-warranty-load").slideUp();
+					}						
 				}
 				
 			}else{
@@ -120,6 +176,18 @@ function warrantyInfo(i){
 			$('#tab-warranty-not_exist').slideDown();
 			$("#tab-warranty-load").slideUp();
 	}
+};
+function claimInfo(){
+	$.post('http://power-api-test.azurewebsites.net/claim/info', {
+		apiKey: apiKey,
+		shop: shop,
+		id: $('#txt=claimno').val()
+	}, function(data){
+			if (data.success) {
+				claimInfo = data.result[0];
+				warrantyInfo(0, data.result[0].Barcode._);			
+			}
+	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
 function loadProvince(){
 	$.post('http://power-api-test.azurewebsites.net/province/list', {
