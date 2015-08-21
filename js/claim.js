@@ -283,7 +283,8 @@ function addClaim(){
 				$('#sum-email').html($('#txt-email').val())
 				
 				var modal = $('#dv-claim_info');
-				var file = [fileName.replace('|',',')];
+				var fileImg = fileName.replace(/|/g,',')
+				var file = [fileImg];
 				if (typeof file != 'undefined') {
 					for(i=0; i<=3; i++) {
 						modal.find('.img'+i+' img').attr('src', 'https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg');
