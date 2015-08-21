@@ -5,7 +5,7 @@ var fileCount = 0;
 var fileProgress = {};
 var fileName = '';
 var allProgress = 0;
-
+var json;
 $(function() {
 	loadProvince();
 	$('#txt-tel').ForceNumericOnly();
@@ -272,7 +272,7 @@ function addClaim(){
 				$('#claim-ProductName').html($('#tab-ProductName').html());
 				$('#claim-Barcode').html($('#tab-Barcode').html());
 
-				$('#sum-name').html('คุณ '+$('#txt-firstname').val()+' '+$('#txt-lastname').val()+($('#txt-nickname').val() != '' ? + ' ('+$('#txt-nickname').val()+')' : ''));
+				$('#sum-name').html('คุณ '+$('#txt-firstname').val()+' '+$('#txt-lastname').val()+($('#txt-nickname').val() != '' ? ' ('+$('#txt-nickname').val()+')' : ''));
 				$('#sum-address').html($('#txt-address').val())
 				$('#sum-address2').html($('#txt-address2').val())
 				$('#sum-location').html('แขวง/ตำบล'+$('#txt-sub_district').val()+' '+'เขต/อำเภอ'+$('#district :selected').html()+' '+'จังหวัด'+$('#province :selected').html()+' '+$('#txt-zipcode').val())
@@ -283,13 +283,13 @@ function addClaim(){
 				$('#sum-email').html($('#txt-email').val())
 				
 				var modal = $('#dv-claim_info');
-				if (typeof fileName != 'undefined') {
+				if (typeof json.fileName != 'undefined') {
 					for(i=0; i<=3; i++) {
 						modal.find('.img'+i+' img').attr('src', 'https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg');
 						modal.find('.img'+i+' a').attr('href', '#');
-						if (typeof fileName[i] != 'undefined' && fileName[i] != '') {
-							modal.find('.img'+i).show().find('img').attr('src', fileName[i]);
-							modal.find('.img'+i).show().find('a').attr('href', fileName[i]);
+						if (typeof json.fileName[i] != 'undefined' && json.fileName[i] != '') {
+							modal.find('.img'+i).show().find('img').attr('src', json.fileName[i]);
+							modal.find('.img'+i).show().find('a').attr('href', json.fileName[i]);
 						}
 						else {
 							modal.find('.img'+i).hide();
