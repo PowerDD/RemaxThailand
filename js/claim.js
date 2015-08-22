@@ -91,13 +91,13 @@ function warrantyInfo(i, chkBarcode){
 				else{
 					if (chkClaim){
 						var claimStatus = '';
-						if (claimInfo.Status == 'CI') claimStatus = 'ตรวจสอบข้อมูล', $('#claim-ClaimStatus').addClass('text-danger');
-						else if (claimInfo.Status == 'AP') claimStatus = 'อยู่ในเงื่อนไขการเคลม', $('#claim-ClaimStatus').addClass('text-success');
-						else if (claimInfo.Status == 'RJ') claimStatus = 'ไม่รับเคลมสินค้า', $('#claim-ClaimStatus').addClass('text-danger');
-						else if (claimInfo.Status == 'AM') claimStatus = 'กรุณาเพิ่มข้อมูลรายละเอียด', $('#claim-ClaimStatus').addClass('text-danger');
-						else if (claimInfo.Status == 'CP') claimStatus = 'สินค้าจัดส่งโดยลูกค้า', $('#claim-ClaimStatus').addClass('text-warning');
-						else if (claimInfo.Status == 'RP') claimStatus = 'ระบบได้รับสินค้าเคลมแล้ว', $('#claim-ClaimStatus').addClass('text-success');
-						else if (claimInfo.Status == 'SH') claimStatus = 'จัดส่งสินค้าเคลมให้ลูกค้า', $('#claim-ClaimStatus').addClass('text-success');
+						if (claimInfo.Status == 'CI') claimStatus = 'ตรวจสอบข้อมูล', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
+						else if (claimInfo.Status == 'AP') claimStatus = 'อยู่ในเงื่อนไขการเคลม', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-success');
+						else if (claimInfo.Status == 'RJ') claimStatus = 'ไม่รับเคลมสินค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
+						else if (claimInfo.Status == 'AM') claimStatus = 'กรุณาเพิ่มข้อมูลรายละเอียด', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
+						else if (claimInfo.Status == 'CP') claimStatus = 'สินค้าจัดส่งโดยลูกค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-warning');
+						else if (claimInfo.Status == 'RP') claimStatus = 'ระบบได้รับสินค้าเคลมแล้ว', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-success');
+						else if (claimInfo.Status == 'SH') claimStatus = 'จัดส่งสินค้าเคลมให้ลูกค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-success');
 						else claimStatus = 'กรุณาติดต่อ ฝ่ายเคลม โทร 081- 828-8833 / 02-1567199 ';
 												
 						//$('#claim-Massage').html('ข้อมูลล่าสุด ').addClass('text-success');
