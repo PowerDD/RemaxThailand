@@ -212,7 +212,8 @@ function claimInfomation(){
 				claimInfo = data.result[0];
 				warrantyInfo(0, data.result[0].Barcode);			
 			}else{
-				$('#tab-warranty-not_exist').hide();
+				setTimeout('$("#tab-warranty-load").show()',3000);
+				$('#tab-warranty-not_exist').slideDown();
 				$("#tab-warranty-load").slideUp();
 				
 			}
