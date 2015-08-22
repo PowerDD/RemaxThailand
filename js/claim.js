@@ -36,6 +36,7 @@ $(function() {
 			$('#dv-claim').hide();
 			$('#form-success').hide();
 			$('#dv-claim_info').hide();
+			$('#dv-track').hide();//
 			$("#tab-warranty-load").slideDown();
 		}
 	});
@@ -70,6 +71,7 @@ $(function() {
 			$('#dv-claim').hide();
 			$('#form-success').hide();
 			$('#dv-claim_info').hide();
+			$('#dv-track').hide();
 			$("#tab-warranty-load").slideDown();
 		}
 	});

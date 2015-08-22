@@ -58,7 +58,7 @@
 				</div>
 			 </div>
 		</div>
-		<div id="dv-claim_info" class="panel panel-success hidden">
+		<div id="dv-claim_info" class="panel panel-default hidden">
 			<div class="panel-heading">รายละเอียด</div>
 			<div class="panel-body">
 				<div id="claim-Massage" role="alert" class="alert alert-success text-center"></div>
