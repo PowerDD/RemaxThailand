@@ -195,15 +195,15 @@
 				<p><b>Remax   Thailand</b></p>
 				<p><b>200/38   ลภาวัน 17  ต.บางรักน้อย  อ.เมือง จ.นนทบุรี  11000</b></p>
 				<p><b>โทร  081-828-8833 / 02- 1567199 </b></p>
-				<p class="text-danger">* กรุณาแนบใบเคลมสินค้า หรือ ระบุ Claim No. พร้อมสินค้าเคลมที่ส่งมา</p>
+				<p class="text-danger">* กรุณาแนบใบเคลมสินค้า หรือ ระบุเลขที่เคลม พร้อมสินค้าเคลมที่ส่งมา</p>
 			</div>
 
-			<form id="customer_track" class="form-horizontal" role="form">
+			<form id="customer_track" class="form-horizontal text-center" role="form">
 				<div class="form-group col-sm-6">
 					<label class="control-label" for="txt-trackno">กรุณาระบุ Trank No./ EMS</label>
 					<input id="txt-trackno" class="form-control txt-input txt-require" type="text" value="" placeholder="Trank No./ EMS"></input>
 				</div>
-				<div class="form-group text-center">
+				<div class="form-group col-sm-6">
 					<span id="btn-submit_trackno" class="btn btn-warning">ยืนยันข้อมูล</span>
 				</div>
 			</form>
