@@ -37,7 +37,7 @@ $(function() {
 			$('#form-success').hide();
 			$('#dv-claim_info').hide();
 			$('#dv-track').hide();//
-			$("#tab-warranty-load").slideDown();
+			$("#tab-warranty-load").fadeIn();
 		}
 	});
 	$("#txt-barcode").keyup(function(event){ 
@@ -72,7 +72,7 @@ $(function() {
 			$('#form-success').hide();
 			$('#dv-claim_info').hide();
 			$('#dv-track').hide();
-			$("#tab-warranty-load").slideDown();
+			$("#tab-warranty-load").fadeIn();
 		}
 	});
 });
