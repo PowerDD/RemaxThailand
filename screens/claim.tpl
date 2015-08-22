@@ -188,6 +188,28 @@
 				</div>
 			</form>
 		</div>
+		<div id="dv-track" class="hidden">
+			<div class="well">
+				<p>สินค้าที่ส่งเคลมต้องแพ็คในบรรจุภัณฑ์ที่ปลอดภัยเพื่อป้องกันสินค้าเสียหายระหว่างการขนส่ง </p>
+				<p>ส่งมาตามที่อยู่บริษัท ระบุหน้ากล่อง (แผนกเคลมสินค้า)</p>
+				<p><b>Remax   Thailand</b></p>
+				<p><b>200/38   ลภาวัน 17  ต.บางรักน้อย  อ.เมือง จ.นนทบุรี  11000</b></p>
+				<p><b>โทร  081-828-8833 / 02- 1567199 </b></p>
+			</div>
+
+			<form id="customer_track" class="form-horizontal" role="form">
+				<div id="alert-claim_info" role="alert" class="alert alert-danger text-center hidden margin-bottom-30"> กรุณาแนบใบเคลมสินค้า หรือ ระบุ Claim No. พร้อมสินค้าเคลมที่ส่งมา</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="txt-trackno">กรุณาระบุ Trank No./ EMS</label>
+					<div class="col-sm-6">
+					<input id="txt-trackno" class="form-control txt-input txt-require" type="text" value="" placeholder="Trank No./ EMS"></input>
+					</div>
+				</div>
+				<div class="form-group text-center">
+					<span id="btn-submit_trackno class="btn btn-warning">ยืนยันข้อมูล</span>
+				</div>
+			</form>
+		</div>
 		<div id="form-loading" class="row hidden">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10">	    
 				<div class="alert alert-info text-center margin-bottom-0">			
@@ -200,14 +222,6 @@
 				</div>
 			</div>
 		 </div>
-
-		<div id="form-success" class="row hidden">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10">	    
-				<div class="alert alert-info text-center margin-bottom-0">
-				ขอบคุณสำหรับข้อมูล จะมีเจ้าหน้าที่พิจารณา และติดต่อท่านกลับไปค่ะ
-				</div>
-			</div>
-		</div>
 	</div>
 	</div>
 	

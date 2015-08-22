@@ -70,7 +70,6 @@ $(function() {
 });
 function warrantyInfo(i, chkBarcode){
 	var barcode_info = ((typeof chkBarcode != 'undefined' && chkBarcode != '') ? $.trim(chkBarcode) : $.trim($('#txt-barcode').val()));
-	console.log(barcode_info);
 	if(i < 4 ){
 		$.post('http://power-api-test.azurewebsites.net/warranty/info', {
 			apiKey: apiKey,
@@ -83,9 +82,19 @@ function warrantyInfo(i, chkBarcode){
 				}
 				else{
 					if (chkClaim){
-						$('#claim-Massage').html('ข้อมูลล่าสุด ').addClass('text-success');
+						var claimStatus = '';
+						if (claimInfo.Status == 'CI') claimStatus = 'ตรวจสอบข้อมูล';
+						else if (claimInfo.Status == 'AP') claimStatus = 'รับเคลมสินค้า';
+						else if (claimInfo.Status == 'RJ') claimStatus = 'ไม่รับเคลมสินค้า';
+						else if (claimInfo.Status == 'AM') claimStatus = 'กรุณาเพิ่มข้อมูลรายละเอียด';
+						else if (claimInfo.Status == 'CP') claimStatus = 'สินค้าจัดส่งโดยลูกค้า';
+						else if (claimInfo.Status == 'RP') claimStatus = 'ระบบได้รับสินค้าเคลมแล้ว';
+						else if (claimInfo.Status == 'SH') claimStatus = 'จัดส่งสินค้าเคลมให้ลูกค้า';
+						else claimStatus = 'กรุณาติดต่อ ฝ่ายเคลม โทร 081- 828-8833 / 02-1567199 ';
+												
+						//$('#claim-Massage').html('ข้อมูลล่าสุด ').addClass('text-success');
 						$('#claim-ClaimNo').html('<b>Claim No. </b>'+ claimInfo.ClaimNo);
-						$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+ (claimInfo.Status == 'CI' ? ' <u>ตรวจสอบข้อมูล </u>' : '-'));
+						$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+ ('<u>'+ claimStatus +'</u>');
 						$('#claim-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.ProductName);
 						$('#claim-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.Barcode);
 
@@ -118,8 +127,12 @@ function warrantyInfo(i, chkBarcode){
 							for(i=0; i<=3; i++) modal.find('.img'+i).hide();
 						}
 						
-						$('#form-loading').slideUp();
+						$('#tab-warranty-load').slideUp();
 						$('#dv-claim_info').slideDown();
+						if (claimStatus == 'AP') {
+							$('#dv-track').slideDown();
+						}
+						
 						chkClaim = false;
 					}else{
 						$('#product').html(data.result.ProductID);
