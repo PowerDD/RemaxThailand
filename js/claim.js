@@ -94,7 +94,7 @@ function warrantyInfo(i, chkBarcode){
 												
 						//$('#claim-Massage').html('ข้อมูลล่าสุด ').addClass('text-success');
 						$('#claim-ClaimNo').html('<b>Claim No. </b>'+ claimInfo.ClaimNo);
-						$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+ ('<u>'+ claimStatus +'</u>');
+						$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+'<u>'+ claimStatus +'</u>');
 						$('#claim-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.ProductName);
 						$('#claim-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.Barcode);
 
