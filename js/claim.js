@@ -72,7 +72,7 @@ function warrantyInfo(i, chkBarcode){
 	if(i < 4 ){
 		$.post('http://power-api-test.azurewebsites.net/warranty/info', {
 			apiKey: apiKey,
-			barcode: chkBarcode// (typeof chkBarcode != 'undefined' && chkBarcode != '') ? $.trim(chkBarcode) : $.trim($('#txt-barcode').val());
+			barcode: (typeof chkBarcode != 'undefined' && chkBarcode != '') ? $.trim(chkBarcode) : $.trim($('#txt-barcode').val());
 		}, function(data){
 			i++
 			if (data.success) {
@@ -85,7 +85,7 @@ function warrantyInfo(i, chkBarcode){
 						$('#claim-ClaimNo').html('<b>Claim No. </b>'+ claimInfo.ClaimNo);
 						$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+ (claimInfo.Status == 'CI' ? ' <u>ตรวจสอบข้อมูล </u>' : '-'));
 						$('#claim-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.ProductName);
-						$('#claim-Barcode').html($('<b>หมายเลข Barcode : </b>'+data.result.Barcode);
+						$('#claim-Barcode').html($('<b>หมายเลข Barcode : </b>'+data.result.Barcode));
 
 						$('#sum-name').html('คุณ 'claimInfo.Firstname+' '+claimInfo.Lastname+(typeof claimInfo.Nickname != 'undefined' && claimInfo.Nickname != '' ? ' ('+claimInfo.Nickname+')' : ''));
 						$('#sum-address').html(claimInfo.Address)
