@@ -201,9 +201,11 @@
 			<form id="customer_track" class="form-horizontal text-center" role="form">
 				<div class="form-group">
 					<label class="control-label col-sm-6" for="txt-trackno">กรุณาระบุ Trank No./ EMS</label>
-					<input id="txt-trackno" class="form-control col-sm-6 txt-input txt-require" type="text" value="" placeholder="Trank No./ EMS"></input>
+					<div class="col-sm-6">
+						<input id="txt-trackno" class="form-control txt-input txt-require" type="text" value="" placeholder="Trank No./ EMS"></input>
+					</div>
 				</div>
-				<div class="form-group col-sm-6">
+				<div class="form-group text-center">
 					<span id="btn-submit_trackno" class="btn btn-warning">ยืนยันข้อมูล</span>
 				</div>
 			</form>
