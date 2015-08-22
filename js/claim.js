@@ -69,10 +69,11 @@ $(function() {
 	});
 });
 function warrantyInfo(i, chkBarcode){
+	var barcode_info = ((typeof chkBarcode != 'undefined' && chkBarcode != '') ? $.trim(chkBarcode) : $.trim($('#txt-barcode').val()));
 	if(i < 4 ){
 		$.post('http://power-api-test.azurewebsites.net/warranty/info', {
 			apiKey: apiKey,
-			barcode: ((typeof chkBarcode != 'undefined' && chkBarcode != '') ? $.trim(chkBarcode) : $.trim($('#txt-barcode').val()));
+			barcode: 's'
 		}, function(data){
 			i++
 			if (data.success) {
