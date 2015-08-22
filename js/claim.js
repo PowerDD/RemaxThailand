@@ -182,7 +182,7 @@ function claimInfo(){
 	$.post('http://power-api-test.azurewebsites.net/claim/info', {
 		apiKey: apiKey,
 		shop: shop,
-		id: $('#txt=claimno').val()
+		id: $('#txt-claimno').val()
 	}, function(data){
 			if (data.success) {
 				claimInfo = data.result[0];
