@@ -131,7 +131,7 @@ function warrantyInfo(i, chkBarcode){
 						$('#tab-warranty-load').slideUp();
 						$('#dv-claim_info').slideDown();
 						if (claimStatus == 'AP') {
-							$('#dv-track').slideDown();
+							$('#dv-track').show();
 						}
 						
 						chkClaim = false;
