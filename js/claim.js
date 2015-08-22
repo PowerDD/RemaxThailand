@@ -188,7 +188,7 @@ function claimInfomation(){
 	}, function(data){
 			if (data.success) {
 				claimInfo = data.result[0];
-				warrantyInfo(0, data.result[0].Barcode._);			
+				warrantyInfo(0, data.result[0].Barcode);			
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
