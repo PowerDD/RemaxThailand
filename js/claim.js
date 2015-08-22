@@ -89,18 +89,18 @@ function warrantyInfo(i, chkBarcode){
 				else{
 					if (chkClaim){
 						var claimStatus = '';
-						if (claimInfo.Status == 'CI') claimStatus = 'ตรวจสอบข้อมูล';
-						else if (claimInfo.Status == 'AP') claimStatus = 'รับเคลมสินค้า';
-						else if (claimInfo.Status == 'RJ') claimStatus = 'ไม่รับเคลมสินค้า';
-						else if (claimInfo.Status == 'AM') claimStatus = 'กรุณาเพิ่มข้อมูลรายละเอียด';
-						else if (claimInfo.Status == 'CP') claimStatus = 'สินค้าจัดส่งโดยลูกค้า';
-						else if (claimInfo.Status == 'RP') claimStatus = 'ระบบได้รับสินค้าเคลมแล้ว';
-						else if (claimInfo.Status == 'SH') claimStatus = 'จัดส่งสินค้าเคลมให้ลูกค้า';
+						if (claimInfo.Status == 'CI') claimStatus = 'ตรวจสอบข้อมูล', $('#claim-ClaimStatus').addClass('text-danger');
+						else if (claimInfo.Status == 'AP') claimStatus = 'อยู่ในเงื่อนไขการเคลม', $('#claim-ClaimStatus').addClass('text-success');
+						else if (claimInfo.Status == 'RJ') claimStatus = 'ไม่รับเคลมสินค้า', $('#claim-ClaimStatus').addClass('text-danger');
+						else if (claimInfo.Status == 'AM') claimStatus = 'กรุณาเพิ่มข้อมูลรายละเอียด', $('#claim-ClaimStatus').addClass('text-danger');
+						else if (claimInfo.Status == 'CP') claimStatus = 'สินค้าจัดส่งโดยลูกค้า', $('#claim-ClaimStatus').addClass('text-warning');
+						else if (claimInfo.Status == 'RP') claimStatus = 'ระบบได้รับสินค้าเคลมแล้ว', $('#claim-ClaimStatus').addClass('text-success');
+						else if (claimInfo.Status == 'SH') claimStatus = 'จัดส่งสินค้าเคลมให้ลูกค้า', $('#claim-ClaimStatus').addClass('text-success');
 						else claimStatus = 'กรุณาติดต่อ ฝ่ายเคลม โทร 081- 828-8833 / 02-1567199 ';
 												
 						//$('#claim-Massage').html('ข้อมูลล่าสุด ').addClass('text-success');
 						$('#claim-Massage').hide();
-						$('#claim-ClaimNo').html('<b>Claim No. </b>'+ claimInfo.ClaimNo);
+						$('#claim-ClaimNo').html('<b>เลขที่การเคลม: </b>'+ claimInfo.ClaimNo);
 						$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+'<u>'+ claimStatus +'</u>');
 						$('#claim-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.ProductName);
 						$('#claim-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.Barcode);
@@ -358,7 +358,7 @@ function addClaim(){
 	}, function(data){
 			if (data.success) {
 				$('#claim-Massage').html('กำลังดำเนินการตรวจสอบข้อมูล ท่านสามารถตรวจสอบสถานะการดำเนินการได้จากเลขที่การเคลม').addClass('text-success');
-				$('#claim-ClaimNo').html('<b>Claim No. </b>'+ data.result.ClaimNo);
+				$('#claim-ClaimNo').html('<b>เลขที่การเคลม: </b>'+ data.result.ClaimNo);
 				$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+ (data.result.Status == 'CI' ? ' <u>ตรวจสอบข้อมูล </u>' : '-'));
 				$('#claim-ProductName').html($('#tab-ProductName').html());
 				$('#claim-Barcode').html($('#tab-Barcode').html());
