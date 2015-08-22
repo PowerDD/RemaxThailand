@@ -45,6 +45,12 @@ $(function() {
 		}
 	});
 	
+	$("#txt-claimno").keyup(function(event){ 
+		if(event.keyCode == 13){
+			$("#btn-claimno").click();
+		}
+	});
+	
 	$("#form-input").submit(function(e){ // Disable Enter Key //
 		return false;
 	});
