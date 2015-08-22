@@ -52,7 +52,7 @@ $(function() {
 		}
 	});
 	
-	$("#form-input").submit(function(e){ // Disable Enter Key //
+	$(document).submit(function(e){ // Disable Enter Key //
 		return false;
 	});
 	
