@@ -211,7 +211,9 @@ function claimInfomation(){
 			if (data.success) {
 				claimInfo = data.result[0];
 				warrantyInfo(0, data.result[0].Barcode);			
-			}
+			}else{
+				$('#tab-warranty-not_exist').slideDown();
+				$("#tab-warranty-load").slideUp();
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
 function loadProvince(){
