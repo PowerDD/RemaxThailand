@@ -37,7 +37,7 @@ $(function() {
 			$('#form-success').hide();
 			$('#dv-claim_info').hide();
 			$('#dv-track').hide();//
-			$("#tab-warranty-load").fadeIn();
+			$("#tab-warranty-load").slideDown();
 		}
 	});
 	$("#txt-barcode").keyup(function(event){ 
@@ -72,7 +72,7 @@ $(function() {
 			$('#form-success').hide();
 			$('#dv-claim_info').hide();
 			$('#dv-track').hide();
-			$("#tab-warranty-load").fadeIn();
+			$("#tab-warranty-load").slideDown();
 		}
 	});
 });
@@ -212,8 +212,10 @@ function claimInfomation(){
 				claimInfo = data.result[0];
 				warrantyInfo(0, data.result[0].Barcode);			
 			}else{
-				$('#tab-warranty-not_exist').fadeIn();
-				$("#tab-warranty-load").fadeOut();
+				setTimeout('$("#tab-warranty-not_exist").show()',3000);
+				$('#tab-warranty-not_exist').slideDown();
+				$("#tab-warranty-load").slideUp();
+				
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
