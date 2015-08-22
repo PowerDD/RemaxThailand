@@ -214,6 +214,7 @@ function claimInfomation(){
 			}else{
 				$('#tab-warranty-not_exist').slideDown();
 				$("#tab-warranty-load").slideUp();
+			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
 function loadProvince(){
