@@ -130,8 +130,8 @@ function warrantyInfo(i, chkBarcode){
 						
 						$('#tab-warranty-load').slideUp();
 						$('#dv-claim_info').slideDown();
-						if (claimStatus == 'AP') {
-							$('#dv-track').show();
+						if (claimInfo.Status == 'AP') {
+							$('#dv-track').slideDown();
 						}
 						
 						chkClaim = false;
