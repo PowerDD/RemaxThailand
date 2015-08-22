@@ -87,7 +87,7 @@ function warrantyInfo(i, chkBarcode){
 						$('#claim-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.ProductName);
 						$('#claim-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.Barcode);
 
-						$('#sum-name').html('คุณ 'claimInfo.Firstname+' '+claimInfo.Lastname+(typeof claimInfo.Nickname != 'undefined' && claimInfo.Nickname != '' ? ' ('+claimInfo.Nickname+')' : ''));
+						$('#sum-name').html('คุณ '+claimInfo.Firstname+' '+claimInfo.Lastname+(typeof claimInfo.Nickname != 'undefined' && claimInfo.Nickname != '' ? ' ('+claimInfo.Nickname+')' : ''));
 						$('#sum-address').html(claimInfo.Address)
 						$('#sum-address2').html(claimInfo.Address2)
 						$('#sum-location').html('แขวง/ตำบล'+claimInfo.Sub_District+' '+'เขต/อำเภอ'+claimInfo.district+' '+'จังหวัด'+claimInfo.Province+' '+claimInfo.Zipcode)
