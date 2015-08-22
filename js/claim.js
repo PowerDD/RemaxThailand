@@ -92,7 +92,7 @@ function warrantyInfo(i, chkBarcode){
 					if (chkClaim){
 						var claimStatus = '';
 						if (claimInfo.Status == 'CI') claimStatus = 'ตรวจสอบข้อมูล', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
-						else if (claimInfo.Status == 'AP') claimStatus = 'อยู่ในเงื่อนไขการเคลม', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-success');
+						else if (claimInfo.Status == 'AP') claimStatus = 'อยู่ในเงื่อนไขการเคลม', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-primary');
 						else if (claimInfo.Status == 'RJ') claimStatus = 'ไม่รับเคลมสินค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
 						else if (claimInfo.Status == 'AM') claimStatus = 'กรุณาเพิ่มข้อมูลรายละเอียด', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
 						else if (claimInfo.Status == 'CP') claimStatus = 'สินค้าจัดส่งโดยลูกค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-warning');
