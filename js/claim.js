@@ -73,7 +73,7 @@ function warrantyInfo(i, chkBarcode){
 	if(i < 4 ){
 		$.post('http://power-api-test.azurewebsites.net/warranty/info', {
 			apiKey: apiKey,
-			barcode: 's'
+			barcode: barcode_info
 		}, function(data){
 			i++
 			if (data.success) {
