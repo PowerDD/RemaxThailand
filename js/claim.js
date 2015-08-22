@@ -58,7 +58,7 @@ $(function() {
 			$('#txt-claimno').focus();
 		}else{
 			chkClaim = true;
-			claimInfo();
+			claimInfomation();
 			$("#tab-warranty-not_exist").hide();
 			$("#tab-warranty-info").hide();
 			$('#dv-claim').hide();
@@ -70,6 +70,7 @@ $(function() {
 });
 function warrantyInfo(i, chkBarcode){
 	var barcode_info = ((typeof chkBarcode != 'undefined' && chkBarcode != '') ? $.trim(chkBarcode) : $.trim($('#txt-barcode').val()));
+	console.log(barcode_info);
 	if(i < 4 ){
 		$.post('http://power-api-test.azurewebsites.net/warranty/info', {
 			apiKey: apiKey,
@@ -119,6 +120,7 @@ function warrantyInfo(i, chkBarcode){
 						
 						$('#form-loading').slideUp();
 						$('#dv-claim_info').slideDown();
+						chkClaim = false;
 					}else{
 						$('#product').html(data.result.ProductID);
 						$('#barcode').html(data.result.Barcode);
@@ -178,7 +180,7 @@ function warrantyInfo(i, chkBarcode){
 			$("#tab-warranty-load").slideUp();
 	}
 };
-function claimInfo(){
+function claimInfomation(){
 	$.post('http://power-api-test.azurewebsites.net/claim/info', {
 		apiKey: apiKey,
 		shop: shop,
