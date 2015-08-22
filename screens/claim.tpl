@@ -198,17 +198,20 @@
 				<p class="text-danger">* กรุณาแนบใบเคลมสินค้า หรือ ระบุเลขที่การเคลม พร้อมสินค้าเคลมที่ส่งมา</p>
 			</div>
 
-			<form id="customer_track" class="form-horizontal text-center" role="form">
+			<form id="customer_track" role="form" class="form-horizontal" >
 				<div class="form-group">
-					<label class="control-label col-sm-6" for="txt-trackno">กรุณาระบุ Trank No./ EMS</label>
-					<div class="col-sm-6">
-						<input id="txt-trackno" class="form-control txt-input txt-require" type="text" value="" placeholder="Trank No./ EMS"></input>
+					<div >
+						<label for="txt-trackno" class="control-label">กรุณาระบุ Trank No./ EMS</label>
+					</div>
+					<div class="col-sm-6 margin-top-5">
+						<input type="text" placeholder="Trank No./ EMS" value="" class="form-control txt-input txt-require" id="txt-trackno">
 					</div>
 				</div>
 				<div class="form-group text-center">
-					<span id="btn-submit_trackno" class="btn btn-warning">ยืนยันข้อมูล</span>
+					<span class="btn btn-warning" id="btn-submit_trackno">ยืนยันข้อมูล</span>
 				</div>
 			</form>
+			
 		</div>
 		<div id="form-loading" class="row hidden">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10">	    
