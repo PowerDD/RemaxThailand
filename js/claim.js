@@ -36,7 +36,8 @@ $(function() {
 			$('#dv-claim').hide();
 			$('#form-success').hide();
 			$('#dv-claim_info').hide();
-			$('#dv-track').hide();//
+			$('#dv-track').hide();
+			$('#alert-trackno').hide();	
 			$("#tab-warranty-load").slideDown();
 		}
 	});
@@ -78,7 +79,7 @@ $(function() {
 			$('#form-success').hide();
 			$('#dv-claim_info').hide();
 			$('#dv-track').hide();
-			$('#btn-submit_trackno').button();
+			$('#alert-trackno').hide();	
 			$("#tab-warranty-load").slideDown(); 
 		}
 	}); 
@@ -87,6 +88,7 @@ $(function() {
 		if($('#txt-trackno').val() == ''){
 			$('#txt-trackno').focus();
 		}else{
+			$('#alert-trackno').hide();	
 			var $obj = $(this);
 			$obj.button('loading');
 			submitCustomerTrack();
@@ -435,7 +437,7 @@ function submitCustomerTrack(){
 			if (data.success) {
 				$('#dv-claim_info').slideUp();
 				$('#dv-track').slideUp();
-				$('#alert-trackno').slideDown();		
+				$('#alert-trackno').slideDown();				
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
