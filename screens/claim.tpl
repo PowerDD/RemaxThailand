@@ -204,7 +204,7 @@
 						<label for="txt-trackno" class="control-label">กรุณาระบุ Trank No./ EMS</label>
 					</div>
 					<div class="col-sm-6 margin-top-5">
-						<input type="text" placeholder="Trank No./ EMS" value="" class="form-control txt-input txt-require" id="txt-trackno">
+						<input id="txt-trackno" type="text" class="form-control txt-input txt-require" placeholder="Trank No./ EMS" value=""  >
 					</div>
 				</div>
 				<div class="form-group text-center">

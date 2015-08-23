@@ -406,6 +406,28 @@ function addClaim(){
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
+
+function submitCustomerTrack(){
+	$.post('http://power-api-test.azurewebsites.net/claim/update', {
+		apiKey: apiKey,
+		shop: shop,
+		id: $('#txt-claimno').val(),
+		entity: '"CustomerTrackNo","Status"',
+		value: '$("#txt-trackno").val(), "RE"'
+	}, function(data){
+			if (data.success) {
+				claimInfo = data.result[0];
+				warrantyInfo(0, data.result[0].Barcode);			
+			}else{
+				setTimeout('$("#tab-warranty-load").slideUp()',3000);
+				setTimeout('$("#tab-warranty-not_exist").slideDown()',3000);
+				//$('#tab-warranty-not_exist').slideDown();
+				//$("#tab-warranty-load").slideUp();
+				
+			}
+	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
+};
+
 function convertDataToArray(sign, data) {
 	if (data == null) {
 		var arr = [];
