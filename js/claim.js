@@ -31,6 +31,7 @@ $(function() {
 			$('#file3').val('');
 			$('#file4').val('');
 			warrantyInfo(0); 
+			$('.alert').hide();
 			$("#tab-warranty-not_exist").hide();
 			$("#tab-warranty-info").hide();
 			$('#dv-claim').hide();
@@ -52,6 +53,12 @@ $(function() {
 		}
 	});
 	
+	$("#txt-trackno").keyup(function(event){ 
+		if(event.keyCode == 13){
+			$("#btn-submit_trackno").click();
+		}
+	});
+	
 	$(document).submit(function(e){ // Disable Enter Key //
 		return false;
 	});
@@ -66,13 +73,24 @@ $(function() {
 		}else{
 			chkClaim = true;
 			claimInfomation();
+			$('.alert').hide();
 			$("#tab-warranty-not_exist").hide();
 			$("#tab-warranty-info").hide();
 			$('#dv-claim').hide();
 			$('#form-success').hide();
 			$('#dv-claim_info').hide();
 			$('#dv-track').hide();
-			$("#tab-warranty-load").slideDown();
+			$("#tab-warranty-load").slideDown(); 
+		}
+	}); 
+	
+	$("#btn-submit_trackno").click(function(){
+		if($('#txt-trackno').val() == ''){
+			$('#txt-trackno').focus();
+		}else{
+			var $obj = $(this);
+			$obj.button('loading');
+			submitCustomerTrack();
 		}
 	});
 });
@@ -416,14 +434,9 @@ function submitCustomerTrack(){
 		value: '$("#txt-trackno").val(), "RE"'
 	}, function(data){
 			if (data.success) {
-				claimInfo = data.result[0];
-				warrantyInfo(0, data.result[0].Barcode);			
-			}else{
-				setTimeout('$("#tab-warranty-load").slideUp()',3000);
-				setTimeout('$("#tab-warranty-not_exist").slideDown()',3000);
-				//$('#tab-warranty-not_exist').slideDown();
-				//$("#tab-warranty-load").slideUp();
-				
+				$('#dv-claim_info').slideUp();
+				$('#dv-track').slideUp();
+				$('#alert-trackno').slideDown();		
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };

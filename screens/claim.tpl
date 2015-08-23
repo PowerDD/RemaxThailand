@@ -213,6 +213,9 @@
 			</form>
 			
 		</div>
+		
+		<div id="alert-trackno" role="alert" class="alert alert-success text-center hidden margin-bottom-30">ระบบได้รับข้อมูลของท่านแล้ว ท่านสามารถนำเลขการเคลมมาตรวจสอบสถานะได้อีกครั้งค่ะ</div>
+		
 		<div id="form-loading" class="row hidden">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10">	    
 				<div class="alert alert-info text-center margin-bottom-0">			
