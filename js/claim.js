@@ -429,8 +429,8 @@ function submitCustomerTrack(){
 		apiKey: apiKey,
 		shop: shop,
 		id: $('#txt-claimno').val(),
-		entity: "CustomerTrackNo","Status",
-		value: $("#txt-trackno").val(), "RE"
+		entity: "CustomerTrackNo,Status",
+		value: $("#txt-trackno").val()+","+"RE"
 	}, function(data){
 			if (data.success) {
 				$('#dv-claim_info').slideUp();
