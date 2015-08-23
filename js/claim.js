@@ -31,7 +31,6 @@ $(function() {
 			$('#file3').val('');
 			$('#file4').val('');
 			warrantyInfo(0); 
-			$('.alert').hide();
 			$("#tab-warranty-not_exist").hide();
 			$("#tab-warranty-info").hide();
 			$('#dv-claim').hide();
@@ -73,13 +72,13 @@ $(function() {
 		}else{
 			chkClaim = true;
 			claimInfomation();
-			$('.alert').hide();
 			$("#tab-warranty-not_exist").hide();
 			$("#tab-warranty-info").hide();
 			$('#dv-claim').hide();
 			$('#form-success').hide();
 			$('#dv-claim_info').hide();
 			$('#dv-track').hide();
+			$('#btn-submit_trackno').button();
 			$("#tab-warranty-load").slideDown(); 
 		}
 	}); 
@@ -159,7 +158,7 @@ function warrantyInfo(i, chkBarcode){
 						if (claimInfo.Status == 'AP') {
 							$('#dv-track').slideDown();
 						}
-						
+						$('#btn-submit_trackno').button('default').html('ยืนยันข้อมูล');
 						chkClaim = false;
 					}else{
 						$('#product').html(data.result.ProductID);
@@ -430,8 +429,8 @@ function submitCustomerTrack(){
 		apiKey: apiKey,
 		shop: shop,
 		id: $('#txt-claimno').val(),
-		entity: '"CustomerTrackNo","Status"',
-		value: '$("#txt-trackno").val(), "RE"'
+		entity: "CustomerTrackNo","Status",
+		value: $("#txt-trackno").val(), "RE"
 	}, function(data){
 			if (data.success) {
 				$('#dv-claim_info').slideUp();
