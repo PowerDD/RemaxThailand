@@ -432,7 +432,7 @@ function submitCustomerTrack(){
 		shop: shop,
 		id: $('#txt-claimno').val(),
 		entity: "CustomerTrackNo,Status",
-		value: $("#txt-trackno").val()+","+"RE"
+		value: $("#txt-trackno").val()+","+"CP"
 	}, function(data){
 			if (data.success) {
 				$('#dv-claim_info').slideUp();
