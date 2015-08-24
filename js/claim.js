@@ -119,7 +119,7 @@ function warrantyInfo(i, chkBarcode){
 						else if (claimInfo.Status == 'SH') claimStatus = 'จัดส่งสินค้าเคลมให้ลูกค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-success');
 						else claimStatus = 'กรุณาติดต่อ ฝ่ายเคลม โทร 081- 828-8833 / 02-1567199 ';
 												
-						//$('#claim-Massage').html('ข้อมูลล่าสุด ').addClass('text-success');
+						$('#claim-Massage').html('ข้อมูลล่าสุด ').addClass('text-success');
 						$('#claim-Massage').hide();
 						$('#claim-ClaimNo').html('<b>เลขที่การเคลม: </b>'+ claimInfo.ClaimNo);
 						$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+'<u>'+ claimStatus +'</u>');
