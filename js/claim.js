@@ -72,7 +72,7 @@ $(function() {
 			$('#txt-claimno').focus();
 		}else{
 			chkClaim = true;
-			claimInfomation();
+			checkClaim();
 			$("#tab-warranty-not_exist").hide();
 			$("#tab-warranty-info").hide();
 			$('#dv-claim').hide();
@@ -109,59 +109,7 @@ function warrantyInfo(i, chkBarcode){
 				}
 				else{
 					if (chkClaim){
-						var claimStatus = '';
-						if (claimInfo.Status == 'CI') claimStatus = 'ตรวจสอบข้อมูล', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
-						else if (claimInfo.Status == 'AP') claimStatus = 'อยู่ในเงื่อนไขการเคลม', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-primary');
-						else if (claimInfo.Status == 'RJ') claimStatus = 'ไม่รับเคลมสินค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
-						else if (claimInfo.Status == 'AM') claimStatus = 'กรุณาเพิ่มข้อมูลรายละเอียด', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
-						else if (claimInfo.Status == 'CP') claimStatus = 'สินค้าจัดส่งโดยลูกค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-warning');
-						else if (claimInfo.Status == 'RP') claimStatus = 'ระบบได้รับสินค้าเคลมแล้ว', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-success');
-						else if (claimInfo.Status == 'SH') claimStatus = 'จัดส่งสินค้าเคลมให้ลูกค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-success');
-						else claimStatus = 'กรุณาติดต่อ ฝ่ายเคลม โทร 081- 828-8833 / 02-1567199 ';
-												
-						$('#claim-Massage').html('ข้อมูลล่าสุด ').addClass('text-success');
-						$('#claim-Massage').hide();
-						$('#claim-ClaimNo').html('<b>เลขที่การเคลม: </b>'+ claimInfo.ClaimNo);
-						$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+'<u>'+ claimStatus +'</u>');
-						$('#claim-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.ProductName);
-						$('#claim-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.Barcode);
-
-						$('#sum-name').html('คุณ '+claimInfo.Firstname+' '+claimInfo.Lastname+(typeof claimInfo.Nickname != 'undefined' && claimInfo.Nickname != '' ? ' ('+claimInfo.Nickname+')' : ''));
-						$('#sum-address').html(claimInfo.Address)
-						$('#sum-address2').html(claimInfo.Address2)
-						$('#sum-location').html('แขวง/ตำบล'+claimInfo.Sub_District+' '+'เขต/อำเภอ'+claimInfo.district+' '+'จังหวัด'+claimInfo.Province+' '+claimInfo.Zipcode)
-						if ( claimInfo.Tel.length == 10 ) {
-							var mobile = claimInfo.Tel;
-							$('#sum-tel').html('เบอร์โทร '+ mobile.substr(0, 3)+'-'+mobile.substr(3, 4)+'-'+mobile.substr(7, 3) );
-						}else{$('#sum-tel').html('เบอร์โทร '+claimInfo.Tel)}
-						$('#sum-email').html(typeof claimInfo.Email != 'undefined' && claimInfo.Email != ''? 'อีเมล '+claimInfo.Email : '')
-						
-						var modal = $('#dv-claim_info');
-						var file = convertDataToArray('|', claimInfo.images);
-						if (typeof file != 'undefined') {
-							for(i=0; i<=3; i++) {
-								modal.find('.img'+i+' img').attr('src', 'https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg');
-								modal.find('.img'+i+' a').attr('href', '#');
-								if (typeof file[i] != 'undefined' && file[i] != '') {
-									modal.find('.img'+i).show().find('img').attr('src', file[i]);
-									modal.find('.img'+i).show().find('a').attr('href', file[i]);
-								}
-								else {
-									modal.find('.img'+i).hide();
-								}
-							}
-						}
-						else {
-							for(i=0; i<=3; i++) modal.find('.img'+i).hide();
-						}
-						
-						$('#tab-warranty-load').slideUp();
-						$('#dv-claim_info').slideDown();
-						if (claimInfo.Status == 'AP') {
-							$('#dv-track').slideDown();
-						}
-						$('#btn-submit_trackno').button('default').html('ยืนยันข้อมูล');
-						chkClaim = false;
+						claimInformation(data)						
 					}else{
 						$('#product').html(data.result.ProductID);
 						$('#barcode').html(data.result.Barcode);
@@ -221,7 +169,7 @@ function warrantyInfo(i, chkBarcode){
 			$("#tab-warranty-load").slideUp();
 	}
 };
-function claimInfomation(){
+function checkClaim(){
 	$.post('http://power-api-test.azurewebsites.net/claim/info', {
 		apiKey: apiKey,
 		shop: shop,
@@ -239,6 +187,62 @@ function claimInfomation(){
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
+function claimInformation(data){
+	var claimStatus = '';
+	if (claimInfo.Status == 'CI') claimStatus = 'ตรวจสอบข้อมูล', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
+	else if (claimInfo.Status == 'AP') claimStatus = 'อยู่ในเงื่อนไขการเคลม', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-primary');
+	else if (claimInfo.Status == 'RJ') claimStatus = 'ไม่รับเคลมสินค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
+	else if (claimInfo.Status == 'AM') claimStatus = 'กรุณาเพิ่มข้อมูลรายละเอียด', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
+	else if (claimInfo.Status == 'CP') claimStatus = 'สินค้าจัดส่งโดยลูกค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-warning');
+	else if (claimInfo.Status == 'RP') claimStatus = 'ระบบได้รับสินค้าเคลมแล้ว', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-success');
+	else if (claimInfo.Status == 'SH') claimStatus = 'จัดส่งสินค้าเคลมให้ลูกค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-success');
+	else claimStatus = 'กรุณาติดต่อ ฝ่ายเคลม โทร 081- 828-8833 / 02-1567199 ';
+							
+	$('#claim-Massage').html('ข้อมูลล่าสุด ').addClass('text-success');
+	$('#claim-Massage').hide();
+	$('#claim-ClaimNo').html('<b>เลขที่การเคลม: </b>'+ claimInfo.ClaimNo);
+	$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+'<u>'+ claimStatus +'</u>');
+	$('#claim-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.ProductName);
+	$('#claim-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.Barcode);
+
+	$('#sum-name').html('คุณ '+claimInfo.Firstname+' '+claimInfo.Lastname+(typeof claimInfo.Nickname != 'undefined' && claimInfo.Nickname != '' ? ' ('+claimInfo.Nickname+')' : ''));
+	$('#sum-address').html(claimInfo.Address)
+	$('#sum-address2').html(claimInfo.Address2)
+	$('#sum-location').html('แขวง/ตำบล'+claimInfo.Sub_District+' '+'เขต/อำเภอ'+claimInfo.district+' '+'จังหวัด'+claimInfo.Province+' '+claimInfo.Zipcode)
+	if ( claimInfo.Tel.length == 10 ) {
+		var mobile = claimInfo.Tel;
+		$('#sum-tel').html('เบอร์โทร '+ mobile.substr(0, 3)+'-'+mobile.substr(3, 4)+'-'+mobile.substr(7, 3) );
+	}else{$('#sum-tel').html('เบอร์โทร '+claimInfo.Tel)}
+	$('#sum-email').html(typeof claimInfo.Email != 'undefined' && claimInfo.Email != ''? 'อีเมล '+claimInfo.Email : '')
+	
+	var modal = $('#dv-claim_info');
+	var file = convertDataToArray('|', claimInfo.images);
+	if (typeof file != 'undefined') {
+		for(i=0; i<=3; i++) {
+			modal.find('.img'+i+' img').attr('src', 'https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg');
+			modal.find('.img'+i+' a').attr('href', '#');
+			if (typeof file[i] != 'undefined' && file[i] != '') {
+				modal.find('.img'+i).show().find('img').attr('src', file[i]);
+				modal.find('.img'+i).show().find('a').attr('href', file[i]);
+			}
+			else {
+				modal.find('.img'+i).hide();
+			}
+		}
+	}
+	else {
+		for(i=0; i<=3; i++) modal.find('.img'+i).hide();
+	}
+	
+	$('#tab-warranty-load').slideUp();
+	$('#dv-claim_info').slideDown();
+	if (claimInfo.Status == 'AP') {
+		$('#dv-track').slideDown();
+	}
+	$('#btn-submit_trackno').button('default').html('ยืนยันข้อมูล');
+	chkClaim = false;
+};
+
 function loadProvince(){
 	$.post('http://power-api-test.azurewebsites.net/province/list', {
 		apiKey: apiKey
