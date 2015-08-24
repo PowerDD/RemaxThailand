@@ -274,8 +274,9 @@ function loadDistrict(){
 						+'>'+ result.Name +'</option>';
 				}
 				$('#district').html( html );
-				loadZipCode();
-				
+				if($('#txt-zipcode').val()=='') {
+					loadZipCode();
+				}				
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
