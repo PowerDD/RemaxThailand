@@ -121,7 +121,7 @@
 	<div class="row">
 
 	    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10">
-		<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/dEuJl53gqaJ5_uDMtz10aPEeqnPPccMnvq9mlI26OYg=w1500-no">
+		<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/wr-0e-NG39HYedbiZugUu_LJM4FxfxZR3ZNT5O7kLWQ=w1500-no">		
 	    </div>
 
 	</div>
