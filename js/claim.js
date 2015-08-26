@@ -230,6 +230,7 @@ function claimInformation(data){
 			}
 		}
 	}
+	console.log(file);
 	else {
 		for(i=0; i<=3; i++) modal.find('.img'+i).hide();
 	}
