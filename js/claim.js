@@ -229,8 +229,9 @@ function claimInformation(data){
 				modal.find('.img'+i).hide();
 			}
 		}
+		console.log(file);
 	}
-	console.log(file);
+	
 	else {
 		for(i=0; i<=3; i++) modal.find('.img'+i).hide();
 	}
