@@ -208,7 +208,7 @@ function claimInformation(data){
 	$('#sum-name').html('คุณ '+claimInfo.Firstname+' '+claimInfo.Lastname+(typeof claimInfo.Nickname != 'undefined' && claimInfo.Nickname != '' ? ' ('+claimInfo.Nickname+')' : ''));
 	$('#sum-address').html(claimInfo.Address)
 	$('#sum-address2').html(claimInfo.Address2)
-	$('#sum-location').html('แขวง/ตำบล'+claimInfo.Sub_District+' '+'เขต/อำเภอ'+claimInfo.district+' '+'จังหวัด'+claimInfo.Province+' '+claimInfo.Zipcode)
+	$('#sum-location').html('แขวง/ตำบล'+claimInfo.Sub_District+' '+'เขต/อำเภอ'+claimInfo.District+' '+'จังหวัด'+claimInfo.Province+' '+claimInfo.Zipcode)
 	if ( claimInfo.Tel.length == 10 ) {
 		var mobile = claimInfo.Tel;
 		$('#sum-tel').html('เบอร์โทร '+ mobile.substr(0, 3)+'-'+mobile.substr(3, 4)+'-'+mobile.substr(7, 3) );
@@ -216,7 +216,7 @@ function claimInformation(data){
 	$('#sum-email').html(typeof claimInfo.Email != 'undefined' && claimInfo.Email != ''? 'อีเมล '+claimInfo.Email : '')
 	
 	var modal = $('#dv-claim_info');
-	var file = convertDataToArray('|', claimInfo.images);
+	var file = claimInfo.images;
 	if (typeof file != 'undefined') {
 		for(i=0; i<=3; i++) {
 			modal.find('.img'+i+' img').attr('src', 'https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg');
