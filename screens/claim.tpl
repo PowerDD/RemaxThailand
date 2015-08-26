@@ -66,6 +66,7 @@
 				<p id="claim-ClaimStatus"></p>
 				<p id="claim-ProductName"></p>
 				<p id="claim-Barcode"></p>
+				<p id="claim-Description"></p>
 				<div class="row">
 					 <div class="col-xs-3 col-md-3 img0">
 						<a target="_blank" href="">

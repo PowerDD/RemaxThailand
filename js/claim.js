@@ -204,6 +204,7 @@ function claimInformation(data){
 	$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+'<u>'+ claimStatus +'</u>');
 	$('#claim-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.ProductName);
 	$('#claim-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.Barcode);
+	$('#claim-Description').html('<b>รายละเอียด : </b>'+data.result.Description);
 
 	$('#sum-name').html('คุณ '+claimInfo.Firstname+' '+claimInfo.Lastname+(typeof claimInfo.Nickname != 'undefined' && claimInfo.Nickname != '' ? ' ('+claimInfo.Nickname+')' : ''));
 	$('#sum-address').html(claimInfo.Address)
