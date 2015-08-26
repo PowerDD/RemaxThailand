@@ -216,7 +216,7 @@ function claimInformation(data){
 	$('#sum-email').html(typeof claimInfo.Email != 'undefined' && claimInfo.Email != ''? 'อีเมล '+claimInfo.Email : '')
 	
 	var modal = $('#dv-claim_info');
-	var file = claimInfo.images;
+	var file = claimInfo.Images;
 	if (typeof file != 'undefined') {
 		for(i=0; i<=3; i++) {
 			modal.find('.img'+i+' img').attr('src', 'https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg');
