@@ -396,6 +396,7 @@ function addClaim(){
 				$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+ (data.result.Status == 'CI' ? ' <u>ตรวจสอบข้อมูล </u>' : '-')).addClass('text-danger');
 				$('#claim-ProductName').html($('#tab-ProductName').html());
 				$('#claim-Barcode').html($('#tab-Barcode').html());
+				$('#claim-Description').html('<b>รายละเอียด : </b>'+$('#claim_description').val());
 
 				$('#sum-name').html('คุณ '+$('#txt-firstname').val()+' '+$('#txt-lastname').val()+($('#txt-nickname').val() != '' ? ' ('+$('#txt-nickname').val()+')' : ''));
 				$('#sum-address').html($('#txt-address').val())
