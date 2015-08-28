@@ -9,8 +9,8 @@
 					<a id="btn-condition_warranty" class="button form-control btn btn-primary btn-block margin-top-5 margin-bottom-5" type="button" href="{$system_url}/claim"> เงื่อนไขการรับประกัน</a>
 					
 					<div id="warranty-not_exist" role="alert" class="alert alert-warranty alert-danger hidden margin-bottom-30"> ไม่พบข้อมูลค่ะ</div>
-					<div id="warranty-info" role="alert" class="alert alert-warranty alert-success hidden margin-bottom-30"><b id="ProductName"></b>
-						<p id="warrantyStatus"></p>
+					<div id="warranty-info" role="alert" class="alert alert-warranty alert-success hidden margin-bottom-30">
+						<b id="ProductName"></b>
 						<p id="ExpireDate"></p>
 					</div>
 					<div id="warranty-load" class="hidden"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ</div>

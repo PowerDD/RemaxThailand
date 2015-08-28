@@ -25,25 +25,28 @@ $(function() {
 
 	$('#newsModal').modal();
 	
-	
+	//--------------Check Warranty----------------//
 	$(document).on('keydown', '#txt-barcode_box', function(e){
 		var key = e.charCode || e.keyCode || 0;
 		if (key == 13) {
 			$('#btn-check_barcode_box').click();
 		}
 	});
-	$("#btn-check_barcode_box").click(function(){
-		if($('#txt-barcode').val() == ''){
-			$('#txt-barcode').focus();
+	$('#check_warranty').submit(function(e){
+		return false;
+	});
+	$('#btn-check_barcode_box').click(function(){
+		if($('#txt-barcode_box').val() == ''){
+			$('#txt-barcode_box').focus();
 		}else{
 			warrantyInfo(0);			
-			$("#warranty-load").show();
-			$("#txt-barcode").hide();
+			$('#warranty-load').show();
+			$('#txt-barcode_box').hide();
 			$('.alert-warranty').hide();
-			$(".button").hide();
+			$('.button').hide();
 		}
 	});
-	
+	//--------------Check Warranty----------------//
 });
 
 function alertTimeout(obj, wait){
@@ -133,7 +136,7 @@ function warrantyInfo(i){
 	if(i < 4 ){
 		$.post('http://power-api-test.azurewebsites.net/warranty/info', {
 			apiKey: 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8',
-			barcode: $.trim($('#txt-barcode').val())
+			barcode: $.trim($('#txt-barcode_box').val())
 		}, function(data){
 			i++;
 				if (data.success) {
@@ -154,14 +157,12 @@ function warrantyInfo(i){
 							$('#warranty-info').addClass('alert-warning');
 						}
 						else if(data.result.Warranty > 0 && data.result.DaysRemaining <= 0){					
-							$('#warrantyStatus').html('<b>สถานะ : <u>หมดประกัน</u><b>');
 							$('#ExpireDate').html('<b>วันที่หมดประกัน : </b>'+expireDateMM+' '+expireDateYearTH);
 							$('#warranty-info').removeClass('alert-success');
 							$('#warranty-info').removeClass('alert-warning');
 							$('#warranty-info').addClass('alert-danger');
 						}
-						else{
-							$('#warrantyStatus').html('<b>สถานะ : <u>อยู่ในประกัน</u><b>');						
+						else{						
 							$('#ExpireDate').html('<b>วันที่หมดประกัน : </b>'+expireDateMM+' '+expireDateYearTH);
 							$('#warranty-info').removeClass('alert-danger');
 							$('#warranty-info').removeClass('alert-warning');
