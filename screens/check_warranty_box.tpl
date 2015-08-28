@@ -4,12 +4,12 @@
 		<div class="text-center">
 			<div id="check_warranty" class="padding-10">
 				<form id="f_warranty" class="form-horizontal">
-					<input id="txt-barcode_box" type="text" placeholder="Barcode" class="form-control"/>
-					<div class="col-md-6">
-						<button id="btn-check_barcode_box" type="button" class="button button-warranty form-control btn btn-warning btn-block margin-top-5 margin-bottom-5"> ตรวจสอบ </button>
+					<div class="form-group">
+						<input id="txt-barcode_box" type="text" placeholder="Barcode" class="form-control"/>
 					</div>
-					<div class="col-md-6">
-						<a id="btn-condition_warranty" class="button-warranty form-control btn btn-danger btn-block margin-top-5 margin-bottom-5" type="button" href="{$system_url}/claim"> เงื่อนไข </a>
+					<div class="form-group">
+						<span id="btn-check_barcode_box" class=" button-warranty  btn btn-warning"> ตรวจสอบ </span>
+						<a id="btn-condition_warranty" class="button-warranty btn btn-danger" href="{$system_url}/claim"> เงื่อนไข </a>
 					</div>
 					
 					<div id="warranty-not_exist" role="alert" class="alert alert-warranty alert-danger hidden margin-bottom-30"> ไม่พบข้อมูลค่ะ</div>
