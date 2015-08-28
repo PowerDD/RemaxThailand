@@ -17,7 +17,7 @@
 				</div>
 				<div class="form-group">
 					<div class="text-center">
-						<span id="btn-barcode" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
+						<span id="btn-barcode" class="btn btn-warning">ตรวจสอบ</span>
 					</div>
 				</div>
 			</form>
@@ -31,7 +31,7 @@
 				</div>
 				<div class="form-group">
 					<div class="text-center">
-						<span id="btn-claimno" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
+						<span id="btn-claimno" class="btn btn-warning">ตรวจสอบ</span>
 					</div>
 				</div>
 			</form>
