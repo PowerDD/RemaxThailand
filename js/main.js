@@ -46,6 +46,12 @@ $(function() {
 			$('.button').hide();
 		}
 	});
+	$(".back-check_warranty").click(function(){
+		$(".alert").fadeOut();
+		$("#txt-barcode").fadeIn();
+		$("#btn-check_barcode").fadeIn();		
+		$(".back-check_warranty").hide();
+	});
 	//--------------Check Warranty----------------//
 });
 
