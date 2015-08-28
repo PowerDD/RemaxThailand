@@ -4,10 +4,12 @@
 		<div class="text-center">
 			<div id="check_warranty" class="padding-15">
 				<form id="f_warranty" class="form-horizontal">
-					<input id="txt-barcode" type="text" placeholder="Barcode" class="form-control"/>
-					<button id="btn-check_barcode" type="button" class="form-control btn btn-warning btn-block margin-top-5 margin-bottom-5"> ตรวจสอบ</button>
-					<div id="warranty-not_exist" role="alert" class="alert alert-danger hidden margin-bottom-5 padding-top-5 padding-bottom-5"> ไม่พบข้อมูลสินค้าค่ะ</div>
-					<div id="warranty-info" role="alert" class="alert alert-success hidden margin-bottom-30 padding-top-5 padding-bottom-5"><b id="ProductName"></b>
+					<input id="txt-barcode_box" type="text" placeholder="Barcode" class="form-control"/>
+					<button id="btn-check_barcode_box" type="button" class="button form-control btn btn-warning btn-block margin-top-5 margin-bottom-5"> ตรวจสอบ</button>
+					<a id="btn-condition_warranty" class="button form-control btn btn-primary btn-block active margin-top-5 margin-bottom-5" type="button" href="{$system_url}/claim"> เงื่อนไขการรับประกัน</a>
+					
+					<div id="warranty-not_exist" role="alert" class="alert alert-warranty alert-danger hidden margin-bottom-30"> ไม่พบข้อมูลค่ะ</div>
+					<div id="warranty-info" role="alert" class="alert alert-warranty alert-success hidden margin-bottom-30"><b id="ProductName"></b>
 						<p id="warrantyStatus"></p>
 						<p id="ExpireDate"></p>
 					</div>
@@ -18,3 +20,4 @@
 		</div>
 	</div>
 </div>
+

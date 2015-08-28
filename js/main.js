@@ -25,23 +25,23 @@ $(function() {
 
 	$('#newsModal').modal();
 	
-	$("#btn-check_barcode").click(function(){
+	
+	$(document).on('keydown', '#txt-barcode_box', function(e){
+		var key = e.charCode || e.keyCode || 0;
+		if (key == 13) {
+			$('#btn-check_barcode_box').click();
+		}
+	});
+	$("#btn-check_barcode_box").click(function(){
 		if($('#txt-barcode').val() == ''){
 			$('#txt-barcode').focus();
 		}else{
-			warrantyInfo(0);
+			warrantyInfo(0);			
 			$("#warranty-load").show();
 			$("#txt-barcode").hide();
-			$("#btn-check_barcode").hide();
+			$('.alert-warranty').hide();
+			$(".button").hide();
 		}
-	});
-	$(".back-check_warranty").click(function(){
-		$("#warranty-info").fadeOut();
-		$("#txt-barcode").fadeIn();
-		$("#btn-check_barcode").fadeIn();		
-		$(".back-check_warranty").hide();
-		$("#warranty-not_exist").hide();
-		$("#warranty-info").hide();
 	});
 	
 });
