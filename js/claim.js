@@ -283,6 +283,7 @@ function loadDistrict(){
 function loadZipCode(){
 	$('#txt-zipcode').val( $('#district :selected').attr('data-zipcode') );
 	console.log($('#district :selected').attr('data-zipcode'));
+	console.log($('#txt-zipcode').val());
 };
 
 function uploadFile(){
