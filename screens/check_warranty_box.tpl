@@ -1,6 +1,5 @@
-<div class="pinWarrantyBox">
-	<div class="pinBox pinWell margin-bottom-15">
-		<h3>ตรวจสอบประกันสินค้า</h3>
+<div class="pinItem">
+	<div class="pinWarrantyBox pinWell margin-bottom-15">
 		<div class="row">
 			<div class="col-md-3">
 				
