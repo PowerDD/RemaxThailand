@@ -19,7 +19,7 @@
 						<b id="ProductName"></b>
 						<p id="ExpireDate"></p>
 					</div>
-					<div id="warranty-load" class="hidden"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ</div>
+					<div id="warranty-load" class="padding-15 hidden"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ</div>
 					<a href="javascript:void(0)" class="back-check_warranty hidden margin-top-5 margin-bottom-5"><i class="fa fa-arrow-left"></i></a>
 				</form>
 			</div>
