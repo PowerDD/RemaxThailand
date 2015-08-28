@@ -4,10 +4,14 @@
 		<div class="text-center">
 			<div id="check_warranty" class="padding-10">
 				<form id="f_warranty" class="form-horizontal">
-					<input id="txt-barcode_box" type="text" placeholder="Barcode" class="form-control">
-						<span class="input-group-btn">
-							<button id="btn-check_barcode_box" type="button" class="button-warranty btn btn-warning"><i class="fa fa-search"></i></button>
-						</span>
+					<form class="navbar-form navbar-left">
+						<div class="input-group">
+							<input id="txt-barcode_box" type="text" placeholder="Barcode" class="form-control">
+								<span class="input-group-btn">
+									<button id="btn-check_barcode_box" type="button" class="button-warranty btn btn-warning"><i class="fa fa-search"></i></button>
+								</span>
+						</div>
+					</form>
 					<a id="btn-condition_warranty" class="button-warranty btn btn-danger" href="{$system_url}/claim"> เงื่อนไขการรับประกันสินค้า </a>
 					
 					<div id="warranty-not_exist" role="alert" class="alert alert-warranty alert-danger hidden margin-bottom-30"> ไม่พบข้อมูลค่ะ</div>
@@ -22,4 +26,3 @@
 		</div>
 	</div>
 </div>
-
