@@ -1,6 +1,6 @@
 <div class="pinItem">
 	<div class="pinBox pinWell margin-bottom-15">
-	<img src="https://lh3.googleusercontent.com/2HKvk9TTq4IE5P6GMVbUKbklXXk_0OHKg3mzP4k2bqo=w864-h360-no" class="img-responsive">
+	<img src="https://lh3.googleusercontent.com/TJ6WrPZinluh-I85ht9myDbWOQ2xHRuWcit1zaMvAVk=w600-no" class="img-responsive">
 		<div class="text-center">
 			<div id="check_warranty" class="padding-10">
 				<form id="f_warranty" class="form-horizontal margin-bottom-10">
