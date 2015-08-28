@@ -148,7 +148,7 @@ function warrantyInfo(i){
 				if (data.success) {
 					if ( typeof data.result == '' || typeof data.result == 'undefined' || data.result.length == 0){
 						warrantyInfo(i);
-					}				
+					}else{				
 						$('#ProductName').html(data.result.ProductName);
 						var sellDateYearTH = parseInt(moment(data.result.SellDate).lang('th').add(3600*7, 'seconds').format('YYYY'))+543;
 						var sellDateMM = moment(data.result.SellDate).locale('th').add(3600*7, 'seconds').format('DD MMMM'); 
@@ -176,7 +176,8 @@ function warrantyInfo(i){
 						}							
 						$('#warranty-info').fadeIn();
 						$("#warranty-load").hide();
-						$(".back-check_warranty").show();				
+						$(".back-check_warranty").show();	
+					}						
 				}else{
 					$('#warranty-not_exist').show();
 					$("#warranty-load").hide();
