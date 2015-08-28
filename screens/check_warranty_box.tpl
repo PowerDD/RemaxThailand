@@ -4,11 +4,9 @@
 		<div class="text-center">
 			<div id="check_warranty" class="padding-10">
 				<form id="f_warranty" class="form-horizontal">
+					<input id="txt-barcode_box" type="text" placeholder="Barcode" class="form-control"/>
 					<div class="form-group">
-						<input id="txt-barcode_box" type="text" placeholder="Barcode" class="form-control"/>
-					</div>
-					<div class="form-group">
-						<span id="btn-check_barcode_box" class=" button-warranty  btn btn-warning"> ตรวจสอบ </span>
+						<span id="btn-check_barcode_box" class=" button-warranty btn btn-warning"> ตรวจสอบ </span>
 						<a id="btn-condition_warranty" class="button-warranty btn btn-danger" href="{$system_url}/claim"> เงื่อนไข </a>
 					</div>
 					
