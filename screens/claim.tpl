@@ -7,9 +7,9 @@
 		<li class="active"><a data-toggle="tab" href="#tabbarcode">ตรวจสอบข้อมูลประกันสินค้า</a></li>
 		<li><a data-toggle="tab" href="#tabclaimno">ตรวจสอบสถานะการเคลม</a></li>
 	</ul>
-	<div class="tab-content">
+	<div class="tab-content margin-bottom-30">
 		<div id="tabbarcode" class="tab-pane fade in active">
-			<div class="col-sm-6 margin-top-5">
+			<div class="col-sm-6 margin-top-15">
 				<input id="txt-barcode" type="text" class="form-control required" placeholder="Barcode">
 			</div>
 			<div class="text-center">
@@ -17,7 +17,7 @@
 			</div>
 		</div>
 		<div id="tabclaimno" class="tab-pane fade">
-			<div class="col-sm-6 margin-top-5">
+			<div class="col-sm-6 margin-top-15">
 				<input id="txt-claimno" type="text" class="form-control required" placeholder="เลขที่เคลม">
 			</div>
 			<div class="text-center">
