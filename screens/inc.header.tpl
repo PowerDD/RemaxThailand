@@ -62,7 +62,7 @@
 						</ul>
 					</li>
 					<li{if strpos($filename, 'contact_us') !== false} class="active"{/if}><a href="{$system_url}/contact_us">ติดต่อเรา</a></li>
-					<li{if strpos($filename, 'payment') !== false} class="active"{/if}><a href="{$system_url}/payment">วิธีการชำระเงิน</a></li>
+					<li{if strpos($filename, 'warranty_condition') !== false} class="active"{/if}><a href="{$system_url}/warranty_condition">เงื่อนไขการรับประกันสินค้า</a></li>
 				</ul>
 				<form class="navbar-form navbar-left" role="search" method="POST" action="{$system_url}/product/search">				
 					<div class="input-group">
