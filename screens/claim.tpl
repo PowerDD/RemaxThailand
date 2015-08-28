@@ -11,7 +11,7 @@
 		<div id="tabbarcode" class="tab-pane fade in active">
 			<form class="form-horizontal" role="form">
 				<div class="form-group">
-					<div class="col-sm-6 margin-top-15">
+					<div class="col-sm-6 col-md-offset-3 margin-top-15">
 						<input id="txt-barcode" type="text" class="form-control required" placeholder="Barcode">
 					</div>
 				</div>
@@ -25,7 +25,7 @@
 		<div id="tabclaimno" class="tab-pane fade">
 			<form class="form-horizontal" role="form">
 				<div class="form-group">
-					<div class="col-sm-6 margin-top-15">
+					<div class="col-sm-6 col-md-offset-3 margin-top-15">
 						<input id="txt-claimno" type="text" class="form-control required" placeholder="เลขที่เคลม">
 					</div>
 				</div>
