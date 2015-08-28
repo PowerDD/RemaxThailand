@@ -4,18 +4,22 @@
 	
 	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
     <ul class="nav nav-tabs">
-		<li class="active"><a data-toggle="tab" href="#barcode">ตรวจสอบข้อมูลประกันสินค้า</a></li>
-		<li><a data-toggle="tab" href="#claimno">ตรวจสอบสถานะการเคลม</a></li>
+		<li class="active"><a data-toggle="tab" href="#tabbacode">ตรวจสอบข้อมูลประกันสินค้า</a></li>
+		<li><a data-toggle="tab" href="#tabclaimno">ตรวจสอบสถานะการเคลม</a></li>
 	</ul>
 	<div class="tab-content">
-		<div id="barcode" class="tab-pane fade in active"></div>
-			<input id="txt-barcode" type="text" class="form-control required" placeholder="Barcode">
+		<div id="tabbacode" class="tab-pane fade in active"></div>
+			<div class="col-sm-6 margin-top-5">
+				<input id="txt-barcode" type="text" class="form-control required" placeholder="Barcode">
+			</div>
 			<div class="text-center">
 				<span id="btn-barcode" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
 			</div>
 		<div class="dottedLine"></div>
-		<div id="claimno" class="tab-pane fade"></div>
-			<input id="txt-claimno" type="text" class="form-control required" placeholder="เลขที่เคลม">
+		<div id="tabclaimno" class="tab-pane fade"></div>
+			<div class="col-sm-6 margin-top-5">
+				<input id="txt-claimno" type="text" class="form-control required" placeholder="เลขที่เคลม">
+			</div>
 			<div class="text-center">
 				<span id="btn-claimno" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
 			</div>
