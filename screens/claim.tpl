@@ -2,30 +2,24 @@
 	<h1 class="page-header font-28 margin-top-10">เคลมสินค้า</h1>
 
 	
-	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">	
-	<div id="form-input" class="row margin-bottom-15">
-	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-15">
-		<form>
-			<div class="form-group text-danger">
-				<label for="input">ตรวจสอบข้อมูลประกันสินค้า</label>
-				<input id="txt-barcode" type="text" class="form-control required" placeholder="Barcode">
-				<div class="text-center">
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <ul class="nav nav-tabs">
+		<li class="active"><a data-toggle="tab" href="#barcode">ตรวจสอบข้อมูลประกันสินค้า</a></li>
+		<li><a data-toggle="tab" href="#claimno">ตรวจสอบสถานะการเคลม</a></li>
+	</ul>
+	<div class="tab-content">
+		<div id="barcode" class="tab-pane fade in active"></div>
+			<input id="txt-barcode" type="text" class="form-control required" placeholder="Barcode">
+			<div class="text-center">
 				<span id="btn-barcode" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
-				</div>
 			</div>
-		</form>
-	    </div>
-		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-15">
-		<form>
-			<div class="form-group text-danger">
-				<label for="input">ตรวจสอบสถานะการเคลม</label>
-				<input id="txt-claimno" type="text" class="form-control required" placeholder="เลขที่เคลม">
-				<div class="text-center">
+		<div class="dottedLine"></div>
+		<div id="claimno" class="tab-pane fade"></div>
+			<input id="txt-claimno" type="text" class="form-control required" placeholder="เลขที่เคลม">
+			<div class="text-center">
 				<span id="btn-claimno" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
-				</div>
 			</div>
-		</form>
-	    </div>
+		<div class="dottedLine"></div>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div id="tab-warranty-load" role="alert" class="alert alert-info text-center hidden margin-bottom-30"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ</div>
