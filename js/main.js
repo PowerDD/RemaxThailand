@@ -43,13 +43,13 @@ $(function() {
 			$('#warranty-load').show();
 			$('#txt-barcode_box').hide();
 			$('.alert-warranty').hide();
-			$('.button').hide();
+			$('.button-warranty').hide();
 		}
 	});
 	$(".back-check_warranty").click(function(){
-		$(".alert").fadeOut();
-		$("#txt-barcode").fadeIn();
-		$("#btn-check_barcode").fadeIn();		
+		$(".alert-warranty").fadeOut();
+		$("#txt-barcode_box").fadeIn();
+		$(".button-warranty").fadeIn();		
 		$(".back-check_warranty").hide();
 	});
 	//--------------Check Warranty----------------//
