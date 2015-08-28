@@ -3,7 +3,7 @@
 	<img src="https://lh3.googleusercontent.com/2HKvk9TTq4IE5P6GMVbUKbklXXk_0OHKg3mzP4k2bqo=w864-h360-no" class="img-responsive">
 		<div class="text-center">
 			<div id="check_warranty" class="padding-10">
-				<form id="f_warranty" class="form-horizontal">
+				<form id="f_warranty" class="form-horizontal margin-bottom-10">
 					<form class="navbar-form navbar-left">
 						<div class="input-group">
 							<input id="txt-barcode_box" type="text" placeholder="Barcode" class="form-control">
