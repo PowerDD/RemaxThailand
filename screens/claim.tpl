@@ -7,22 +7,34 @@
 		<li class="active"><a data-toggle="tab" href="#tabbarcode">ตรวจสอบข้อมูลประกันสินค้า</a></li>
 		<li><a data-toggle="tab" href="#tabclaimno">ตรวจสอบสถานะการเคลม</a></li>
 	</ul>
-	<div class="tab-content margin-bottom-30">
+	<div class="tab-content margin-bottom-15">
 		<div id="tabbarcode" class="tab-pane fade in active">
-			<div class="col-sm-6 margin-top-15">
-				<input id="txt-barcode" type="text" class="form-control required" placeholder="Barcode">
-			</div>
-			<div class="text-center">
-				<span id="btn-barcode" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
-			</div>
+			<form class="form-horizontal" role="form">
+				<div class="form-group">
+					<div class="col-sm-6 margin-top-15">
+						<input id="txt-barcode" type="text" class="form-control required" placeholder="Barcode">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="text-center">
+						<span id="btn-barcode" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
+					</div>
+				</div>
+			</form>
 		</div>
 		<div id="tabclaimno" class="tab-pane fade">
-			<div class="col-sm-6 margin-top-15">
-				<input id="txt-claimno" type="text" class="form-control required" placeholder="เลขที่เคลม">
-			</div>
-			<div class="text-center">
-				<span id="btn-claimno" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
-			</div>
+			<form class="form-horizontal" role="form">
+				<div class="form-group">
+					<div class="col-sm-6 margin-top-15">
+						<input id="txt-claimno" type="text" class="form-control required" placeholder="เลขที่เคลม">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="text-center">
+						<span id="btn-claimno" class="btn btn-warning margin-top-5">ตรวจสอบ</span>
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
