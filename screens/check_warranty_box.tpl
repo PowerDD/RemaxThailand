@@ -1,13 +1,13 @@
-<div class="pinItem">
+<div class="pinWarrantyBox">
 	<div class="pinBox pinWell margin-bottom-15">
 		<h3>ตรวจสอบประกันสินค้า</h3>
 		<div class="row">
 			<div class="col-md-3">
-				<img src="https://cdn4.iconfinder.com/data/icons/Primo_Icons/PNG/128x128/barcode.png" class="img-responsive">
+				
 			</div>
 			<div class="col-md-9">
 				<div class="text-center">
-					<div id="check_warranty" class="padding-15">
+					<div id="check_warranty" class="padding-10">
 						<form id="f_warranty" class="form-horizontal">
 							<input id="txt-barcode_box" type="text" placeholder="Barcode" class="form-control"/>
 							<button id="btn-check_barcode_box" type="button" class="button button-warranty form-control btn btn-warning btn-block margin-top-5 margin-bottom-5"> ตรวจสอบ</button>
