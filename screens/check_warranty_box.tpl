@@ -1,5 +1,6 @@
 <div class="pinItem">
-	<div class="pinWarrantyBox pinWell margin-bottom-15">
+	<div class="pinBox pinWell margin-bottom-15">
+	<img src="https://lh3.googleusercontent.com/2HKvk9TTq4IE5P6GMVbUKbklXXk_0OHKg3mzP4k2bqo=w864-h360-no" class="img-responsive">
 		<div class="row">
 			<div class="col-md-3">
 				
