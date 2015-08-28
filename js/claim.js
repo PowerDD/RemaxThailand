@@ -276,14 +276,13 @@ function loadDistrict(){
 						+'>'+ result.Name +'</option>';
 				}
 				$('#district').html( html );
-				if($('#txt-zipcode').val()=='') {
-					loadZipCode();
-				}				
+					loadZipCode();			
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
 function loadZipCode(){
 	$('#txt-zipcode').val( $('#district :selected').attr('data-zipcode') );
+	console.log($('#district :selected').attr('data-zipcode'));
 };
 
 function uploadFile(){
