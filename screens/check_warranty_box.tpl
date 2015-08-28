@@ -1,6 +1,6 @@
 <div class="pinItem">
 	<div class="pinBox pinWell margin-bottom-15">
-	<img src="https://lh3.googleusercontent.com/TJ6WrPZinluh-I85ht9myDbWOQ2xHRuWcit1zaMvAVk=w600-no" class="img-responsive">
+	<img src="https://lh3.googleusercontent.com/nOKotoyEe8RSl4QQJQqJQgS9xHteJY7UKSnajDOEnvc=w600" class="img-responsive">
 		<div class="text-center">
 			<div id="check_warranty" class="padding-10">
 				<form id="f_warranty" class="form-horizontal margin-bottom-10">
@@ -12,7 +12,7 @@
 								</span>
 						</div>
 					</form>
-					<a id="btn-condition_warranty" class="button-warranty btn btn-danger" href="{$system_url}/claim"> เงื่อนไขการรับประกันสินค้า </a>
+					<a id="btn-condition_warranty" class="button-warranty btn btn-block btn-danger" href="{$system_url}/claim"> เงื่อนไขการรับประกันสินค้า </a>
 					
 					<div id="warranty-not_exist" role="alert" class="alert alert-warranty alert-danger hidden margin-bottom-30"> ไม่พบข้อมูลค่ะ</div>
 					<div id="warranty-info" role="alert" class="alert alert-warranty alert-success hidden margin-bottom-30">
