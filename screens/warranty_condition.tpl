@@ -18,13 +18,10 @@
 <div class="modal fade" id="feqModal" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/6aaedhZzAlcwqryAWHKR2a_45lMFGEDJ3ppYoLlgL6k=w1500-no">
-      </div>
+		<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/X2gqEZDkdIYN_zbiCyzH06EnAvWZs9p0OfZuUYks104=w1500-no">
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
-        <a href="http://www.remaxthailand.co.th/register"><span class="btn btn-primary">สมัครตัวแทนจำหน่าย</span></a>
       </div>
     </div>
   </div>
