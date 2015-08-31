@@ -41,6 +41,7 @@ if (count($ex) >= 2) {
 
 $title = 'หน้าหลัก';
 switch($filename) {
+	case 'warranty_condition' : $title = 'เงื่อนไขการรับประกัน'; break;
 	case 'about_us' : $title = 'เกี่ยวกับเรา'; break;
 	case 'contact_us' : $title = 'ติดต่อเรา'; break;
 	case 'member/home' : $title = 'หน้าหลัก'; break;
