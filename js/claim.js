@@ -95,9 +95,7 @@ $(function() {
 			submitCustomerTrack();
 		}
 	});
-	$("#warranty_feq").click(function(){
-		$('#feqModal').modal();
-	});
+
 });
 function warrantyInfo(i, chkBarcode){
 	var barcode_info = ((typeof chkBarcode != 'undefined' && chkBarcode != '') ? $.trim(chkBarcode) : $.trim($('#txt-barcode').val()));
