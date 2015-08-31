@@ -8,11 +8,11 @@
 						<div class="input-group">
 							<input id="txt-barcode_box" type="text" placeholder="Barcode" class="form-control">
 								<span class="input-group-btn">
-									<button id="btn-check_barcode_box" type="button" class="button-warranty btn btn-warning"><i class="fa fa-search"></i></button>
+									<button id="btn-check_barcode_box" type="button" class="button-warranty btn btn-default"><i class="fa fa-search"></i></button>
 								</span>
 						</div>
 					</form>
-					<a id="btn-condition_warranty" class="button-warranty btn btn-block btn-danger" href="{$system_url}/claim"> เงื่อนไขการรับประกัน </a>
+					<a id="btn-condition_warranty" class="button-warranty btn btn-block btn-primary" href="{$system_url}/claim"> เคลม / เงื่อนไขการรับประกัน </a>
 					
 					<div id="warranty-not_exist" role="alert" class="alert alert-warranty alert-danger hidden margin-bottom-30"> ไม่พบข้อมูลค่ะ</div>
 					<div id="warranty-info" role="alert" class="alert alert-warranty alert-success hidden margin-bottom-30">
