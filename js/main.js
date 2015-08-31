@@ -53,6 +53,11 @@ $(function() {
 		$(".back-check_warranty").hide();
 	});
 	//--------------Check Warranty----------------//
+	
+	$("#warranty_feq").click(function(){
+		$('#feqModal').modal();
+	});
+	
 });
 
 function alertTimeout(obj, wait){
