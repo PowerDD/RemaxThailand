@@ -54,9 +54,9 @@ $(function() {
 	});
 	//--------------Check Warranty----------------//
 	
-	$("#warranty_feq").click(function(){
+	/*$("#warranty_feq").click(function(){
 		$('#feqModal').modal();
-	});
+	});*/
 	
 });
 
