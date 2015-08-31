@@ -262,3 +262,18 @@
 	<div class="row"> 
 	</div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="feqModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/X2gqEZDkdIYN_zbiCyzH06EnAvWZs9p0OfZuUYks104=w1500-no">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+      </div>
+    </div>
+  </div>
+</div>
