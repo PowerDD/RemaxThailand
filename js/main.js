@@ -44,6 +44,7 @@ $(function() {
 			$('#txt-barcode_box').hide();
 			$('.alert-warranty').hide();
 			$('.button-warranty').hide();
+			$('#warrantyStatus').hide();
 		}
 	});
 	$(".back-check_warranty").click(function(){
@@ -51,6 +52,7 @@ $(function() {
 		$("#txt-barcode_box").fadeIn();
 		$(".button-warranty").fadeIn();		
 		$(".back-check_warranty").hide();
+		$('#warrantyStatus').hide();
 	});
 	//--------------Check Warranty----------------//
 	
@@ -158,6 +160,7 @@ function warrantyInfo(){
 				var expireDateMM = moment(data.result.expireDate).locale('th').format('DD MMMM');
 				if(data.result.warranty == 0){
 					$('#warrantyStatus').html('<b>สถานะ : <u>สินค้าไม่มีประกัน</u><b>');
+					$('#warrantyStatus').show();
 					$('#ExpireDate').html('');
 					$('#warranty-info').removeClass('alert-success');
 					$('#warranty-info').removeClass('alert-danger');

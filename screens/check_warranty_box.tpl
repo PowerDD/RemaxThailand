@@ -18,6 +18,7 @@
 					<div id="warranty-info" role="alert" class="alert alert-warranty alert-success hidden margin-bottom-30">
 						<b id="ProductName"></b>
 						<p id="ExpireDate"></p>
+						<p id="warrantyStatus" class="hidden"></p>
 					</div>
 					<div id="warranty-load" class="padding-15 hidden"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ</div>
 					<a href="javascript:void(0)" class="back-check_warranty hidden margin-top-5 margin-bottom-5"><i class="fa fa-arrow-left"></i></a>
