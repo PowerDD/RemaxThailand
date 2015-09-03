@@ -143,56 +143,45 @@ function getPoint(isCheck){
 		});
 	}
 };
-function warrantyInfo(i){
-	if(i < 4 ){
-		$.post('http://power-api-test.azurewebsites.net/warranty/info', {
-			apiKey: 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8',
-			barcode: $.trim($('#txt-barcode_box').val())
-		}, function(data){
-			i++;
-				if (data.success) {
-					if ( typeof data.result == '' || typeof data.result == 'undefined' || data.result.length == 0){
-						warrantyInfo(i);
-					}else{				
-						$('#ProductName').html(data.result.ProductName);
-						var sellDateYearTH = parseInt(moment(data.result.SellDate).lang('th').add(3600*7, 'seconds').format('YYYY'))+543;
-						var sellDateMM = moment(data.result.SellDate).locale('th').add(3600*7, 'seconds').format('DD MMMM'); 
-						$('#tab-SellDate').html(sellDateMM+' '+sellDateYearTH);
-						var expireDateYearTH = parseInt(moment(data.result.ExpireDate).lang('th').add(3600*7, 'seconds').format('YYYY'))+543;
-						var expireDateMM = moment(data.result.ExpireDate).locale('th').add(3600*7, 'seconds').format('DD MMMM');
-						if(data.result.Warranty == 0){
-							$('#warrantyStatus').html('<b>สถานะ : <u>สินค้าไม่มีประกัน</u><b>');
-							$('#ExpireDate').html('');
-							$('#warranty-info').removeClass('alert-success');
-							$('#warranty-info').removeClass('alert-danger');
-							$('#warranty-info').addClass('alert-warning');
-						}
-						else if(data.result.Warranty > 0 && data.result.DaysRemaining <= 0){					
-							$('#ExpireDate').html('<b>วันที่หมดประกัน : </b>'+expireDateMM+' '+expireDateYearTH);
-							$('#warranty-info').removeClass('alert-success');
-							$('#warranty-info').removeClass('alert-warning');
-							$('#warranty-info').addClass('alert-danger');
-						}
-						else{						
-							$('#ExpireDate').html('<b>วันที่หมดประกัน : </b>'+expireDateMM+' '+expireDateYearTH);
-							$('#warranty-info').removeClass('alert-danger');
-							$('#warranty-info').removeClass('alert-warning');
-							$('#warranty-info').addClass('alert-success');
-						}							
-						$('#warranty-info').fadeIn();
-						$("#warranty-load").hide();
-						$(".back-check_warranty").show();	
-					}						
-				}else{
-					$('#warranty-not_exist').show();
-					$("#warranty-load").hide();
-					$(".back-check_warranty").show();			
-				}
-			
-		},'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
-	}else if( i = 4){
-		$('#warranty-not_exist').show();
-		$("#warranty-load").hide();
-		$(".back-check_warranty").show();		
-	}
+function warrantyInfo(){
+	$.post('http://api.powerdd.com/warranty/info', {
+		apiKey: 'C2450FDD-28E1-42C4-BBF7-181D2BEDB422',
+		barcode: $.trim($('#txt-barcode_box').val())
+	}, function(data){
+		if (data.success) {			
+			$('#ProductName').html(data.result.productName);
+			var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
+			var sellDateMM = moment(data.result.sellDate).locale('th').format('DD MMMM'); 
+			$('#tab-SellDate').html(sellDateMM+' '+sellDateYearTH);
+			var expireDateYearTH = parseInt(moment(data.result.expireDate).lang('th').format('YYYY'))+543;
+			var expireDateMM = moment(data.result.expireDate).locale('th').format('DD MMMM');
+			if(data.result.warranty == 0){
+				$('#warrantyStatus').html('<b>สถานะ : <u>สินค้าไม่มีประกัน</u><b>');
+				$('#ExpireDate').html('');
+				$('#warranty-info').removeClass('alert-success');
+				$('#warranty-info').removeClass('alert-danger');
+				$('#warranty-info').addClass('alert-warning');
+			}
+			else if(data.result.warranty > 0 && data.result.daysRemaining <= 0){					
+				$('#ExpireDate').html('<b>วันที่หมดประกัน : </b>'+expireDateMM+' '+expireDateYearTH);
+				$('#warranty-info').removeClass('alert-success');
+				$('#warranty-info').removeClass('alert-warning');
+				$('#warranty-info').addClass('alert-danger');
+			}
+			else{						
+				$('#ExpireDate').html('<b>วันที่หมดประกัน : </b>'+expireDateMM+' '+expireDateYearTH);
+				$('#warranty-info').removeClass('alert-danger');
+				$('#warranty-info').removeClass('alert-warning');
+				$('#warranty-info').addClass('alert-success');
+			}							
+			$('#warranty-info').fadeIn();
+			$("#warranty-load").hide();
+			$(".back-check_warranty").show();									
+		}else{
+			$('#warranty-not_exist').show();
+			$("#warranty-load").hide();
+			$(".back-check_warranty").show();			
+		}
+		
+	},'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
