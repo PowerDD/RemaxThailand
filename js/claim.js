@@ -99,7 +99,6 @@ $(function() {
 	var url = window.location.href.split('/');
 	var web = "remaxthailand.co.th";
 	console.log(url[2]);
-	console.log(indexOf(web));
 	console.log(url[2].indexOf(web));
 
 });
