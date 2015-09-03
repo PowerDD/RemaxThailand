@@ -97,7 +97,7 @@ $(function() {
 	});
 	
 	var url = window.location.href.split('/');
-	console.log(url);
+	console.log(url[2]);
 
 });
 function warrantyInfo(i, chkBarcode){
