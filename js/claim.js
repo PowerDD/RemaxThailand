@@ -32,7 +32,7 @@ $(function() {
 			$('#file2').val('');
 			$('#file3').val('');
 			$('#file4').val('');
-			warrantyInfo($.trim($('#txt-barcode').val())); 
+			warrantyInfo(); 
 			$("#tab-warranty-not_exist").hide();
 			$("#tab-warranty-info").hide();
 			$('#dv-claim').hide();
@@ -101,73 +101,68 @@ $(function() {
 });
 function warrantyInfo(chkBarcode){
 	var barcode_info = ((typeof chkBarcode != 'undefined' && chkBarcode != '') ? $.trim(chkBarcode) : $.trim($('#txt-barcode').val()));
-	if(i < 4 ){
-		$.post('http://api.powerdd.com/warranty/info', {
-			apiKey: apiKeyPower,
-			barcode: barcode_info
-		}, function(data){
-			if (data.success) {
-				if (data.result.length != 0){
-					if (chkClaim){
-						claimInformation(data)						
-					}else{
-						$('#product').html(data.result.product);
-						$('#barcode').html(data.result.barcode);
-						$('#tab-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.productName);
-						$('#tab-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.barcode);
-						$('#tab-CustomerName').html(data.result.customerName);
-						var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
-						var sellDateMM = moment(data.result.sellDate).locale('th').format('DD MMMM'); 
-						$('#tab-SellDate').html(sellDateMM+' '+sellDateYearTH);
-						var expireDateYearTH = parseInt(moment(data.result.expireDate).lang('th').format('YYYY'))+543;
-						var expireDateMM = moment(data.result.expireDate).locale('th').format('DD MMMM');
-						if(data.result.warranty == 0){
-							$('#tab-warrantyStatus').html('<b><u>สินค้าไม่มีประกัน</u><b>');
-							$('#tab-warrantyStatus').removeClass('text-success');
-							$('#tab-warrantyStatus').removeClass('text-danger');
-							$('#tab-warrantyStatus').addClass('text-warning');
-							$('#tab-ExpireDate').html('');
-							$('#tab-warranty-info').removeClass('panel-success');
-							$('#tab-warranty-info').removeClass('panel-danger');
-							$('#tab-warranty-info').addClass('panel-warning');
-						}
-						else if(data.result.warranty > 0 && data.result.daysRemaining <= 0){					
-							$('#tab-warrantyStatus').html('<b><u>หมดประกัน</u><b>');
-							$('#tab-warrantyStatus').removeClass('text-success');
-							$('#tab-warrantyStatus').removeClass('text-warning');
-							$('#tab-warrantyStatus').addClass('text-danger');
-							$('#tab-ExpireDate').html(expireDateMM+' '+expireDateYearTH);
-							$('#tab-warranty-info').removeClass('panel-success');
-							$('#tab-warranty-info').removeClass('panel-warning');
-							$('#tab-warranty-info').addClass('panel-danger');
-						}
-						else{
-							$('#tab-warrantyStatus').html('<b><u>อยู่ในประกัน</u><b>');
-							$('#tab-warrantyStatus').removeClass('text-danger');
-							$('#tab-warrantyStatus').removeClass('text-warning');
-							$('#tab-warrantyStatus').addClass('text-success');							
-							$('#tab-ExpireDate').html(expireDateMM+' '+expireDateYearTH);
-							$('#tab-warranty-info').removeClass('panel-danger');
-							$('#tab-warranty-info').removeClass('panel-warning');
-							$('#tab-warranty-info').addClass('panel-success');
-							
-							$('#dv-claim').slideDown();
-						}
-						$('#tab-warranty-info').slideDown();					
-						$("#tab-warranty-load").slideUp();
-					}						
-				}
-				
-			}else{
-				$('#tab-warranty-not_exist').slideDown();
-				$("#tab-warranty-load").slideUp();
+	$.post('http://api.powerdd.com/warranty/info', {
+		apiKey: apiKeyPower,
+		barcode: barcode_info
+	}, function(data){
+		if (data.success) {
+			if (data.result.length != 0){
+				if (chkClaim){
+					claimInformation(data)						
+				}else{
+					$('#product').html(data.result.product);
+					$('#barcode').html(data.result.barcode);
+					$('#tab-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.productName);
+					$('#tab-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.barcode);
+					$('#tab-CustomerName').html(data.result.customerName);
+					var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
+					var sellDateMM = moment(data.result.sellDate).locale('th').format('DD MMMM'); 
+					$('#tab-SellDate').html(sellDateMM+' '+sellDateYearTH);
+					var expireDateYearTH = parseInt(moment(data.result.expireDate).lang('th').format('YYYY'))+543;
+					var expireDateMM = moment(data.result.expireDate).locale('th').format('DD MMMM');
+					if(data.result.warranty == 0){
+						$('#tab-warrantyStatus').html('<b><u>สินค้าไม่มีประกัน</u><b>');
+						$('#tab-warrantyStatus').removeClass('text-success');
+						$('#tab-warrantyStatus').removeClass('text-danger');
+						$('#tab-warrantyStatus').addClass('text-warning');
+						$('#tab-ExpireDate').html('');
+						$('#tab-warranty-info').removeClass('panel-success');
+						$('#tab-warranty-info').removeClass('panel-danger');
+						$('#tab-warranty-info').addClass('panel-warning');
+					}
+					else if(data.result.warranty > 0 && data.result.daysRemaining <= 0){					
+						$('#tab-warrantyStatus').html('<b><u>หมดประกัน</u><b>');
+						$('#tab-warrantyStatus').removeClass('text-success');
+						$('#tab-warrantyStatus').removeClass('text-warning');
+						$('#tab-warrantyStatus').addClass('text-danger');
+						$('#tab-ExpireDate').html(expireDateMM+' '+expireDateYearTH);
+						$('#tab-warranty-info').removeClass('panel-success');
+						$('#tab-warranty-info').removeClass('panel-warning');
+						$('#tab-warranty-info').addClass('panel-danger');
+					}
+					else{
+						$('#tab-warrantyStatus').html('<b><u>อยู่ในประกัน</u><b>');
+						$('#tab-warrantyStatus').removeClass('text-danger');
+						$('#tab-warrantyStatus').removeClass('text-warning');
+						$('#tab-warrantyStatus').addClass('text-success');							
+						$('#tab-ExpireDate').html(expireDateMM+' '+expireDateYearTH);
+						$('#tab-warranty-info').removeClass('panel-danger');
+						$('#tab-warranty-info').removeClass('panel-warning');
+						$('#tab-warranty-info').addClass('panel-success');
+						
+						$('#dv-claim').slideDown();
+					}
+					$('#tab-warranty-info').slideDown();					
+					$("#tab-warranty-load").slideUp();
+				}						
 			}
 			
-		},'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
-	}else if( i = 4){
+		}else{
 			$('#tab-warranty-not_exist').slideDown();
 			$("#tab-warranty-load").slideUp();
-	}
+		}
+		
+	},'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
 function checkClaim(){
 	$.post('http://power-api-test.azurewebsites.net/claim/info', {
