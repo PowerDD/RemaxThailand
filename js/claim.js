@@ -32,7 +32,7 @@ $(function() {
 			$('#file2').val('');
 			$('#file3').val('');
 			$('#file4').val('');
-			warrantyInfo(); 
+			warrantyInfo($.trim($('#txt-barcode').val())); 
 			$("#tab-warranty-not_exist").hide();
 			$("#tab-warranty-info").hide();
 			$('#dv-claim').hide();
