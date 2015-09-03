@@ -97,7 +97,7 @@ $(function() {
 	});
 	
 	var url = window.location.href.split('/');
-	var web = ".co.th";
+	var web = "remaxthailand";
 	console.log(url[2]);
 	console.log(url[2].indexOf(web));
 
