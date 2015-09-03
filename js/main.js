@@ -145,7 +145,7 @@ function getPoint(isCheck){
 };
 function warrantyInfo(){
 	$.post('http://api.powerdd.com/warranty/info', {
-		apiKey: 'C2450FDD-28E1-42C4-BBF7-181D2BEDB422',
+		apiKey: 'BE12B369-0963-40AD-AA40-D68A7516A37B',
 		barcode: $.trim($('#txt-barcode_box').val())
 	}, function(data){
 		if (data.success) {			
