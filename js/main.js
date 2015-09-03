@@ -39,7 +39,7 @@ $(function() {
 		if($('#txt-barcode_box').val() == ''){
 			$('#txt-barcode_box').focus();
 		}else{
-			warrantyInfo(0);			
+			warrantyInfo();			
 			$('#warranty-load').show();
 			$('#txt-barcode_box').hide();
 			$('.alert-warranty').hide();
