@@ -1,5 +1,5 @@
 var shop = '09A3C5B1-EBF7-443E-B620-48D3B648294E';
-var apiKey = 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8'
+var apiKey = 'BE12B369-0963-40AD-AA40-D68A7516A37B'
 
 var fileCount = 0;
 var fileProgress = {};
@@ -31,7 +31,7 @@ $(function() {
 			$('#file2').val('');
 			$('#file3').val('');
 			$('#file4').val('');
-			warrantyInfo(0); 
+			warrantyInfo(); 
 			$("#tab-warranty-not_exist").hide();
 			$("#tab-warranty-info").hide();
 			$('#dv-claim').hide();
@@ -96,39 +96,31 @@ $(function() {
 		}
 	});
 	
-	var url = window.location.href.split('/');
-	var web = "remaxthailand";
-	console.log(url[2]);
-	console.log(url[2].indexOf(web));
 
 });
-function warrantyInfo(i, chkBarcode){
+function warrantyInfo(chkBarcode){
 	var barcode_info = ((typeof chkBarcode != 'undefined' && chkBarcode != '') ? $.trim(chkBarcode) : $.trim($('#txt-barcode').val()));
 	if(i < 4 ){
-		$.post('http://power-api-test.azurewebsites.net/warranty/info', {
+		$.post('http://api.powerdd.com/warranty/info', {
 			apiKey: apiKey,
 			barcode: barcode_info
 		}, function(data){
-			i++
 			if (data.success) {
-				if ( typeof data.result == '' || typeof data.result == 'undefined' || data.result.length == 0){
-					warrantyInfo(i);
-				}
-				else{
+				if (data.result.length != 0){
 					if (chkClaim){
 						claimInformation(data)						
 					}else{
-						$('#product').html(data.result.ProductID);
-						$('#barcode').html(data.result.Barcode);
-						$('#tab-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.ProductName);
-						$('#tab-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.Barcode);
-						$('#tab-CustomerName').html(data.result.CustomerName);
-						var sellDateYearTH = parseInt(moment(data.result.SellDate).lang('th').add(3600*7, 'seconds').format('YYYY'))+543;
-						var sellDateMM = moment(data.result.SellDate).locale('th').add(3600*7, 'seconds').format('DD MMMM'); 
+						$('#product').html(data.result.product);
+						$('#barcode').html(data.result.barcode);
+						$('#tab-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.productName);
+						$('#tab-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.barcode);
+						$('#tab-CustomerName').html(data.result.customerName);
+						var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
+						var sellDateMM = moment(data.result.sellDate).locale('th').format('DD MMMM'); 
 						$('#tab-SellDate').html(sellDateMM+' '+sellDateYearTH);
-						var expireDateYearTH = parseInt(moment(data.result.ExpireDate).lang('th').add(3600*7, 'seconds').format('YYYY'))+543;
-						var expireDateMM = moment(data.result.ExpireDate).locale('th').add(3600*7, 'seconds').format('DD MMMM');
-						if(data.result.Warranty == 0){
+						var expireDateYearTH = parseInt(moment(data.result.expireDate).lang('th').format('YYYY'))+543;
+						var expireDateMM = moment(data.result.expireDate).locale('th').format('DD MMMM');
+						if(data.result.warranty == 0){
 							$('#tab-warrantyStatus').html('<b><u>สินค้าไม่มีประกัน</u><b>');
 							$('#tab-warrantyStatus').removeClass('text-success');
 							$('#tab-warrantyStatus').removeClass('text-danger');
@@ -138,7 +130,7 @@ function warrantyInfo(i, chkBarcode){
 							$('#tab-warranty-info').removeClass('panel-danger');
 							$('#tab-warranty-info').addClass('panel-warning');
 						}
-						else if(data.result.Warranty > 0 && data.result.DaysRemaining <= 0){					
+						else if(data.result.warranty > 0 && data.result.daysRemaining <= 0){					
 							$('#tab-warrantyStatus').html('<b><u>หมดประกัน</u><b>');
 							$('#tab-warrantyStatus').removeClass('text-success');
 							$('#tab-warrantyStatus').removeClass('text-warning');
@@ -184,7 +176,7 @@ function checkClaim(){
 	}, function(data){
 			if (data.success) {
 				claimInfo = data.result[0];
-				warrantyInfo(0, data.result[0].Barcode);			
+				warrantyInfo(data.result[0].Barcode);			
 			}else{
 				setTimeout('$("#tab-warranty-load").slideUp()',3000);
 				setTimeout('$("#tab-warranty-not_exist").slideDown()',3000);
@@ -209,8 +201,8 @@ function claimInformation(data){
 	$('#claim-Massage').hide();
 	$('#claim-ClaimNo').html('<b>เลขที่การเคลม: </b>'+ claimInfo.ClaimNo);
 	$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+'<u>'+ claimStatus +'</u>');
-	$('#claim-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.ProductName);
-	$('#claim-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.Barcode);
+	$('#claim-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.productName);
+	$('#claim-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.barcode);
 	$('#claim-Description').html('<b>รายละเอียด : </b>'+claimInfo.Description);
 
 	$('#sum-name').html('คุณ '+claimInfo.Firstname+' '+claimInfo.Lastname+(typeof claimInfo.Nickname != 'undefined' && claimInfo.Nickname != '' ? ' ('+claimInfo.Nickname+')' : ''));
