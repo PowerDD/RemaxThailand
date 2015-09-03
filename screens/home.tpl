@@ -15,7 +15,7 @@
 			<div class="message text-center">สินค้ามาใหม่</div>
 		</div>
 	</div>
-
+	{include file='check_warranty_box.tpl'}
 	{section name=idx loop=$category.id}
 		{if $category.id[idx] != '2-7'}
 			<div class="pinItem">
