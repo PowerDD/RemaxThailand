@@ -1,5 +1,6 @@
 var shop = '09A3C5B1-EBF7-443E-B620-48D3B648294E';
-var apiKey = 'BE12B369-0963-40AD-AA40-D68A7516A37B'
+var apiKey = 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8'
+var apiKeyPower = 'BE12B369-0963-40AD-AA40-D68A7516A37B'
 
 var fileCount = 0;
 var fileProgress = {};
@@ -102,7 +103,7 @@ function warrantyInfo(chkBarcode){
 	var barcode_info = ((typeof chkBarcode != 'undefined' && chkBarcode != '') ? $.trim(chkBarcode) : $.trim($('#txt-barcode').val()));
 	if(i < 4 ){
 		$.post('http://api.powerdd.com/warranty/info', {
-			apiKey: apiKey,
+			apiKey: apiKeyPower,
 			barcode: barcode_info
 		}, function(data){
 			if (data.success) {
