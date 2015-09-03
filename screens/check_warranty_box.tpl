@@ -12,7 +12,7 @@
 								</span>
 						</div>
 					</form>
-					<a id="btn-condition_warranty" class="button-warranty btn btn-block btn-primary" href="{$system_url}/claim"> เคลม / เงื่อนไขการรับประกัน </a>
+					<a id="btn-condition_warranty" href="{$system_url}/warranty_condition"> เงื่อนไขการรับประกัน </a>
 					
 					<div id="warranty-not_exist" role="alert" class="alert alert-warranty alert-danger hidden margin-bottom-30"> ไม่พบข้อมูลค่ะ</div>
 					<div id="warranty-info" role="alert" class="alert alert-warranty alert-success hidden margin-bottom-30">
