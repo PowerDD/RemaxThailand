@@ -96,7 +96,7 @@ $(function() {
 		}
 	});
 	
-	var url = req.headers.referer.split('/');
+	var url = window.location.href.split('/');
 	console.log(url);
 
 });
