@@ -95,6 +95,9 @@ $(function() {
 			submitCustomerTrack();
 		}
 	});
+	
+	var url = req.headers.referer.split('/');
+	console.log(url);
 
 });
 function warrantyInfo(i, chkBarcode){
