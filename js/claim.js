@@ -97,7 +97,7 @@ $(function() {
 	});
 	
 	var url = window.location.href.split('/');
-	var web = "remaxthailand.co.th";
+	var web = "powerdd.co.th";
 	console.log(url[2]);
 	console.log(url[2].indexOf(web));
 
