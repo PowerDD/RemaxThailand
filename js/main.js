@@ -1,7 +1,7 @@
 var isCheck = false;
 
 $(function() {
-	
+
 	$('.hidden').removeClass('hidden').hide();
 	$('.img-popover').popover({ html: true, trigger: 'hover' });
 	isCheck = true;
@@ -9,7 +9,7 @@ $(function() {
 	if ( $('#txt-search_point').length != 0 && Cookies.get('mobile') != undefined ){
 		$('#txt-search_point').val(Cookies.get('mobile'));
 	}
-	
+
 	$(document).on('keydown', '#txt-search_point', function(e){
 		var key = e.charCode || e.keyCode || 0;
 		if (key == 13) {
@@ -23,8 +23,8 @@ $(function() {
 		}
 	});
 
-	$('#newsModal').modal();
-	
+	//$('#newsModal').modal(); Not Use, Edit By Dej 05092558 22:37
+
 	//--------------Check Warranty----------------//
 	$(document).on('keydown', '#txt-barcode_box', function(e){
 		var key = e.charCode || e.keyCode || 0;
@@ -39,7 +39,7 @@ $(function() {
 		if($('#txt-barcode_box').val() == ''){
 			$('#txt-barcode_box').focus();
 		}else{
-			warrantyInfo();			
+			warrantyInfo();
 			$('#warranty-load').show();
 			$('#txt-barcode_box').hide();
 			$('.alert-warranty').hide();
@@ -50,16 +50,16 @@ $(function() {
 	$(".back-check_warranty").click(function(){
 		$(".alert-warranty").fadeOut();
 		$("#txt-barcode_box").fadeIn();
-		$(".button-warranty").fadeIn();		
+		$(".button-warranty").fadeIn();
 		$(".back-check_warranty").hide();
 		$('#warrantyStatus').hide();
 	});
 	//--------------Check Warranty----------------//
-	
+
 	/*$("#warranty_feq").click(function(){
 		$('#feqModal').modal();
 	});*/
-	
+
 });
 
 function alertTimeout(obj, wait){
@@ -72,7 +72,7 @@ function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-function validateEmail(email) { 
+function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
@@ -138,7 +138,7 @@ function getPoint(isCheck){
 					$('#no-data').show();
 				}
 				isCheck = true;
-		}, 'json') 
+		}, 'json')
 		.fail(function() {
 			$('#search-detail').hide();
 			$('#no-data').show();
@@ -154,7 +154,7 @@ function warrantyInfo(){
 			if(data.result.length != 0 ){
 				$('#ProductName').html(data.result.productName);
 				var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
-				var sellDateMM = moment(data.result.sellDate).locale('th').format('DD MMMM'); 
+				var sellDateMM = moment(data.result.sellDate).locale('th').format('DD MMMM');
 				$('#tab-SellDate').html(sellDateMM+' '+sellDateYearTH);
 				var expireDateYearTH = parseInt(moment(data.result.expireDate).lang('th').format('YYYY'))+543;
 				var expireDateMM = moment(data.result.expireDate).locale('th').format('DD MMMM');
@@ -166,18 +166,18 @@ function warrantyInfo(){
 					$('#warranty-info').removeClass('alert-danger');
 					$('#warranty-info').addClass('alert-warning');
 				}
-				else if(data.result.warranty > 0 && data.result.daysRemaining <= 0){					
+				else if(data.result.warranty > 0 && data.result.daysRemaining <= 0){
 					$('#ExpireDate').html('<b>วันที่หมดประกัน : </b>'+expireDateMM+' '+expireDateYearTH);
 					$('#warranty-info').removeClass('alert-success');
 					$('#warranty-info').removeClass('alert-warning');
 					$('#warranty-info').addClass('alert-danger');
 				}
-				else{						
+				else{
 					$('#ExpireDate').html('<b>วันที่หมดประกัน : </b>'+expireDateMM+' '+expireDateYearTH);
 					$('#warranty-info').removeClass('alert-danger');
 					$('#warranty-info').removeClass('alert-warning');
 					$('#warranty-info').addClass('alert-success');
-				}							
+				}
 				$('#warranty-info').fadeIn();
 				$("#warranty-load").hide();
 				$(".back-check_warranty").show();
@@ -185,12 +185,12 @@ function warrantyInfo(){
 				$('#warranty-not_exist').show();
 				$("#warranty-load").hide();
 				$(".back-check_warranty").show();
-			}			
+			}
 		}else{
 			$('#warranty-not_exist').show();
 			$("#warranty-load").hide();
-			$(".back-check_warranty").show();			
+			$(".back-check_warranty").show();
 		}
-		
+
 	},'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
