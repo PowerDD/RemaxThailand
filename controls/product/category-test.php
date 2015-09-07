@@ -8,10 +8,9 @@ $ex = explode('/', $HTTP_URI);
 $url = 'http://api.powerdd.com/product/info';
 $data = array('apiKey' => 'BE12B369-0963-40AD-AA40-D68A7516A37B','shop' => 'POWERDDH-8888-8888-B620-48D3B6489999', 'type' => 'byCategoryUrl4Web', 'value' => $ex[3]);
 
-/*$options = array(
+$options = array(
     'http' => array(
         'header'  => "Referer: http://remaxthailand.co.th\r\n".
-			"Origin: http://remaxthailand.co.th\r\n".
 			"Content-type: application/x-www-form-urlencoded\r\n",
         'method'  => 'POST',
         'content' => http_build_query($data),
@@ -19,8 +18,8 @@ $data = array('apiKey' => 'BE12B369-0963-40AD-AA40-D68A7516A37B','shop' => 'POWE
 );
 $context  = stream_context_create($options);
 $result = file_get_contents($url, false, $context);
-*/
-print_r( http_build_query($data) );
+
+print_r( $result );
 exit();
 
 $smarty->assign('api-data', $result );
