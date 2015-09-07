@@ -25,6 +25,35 @@ $(function() {
 
 	//$('#newsModal').modal(); Not Use, Edit By Dej 05092558 22:37
 
+	//--------------Check Remax Product----------------//
+	$(document).on('keydown', '#txt-remax_barcode', function(e){
+		var key = e.charCode || e.keyCode || 0;
+		if (key == 13) {
+			$('#btn-remax_barcode').click();
+		}
+	});
+	$('#check_remax_product').submit(function(e){
+		return false;
+	});
+	$('#btn-check_barcode_box').click(function(){
+		if($('#txt-remax_barcode').val() == ''){
+			$('#txt-remax_barcode').focus();
+		}else{
+			checkRemaxProduct();
+			$('#remax_barcode-load').show();
+			$('#txt-remax_barcode').hide();
+			$('.alert-remax_barcode').hide();
+			$(".button-check_remax_product").hide();
+		}
+	});
+	$(".back-remax_barcode").click(function(){
+		$(".alert-remax_barcode").fadeOut();
+		$("#txt-remax_barcode").fadeIn();
+		$(".button-check_remax_product").fadeIn();
+		$(".back-remax_barcode").hide();
+	});
+	//--------------Check Remax Product----------------//
+
 	//--------------Check Warranty----------------//
 	$(document).on('keydown', '#txt-barcode_box', function(e){
 		var key = e.charCode || e.keyCode || 0;
@@ -145,6 +174,38 @@ function getPoint(isCheck){
 		});
 	}
 };
+
+function checkRemaxProduct(){
+	$.post('http://api.powerdd.com/warranty/info', {
+		apiKey: 'BE12B369-0963-40AD-AA40-D68A7516A37B',
+		barcode: $.trim($('#txt-remax_barcode').val())
+	}, function(data){
+		if (data.success) {
+			if(data.result.length != 0 ){
+				$('#ProductName').html(data.result.productName);
+				var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
+				var sellDateMM = moment(data.result.sellDate).locale('th').format('DD MMMM');
+				$('#SellDate').html(sellDateMM+' '+sellDateYearTH);
+				var expireDateYearTH = parseInt(moment(data.result.expireDate).lang('th').format('YYYY'))+543;
+				var expireDateMM = moment(data.result.expireDate).locale('th').format('DD MMMM');
+
+				$('#product-info').fadeIn();
+				$("#product-load").hide();
+				$(".back-remax_barcode").show();
+			}else{
+				$('#remax_not_exist').show();
+				$("#product-load").hide();
+				$(".back-remax_barcode").show();
+			}
+		}else{
+			$('#remax_not_exist').show();
+			$("#product-load").hide();
+			$(".back-remax_barcode").show();
+		}
+
+	},'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
+};
+
 function warrantyInfo(){
 	$.post('http://api.powerdd.com/warranty/info', {
 		apiKey: 'BE12B369-0963-40AD-AA40-D68A7516A37B',
