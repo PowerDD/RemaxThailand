@@ -9,6 +9,7 @@ $data = array('apiKey' => 'BE12B369-0963-40AD-AA40-D68A7516A37B','shop' => 'POWE
 
 $options = array(
     'http' => array(
+        'header'  => "Referer: http://remaxthailand.co.th\r\n",
         'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
         'method'  => 'POST',
         'content' => http_build_query($data),
