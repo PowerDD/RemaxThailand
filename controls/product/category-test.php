@@ -19,7 +19,7 @@ $options = array(
 $context  = stream_context_create($options);
 $result = json_decode(file_get_contents($url, false, $context));
 
-print_r( $result.result );
+print_r( $result );
 exit();
 
 $smarty->assign('api-data', $result );
