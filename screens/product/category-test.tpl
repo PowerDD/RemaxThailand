@@ -3,10 +3,10 @@
 		<div class="pinItem">
 			<div class="pinBox pinWell margin-bottom-15"> 
 				<a href="/product/item/{$product[idx].product}">
-					<img class="img-responsive img-popover" width="500" src="{if $product[idx].image != ''}http://api.powerdd.com/img/remax/product/88888888/{$product[idx].sku}/300/300/{$product[idx].image}{else}http://src.powerdd.com/img/category/88888888/default.png{/if}"{if $product.highlights[idx] != ''} data-placement="bottom" data-toggle="popover" title="จุดเด่นของสินค้า" data-content="{$product.highlights[idx]|replace:'<img':"<img class='img-responsive'"}"{/if}>
+					<img class="img-responsive img-popover" width="500" src="{if $product[idx].image != ''}http://api.powerdd.com/img/remax/product/88888888/{$product[idx].sku}/300/300/{$product[idx].image}{else}http://src.powerdd.com/img/product/88888888/default.jpg{/if}">
 				</a>
 				<div class="message">
-					<div class="margin-top-5 margin-bottom-5"><div class="text-center">{if $product[idx].isNew == 1}<img src="https://src.24fin.com/images/gif/new.gif"> {/if}<b class="text-info">
+					<div class="margin-top-5 margin-bottom-5"><div class="text-center">{if $product[idx].isNew == 1}<img src="http://src.powerdd.com/img/web/88888888/gif/new.gif"> {/if}<b class="text-info">
 					<a href="/product/item/{$product[idx].product}">{$product[idx].name}</a></b></div>{if $product[idx].sku != '' && $product[idx].sku|substr:0:1 == 'D'}<div class="margin-top-5 pull-left">{$product[idx].sku}</div>{/if}
 						<div class="margin-top-5 pull-right no-wrap">{if $product[idx].warranty > 0}รับประกัน 
 							{if $product[idx].warranty == 365} 1 ปี
