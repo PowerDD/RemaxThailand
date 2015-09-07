@@ -3,7 +3,7 @@
 	<div class="pinItem">
     <div class="pinBox pinWell margin-bottom-15">
       <a href="{$system_url}/register">
-        <img src="https://lh3.googleusercontent.com/e5xRTLmKd2D41p02dr6NWJUF1KPBi_ZrFF1zwG_UpJnG2s1nHs2eaQI0A1_ci64-g1ljJqNE2KZj7roESzHhCmwxI0n4zysRM8L1x5wuWs70_Yje1qmGDPs8_Cap-ft6Ma5c2lMd-K1iUkyzdp3Kq6WS497LxBnnDGq1Cx7vzhqCDin-pGfiyM0uKKItC0-9486zkuFt0Q41MgLUTNzjiyzG4N5I2s4rp4zBoMHZahyHfVxxhxYLpB20OpJQ6HPbVVnfxZXBYKGqGnYCSRuL_g6w4CU4Bsw7_niGlfUXdS-sS_Qb0O04LpWKe6MY5UO2oJF_nJzExiMx7PKMxJyoTPjFmMfWdy2ehCy0B4aN59otcb-nTIFa49GpAJhZc4hGSqiEz_MNjiCsPSwXHCDiI1_HWTsv3aAlHmcp2FT8dYNA5TMV-TAU3lOWDU0Y2RB_UkwkJ4fohs9115fVpXcMyZvbe4uOwaDMWkboBExbifbOYe-Dz41jnVhfbBkPs-b6A_-MVPfhm0S8F1gz3e8kqaY=w600-no"  class="img-responsive">
+        <img src="http://src.powerdd.com/img/web/88888888/box/dealer_regis.png"  class="img-responsive">
       </a>
       <div class="message text-center">สมัครตัวแทนจำหน่าย</div>
     </div>
