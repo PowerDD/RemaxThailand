@@ -35,7 +35,7 @@ $(function() {
 	$('#check_remax_product').submit(function(e){
 		return false;
 	});
-	$('#btn-check_barcode_box').click(function(){
+	$('#btn-remax_barcode').click(function(){
 		if($('#txt-remax_barcode').val() == ''){
 			$('#txt-remax_barcode').focus();
 		}else{
