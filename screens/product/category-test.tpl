@@ -3,11 +3,11 @@
 		<div class="pinItem">
 			<div class="pinBox pinWell margin-bottom-15"> 
 				<a href="/product/item/{$product[idx].product}">
-					<img class="img-responsive img-popover" width="500" src="http://api.powerdd.com/img/remax/product/88888888/{if $product[idx].image != NULL}{$product[idx].sku}/300/300/{$product[idx].image}{else}xxx{/if}"{if $product.highlights[idx] != ''} data-placement="bottom" data-toggle="popover" title="จุดเด่นของสินค้า" data-content="{$product.highlights[idx]|replace:'<img':"<img class='img-responsive'"}"{/if}>
+					<img class="img-responsive img-popover" width="500" src="http://api.powerdd.com/img/remax/product/88888888/{if $product[idx].image != ''}{$product[idx].sku}/300/300/{$product[idx].image}{else}xxx{/if}"{if $product.highlights[idx] != ''} data-placement="bottom" data-toggle="popover" title="จุดเด่นของสินค้า" data-content="{$product.highlights[idx]|replace:'<img':"<img class='img-responsive'"}"{/if}>
 				</a>
 				<div class="message">
 					<div class="margin-top-5 margin-bottom-5"><div class="text-center">{if $product[idx].isNew == 1}<img src="https://src.24fin.com/images/gif/new.gif"> {/if}<b class="text-info">
-					<a href="/product/item/{$product.id[idx]}">{$product[idx].name}</a></b></div>{if $product[idx].sku != '' && $product[idx].sku|substr:0:1 == 'D'}<div class="margin-top-5 pull-left">{$product[idx].sku}</div>{/if}
+					<a href="/product/item/{$product[idx].product}">{$product[idx].name}</a></b></div>{if $product[idx].sku != '' && $product[idx].sku|substr:0:1 == 'D'}<div class="margin-top-5 pull-left">{$product[idx].sku}</div>{/if}
 						<div class="margin-top-5 pull-right no-wrap">{if $product[idx].warranty > 0}รับประกัน 
 							{if $product[idx].warranty == 365} 1 ปี
 							{else if $product[idx].warranty >= 30} {$product[idx].warranty/30} เดือน
