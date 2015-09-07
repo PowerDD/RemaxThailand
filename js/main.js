@@ -40,7 +40,7 @@ $(function() {
 			$('#txt-remax_barcode').focus();
 		}else{
 			checkRemaxProduct();
-			$('#remax_barcode-load').show();
+			$('#product-load').show();
 			$('#txt-remax_barcode').hide();
 			$('.alert-remax_barcode').hide();
 			$(".button-check_remax_product").hide();
