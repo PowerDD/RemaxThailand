@@ -182,13 +182,12 @@ function checkRemaxProduct(){
 	}, function(data){
 		if (data.success) {
 			if(data.result.length != 0 ){
-				$('#ProductName').html(data.result.productName);
 				var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
 				var sellDateMM = moment(data.result.sellDate).locale('th').format('DD MMMM');
-				$('#SellDate').html(sellDateMM+' '+sellDateYearTH);
 				var expireDateYearTH = parseInt(moment(data.result.expireDate).lang('th').format('YYYY'))+543;
 				var expireDateMM = moment(data.result.expireDate).locale('th').format('DD MMMM');
-
+				$('#ProductName').html(data.result.productName);
+				$('#SellDate').html('จำหน่ายเมื่อวันที่ : 'sellDateMM+' '+sellDateYearTH);
 				$('#product-info').fadeIn();
 				$("#product-load").hide();
 				$(".back-remax_barcode").show();
