@@ -1,11 +1,15 @@
 <div class="row pinRow">
-	
+
 	<div class="pinItem">
-		<div class="pinBox pinWell margin-bottom-15">
-			<img src="https://cdn24fin.blob.core.windows.net/img/products/1/D-Reward point/1.jpg" class="img-responsive pointer"  data-toggle="modal" data-target="#dv-check_point">
-			<div class="message text-center">ตรวจสอบคะแนนสะสม</div>
-		</div>
-	</div>
+    <div class="pinBox pinWell margin-bottom-15">
+      <a href="{$system_url}/register">
+        <img src="http://src.powerdd.com/img/web/88888888/box/dealer_regis.jpg"  class="img-responsive">
+      </a>
+      <div class="message text-center">สมัครตัวแทนจำหน่าย</div>
+    </div>
+  </div>
+
+	{include file='check_remax_product_box.tpl'}
 
 	<div class="pinItem">
 		<div class="pinBox pinWell margin-bottom-15">
@@ -15,9 +19,9 @@
 			<div class="message text-center">สินค้ามาใหม่</div>
 		</div>
 	</div>
-	
+
 	{include file='check_warranty_box.tpl'}
-	
+
 	{section name=idx loop=$category.id}
 		{if $category.id[idx] != '2-7'}
 			<div class="pinItem">
