@@ -81,7 +81,7 @@
 						{if $product.imageDetail|count > 1}
 							{section name=idx loop=$product.imageDetail}
 								<div class="col-sm-12">
-									<img src="http://api.powerdd.com/img/remax/product/{$product.shop}/{$product.sku}/{$product.imageDetail[idx]}" alt="{$product.name}" class="img-responsive">
+									<img src="http://api.powerdd.com/img/remax/product/{$product.shop}/{$product.sku}/{$product.imageDetail[idx]}" alt="{$product.name}" class="img-responsive no-radius">
 								</div>
 							{/section}
 						{/if}
