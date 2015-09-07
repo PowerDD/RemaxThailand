@@ -15,8 +15,8 @@
 						{/if}</div>
 					</div>
 					<div class="clearfix line margin-bottom-5"></div>
-					<div class="pull-left no-wrap">{if $product.hasStock[idx] == 0}<b class="text-danger">สินค้าหมด</b> : {/if}ราคาปลีก<b class="text-danger">{if $product[idx].price == 0}ยังไม่กำหนด</b>{else} {$product[idx].price|number_format:0:".":","}</b> บาท{/if}</div>
-					<div class="pull-right no-wrap">ราคาส่ง(3 ชิ้น)<b class="text-danger">{if $product.salePrice1[idx] == 0}ยังไม่กำหนด</b>{else} {$product.salePrice1[idx]|number_format:0:".":","}</b> บาท{/if}</div>
+					<div class="pull-left no-wrap">{if $product[idx].stock <= 0}<b class="text-danger">สินค้าหมด</b> : {/if}ราคาปลีก<b class="text-danger">{if $product[idx].price == 0}ยังไม่กำหนด</b>{else} {$product[idx].price|number_format:0:".":","}</b> บาท{/if}</div>
+					<div class="pull-right no-wrap">ราคาส่ง(3 ชิ้น)<b class="text-danger">{if $product[idx].price1 == 0}ยังไม่กำหนด</b>{else} {$product[idx].price1|number_format:0:".":","}</b> บาท{/if}</div>
 					<div class="clearfix"></div>
 				</div>
 			</div>
