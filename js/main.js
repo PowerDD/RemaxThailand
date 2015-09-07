@@ -187,7 +187,7 @@ function checkRemaxProduct(){
 				var expireDateYearTH = parseInt(moment(data.result.expireDate).lang('th').format('YYYY'))+543;
 				var expireDateMM = moment(data.result.expireDate).locale('th').format('DD MMMM');
 				$('#ProductName').html(data.result.productName);
-				$('#SellDate').html('จำหน่ายเมื่อวันที่ : '+sellDateMM+' '+sellDateYearTH);
+				$('#SellDate').html('จำหน่ายเมื่อ : '+sellDateMM+' '+sellDateYearTH);
 				$('#product-info').fadeIn();
 				$("#product-load").hide();
 				$(".back-remax_barcode").show();
