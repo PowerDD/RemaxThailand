@@ -48,11 +48,11 @@
 					<div class="col-sm-3 col-xs-6 margin-top-10">
 						<div class="small text-primary">ราคาส่ง</div>
 						<div class="margin-bottom-0 margin-top-0">
-							{if !isset($product.salePrice1) || $product.salePrice1 == 0}
+							{if !isset($product.price1) || $product.price1 == 0}
 								ยังไม่กำหนดราคา
 							{else}
-								<h3 class="margin-bottom-0 margin-top-0"><strong class="text-danger">{$product.salePrice1|number_format:0:".":","}</strong> บาท</h3>
-								<div class="small">ประหยัด {(($product.price-$product.salePrice1)*100/$product.price)|number_format:2:".":","}%</div>
+								<h3 class="margin-bottom-0 margin-top-0"><strong class="text-danger">{$product.price1|number_format:0:".":","}</strong> บาท</h3>
+								<div class="small">ประหยัด {(($product.price-$product.price1)*100/$product.price)|number_format:2:".":","}%</div>
 							{/if}
 						</div>
 						<div class="small"></div>
