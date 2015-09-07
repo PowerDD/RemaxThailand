@@ -19,14 +19,11 @@ $options = array(
 $context  = stream_context_create($options);
 $result = json_decode(file_get_contents($url, false, $context), true);
 
-print_r( $result['result'] );
-exit();
-
-$smarty->assign('api-data', $result );
+$smarty->assign('product', $result['result'] );
 
 
 $smarty->assign('category_name', $ex[3]);
 //$smarty->assign('title', $ex[3]);
-$smarty->assign('product', $_DB->query( 'EXEC ProductCategoryRemaxSelect 2, \''.$ex[3].'\'' ) );
+//$smarty->assign('product', $_DB->query( 'EXEC ProductCategoryRemaxSelect 2, \''.$ex[3].'\'' ) );
 
 ?>
