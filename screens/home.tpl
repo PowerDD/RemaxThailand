@@ -30,7 +30,7 @@
 			<div class="pinItem">
 				<div class="pinBox pinWell margin-bottom-15">
 					<a href="{$system_url}/product/category/{$category.url[idx]}">
-						<img src="https://cdn24fin.blob.core.windows.net/img/products/1/D-{$category.name[idx]|replace:'-':'/'|replace:'/':''|replace:'  ':' '}/1_l.jpg" class="img-responsive">
+						<img src=" http://src.powerdd.com/img/category/88888888/{$category.name[idx]|replace:'-':'/'|replace:'/':''|replace:'  ':' '}/1.jpg" class="img-responsive">
 					</a>
 					<div class="message text-center margin-top-5">{$category.name[idx]}</div>
 				</div>
