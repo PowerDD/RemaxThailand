@@ -2,7 +2,9 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-4 col-md-4 margin-bottom-15">
 		
-			<img src="http://api.powerdd.com/img/remax/product/{$product.shop}/{$product.sku}/300/300/1.jpg{if $id_cover != ''}{$image.$id_cover.path}{else}products/box.png{/if}" alt="{$product.name}" class="img-thumbnail img_box_shadow" id="img_main"  data-zoom-image="https://cdn24fin.blob.core.windows.net/img/products/1/{if $id_cover != ''}{$image.$id_cover.path}{else}products/box_l.png{/if}">
+			<img src="{if $product.cover != ''}http://api.powerdd.com/img/remax/product/{$product.shop}/{$product.sku}/500/500/{$product.cover}
+			{else}products/box.png{/if}" 
+			alt="{$product.name}" class="img-thumbnail img_box_shadow" id="img_main"  data-zoom-image="{if $id_cover != ''}xxx{else}yyy{/if}">
 
 			{if $id_cover != '' && $image|count > 1}
 				<div class="row">
