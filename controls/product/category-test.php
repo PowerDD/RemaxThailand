@@ -2,6 +2,7 @@
 
 $smarty->assign('is_use_lazy_load', true);
 
+$ex = explode('/', $HTTP_URI);
 //$_DB->execute( 'EXEC ProductReplaceJunkMessage' );
 
 $url = 'http://api.powerdd.com/product/info';
@@ -19,13 +20,12 @@ $options = array(
 $context  = stream_context_create($options);
 $result = file_get_contents($url, false, $context);
 
-print_r( http_build_query($data) );
+print_r( $result );
 exit();
 
 $smarty->assign('api-data', $result );
 
 
-$ex = explode('/', $HTTP_URI);
 $smarty->assign('category_name', $ex[3]);
 //$smarty->assign('title', $ex[3]);
 $smarty->assign('product', $_DB->query( 'EXEC ProductCategoryRemaxSelect 2, \''.$ex[3].'\'' ) );
