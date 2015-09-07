@@ -10,7 +10,7 @@
 				<div class="row">
 					{section name=idx loop=$product.image}
 						<div class="col-xs-3 col-sm-3 col-md-3">
-							<img src="http://api.powerdd.com/img/remax/product/{$product.shop}/{$product.sku}/100/100/$product.image[idx]" alt="{$product.name}" class="pointer img-thumbnail img_small_list{if $product.image[idx] == $product.cover} active{/if}">
+							<img src="http://api.powerdd.com/img/remax/product/{$product.shop}/{$product.sku}/100/100/{$product.image[idx]}" alt="{$product.name}" class="pointer img-thumbnail img_small_list{if $product.image[idx] == $product.cover} active{/if}">
 						</div>
 					{/section}
 				</div>
@@ -76,6 +76,16 @@
 							{$product.inTheBox}
 						{/if}
 						<div class="line"></div>
+
+						
+						{if $product.imageDetail|count > 1}
+							{section name=idx loop=$product.imageDetail}
+								<div class="col-xs-3 col-sm-3 col-md-3">
+									<img src="http://api.powerdd.com/img/remax/product/{$product.shop}/{$product.sku}/100/100/{$product.imageDetail[idx]}" alt="{$product.name}">
+								</div>
+							{/section}
+						{/if}
+
 						<div class="text-center">
 							<img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https:{$system_url}/product/item/{$product.id}">
 						</div>
