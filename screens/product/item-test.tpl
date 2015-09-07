@@ -9,11 +9,9 @@
 			{if $product.cover != '' && $product.image|count > 1}
 				<div class="row">
 					{section name=idx loop=$product.image}
-						{if isset($image.$idx.path_s)}
-							<div class="col-xs-3 col-sm-3 col-md-3">
-								<img src="http://api.powerdd.com/img/remax/product/{$product.shop}/{$product.sku}/100/100/$product.image[idx]" alt="{$product.name}" class="pointer img-thumbnail img_small_list{if $product.image[idx] == $product.cover} active{/if}">
-							</div>
-						{/if}
+						<div class="col-xs-3 col-sm-3 col-md-3">
+							<img src="http://api.powerdd.com/img/remax/product/{$product.shop}/{$product.sku}/100/100/$product.image[idx]" alt="{$product.name}" class="pointer img-thumbnail img_small_list{if $product.image[idx] == $product.cover} active{/if}">
+						</div>
 					{/section}
 				</div>
 			{/if}
