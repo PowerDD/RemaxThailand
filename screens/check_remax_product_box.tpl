@@ -15,7 +15,7 @@
 
 					<div id="remax_not_exist" role="alert" class="alert alert-remax_barcode alert-danger hidden margin-bottom-30"><i class="fa fa-exclamation-triangle"></i> ไม่พบข้อมูลค่ะ</div>
 					<div id="product-info" role="alert" class="alert alert-remax_barcode alert-success hidden margin-bottom-30">
-						<p>สินค้ารายการนี้<b><u>เป็นของแท้</u></b></p>
+						<p>สินค้ารายการนี้เป็น<b><u>ของแท้</u></b></p>
 						<p>จาก Remax Thailand</p>
 						<p><b id="ProductName"></b></p>
 						<p id="SellDate"></p>
