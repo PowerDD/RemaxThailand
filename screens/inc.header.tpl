@@ -63,15 +63,17 @@
 					</li>
 					<li{if strpos($filename, 'contact_us') !== false} class="active"{/if}><a href="{$system_url}/contact_us">ติดต่อเรา</a></li>
 					<li{if strpos($filename, 'warranty_condition') !== false} class="active"{/if}><a href="{$system_url}/warranty_condition">เงื่อนไขการรับประกัน</a></li>
+          <li{if strpos($filename, 'payment') !== false} class="active"{/if}><a href="{$system_url}/payment">วิธีการชำระเงิน</a></li>
 				</ul>
-				<form class="navbar-form navbar-left" role="search" method="POST" action="{$system_url}/product/search">				
+        <!--
+				<form class="navbar-form navbar-left" role="search" method="POST" action="{$system_url}/product/search">
 					<div class="input-group">
 						<input type="text" class="form-control" id="keyword" name="keyword" placeholder="ค้นหาสินค้า" value="{if isset($smarty.post.keyword)}{$smarty.post.keyword}{/if}">
 						<span class="input-group-btn">
 							<button class="btn btn-primary" type="button" id="btn-search"><i class="fa fa-search"></i></button>
 						</span>
 					</div>
-				</form>
+				</form> -->
 
 				<ul class="nav navbar-nav navbar-right">
 				{if isset($smarty.session.member.id)}
