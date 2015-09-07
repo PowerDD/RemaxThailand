@@ -6,15 +6,15 @@
 			{else}products/box.png{/if}" 
 			alt="{$product.name}" class="img-thumbnail img_box_shadow" id="img_main"  data-zoom-image="{if $id_cover != ''}xxx{else}yyy{/if}">
 
-			{if $id_cover != '' && $image|count > 1}
+			{if $product.cover != '' && $product.image|count > 1}
 				<div class="row">
-					{for $idx=1 to 8}
+					{section name=idx loop=$product.image}
 						{if isset($image.$idx.path_s)}
 							<div class="col-xs-3 col-sm-3 col-md-3">
-								<img src="https://cdn24fin.blob.core.windows.net/img/products/1/{$image.$idx.path_s}" alt="{$product.name}" class="pointer img-thumbnail img_small_list{if $id_cover == $idx} active{/if}">
+								<img src="http://api.powerdd.com/img/remax/product/{$product.shop}/{$product.sku}/100/100/$product.image[idx]" alt="{$product.name}" class="pointer img-thumbnail img_small_list{if $product.image[idx] == $product.cover} active{/if}">
 							</div>
 						{/if}
-					{/for}
+					{/section}
 				</div>
 			{/if}
 
