@@ -22,9 +22,6 @@ if (isset($id)) {
 
 	$smarty->assign('product', $result['result'] );
 
-	print_r( $result['result'] );
-	exit();
-
 }
 
 ?>
