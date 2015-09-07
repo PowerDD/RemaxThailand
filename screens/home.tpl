@@ -3,7 +3,7 @@
 	<div class="pinItem">
     <div class="pinBox pinWell margin-bottom-15">
       <a href="{$system_url}/register">
-        <img src="http://src.powerdd.com/img/web/88888888/box/dealer_regis.png"  class="img-responsive">
+        <img src="http://src.powerdd.com/img/web/88888888/box/dealer_regis.gif"  class="img-responsive">
       </a>
       <div class="message text-center">สมัครตัวแทนจำหน่าย</div>
     </div>
