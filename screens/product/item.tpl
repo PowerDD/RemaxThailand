@@ -19,6 +19,7 @@
 		</div>
 		<div class="col-xs-12 col-sm-8 col-md-8">
 			<h1 class="font-16 margin-top-10"><strong id="product" data-id="{$product.id}">{$product.name}</strong></h1>
+			{if $product.model != ''}<h3>{$product.model}</h3>{/if}
 			<div class="pull-left">
 				{if isset($product.warranty) && $product.warranty > 0}
 					<div><span class="label label-success">รับประกันสินค้า 
