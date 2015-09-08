@@ -100,8 +100,8 @@
 						{/if}
 
 						{if $product.specialProperties != ''  && $product.specialProperties|count > 0}
-							<div class="row margin-top-15">
-								<h4 class="col-xs-12">คุณสมบัติ</h4>
+							<div class="row">
+								<h4 class="col-xs-12">คุณสมบัติพิเศษ</h4>
 								<div class="col-xs-12 margin-bottom-15">
 									<ul>
 										{section name=idx loop=$product.specialProperties}
@@ -113,8 +113,8 @@
 						{/if}
 
 						{if $product.howToUse != ''  && $product.howToUse|count > 0}
-							<div class="row margin-top-15">
-								<h4 class="col-xs-12">คุณสมบัติ</h4>
+							<div class="row">
+								<h4 class="col-xs-12">วิธีใช้งาน</h4>
 								<div class="col-xs-12 margin-bottom-15">
 									<ul>
 										{section name=idx loop=$product.howToUse}
@@ -126,8 +126,8 @@
 						{/if}
 
 						{if $product.inBox != ''  && $product.inBox|count > 0}
-							<div class="row margin-top-15">
-								<h4 class="col-xs-12">คุณสมบัติ</h4>
+							<div class="row">
+								<h4 class="col-xs-12">อุปกรณ์ภายในกล่อง</h4>
 								<div class="col-xs-12 margin-bottom-15">
 									<ul>
 										{section name=idx loop=$product.inBox}
@@ -137,6 +137,7 @@
 								</div>
 							</div>
 						{/if}
+
 
 						{if $product.imageDetail|count > 1}
 							<div class="row margin-top-15">
