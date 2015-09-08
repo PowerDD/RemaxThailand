@@ -23,7 +23,7 @@ if (isset($id)) {
 	$smarty->assign('product', $result['result'] );
 
 	$smarty->assign('title', $result['result']['name'] );
-	$smarty->assign('description', implode("\n\r",$result['result']['detail']) );
+	$smarty->assign('description', implode("\n",$result['result']['detail']) );
 
 }
 
