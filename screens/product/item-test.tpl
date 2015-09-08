@@ -40,11 +40,14 @@
 				{if $product.grossWeight > 0}
 					<div class="col-xs-4 bold text-right small">น้ำหนักรวม</div><div class="col-xs-8">{$product.grossWeight} กรัม</div>
 				{/if}
+				{if $product.madeIn != ''}
+					<div class="col-xs-4 bold text-right small">ผลิตในประเทศ</div><div class="col-xs-8">{$product.madeIn}</div>
+				{/if}
 				{if $product.standard != ''}
 					<div class="col-xs-4 bold text-right small">มาตรฐาน</div><div class="col-xs-8">{$product.standard}</div>
 				{/if}
-				{if $product.madeIn != ''}
-					<div class="col-xs-4 bold text-right small">ผลิตในประเทศ</div><div class="col-xs-8">{$product.madeIn}</div>
+				{if $product.standard != ''}
+					<div class="col-xs-12">{$product.standard|strpos:'CE'}</div>
 				{/if}
 			</div>
 
