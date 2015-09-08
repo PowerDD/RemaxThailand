@@ -84,22 +84,12 @@
 						<div class="small">จัดจำหน่ายและดำเนินการโดย Remax (Thailand) Co.,Ltd.</div>
 					</div>
 					<div class="col-sm-12 margin-top-10">
-						{if isset($product.highlights) && $product.highlights|trim|replace:'<br>':'' != ''}
-							<br/>
-							<strong><h4>จุดเด่น/จุดขายของสินค้า</h4></strong>
-							{$product.highlights}
-						{/if}
-						{if isset($product.inTheBox) && $product.inTheBox|trim|replace:'<br>':'' != ''}
-							<br/>
-							<strong><h4>อุปกรณ์ที่จะได้รับ</h4></strong>
-							{$product.inTheBox}
-						{/if}
 						<div class="line"></div>
 
-						{if $product.detail != ''}
+						{if $product.detail != ''  && $product.detail|count > 0}
 							<div class="row margin-top-15">
 								<h4 class="col-xs-12">คุณสมบัติ</h4>
-								<div class="col-xs-12 margin-bottom-15">{$product.detail|replace:"\n":'<br>'}</div>
+								<div class="col-xs-12 margin-bottom-15">{$product.detail[0]}</div>
 							</div>
 						{/if}
 
