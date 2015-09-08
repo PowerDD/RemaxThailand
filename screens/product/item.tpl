@@ -22,10 +22,10 @@
 				{if $product.deviceSupport != ''}
 					<div class="col-xs-4">อุปกรณ์ที่รองรับ</div><div class="col-xs-8">{$product.deviceSupport}</div>
 				{/if}
-				{if $product."material != ''}
+				{if $product.material != ''}
 					<div class="col-xs-4">วัสดุ/ผิวสัมผัส</div><div class="col-xs-8">{$product.material}</div>
 				{/if}
-				{if $product."standard != ''}
+				{if $product.standard != ''}
 					<div class="col-xs-4">มาตรฐาน</div><div class="col-xs-8">{$product.standard}</div>
 				{/if}
 				{if $product.madeIn != ''}
