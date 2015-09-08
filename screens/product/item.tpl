@@ -102,7 +102,7 @@
 
 						{if $product.detail != ''  && $product.detail|count > 0}
 							<div class="row margin-top-15">
-								<h4 class="col-xs-12">คุณสมบัติ</h4>
+								<h4 class="col-xs-12">รายละเอียดเกี่ยวกับสินค้า</h4>
 								<div class="col-xs-12 margin-bottom-15">
 									<ul>
 										{section name=idx loop=$product.detail}
