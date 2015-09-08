@@ -160,7 +160,7 @@
 						{/if}
 
 
-						{if $product.imageDetail|count > 1}
+						{if $product.imageDetail|count > 0}
 							<div class="row margin-top-15">
 								{section name=idx loop=$product.imageDetail}
 									<div class="col-sm-12">
