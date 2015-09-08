@@ -98,7 +98,7 @@
 
 						{if $product.detail != ''}
 							<div class="row margin-top-15">
-								<div class="col-xs-12 margin-bottom-15">{$product.detail}</div>
+								<div class="col-xs-12 margin-bottom-15">{$product.detail|replace:"\n":'<br>'}</div>
 								<div class="col-xs-12 margin-bottom-15"><div class="line"></div></div>
 							</div>
 						{/if}
