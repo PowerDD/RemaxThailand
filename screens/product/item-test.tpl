@@ -57,8 +57,8 @@
 
 		</div>
 		<div class="col-xs-12 col-sm-8 col-md-8">
-			<h1 class="font-16 margin-top-10"><strong id="product" data-id="{$product.id}">{$product.name}</strong></h1>
-			{if $product.model != ''}<h2 class="font-14 margin-top-0">รุ่น <strong>{$product.model}</strong></h2>{/if}
+			<h1 class="font-24 margin-top-10"><strong id="product" data-id="{$product.id}">{$product.name}</strong></h1>
+			{if $product.model != ''}<h2 class="font-16 margin-top-0">รุ่น <strong>{$product.model}</strong></h2>{/if}
 			<div class="pull-left">
 				{if isset($product.warranty) && $product.warranty > 0}
 					<div><span class="label label-success">รับประกันสินค้า 
@@ -171,7 +171,7 @@
 						{/if}
 
 						<div class="text-center">
-							<img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https:{$system_url}/product/item/{$product.id}">
+							<img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=http://www.remaxthailand.co.th/product/item/{$id}">
 						</div>
 					</div>
 				</div>
