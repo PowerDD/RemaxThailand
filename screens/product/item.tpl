@@ -16,7 +16,7 @@
 				</div>
 			{/if}
 			<div class="row margin-top-10 small">
-				<div class="col-xs-12 line margin-bottom-15"></div>
+				<div class="col-xs-12 margin-bottom-15"><div class="line"></div></div>
 				{if $product.chargeType != ''}
 					<div class="col-xs-4 bold text-right">หัวชาร์จแบบ</div><div class="col-xs-8">{$product.chargeType}</div>
 				{/if}
