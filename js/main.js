@@ -176,7 +176,7 @@ function getPoint(isCheck){
 };
 
 function checkRemaxProduct(){
-	$.post('http://api.powerdd.com/warranty/info', {
+	$.post('http://api.powerdd.com/warranty/remax', {
 		apiKey: 'BE12B369-0963-40AD-AA40-D68A7516A37B',
 		barcode: $.trim($('#txt-remax_barcode').val())
 	}, function(data){
@@ -184,8 +184,6 @@ function checkRemaxProduct(){
 			if(data.result.length != 0 ){
 				var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
 				var sellDateMM = moment(data.result.sellDate).locale('th').format('MMMM');
-				var expireDateYearTH = parseInt(moment(data.result.expireDate).lang('th').format('YYYY'))+543;
-				var expireDateMM = moment(data.result.expireDate).locale('th').format('DD MMMM');
 				$('#ProductName').html(data.result.productName);
 				$('#SellDate').html('จำหน่ายเมื่อ : '+sellDateMM+' '+sellDateYearTH);
 				$('#product-info').fadeIn();
