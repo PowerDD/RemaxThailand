@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>{$title} : Remax (Thailand) Co.,Ltd.</title>
-        <meta name="description" content="">
+        <meta name="description" content="{$description}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="shortcut icon" href="https://src.24fin.com/site/seller/favicon.ico" type="image/x-icon">

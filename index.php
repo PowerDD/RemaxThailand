@@ -50,6 +50,7 @@ switch($filename) {
 	case 'product/category' : $title = 'หมวดหมู่สินค้า'; break;
 }
 $smarty->assign('title', $title);
+$smarty->assign('description', $title);
 
 if (file_exists( 'controls/'.$filename.'.php' )) require_once 'controls/'.$filename.'.php';
 
