@@ -89,26 +89,32 @@
 						{if $product.detail != ''  && $product.detail|count > 0}
 							<div class="row margin-top-15">
 								<h4 class="col-xs-12">คุณสมบัติ</h4>
-								<div class="col-xs-12 margin-bottom-15">{$product.detail[0]}</div>
+								<div class="col-xs-12 margin-bottom-15">
+									<ul>
+										{section name=idx loop=$product.detail}
+											<li>{$product.detail[idx]}</li>
+										{/section}
+									</ul>
+								</div>
 							</div>
 						{/if}
 
 						{if $product.specialProperties != ''}
-							<div class="row margin-top-15">
+							<div class="row">
 								<h4 class="col-xs-12">คุณสมบัติพิเศษ</h4>
 								<div class="col-xs-12 margin-bottom-15">{$product.specialProperties|replace:"\n":'<br>'}</div>
 							</div>
 						{/if}
 
 						{if $product.howToUse != ''}
-							<div class="row margin-top-15">
+							<div class="row">
 								<h4 class="col-xs-12">วิธีใช้งาน</h4>
 								<div class="col-xs-12 margin-bottom-15">{$product.howToUse|replace:"\n":'<br>'}</div>
 							</div>
 						{/if}
 
 						{if $product.inBox != ''}
-							<div class="row margin-top-15">
+							<div class="row">
 								<h4 class="col-xs-12">อุปกรณ์ภายในกล่อง</h4>
 								<div class="col-xs-12 margin-bottom-15">{$product.inBox|replace:"\n":'<br>'}</div>
 							</div>
