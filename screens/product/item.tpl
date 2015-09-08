@@ -15,7 +15,7 @@
 					{/section}
 				</div>
 			{/if}
-			<div class="row margin-top-10 small">
+			<div class="row margin-top-15 small">
 				<div class="col-xs-12 margin-bottom-15"><div class="line"></div></div>
 				{if $product.chargeType != ''}
 					<div class="col-xs-4 bold text-right">หัวชาร์จแบบ</div><div class="col-xs-8">{$product.chargeType}</div>
@@ -84,19 +84,61 @@
 						<div class="small">จัดจำหน่ายและดำเนินการโดย Remax (Thailand) Co.,Ltd.</div>
 					</div>
 					<div class="col-sm-12 margin-top-10">
-						{if isset($product.highlights) && $product.highlights|trim|replace:'<br>':'' != ''}
-							<br/>
-							<strong><h4>จุดเด่น/จุดขายของสินค้า</h4></strong>
-							{$product.highlights}
-						{/if}
-						{if isset($product.inTheBox) && $product.inTheBox|trim|replace:'<br>':'' != ''}
-							<br/>
-							<strong><h4>อุปกรณ์ที่จะได้รับ</h4></strong>
-							{$product.inTheBox}
-						{/if}
 						<div class="line"></div>
 
-						
+						{if $product.detail != ''  && $product.detail|count > 0}
+							<div class="row margin-top-15">
+								<h4 class="col-xs-12">คุณสมบัติ</h4>
+								<div class="col-xs-12 margin-bottom-15">
+									<ul>
+										{section name=idx loop=$product.detail}
+											<li>{$product.detail[idx]}</li>
+										{/section}
+									</ul>
+								</div>
+							</div>
+						{/if}
+
+						{if $product.specialProperties != ''  && $product.specialProperties|count > 0}
+							<div class="row">
+								<h4 class="col-xs-12">คุณสมบัติพิเศษ</h4>
+								<div class="col-xs-12 margin-bottom-15">
+									<ul>
+										{section name=idx loop=$product.specialProperties}
+											<li>{$product.specialProperties[idx]}</li>
+										{/section}
+									</ul>
+								</div>
+							</div>
+						{/if}
+
+						{if $product.howToUse != ''  && $product.howToUse|count > 0}
+							<div class="row">
+								<h4 class="col-xs-12">วิธีใช้งาน</h4>
+								<div class="col-xs-12 margin-bottom-15">
+									<ul>
+										{section name=idx loop=$product.howToUse}
+											<li>{$product.howToUse[idx]}</li>
+										{/section}
+									</ul>
+								</div>
+							</div>
+						{/if}
+
+						{if $product.inBox != ''  && $product.inBox|count > 0}
+							<div class="row">
+								<h4 class="col-xs-12">อุปกรณ์ภายในกล่อง</h4>
+								<div class="col-xs-12 margin-bottom-15">
+									<ul>
+										{section name=idx loop=$product.inBox}
+											<li>{$product.inBox[idx]}</li>
+										{/section}
+									</ul>
+								</div>
+							</div>
+						{/if}
+
+
 						{if $product.imageDetail|count > 1}
 							<div class="row margin-top-15">
 								{section name=idx loop=$product.imageDetail}
