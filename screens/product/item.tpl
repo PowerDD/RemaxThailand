@@ -2,8 +2,7 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-4 col-md-4 margin-bottom-15">
 		
-			<img src="{if $product.cover != ''}http://api.powerdd.com/img/remax/product/{$product.shop}/{$product.sku}/500/500/{$product.cover}
-			{else}http://src.powerdd.com/img/product/88888888/default.jpg{/if}"
+			<img src="{if $product.cover != ''}http://api.powerdd.com/img/remax/product/{$product.shop}/{$product.sku}/500/500/{$product.cover}{else}http://src.powerdd.com/img/product/88888888/default.jpg{/if}"
 			alt="{$product.name}" class="img-thumbnail img_box_shadow" id="img_main"  data-zoom-image="{if $id_cover != ''}xxx{else}yyy{/if}">
 
 			{if $product.cover != '' && $product.image|count > 1}

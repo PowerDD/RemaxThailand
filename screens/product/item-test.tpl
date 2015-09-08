@@ -2,8 +2,7 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-4 col-md-4 margin-bottom-15">
 		
-			<img src="{if $product.cover != ''}http://api.powerdd.com/img/remax/product/{$product.shop}/{$product.sku}/500/500/{$product.cover}
-			{else}http://src.powerdd.com/img/product/88888888/default.jpg{/if}"
+			<img src="{if $product.cover != ''}http://api.powerdd.com/img/remax/product/{$product.shop}/{$product.sku}/500/500/{$product.cover}{else}http://src.powerdd.com/img/product/88888888/default.jpg{/if}"
 			alt="{$product.name}" class="img-thumbnail img_box_shadow" id="img_main"  data-zoom-image="{if $id_cover != ''}xxx{else}yyy{/if}">
 
 			{if $product.cover != '' && $product.image|count > 1}
@@ -15,29 +14,44 @@
 					{/section}
 				</div>
 			{/if}
-			<div class="row margin-top-15 small">
+			<div class="row margin-top-15">
 				<div class="col-xs-12 margin-bottom-15"><div class="line"></div></div>
 				{if $product.chargeType != ''}
-					<div class="col-xs-4 bold text-right">หัวชาร์จแบบ</div><div class="col-xs-8">{$product.chargeType}</div>
+					<div class="col-xs-4 bold text-right small">หัวชาร์จแบบ</div><div class="col-xs-8">{$product.chargeType}</div>
 				{/if}
 				{if $product.deviceSupport != ''}
-					<div class="col-xs-4 bold text-right">อุปกรณ์ที่รองรับ</div><div class="col-xs-8">{$product.deviceSupport}</div>
+					<div class="col-xs-4 bold text-right small">อุปกรณ์ที่รองรับ</div><div class="col-xs-8">{$product.deviceSupport}</div>
 				{/if}
 				{if $product.material != ''}
-					<div class="col-xs-4 bold text-right">วัสดุ/ผิวสัมผัส</div><div class="col-xs-8">{$product.material}</div>
+					<div class="col-xs-4 bold text-right small">วัสดุ/ผิวสัมผัส</div><div class="col-xs-8">{$product.material}</div>
+				{/if}
+				{if $product.width > 0}
+					<div class="col-xs-4 bold text-right small">กว้าง</div><div class="col-xs-8">{$product.width} ซม.</div>
+				{/if}
+				{if $product.length > 0}
+					<div class="col-xs-4 bold text-right small">ยาว</div><div class="col-xs-8">{$product.length} ซม.</div>
+				{/if}
+				{if $product.height > 0}
+					<div class="col-xs-4 bold text-right small">สูง</div><div class="col-xs-8">{$product.height} ซม.</div>
+				{/if}
+				{if $product.weight > 0}
+					<div class="col-xs-4 bold text-right small">น้ำหนัก</div><div class="col-xs-8">{$product.weight} กรัม</div>
+				{/if}
+				{if $product.grossWeight > 0}
+					<div class="col-xs-4 bold text-right small">น้ำหนักรวม</div><div class="col-xs-8">{$product.grossWeight} กรัม</div>
 				{/if}
 				{if $product.standard != ''}
-					<div class="col-xs-4 bold text-right">มาตรฐาน</div><div class="col-xs-8">{$product.standard}</div>
+					<div class="col-xs-4 bold text-right small">มาตรฐาน</div><div class="col-xs-8">{$product.standard}</div>
 				{/if}
 				{if $product.madeIn != ''}
-					<div class="col-xs-4 bold text-right">ผลิตในประเทศ</div><div class="col-xs-8">{$product.madeIn}</div>
+					<div class="col-xs-4 bold text-right small">ผลิตในประเทศ</div><div class="col-xs-8">{$product.madeIn}</div>
 				{/if}
 			</div>
 
 		</div>
 		<div class="col-xs-12 col-sm-8 col-md-8">
 			<h1 class="font-16 margin-top-10"><strong id="product" data-id="{$product.id}">{$product.name}</strong></h1>
-			{if $product.model != ''}<h2 class="font-14">รุ่น <strong>{$product.model}</strong></h2>{/if}
+			{if $product.model != ''}<h2 class="font-14 margin-top-0">รุ่น <strong>{$product.model}</strong></h2>{/if}
 			<div class="pull-left">
 				{if isset($product.warranty) && $product.warranty > 0}
 					<div><span class="label label-success">รับประกันสินค้า 
