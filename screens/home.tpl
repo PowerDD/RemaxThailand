@@ -9,12 +9,15 @@
     </div>
   </div>
 
+{include file='check_remax_product_box.tpl'}
+
+<!--
 	<div class="pinItem">
 		<div class="pinBox pinWell margin-bottom-15">
 			<img src="https://cdn24fin.blob.core.windows.net/img/products/1/D-Reward point/1.jpg" class="img-responsive pointer"  data-toggle="modal" data-target="#dv-check_point">
 			<div class="message text-center">ตรวจสอบคะแนนสะสม</div>
 		</div>
-	</div>
+	</div> // Comment by Dej 08092558 0940-->
 
 	<div class="pinItem">
 		<div class="pinBox pinWell margin-bottom-15">
