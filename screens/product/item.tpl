@@ -171,7 +171,7 @@
 						{/if}
 
 						<div class="text-center">
-							<img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=http://www.remaxthailand.co.th/product/item/{$product.product}/{$product.name}">
+							<img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=http://www.remaxthailand.co.th/product/item/{$product.product}">
 						</div>
 					</div>
 				</div>
