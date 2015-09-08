@@ -40,11 +40,18 @@
 				{if $product.grossWeight > 0}
 					<div class="col-xs-4 bold text-right small">น้ำหนักรวม</div><div class="col-xs-8">{$product.grossWeight} กรัม</div>
 				{/if}
+				{if $product.madeIn != ''}
+					<div class="col-xs-4 bold text-right small">ผลิตในประเทศ</div><div class="col-xs-8">{$product.madeIn}</div>
+				{/if}
 				{if $product.standard != ''}
 					<div class="col-xs-4 bold text-right small">มาตรฐาน</div><div class="col-xs-8">{$product.standard}</div>
 				{/if}
-				{if $product.madeIn != ''}
-					<div class="col-xs-4 bold text-right small">ผลิตในประเทศ</div><div class="col-xs-8">{$product.madeIn}</div>
+				{if $product.standard != ''}
+					<div class="col-xs-12 text-center">
+						{if $product.standard|strpos:'CE' >= 0}<img src="http://src.powerdd.com/img/web/88888888/icon/logo-ce.png">{/if}
+						{if $product.standard|strpos:'FCC' >= 0}<img src="http://src.powerdd.com/img/web/88888888/icon/logo-fcc.png">{/if}
+						{if $product.standard|strpos:'RoHS' >= 0}<img src="http://src.powerdd.com/img/web/88888888/icon/logo-rohs.png">{/if}
+					</div>
 				{/if}
 			</div>
 
