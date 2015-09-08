@@ -15,7 +15,8 @@
 					{/section}
 				</div>
 			{/if}
-			<div class="row">
+			<div class="row margin-top-10">
+				<div class="line"></div>
 				{if $product.chargeType != ''}
 					<div class="col-xs-4">หัวชาร์จแบบ</div><div class="col-xs-8">{$product.chargeType}</div>
 				{/if}
