@@ -104,6 +104,30 @@
 							</div>
 						{/if}
 
+						{if $product.specialProperties != ''}
+							<div class="row margin-top-15">
+								<h4 class="col-xs-12">คุณสมบัติพิเศษ</h4>
+								<div class="col-xs-12 margin-bottom-15">{$product.specialProperties|replace:"\n":'<br>'}</div>
+								<div class="col-xs-12 margin-bottom-15"><div class="line"></div></div>
+							</div>
+						{/if}
+
+						{if $product.howToUse != ''}
+							<div class="row margin-top-15">
+								<h4 class="col-xs-12">วิธีใช้งาน</h4>
+								<div class="col-xs-12 margin-bottom-15">{$product.howToUse|replace:"\n":'<br>'}</div>
+								<div class="col-xs-12 margin-bottom-15"><div class="line"></div></div>
+							</div>
+						{/if}
+
+						{if $product.inBox != ''}
+							<div class="row margin-top-15">
+								<h4 class="col-xs-12">อุปกรณ์ภายในกล่อง</h4>
+								<div class="col-xs-12 margin-bottom-15">{$product.inBox|replace:"\n":'<br>'}</div>
+								<div class="col-xs-12 margin-bottom-15"><div class="line"></div></div>
+							</div>
+						{/if}
+
 						{if $product.imageDetail|count > 1}
 							<div class="row margin-top-15">
 								{section name=idx loop=$product.imageDetail}
