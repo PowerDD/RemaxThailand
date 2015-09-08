@@ -18,19 +18,19 @@
 			<div class="row margin-top-10 small">
 				<div class="col-xs-12 line margin-bottom-15"></div>
 				{if $product.chargeType != ''}
-					<div class="col-xs-4 bold">หัวชาร์จแบบ</div><div class="col-xs-8">{$product.chargeType}</div>
+					<div class="col-xs-4 bold text-right">หัวชาร์จแบบ</div><div class="col-xs-8">{$product.chargeType}</div>
 				{/if}
 				{if $product.deviceSupport != ''}
-					<div class="col-xs-4 bold">อุปกรณ์ที่รองรับ</div><div class="col-xs-8">{$product.deviceSupport}</div>
+					<div class="col-xs-4 bold text-right">อุปกรณ์ที่รองรับ</div><div class="col-xs-8">{$product.deviceSupport}</div>
 				{/if}
 				{if $product.material != ''}
-					<div class="col-xs-4 bold">วัสดุ/ผิวสัมผัส</div><div class="col-xs-8">{$product.material}</div>
+					<div class="col-xs-4 bold text-right">วัสดุ/ผิวสัมผัส</div><div class="col-xs-8">{$product.material}</div>
 				{/if}
 				{if $product.standard != ''}
-					<div class="col-xs-4 bold">มาตรฐาน</div><div class="col-xs-8">{$product.standard}</div>
+					<div class="col-xs-4 bold text-right">มาตรฐาน</div><div class="col-xs-8">{$product.standard}</div>
 				{/if}
 				{if $product.madeIn != ''}
-					<div class="col-xs-4 bold">ผลิตในประเทศ</div><div class="col-xs-8">{$product.madeIn}</div>
+					<div class="col-xs-4 bold text-right">ผลิตในประเทศ</div><div class="col-xs-8">{$product.madeIn}</div>
 				{/if}
 			</div>
 
