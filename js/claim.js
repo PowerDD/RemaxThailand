@@ -440,8 +440,8 @@ function submitCustomerTrack(){
 		apiKey: apiKeyPower,
 		shop: shop,
 		id: $('#txt-claimno').val(),
-		column: "customerTrackNo,status",
-		value: $("#txt-trackno").val()+","+"CP"
+		column: "customerTrackNo,status,updateBy",
+		value: $("#txt-trackno").val()+","+"CP"+","+claimInfo.firstname
 	}, function(data){
 			if (data.success) {
 				$('#dv-claim_info').hide();
