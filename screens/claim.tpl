@@ -244,7 +244,7 @@
 	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 		<div class="row">  
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<a id="warrantyZoom">
+				<a id="warrantyZoom" href="javascript:void(0)">
 					<img class="img-responsive no-radius" src="http://src.powerdd.com/img/web/88888888/warranty/condition-01.png">
 				</a>
 			</div>
@@ -277,8 +277,8 @@
   </div>
 </div>
 
-<div class="modal fade" id="warrantyModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-md" role="document">
+<div class="modal fade" id="warrantyModal" tabindex="1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
