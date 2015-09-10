@@ -50,7 +50,7 @@
 					<div class="col-xs-12 text-center">
 						{if $product.standard|strpos:'CE' >= 0}<img src="http://src.powerdd.com/img/web/88888888/icon/logo-ce.png">{/if}
 						{if $product.standard|strpos:'FCC' >= 0}<img src="http://src.powerdd.com/img/web/88888888/icon/logo-fcc.png">{/if}
-						{if $product.standard|strpos:'RoHS' >= 0}<img src="http://src.powerdd.com/img/web/88888888/icon/logo-rohs.png">{/if}
+						{if $product.standard|strpos:'RoHS' >= 0}<img src="http://src.powerdd.com/img/web/88888888/icon/logo-rohs.png" title="{$product.standard|strpos:'RoHS'}">{/if}
 					</div>
 				{/if}
 			</div>
