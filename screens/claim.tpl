@@ -228,7 +228,7 @@
 		
 		<div id="form-loading" class="row hidden">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10">	    
-				<div class="alert alert-info text-center margin-bottom-0">			
+				<div class="alert alert-info text-center margin-bottom-10">			
 				<div class="progress margin-bottom-5">
 					<div id="progress" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
 						<span class="sr-only"></span>
