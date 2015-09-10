@@ -204,7 +204,6 @@ function claimInformation(data){
 	$('#claim-Massage').hide();
 	var YearTH = parseInt(moment(claimInfo.claimDate).lang('th').format('YYYY'))+543;
 	var DateMM = moment(claimInfo.claimDate).locale('th').format('DD MMMM');
-	console.log(DateMM+' '+YearTH+'|'+claimInfo.claimDate)
 	$('#claim-ClaimDate').html('<font size="1"><b>วันที่ส่งข้อมูล : </b>'+ DateMM+' '+YearTH+'</font>');
 	$('#claim-ClaimNo').html('<b>เลขที่การเคลม : </b>'+ claimInfo.claimNo);
 	$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+'<u>'+ claimStatus +'</u>');
