@@ -387,8 +387,8 @@ function addClaim(){
 	}, function(data){
 			if (data.success) {
 				$('#claim-Massage').html('กำลังดำเนินการตรวจสอบข้อมูล ท่านสามารถตรวจสอบสถานะการดำเนินการได้จากเลขที่การเคลม').addClass('text-success');
-				$('#claim-ClaimNo').html('<b>เลขที่การเคลม: </b>'+ data.result.claimNo);
-				$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+ (data.result.status == 'CI' ? ' <u>ตรวจสอบข้อมูล </u>' : '-')).addClass('text-danger');
+				$('#claim-ClaimNo').html('<b>เลขที่การเคลม: </b>'+ data.result[0].claimNo);
+				$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+ (data.result[0].status == 'CI' ? ' <u>ตรวจสอบข้อมูล </u>' : '-')).addClass('text-danger');
 				$('#claim-ProductName').html($('#tab-ProductName').html());
 				$('#claim-Barcode').html($('#tab-Barcode').html());
 				$('#claim-Description').html('<b>รายละเอียด : </b>'+$('#claim_description').val());
