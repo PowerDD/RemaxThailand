@@ -199,7 +199,10 @@ function claimInformation(data){
 							
 	$('#claim-Massage').html('ข้อมูลล่าสุด ').addClass('text-success');
 	$('#claim-Massage').hide();
-	$('#claim-ClaimNo').html('<b>เลขที่การเคลม: </b>'+ claimInfo.claimNo);
+	var claimDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
+	var claimDateMM = moment(data.result.sellDate).locale('th').format('DD MMMM'); 
+	$('#claim-ClaimDate').html('<b>วันที่ส่งข้อมูล : </b>'+ claimDateMM+' '+claimDateYearTH);
+	$('#claim-ClaimNo').html('<b>เลขที่การเคลม : </b>'+ claimInfo.claimNo);
 	$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+'<u>'+ claimStatus +'</u>');
 	$('#claim-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.productName);
 	$('#claim-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.barcode);
@@ -216,7 +219,7 @@ function claimInformation(data){
 	$('#sum-email').html(typeof claimInfo.email != 'undefined' && claimInfo.email != ''? 'อีเมล '+claimInfo.email : '')
 	
 	var modal = $('#dv-claim_info');
-	var file = claimInfo.images;
+	var file = convertDataToArray('|', claimInfo.images);
 	if (typeof file != 'undefined') {
 		for(i=0; i<=3; i++) {
 			modal.find('.img'+i+' img').attr('src', 'https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg');
