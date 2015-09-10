@@ -40,7 +40,7 @@ $(function() {
 			$('#dv-claim_info').hide();
 			$('#dv-track').hide();
 			$('#alert-trackno').hide();	
-			$("#tab-warranty-load").slideDown();
+			$("#tab-warranty-load").show();
 		}
 	});
 	$("#txt-barcode").keyup(function(event){ 
@@ -82,7 +82,7 @@ $(function() {
 			$('#dv-claim_info').hide();
 			$('#dv-track').hide();
 			$('#alert-trackno').hide();	
-			$("#tab-warranty-load").slideDown(); 
+			$("#tab-warranty-load").show(); 
 		}
 	}); 
 	
@@ -149,22 +149,22 @@ function warrantyInfo(chkBarcode){
 						$('#tab-warranty-info').removeClass('panel-warning');
 						$('#tab-warranty-info').addClass('panel-success');
 						
-						$('#dv-claim').slideDown();
+						$('#dv-claim').show();
 					}
-					$('#tab-warranty-info').slideDown();					
-					$("#tab-warranty-load").slideUp();
+					$('#tab-warranty-info').show();					
+					$("#tab-warranty-load").hide();
 				}						
 			}
 			
 		}else{
-			$('#tab-warranty-not_exist').slideDown();
-			$("#tab-warranty-load").slideUp();
+			$('#tab-warranty-not_exist').show();
+			$("#tab-warranty-load").hide();
 		}
 		
 	},'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
 function checkClaim(){
-	$.post('http://api.powerdd.com/claim/info', {
+	$.post('http://api-test.powerdd.com/claim/info', {
 		apiKey: apiKeyPower,
 		shop: shop,
 		id: $('#txt-claimno').val()
@@ -173,10 +173,10 @@ function checkClaim(){
 				claimInfo = data.result[0];
 				warrantyInfo(data.result[0].Barcode);			
 			}else{
-				setTimeout('$("#tab-warranty-load").slideUp()',3000);
-				setTimeout('$("#tab-warranty-not_exist").slideDown()',3000);
-				//$('#tab-warranty-not_exist').slideDown();
-				//$("#tab-warranty-load").slideUp();
+				setTimeout('$("#tab-warranty-load").hide()',3000);
+				setTimeout('$("#tab-warranty-not_exist").show()',3000);
+				//$('#tab-warranty-not_exist').show();
+				//$("#tab-warranty-load").hide();
 				
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
@@ -230,10 +230,10 @@ function claimInformation(data){
 		for(i=0; i<=3; i++) modal.find('.img'+i).hide();
 	}
 	
-	$('#tab-warranty-load').slideUp();
-	$('#dv-claim_info').slideDown();
+	$('#tab-warranty-load').hide();
+	$('#dv-claim_info').show();
 	if (claimInfo.Status == 'AP') {
-		$('#dv-track').slideDown();
+		$('#dv-track').show();
 	}
 	$('#btn-submit_trackno').button('default').html('ยืนยันข้อมูล');
 	chkClaim = false;
@@ -280,8 +280,8 @@ function loadZipCode(){
 
 function uploadFile(){
 	window.scrollTo(0 ,0);
-	$('#dv-claim').slideUp();
-	$('#tab-warranty-info').slideUp();
+	$('#dv-claim').hide();
+	$('#tab-warranty-info').hide();
 	$('#form-loading').fadeIn();
 	
 	fileCount = 0;
@@ -362,7 +362,7 @@ function submitClaim(){
 
 function addClaim(){
 	 
-	$.post('http://api.powerdd.com/claim/add', {
+	$.post('http://api-test.powerdd.com/claim/add', {
 		apiKey: apiKeyPower,
 		shop: shop,
 		type: 'web',
@@ -419,15 +419,15 @@ function addClaim(){
 					for(i=0; i<=3; i++) modal.find('.img'+i).hide();
 				}
 				
-				$('#form-loading').slideUp();
-				$('#dv-claim_info').slideDown();
+				$('#form-loading').hide();
+				$('#dv-claim_info').show();
 				
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
 
 function submitCustomerTrack(){
-	$.post('http://api.powerdd.com/claim/update', {
+	$.post('http://api-test.powerdd.com/claim/update', {
 		apiKey: apiKeyPower,
 		shop: shop,
 		id: $('#txt-claimno').val(),
@@ -435,9 +435,9 @@ function submitCustomerTrack(){
 		value: $("#txt-trackno").val()+","+"CP"
 	}, function(data){
 			if (data.success) {
-				$('#dv-claim_info').slideUp();
-				$('#dv-track').slideUp();
-				$('#alert-trackno').slideDown();				
+				$('#dv-claim_info').hide();
+				$('#dv-track').hide();
+				$('#alert-trackno').show();				
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
