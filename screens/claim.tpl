@@ -70,7 +70,7 @@
 			<div class="panel-heading">รายละเอียด</div>
 			<div class="panel-body">
 				<div id="claim-Massage" role="alert" class="alert alert-success text-center"></div>
-				<p id="claim-ClaimDate"></p>
+				<p id="claim-ClaimDate" class="text-right"></p>
 				<p id="claim-ClaimNo"></p>
 				<p id="claim-ClaimStatus"></p>
 				<p id="claim-ProductName"></p>
