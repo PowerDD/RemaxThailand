@@ -48,9 +48,9 @@
 				{/if}
 				{if $product.standard != ''}
 					<div class="col-xs-12 text-center">
-						{if $product.standard|strpos:'CE' >= 0}<img src="http://src.powerdd.com/img/web/88888888/icon/logo-ce.png">{/if}
-						{if $product.standard|strpos:'FCC' >= 0}<img src="http://src.powerdd.com/img/web/88888888/icon/logo-fcc.png" title="{$product.standard|strpos:'FCC'}">{/if}
-						{if $product.standard|strpos:'RoHS' >= 0}<img src="http://src.powerdd.com/img/web/88888888/icon/logo-rohs.png" title="{$product.standard|strpos:'RoHS'}">{/if}
+						{if $product.standard|strpos:'CE' != ''}<img src="http://src.powerdd.com/img/web/88888888/icon/logo-ce.png">{/if}
+						{if $product.standard|strpos:'FCC' != ''}<img src="http://src.powerdd.com/img/web/88888888/icon/logo-fcc.png">{/if}
+						{if $product.standard|strpos:'RoHS' != ''}<img src="http://src.powerdd.com/img/web/88888888/icon/logo-rohs.png">{/if}
 					</div>
 				{/if}
 			</div>
