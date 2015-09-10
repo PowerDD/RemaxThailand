@@ -98,6 +98,9 @@ $(function() {
 		}
 	});
 	
+	$("#warrantyZoom").click(function(){
+		$('#warrantyModal').modal();
+	});
 
 });
 function warrantyInfo(chkBarcode){
