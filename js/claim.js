@@ -440,7 +440,7 @@ function submitCustomerTrack(){
 		apiKey: apiKeyPower,
 		shop: shop,
 		id: $('#txt-claimno').val(),
-		column: "CustomerTrackNo,Status",
+		column: "customerTrackNo,status",
 		value: $("#txt-trackno").val()+","+"CP"
 	}, function(data){
 			if (data.success) {
