@@ -381,8 +381,7 @@ function addClaim(){
 		zipcode: $('#txt-zipcode').val(),
 		tel: $('#txt-tel').val(),
 		email: $('#txt-email').val(), 
-		images: fileName,
-		lastShop: 
+		images: fileName
 	}, function(data){
 			if (data.success) {
 				$('#claim-Massage').html('กำลังดำเนินการตรวจสอบข้อมูล ท่านสามารถตรวจสอบสถานะการดำเนินการได้จากเลขที่การเคลม').addClass('text-success');
