@@ -101,7 +101,7 @@ $(function() {
 });
 function warrantyInfo(chkBarcode){
 	var barcode_info = ((typeof chkBarcode != 'undefined' && chkBarcode != '') ? $.trim(chkBarcode) : $.trim($('#txt-barcode').val()));
-	$.post('http://api.powerdd.com/warranty/info', {
+	$.post('http://api-test.powerdd.com/warranty/info', {
 		apiKey: apiKeyPower,
 		barcode: barcode_info
 	}, function(data){
@@ -165,8 +165,8 @@ function warrantyInfo(chkBarcode){
 	},'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
 function checkClaim(){
-	$.post('http://power-api-test.azurewebsites.net/claim/info', {
-		apiKey: apiKey,
+	$.post('http://api.powerdd.com/claim/info', {
+		apiKey: apiKeyPower,
 		shop: shop,
 		id: $('#txt-claimno').val()
 	}, function(data){
@@ -363,8 +363,8 @@ function submitClaim(){
 
 function addClaim(){
 	 
-	$.post('http://power-api-test.azurewebsites.net/claim/add', {
-		apiKey: apiKey,
+	$.post('http://api.powerdd.com/claim/add', {
+		apiKey: apiKeyPower,
 		shop: shop,
 		type: 'web',
 		barcode: $('#barcode').html(),
@@ -381,7 +381,8 @@ function addClaim(){
 		zipcode: $('#txt-zipcode').val(),
 		tel: $('#txt-tel').val(),
 		email: $('#txt-email').val(), 
-		images: fileName
+		images: fileName,
+		lastShop: 
 	}, function(data){
 			if (data.success) {
 				$('#claim-Massage').html('กำลังดำเนินการตรวจสอบข้อมูล ท่านสามารถตรวจสอบสถานะการดำเนินการได้จากเลขที่การเคลม').addClass('text-success');
@@ -428,11 +429,11 @@ function addClaim(){
 };
 
 function submitCustomerTrack(){
-	$.post('http://power-api-test.azurewebsites.net/claim/update', {
-		apiKey: apiKey,
+	$.post('http://api.powerdd.com/claim/update', {
+		apiKey: apiKeyPower,
 		shop: shop,
 		id: $('#txt-claimno').val(),
-		entity: "CustomerTrackNo,Status",
+		column: "CustomerTrackNo,Status",
 		value: $("#txt-trackno").val()+","+"CP"
 	}, function(data){
 			if (data.success) {
