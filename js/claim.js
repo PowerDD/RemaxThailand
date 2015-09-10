@@ -199,8 +199,8 @@ function claimInformation(data){
 							
 	$('#claim-Massage').html('ข้อมูลล่าสุด ').addClass('text-success');
 	$('#claim-Massage').hide();
-	var claimDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
-	var claimDateMM = moment(data.result.sellDate).locale('th').format('DD MMMM'); 
+	var claimDateYearTH = parseInt(moment(data.result.claimDate).lang('th').format('YYYY'))+543;
+	var claimDateMM = moment(data.result.claimDate).locale('th').format('DD MMMM'); 
 	$('#claim-ClaimDate').html('<b>วันที่ส่งข้อมูล : </b>'+ claimDateMM+' '+claimDateYearTH);
 	$('#claim-ClaimNo').html('<b>เลขที่การเคลม : </b>'+ claimInfo.claimNo);
 	$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+'<u>'+ claimStatus +'</u>');
