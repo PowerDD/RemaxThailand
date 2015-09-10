@@ -169,7 +169,11 @@ function checkClaim(){
 	$.post('http://api-test.powerdd.com/claim/info', {
 		apiKey: apiKeyPower,
 		shop: shop,
-		id: $('#txt-claimno').val()
+		id: $('#txt-claimno').val(),
+		barcode: '',	
+		claimdate_from: '',
+		claimdate_to: '',	
+		status: ''
 	}, function(data){
 			if (data.success) {
 				claimInfo = data.result[0];
