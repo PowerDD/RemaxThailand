@@ -1,5 +1,5 @@
-<div class="pinBox pinWell padding-10">
-	<img class="img-responsive no-radius" src="http://src.powerdd.com/img/web/88888888/contact/contact_us.jpg">
+<div class="pinBox pinWell">
+	<img class="img-responsive" src="http://src.powerdd.com/img/web/88888888/contact/contact_us.jpg">
 </div>
 <!--<div class="pinBox pinWell padding-10">
 	<h1 class="page-header font-28 margin-top-10 margin-bottom-0">ติดต่อเรา</h1>
