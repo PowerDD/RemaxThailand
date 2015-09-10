@@ -40,6 +40,7 @@ $(function() {
 			$('#dv-claim_info').hide();
 			$('#dv-track').hide();
 			$('#alert-trackno').hide();	
+			$('#form-loading').hide();
 			$("#tab-warranty-load").show();
 		}
 	});
@@ -365,7 +366,7 @@ function addClaim(){
 	$.post('http://api-test.powerdd.com/claim/add', {
 		apiKey: apiKeyPower,
 		shop: shop,
-		type: 'web',
+		from : 'W', // W is From Website
 		barcode: $('#barcode').html(),
 		product: $('#product').html(), 
 		description: $('#claim_description').val(),
