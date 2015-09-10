@@ -446,7 +446,8 @@ function submitCustomerTrack(){
 			if (data.success) {
 				$('#dv-claim_info').hide();
 				$('#dv-track').hide();
-				$('#alert-trackno').show();				
+				$('#alert-trackno').show();
+				window.scrollTo(0, 0);				
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
