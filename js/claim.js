@@ -188,35 +188,35 @@ function checkClaim(){
 };
 function claimInformation(data){
 	var claimStatus = '';
-	if (claimInfo.Status == 'CI') claimStatus = 'ตรวจสอบข้อมูล', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
-	else if (claimInfo.Status == 'AP') claimStatus = 'อยู่ในเงื่อนไขการเคลม', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-primary');
-	else if (claimInfo.Status == 'RJ') claimStatus = 'ไม่รับเคลมสินค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
-	else if (claimInfo.Status == 'AM') claimStatus = 'กรุณาเพิ่มข้อมูลรายละเอียด', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
-	else if (claimInfo.Status == 'CP') claimStatus = 'สินค้าจัดส่งโดยลูกค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-warning');
-	else if (claimInfo.Status == 'RP') claimStatus = 'ระบบได้รับสินค้าเคลมแล้ว', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-success');
-	else if (claimInfo.Status == 'SH') claimStatus = 'จัดส่งสินค้าเคลมให้ลูกค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-success');
+	if (claimInfo.status == 'CI') claimStatus = 'ตรวจสอบข้อมูล', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
+	else if (claimInfo.status == 'AP') claimStatus = 'อยู่ในเงื่อนไขการเคลม', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-primary');
+	else if (claimInfo.status == 'RJ') claimStatus = 'ไม่รับเคลมสินค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
+	else if (claimInfo.status == 'AM') claimStatus = 'กรุณาเพิ่มข้อมูลรายละเอียด', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
+	else if (claimInfo.status == 'CP') claimStatus = 'สินค้าจัดส่งโดยลูกค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-warning');
+	else if (claimInfo.status == 'RP') claimStatus = 'ระบบได้รับสินค้าเคลมแล้ว', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-success');
+	else if (claimInfo.status == 'SH') claimStatus = 'จัดส่งสินค้าเคลมให้ลูกค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-success');
 	else claimStatus = 'กรุณาติดต่อ ฝ่ายเคลม โทร 081- 828-8833 / 02-1567199 ';
 							
 	$('#claim-Massage').html('ข้อมูลล่าสุด ').addClass('text-success');
 	$('#claim-Massage').hide();
-	$('#claim-ClaimNo').html('<b>เลขที่การเคลม: </b>'+ claimInfo.ClaimNo);
+	$('#claim-ClaimNo').html('<b>เลขที่การเคลม: </b>'+ claimInfo.claimNo);
 	$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+'<u>'+ claimStatus +'</u>');
 	$('#claim-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.productName);
 	$('#claim-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.barcode);
-	$('#claim-Description').html('<b>รายละเอียด : </b>'+claimInfo.Description);
+	$('#claim-Description').html('<b>รายละเอียด : </b>'+claimInfo.description);
 
-	$('#sum-name').html('คุณ '+claimInfo.Firstname+' '+claimInfo.Lastname+(typeof claimInfo.Nickname != 'undefined' && claimInfo.Nickname != '' ? ' ('+claimInfo.Nickname+')' : ''));
-	$('#sum-address').html(claimInfo.Address)
-	$('#sum-address2').html(claimInfo.Address2)
-	$('#sum-location').html('แขวง/ตำบล'+claimInfo.Sub_District+' '+'เขต/อำเภอ'+claimInfo.District+' '+'จังหวัด'+claimInfo.Province+' '+claimInfo.Zipcode)
-	if ( claimInfo.Tel.length == 10 ) {
-		var mobile = claimInfo.Tel;
+	$('#sum-name').html('คุณ '+claimInfo.firstname+' '+claimInfo.lastname+(typeof claimInfo.nickname != 'undefined' && claimInfo.nickname != '' ? ' ('+claimInfo.nickname+')' : ''));
+	$('#sum-address').html(claimInfo.address)
+	$('#sum-address2').html(claimInfo.address2)
+	$('#sum-location').html('แขวง/ตำบล'+claimInfo.subDistrict+' '+'เขต/อำเภอ'+claimInfo.district+' '+'จังหวัด'+claimInfo.province+' '+claimInfo.zipcode)
+	if ( claimInfo.tel.length == 10 ) {
+		var mobile = claimInfo.tel;
 		$('#sum-tel').html('เบอร์โทร '+ mobile.substr(0, 3)+'-'+mobile.substr(3, 4)+'-'+mobile.substr(7, 3) );
-	}else{$('#sum-tel').html('เบอร์โทร '+claimInfo.Tel)}
-	$('#sum-email').html(typeof claimInfo.Email != 'undefined' && claimInfo.Email != ''? 'อีเมล '+claimInfo.Email : '')
+	}else{$('#sum-tel').html('เบอร์โทร '+claimInfo.tel)}
+	$('#sum-email').html(typeof claimInfo.email != 'undefined' && claimInfo.email != ''? 'อีเมล '+claimInfo.email : '')
 	
 	var modal = $('#dv-claim_info');
-	var file = claimInfo.Images;
+	var file = claimInfo.images;
 	if (typeof file != 'undefined') {
 		for(i=0; i<=3; i++) {
 			modal.find('.img'+i+' img').attr('src', 'https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg');
@@ -237,7 +237,7 @@ function claimInformation(data){
 	
 	$('#tab-warranty-load').hide();
 	$('#dv-claim_info').show();
-	if (claimInfo.Status == 'AP') {
+	if (claimInfo.status == 'AP') {
 		$('#dv-track').show();
 	}
 	$('#btn-submit_trackno').button('default').html('ยืนยันข้อมูล');
