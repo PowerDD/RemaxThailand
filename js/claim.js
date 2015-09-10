@@ -114,7 +114,6 @@ function warrantyInfo(chkBarcode){
 					$('#barcode').html(data.result.barcode);
 					$('#tab-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.productName);
 					$('#tab-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.barcode);
-					$('#tab-CustomerName').html(data.result.customerName);
 					var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
 					var sellDateMM = moment(data.result.sellDate).locale('th').format('DD MMMM'); 
 					$('#tab-SellDate').html(sellDateMM+' '+sellDateYearTH);

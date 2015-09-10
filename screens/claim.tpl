@@ -51,13 +51,11 @@
 					<div class="box-body table-responsive no-padding">
 						<table class="table table-bordered">
 							<tr class="active">
-								<th>ชื่อตัวแทนจำหน่าย</th>
 								<th>สถานะ</th>
 								<th>วันที่ซื้อ</th>
 								<th>วันที่หมดประกัน</th>
 							</tr>
 							<tr>
-								<td id="tab-CustomerName"></td>
 								<td id="tab-warrantyStatus"></td>
 								<td id="tab-SellDate"></td>
 								<td id="tab-ExpireDate"></td>
