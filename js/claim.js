@@ -378,7 +378,7 @@ function addClaim(){
 		address2: $('#txt-address2').val(),
 		province: $('#province :selected').html(),
 		district: $('#district :selected').html(),
-		sub_district: $('#txt-sub_district').val(),
+		subDistrict: $('#txt-sub_district').val(),
 		zipcode: $('#txt-zipcode').val(),
 		tel: $('#txt-tel').val(),
 		email: $('#txt-email').val(), 
