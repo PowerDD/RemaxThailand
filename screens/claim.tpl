@@ -45,6 +45,7 @@
 			<div class="panel-body">
 				<p id="product" class="hidden"></p>
 				<p id="barcode" class="hidden"></p>
+				<p id="lastShop" class="hidden"></p>
 				<p id="tab-ProductName"></p>
 				<p id="tab-Barcode"></p>
 				<div class="col-md-12 col-sm-12">
