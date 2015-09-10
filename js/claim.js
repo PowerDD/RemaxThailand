@@ -441,7 +441,7 @@ function submitCustomerTrack(){
 		shop: shop,
 		id: $('#txt-claimno').val(),
 		column: "customerTrackNo,status",
-		value: $("#txt-trackno").val()+","+"CP"
+		value: $("#txt-trackno").val()+","+"CP","dd"
 	}, function(data){
 			if (data.success) {
 				$('#dv-claim_info').hide();
