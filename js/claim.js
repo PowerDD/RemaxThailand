@@ -173,12 +173,11 @@ function checkClaim(){
 	}, function(data){
 			if (data.success) {
 				claimInfo = data.result[0];
-				warrantyInfo(data.result[0].Barcode);			
+				warrantyInfo(data.result[0].barcode);			
 			}else{
-				setTimeout('$("#tab-warranty-load").hide()',3000);
-				setTimeout('$("#tab-warranty-not_exist").show()',3000);
-				//$('#tab-warranty-not_exist').show();
-				//$("#tab-warranty-load").hide();
+
+				$('#tab-warranty-not_exist').show();
+				$("#tab-warranty-load").hide();
 				
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
