@@ -113,6 +113,7 @@ function warrantyInfo(chkBarcode){
 				}else{
 					$('#product').html(data.result.product);
 					$('#barcode').html(data.result.barcode);
+					$('#lastShop').html(data.result.shop);
 					$('#tab-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.productName);
 					$('#tab-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.barcode);
 					var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
@@ -382,7 +383,7 @@ function addClaim(){
 		tel: $('#txt-tel').val(),
 		email: $('#txt-email').val(), 
 		images: fileName,
-		lastShop: $('#lastShop').html(),
+		lastShop: $('#lastShop').html()
 	}, function(data){
 			if (data.success) {
 				$('#claim-Massage').html('กำลังดำเนินการตรวจสอบข้อมูล ท่านสามารถตรวจสอบสถานะการดำเนินการได้จากเลขที่การเคลม').addClass('text-success');
