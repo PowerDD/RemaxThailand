@@ -62,7 +62,7 @@
 			<div class="pull-left">
 				{if isset($product.warranty) && $product.warranty > 0}
 					<div><span class="label label-success">รับประกันสินค้า 
-						{if $product.warranty == 365}1 ปี{else if $product.warranty >= 30}{$product.warranty/30} เดือน{else}{$product.warranty} วัน{/if}</span>
+						{if $product.warranty >= 365}{$product[idx].warranty/365} ปี{else if $product.warranty >= 30}{$product.warranty/30} เดือน{else}{$product.warranty} วัน{/if}</span>
 						<span class="small"> โดย Remax (Thailand) Co.,Ltd.</span></div>
 				{/if}
 				<div class="small margin-top-5"><i class="fa fa-lg fa-star fav-orange margin-right-1"></i><i class="fa fa-lg fa-star fav-orange margin-right-1"></i><i class="fa fa-lg fa-star fav-orange margin-right-1"></i><i class="fa fa-lg fa-star fav-orange margin-right-1"></i><i class="fa fa-lg fa-star-half-o fav-orange margin-right-1"></i></div>
