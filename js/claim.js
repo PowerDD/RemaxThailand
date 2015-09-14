@@ -8,6 +8,7 @@ var fileName = '';
 var allProgress = 0;
 var chkClaim = false;
 var claimInfo;
+var sellNo = "";
 $(function() {
 	loadProvince();
 	$('#txt-tel').ForceNumericOnly();
@@ -117,6 +118,7 @@ function warrantyInfo(chkBarcode){
 					$('#product').html(data.result.product);
 					$('#barcode').html(data.result.barcode);
 					$('#lastShop').html(data.result.shop);
+					sellNo = data.result.sellNo;
 					$('#tab-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.productName);
 					$('#tab-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.barcode);
 					var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
@@ -392,7 +394,8 @@ function addClaim(){
 		tel: $('#txt-tel').val(),
 		email: $('#txt-email').val(), 
 		images: fileName,
-		lastShop: $('#lastShop').html()
+		lastShop: $('#lastShop').html(),
+		sellNo: sellNo
 	}, function(data){
 			if (data.success) {
 				$('#claim-Massage').html('กำลังดำเนินการตรวจสอบข้อมูล ท่านสามารถตรวจสอบสถานะการดำเนินการได้จากเลขที่การเคลม').addClass('text-success');
