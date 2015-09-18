@@ -13,7 +13,7 @@
 						</div>
 					</form>
 
-					<div id="remax_not_exist" role="alert" class="alert alert-remax_barcode alert-danger hidden margin-bottom-30"><i class="fa fa-exclamation-triangle"></i> สินค้าที่ตรวจสอบ ไม่พบว่าเป็นของแท้ จาก Remax Thailand</div>
+					<div id="remax_not_exist" role="alert" class="alert alert-remax_barcode alert-danger hidden margin-bottom-30"><i class="fa fa-exclamation-triangle"></i>  สินค้าที่ตรวจสอบ ไม่พบว่าเป็น<b><u>ของแท้</u></b>จาก Remax Thailand</div>
 					<div id="product-info" role="alert" class="alert alert-remax_barcode alert-success hidden margin-bottom-30">
 						<p>สินค้ารายการนี้เป็น<b><u>ของแท้</u></b></p>
 						<p>จาก Remax Thailand</p>
