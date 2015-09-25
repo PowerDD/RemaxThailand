@@ -10,7 +10,7 @@
 			<img src="https://src.24fin.com/images/icon/dbd.png">
 		</div>
 		<div class="col-lg-12 text-center margin-top-10">
-		    <p>Copyright &copy; 2015 Remax (Thailand) Co.,Ltd. All rights reserved.</p>
+		    <p>Copyright &copy; 2015 Remax (Thailand) All rights reserved.</p>
 		</div>
 	    </div>
 	</footer>

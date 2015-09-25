@@ -8,7 +8,7 @@
 	    </div>
 
 	    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-		<h2>Remax (Thailand) Co.,Ltd.</h2>
+		<h2>Remax (Thailand)</h2>
 		<p class="justify">&nbsp; &nbsp; &nbsp; &nbsp; คือบริษัทตัวแทนจำหน่ายสินค้าอุปกรณ์เสริมสำหรับโทรศัพท์มือถือและ คอมพิวเตอร์ยี่ห้อชั้นนำ   โดยปัจจุบันเราได้รับการแต่งตั้งอย่างเป็นทางการให้จัดจำหน่ายแบรนด์คุณภาพ  ดังต่อไปนี้   
 				Smartphone Accessories <b>REMAX</b>, Bluetooth headset <b>ROMAN</b>, Computer Accessories <b>ATAKE</b>, <b>HI-POWER</b>, Tablet <b>VIDO</b></p>
 
@@ -35,7 +35,7 @@
 		<h2>REMAX</h2>
 		<p class="justify">&nbsp; &nbsp; &nbsp; &nbsp; ก่อตั้งขึ้นในปี 2008  สำนักงานใหญ่ตั้งอยู่เมือง SHENZHEN จาก<strong>ประเทศฮ่องกง</strong></p>
 
-		<p class="justify">&nbsp; &nbsp; &nbsp; &nbsp; บริษัทเป็นผู้ผลิตและ จำหน่ายสินค้าจำหน่าย  Accessories Smartphone ไม่ว่าจะเป็น Leather Case, Protector Screen  Guard, Power Bank, Audio Series, Cable/Charger   โดยเน้นการออกแบบสินค้าให้โดดเด่นสวยงาม  ทันสมัยและคุณภาพดี  ให้ความสำคัญการรับประกันหลังการขาย  เพื่อสร้างความมั่นใจแก่ผู้บริโภค  มีสาขาและตัวแทนจำหน่ายกระจายอยู่ทั้งในและต่างประเทศ และมีตัวแทนอย่างเป็นทางการกระจายอยู่แต่ละทวีป   ได้แก่  Switzerland, Canada, Russia Egypt, Czech, Israel,Hungary, Dubai, Saudi Arabia, Vietnam และในประเทศไทย <strong>Remax (Thailand) Co.,Ltd.</strong> เป็นตัวแทนที่ได้รับการแต่งตั้งอย่างเป็นทางการ ให้นำเข้าและจัดจำหน่ายสินค้าภายใต้ตราสินค้า <strong>REMAX</strong></p>
+		<p class="justify">&nbsp; &nbsp; &nbsp; &nbsp; บริษัทเป็นผู้ผลิตและ จำหน่ายสินค้าจำหน่าย  Accessories Smartphone ไม่ว่าจะเป็น Leather Case, Protector Screen  Guard, Power Bank, Audio Series, Cable/Charger   โดยเน้นการออกแบบสินค้าให้โดดเด่นสวยงาม  ทันสมัยและคุณภาพดี  ให้ความสำคัญการรับประกันหลังการขาย  เพื่อสร้างความมั่นใจแก่ผู้บริโภค  มีสาขาและตัวแทนจำหน่ายกระจายอยู่ทั้งในและต่างประเทศ และมีตัวแทนอย่างเป็นทางการกระจายอยู่แต่ละทวีป   ได้แก่  Switzerland, Canada, Russia Egypt, Czech, Israel,Hungary, Dubai, Saudi Arabia, Vietnam และในประเทศไทย <strong>Remax (Thailand)</strong> เป็นตัวแทนที่ได้รับการแต่งตั้งอย่างเป็นทางการ ให้นำเข้าและจัดจำหน่ายสินค้าภายใต้ตราสินค้า <strong>REMAX</strong></p>
 
 		<p><img class="img-responsive no-radius margin-top-15" src="https://src.24fin.com/images/remaxthai/shop.jpg"></p>
 
