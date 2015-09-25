@@ -398,9 +398,9 @@ function addClaim(){
 		sellNo: sellNo
 	}, function(data){
 			if (data.success) {
-				$('#claim-Massage').html('กำลังดำเนินการตรวจสอบข้อมูล ท่านสามารถตรวจสอบสถานะการดำเนินการได้จากเลขที่การเคลม').addClass('text-success');
+				$('#claim-Massage').html('กรุณานำเลขที่การเคลมอ้างอิงกับเจ้าหน้าที่เพื่อติดตามสถานะงานเคลมที่ Line ID: @remaxserive ค่ะ').addClass('text-success');
 				$('#claim-ClaimNo').html('<b>เลขที่การเคลม: </b>'+ data.result[0].claimNo);
-				$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+ (data.result[0].status == 'CI' ? ' <u>ตรวจสอบข้อมูล </u>' : '-')).addClass('text-danger');
+				//$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+ (data.result[0].status == 'CI' ? ' <u>ตรวจสอบข้อมูล </u>' : '-')).addClass('text-danger');
 				$('#claim-ProductName').html($('#tab-ProductName').html());
 				$('#claim-Barcode').html($('#tab-Barcode').html());
 				$('#claim-Description').html('<b>รายละเอียด : </b>'+$('#claim_description').val());
@@ -436,6 +436,7 @@ function addClaim(){
 				
 				$('#form-loading').hide();
 				$('#dv-claim_info').show();
+				$('#dv-track').show();
 				
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
