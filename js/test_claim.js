@@ -122,10 +122,10 @@ function warrantyInfo(chkBarcode){
 					$('#tab-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.productName);
 					$('#tab-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.barcode);
 					var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
-					var sellDateMM = moment(data.result.sellDate).locale('th').format('DD MMMM'); 
+					var sellDateMM = moment(data.result.sellDate).locale('th').format('MMMM'); 
 					$('#tab-SellDate').html(sellDateMM+' '+sellDateYearTH);
 					var expireDateYearTH = parseInt(moment(data.result.expireDate).lang('th').format('YYYY'))+543;
-					var expireDateMM = moment(data.result.expireDate).locale('th').format('DD MMMM');
+					var expireDateMM = moment(data.result.expireDate).locale('th').format('MMMM');
 					if(data.result.warranty == 0){
 						$('#tab-warrantyStatus').html('<b><u>สินค้าไม่มีประกัน</u><b>');
 						$('#tab-warrantyStatus').removeClass('text-success');
