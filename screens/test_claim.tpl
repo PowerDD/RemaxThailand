@@ -5,7 +5,7 @@
 		<div id="tabbarcode">
 			<form class="form-horizontal" role="form">
 				<div class="form-group">
-				<p>กรุณากรอกเลขบาร์โค้ด ของ Remax Thailand จากบรรจุภัณฑ์สินค้า</p>
+				<p> * กรุณากรอกเลขบาร์โค้ด ของ Remax Thailand จากบรรจุภัณฑ์สินค้า</p>
 					<div class="col-sm-6 col-md-offset-3 margin-top-15">						
 						<input id="txt-barcode" type="text" class="form-control required" placeholder="Barcode">
 					</div>
