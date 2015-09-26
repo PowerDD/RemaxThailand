@@ -45,6 +45,8 @@ $(function() {
 			$('#alert-trackno').hide();	
 			$('#form-loading').hide();
 			$("#tab-warranty-load").show();
+			
+			$('#tabbarcode').hide();
 		}
 	});
 	$("#txt-barcode").keyup(function(event){ 
@@ -104,6 +106,8 @@ function warrantyInfo(chkBarcode){
 						$('#tab-warranty-info').removeClass('panel-success');
 						$('#tab-warranty-info').removeClass('panel-danger');
 						$('#tab-warranty-info').addClass('panel-warning');
+						
+						$('#tabbarcode').show();
 					}
 					else if(data.result.warranty > 0 && data.result.daysRemaining <= 0){					
 						$('#tab-warrantyStatus').html('<b><u>หมดประกัน</u><b>');
@@ -114,6 +118,8 @@ function warrantyInfo(chkBarcode){
 						$('#tab-warranty-info').removeClass('panel-success');
 						$('#tab-warranty-info').removeClass('panel-warning');
 						$('#tab-warranty-info').addClass('panel-danger');
+						
+						$('#tabbarcode').show();
 					}
 					else{
 						$('#tab-warrantyStatus').html('<b><u>อยู่ในประกัน</u><b>');
@@ -126,7 +132,6 @@ function warrantyInfo(chkBarcode){
 						$('#tab-warranty-info').addClass('panel-success');
 						
 						$('#dv-claim').show();
-						$('#tabbarcode').hide();
 					}
 					$('#tab-warranty-info').show();					
 					$("#tab-warranty-load").hide();
