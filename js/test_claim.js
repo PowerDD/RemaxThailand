@@ -120,6 +120,7 @@ function warrantyInfo(chkBarcode){
 						$('#tab-warranty-info').addClass('panel-success');
 						
 						$('#dv-claim').show();
+						$('tabbarcode').hide();
 					}
 					$('#tab-warranty-info').show();					
 					$("#tab-warranty-load").hide();
