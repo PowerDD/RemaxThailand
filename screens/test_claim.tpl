@@ -7,9 +7,11 @@
 			<img class="img-responsive no-radius" align="left" src="https://lh3.googleusercontent.com/_zUj5OVFSaw5VbeEP_1wqkbm832zhzygZL4g78AXWBw=w250-no">
 	    </div>
 		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-top-10 margin-bottom-10">
-			<a id="warranty_feq" href="javascript:void(0)">
-				<img class="img-responsive no-radius" align="right" src="https://lh3.googleusercontent.com/jkg-DJmKZvHnodDnnt8mw0IiKExAKIpDU-2qNSJGOFI=w200-no">
-			</a>
+		<div class="form-group">
+			<div class="text-center">
+				<span id="warranty_feq" class="btn btn-warning">ตรวจสอบ</span>
+			</div>
+		</div>			
 		</div>
 	</div>
 </div>

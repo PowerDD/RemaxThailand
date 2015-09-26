@@ -9,6 +9,7 @@ var allProgress = 0;
 var chkClaim = false;
 var claimInfo;
 var sellNo = "";
+
 $(function() {
 	loadProvince();
 	$('#txt-tel').ForceNumericOnly();
@@ -20,6 +21,7 @@ $(function() {
 	$(document).on('change', '#district', function(){
 		loadZipCode();
 	});
+	
 	$("#btn-barcode").click(function(){
 		if($('#txt-barcode').val() == ''){
 			$('#txt-barcode').focus();
@@ -51,17 +53,6 @@ $(function() {
 		}
 	});
 	
-	$("#txt-claimno").keyup(function(event){ 
-		if(event.keyCode == 13){
-			$("#btn-claimno").click();
-		}
-	});
-	
-	$("#txt-trackno").keyup(function(event){ 
-		if(event.keyCode == 13){
-			$("#btn-submit_trackno").click();
-		}
-	});
 	
 	$(document).submit(function(e){ // Disable Enter Key //
 		return false;
@@ -70,37 +61,9 @@ $(function() {
 	$("#btn-submit_claiminfo").click(function(){
 		submitClaim();
 	});
-	
-	$("#btn-claimno").click(function(){
-		if($('#txt-claimno').val() == ''){
-			$('#txt-claimno').focus();
-		}else{
-			chkClaim = true;
-			checkClaim();
-			$("#tab-warranty-not_exist").hide();
-			$("#tab-warranty-info").hide();
-			$('#dv-claim').hide();
-			$('#form-success').hide();
-			$('#dv-claim_info').hide();
-			$('#dv-track').hide();
-			$('#alert-trackno').hide();	
-			$("#tab-warranty-load").show(); 
-		}
-	}); 
-	
-	$("#btn-submit_trackno").click(function(){
-		if($('#txt-trackno').val() == ''){
-			$('#txt-trackno').focus();
-		}else{
-			$('#alert-trackno').hide();	
-			var $obj = $(this);
-			$obj.button('loading');
-			submitCustomerTrack();
-		}
-	});
-	
-	$("#warrantyZoom").click(function(){
-		$('#warrantyModal').modal();
+		
+	$("#warranty_feq").click(function(){
+		$('#feqModal').modal();
 	});
 
 });
@@ -170,87 +133,7 @@ function warrantyInfo(chkBarcode){
 		
 	},'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
-function checkClaim(){
-	$.post('http://api-test.powerdd.com/claim/info', {
-		apiKey: apiKeyPower,
-		shop: shop,
-		id: $('#txt-claimno').val(),
-		barcode: '',	
-		claimdate_from: '',
-		claimdate_to: '',	
-		status: ''
-	}, function(data){
-			if (data.success) {
-				claimInfo = data.result[0];
-				warrantyInfo(data.result[0].barcode);			
-			}else{
 
-				$('#tab-warranty-not_exist').show();
-				$("#tab-warranty-load").hide();
-				
-			}
-	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
-};
-function claimInformation(data){
-	var claimStatus = '';
-	if (claimInfo.status == 'CI') claimStatus = 'ตรวจสอบข้อมูล', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
-	else if (claimInfo.status == 'AP') claimStatus = 'อยู่ในเงื่อนไขการเคลม', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-primary');
-	else if (claimInfo.status == 'RJ') claimStatus = 'ไม่รับเคลมสินค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
-	else if (claimInfo.status == 'AM') claimStatus = 'กรุณาเพิ่มข้อมูลรายละเอียด', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-danger');
-	else if (claimInfo.status == 'CP') claimStatus = 'สินค้าจัดส่งโดยลูกค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-warning');
-	else if (claimInfo.status == 'RP') claimStatus = 'ระบบได้รับสินค้าเคลมแล้ว', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-success');
-	else if (claimInfo.status == 'SH') claimStatus = 'จัดส่งสินค้าเคลมให้ลูกค้า', $('#claim-ClaimStatus').removeClass(), $('#claim-ClaimStatus').addClass('text-success');
-	else claimStatus = 'กรุณาติดต่อ ฝ่ายเคลม โทร 081- 828-8833 / 02-1567199 ';
-							
-	$('#claim-Massage').html('ข้อมูลล่าสุด ').addClass('text-success');
-	$('#claim-Massage').hide();
-	var YearTH = parseInt(moment(claimInfo.claimDate).lang('th').format('YYYY'))+543;
-	var DateMM = moment(claimInfo.claimDate).locale('th').format('DD MMMM');
-	$('#claim-ClaimDate').html('<font size="1"><b>วันที่ส่งข้อมูล : </b>'+ DateMM+' '+YearTH+'</font>');
-	$('#claim-ClaimNo').html('<b>เลขที่การเคลม : </b>'+ claimInfo.claimNo);
-	$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+'<u>'+ claimStatus +'</u>');
-	$('#claim-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.productName);
-	$('#claim-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.barcode);
-	$('#claim-Description').html('<b>รายละเอียด : </b>'+claimInfo.description);
-
-	$('#sum-name').html('คุณ '+claimInfo.firstname+' '+claimInfo.lastname+(typeof claimInfo.nickname != 'undefined' && claimInfo.nickname != '' ? ' ('+claimInfo.nickname+')' : ''));
-	$('#sum-address').html(claimInfo.address)
-	$('#sum-address2').html(claimInfo.address2)
-	$('#sum-location').html('แขวง/ตำบล'+claimInfo.subDistrict+' '+'เขต/อำเภอ'+claimInfo.district+' '+'จังหวัด'+claimInfo.province+' '+claimInfo.zipcode)
-	if ( claimInfo.tel.length == 10 ) {
-		var mobile = claimInfo.tel;
-		$('#sum-tel').html('เบอร์โทร '+ mobile.substr(0, 3)+'-'+mobile.substr(3, 4)+'-'+mobile.substr(7, 3) );
-	}else{$('#sum-tel').html('เบอร์โทร '+claimInfo.tel)}
-	$('#sum-email').html(typeof claimInfo.email != 'undefined' && claimInfo.email != ''? 'อีเมล '+claimInfo.email : '')
-	
-	var modal = $('#dv-claim_info');
-	var file = convertDataToArray('|', claimInfo.images);
-	if (typeof file != 'undefined') {
-		for(i=0; i<=3; i++) {
-			modal.find('.img'+i+' img').attr('src', 'https://res.cloudinary.com/powerdd/image/upload/v1438076463/0875665456-1.jpg');
-			modal.find('.img'+i+' a').attr('href', '#');
-			if (typeof file[i] != 'undefined' && file[i] != '') {
-				modal.find('.img'+i).show().find('img').attr('src', file[i]);
-				modal.find('.img'+i).show().find('a').attr('href', file[i]);
-			}
-			else {
-				modal.find('.img'+i).hide();
-			}
-		}
-	}
-	
-	else {
-		for(i=0; i<=3; i++) modal.find('.img'+i).hide();
-	}
-	
-	$('#tab-warranty-load').hide();
-	$('#dv-claim_info').show();
-	if (claimInfo.status == 'AP') {
-		$('#dv-track').show();
-	}
-	$('#btn-submit_trackno').button('default').html('ยืนยันข้อมูล');
-	chkClaim = false;
-};
 
 function loadProvince(){
 	$.post('http://power-api-test.azurewebsites.net/province/list', {
@@ -442,22 +325,6 @@ function addClaim(){
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
 
-function submitCustomerTrack(){
-	$.post('http://api-test.powerdd.com/claim/update', {
-		apiKey: apiKeyPower,
-		shop: shop,
-		id: $('#txt-claimno').val(),
-		column: "customerTrackNo,status,updateBy",
-		value: $("#txt-trackno").val()+","+"CP"+","+claimInfo.firstname
-	}, function(data){
-			if (data.success) {
-				$('#dv-claim_info').hide();
-				$('#dv-track').hide();
-				$('#alert-trackno').show();
-				window.scrollTo(0, 0);				
-			}
-	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
-};
 
 function convertDataToArray(sign, data) {
 	if (data == null) {
