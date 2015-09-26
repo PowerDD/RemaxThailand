@@ -5,14 +5,10 @@
 	    </div>
 		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-top-10 margin-bottom-10">
 			<img class="img-responsive no-radius" align="left" src="https://lh3.googleusercontent.com/_zUj5OVFSaw5VbeEP_1wqkbm832zhzygZL4g78AXWBw=w250-no">
+	    </div> 
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-top-10 margin-bottom-10">
+			<img class="img-responsive no-radius" id="btn-claim" align="right" src="http://src.powerdd.com/img/web/88888888/warranty/claimclick.png">
 	    </div>
-		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right margin-top-15 padding-10">
-			<div class="form-group">
-				<div class="text-center">
-					<span id="btn-claim" class="btn btn-info btn-lg">ส่งข้อมูลการเคลมสินค้า</span>
-				</div>
-			</div>
-		</div>
 	</div>
 </div>
 
