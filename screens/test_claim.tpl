@@ -36,7 +36,39 @@
 							</div>
 						</div>
 					</form>
-				</div>	
+				</div>
+				
+				<div id="tab-warranty-load" role="alert" class="alert alert-info text-center hidden margin-bottom-30"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ
+				</div>
+				<div id="tab-warranty-not_exist" role="alert" class="alert alert-danger text-center hidden margin-bottom-30"> ไม่พบข้อมูลค่ะ										
+				</div>
+				<div id="tab-warranty-info" class="panel panel-success hidden">
+					<div class="panel-heading">ผลการตรวจสอบ
+					</div>
+					<div class="panel-body">
+						<p id="product" class="hidden"></p>
+						<p id="barcode" class="hidden"></p>
+						<p id="lastShop" class="hidden"></p>
+						<p id="tab-ProductName"></p>
+						<p id="tab-Barcode"></p>
+						<div class="col-md-12 col-sm-12">
+							<div class="box-body table-responsive no-padding">
+								<table class="table table-bordered">
+									<tr class="active">
+										<th>สถานะ</th>
+										<th>วันที่ซื้อ</th>
+										<th>วันที่หมดประกัน</th>
+									</tr>
+									<tr>
+										<td id="tab-warrantyStatus"></td>
+										<td id="tab-SellDate"></td>
+										<td id="tab-ExpireDate"></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					 </div>
+				</div>
 			</div>      
 		</div>
     </div>
