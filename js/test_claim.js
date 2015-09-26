@@ -133,6 +133,7 @@ function warrantyInfo(chkBarcode){
 						$('#tab-warranty-info').addClass('panel-success');
 						
 						$('#dv-claim').show();
+						window.scrollTo(0, 0);
 					}
 					$('#tab-warranty-info').show();					
 					$("#tab-warranty-load").hide();
