@@ -6,10 +6,13 @@
 		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-top-10 margin-bottom-10">
 			<img class="img-responsive no-radius" align="left" src="https://lh3.googleusercontent.com/_zUj5OVFSaw5VbeEP_1wqkbm832zhzygZL4g78AXWBw=w250-no">
 	    </div> 
-		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-top-10 margin-bottom-10">
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-top-10 margin-bottom-10"> 
 			<a id="warranty_feq" href="javascript:void(0)">
-				<img class="img-responsive no-radius" id="btn-claim" align="right" src="http://src.powerdd.com/img/web/88888888/warranty/claimclick.png">
+				<img class="img-responsive no-radius" id="btn-claim" align="right" src="https://res.cloudinary.com/powerdd/image/upload/v1443289745/1234567890-1.png">
 			</a>
+			<!--<a id="warranty_feq" href="javascript:void(0)">
+				<img class="img-responsive no-radius" id="btn-claim" align="right" src="http://src.powerdd.com/img/web/88888888/warranty/claimclick.png">
+			</a>-->
 	    </div>
 	</div>
 </div>

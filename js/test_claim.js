@@ -71,6 +71,7 @@ $(function() {
 		$('#tab-warranty-info').hide();
 		$('#dv-claim').hide();
 		$('#dv-claim_info').hide();
+		$('#dv-track').hide();
 		$('#claimModal').modal();
 	});
 
