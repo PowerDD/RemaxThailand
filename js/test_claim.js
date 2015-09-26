@@ -142,6 +142,7 @@ function warrantyInfo(chkBarcode){
 			
 		}else{
 			$('#tab-warranty-not_exist').show();
+			$('#tabbarcode').show();
 			$("#tab-warranty-load").hide();
 		}
 		
