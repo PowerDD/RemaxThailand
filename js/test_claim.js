@@ -62,8 +62,8 @@ $(function() {
 		submitClaim();
 	});
 		
-	$("#warranty_feq").click(function(){
-		$('#feqModal').modal();
+	$("#btn-claim").click(function(){
+		$('#claimModal').modal();
 	});
 
 });
