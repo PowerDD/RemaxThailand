@@ -63,6 +63,9 @@ $(function() {
 	});
 		
 	$("#btn-claim").click(function(){
+		$('#tabbarcode').show();
+		$('.alert').hide();
+		$('.tab-warranty-info').hide();
 		$('#claimModal').modal();
 	});
 
@@ -120,7 +123,7 @@ function warrantyInfo(chkBarcode){
 						$('#tab-warranty-info').addClass('panel-success');
 						
 						$('#dv-claim').show();
-						$('tabbarcode').hide();
+						$('#tabbarcode').hide();
 					}
 					$('#tab-warranty-info').show();					
 					$("#tab-warranty-load").hide();
