@@ -38,9 +38,9 @@
 					</form>
 				</div>
 				
-				<div id="tab-warranty-load" role="alert" class="alert alert-info text-center hidden margin-bottom-30"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ
+				<div id="tab-warranty-load" role="alert" class="alert alert-claim alert-info text-center hidden margin-bottom-30"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ
 				</div>
-				<div id="tab-warranty-not_exist" role="alert" class="alert alert-danger text-center hidden margin-bottom-30"> ไม่พบข้อมูลค่ะ										
+				<div id="tab-warranty-not_exist" role="alert" class="alert alert-claim alert-danger text-center hidden margin-bottom-30"> ไม่พบข้อมูลค่ะ										
 				</div>
 				<div id="tab-warranty-info" class="panel panel-success hidden">
 					<div class="panel-heading">ผลการตรวจสอบ
@@ -70,15 +70,15 @@
 					 </div>
 				</div>
 				
-				<div id="alert-claim_info" role="alert" class="alert alert-danger text-center hidden margin-bottom-30"> กรุณาระบุอาการของสินค้าเคลม และแนบรูปภาพค่ะ										
+				<div id="alert-claim_info" role="alert" class="alert alert-claim alert-danger text-center hidden margin-bottom-30"> กรุณาระบุอาการของสินค้าเคลม และแนบรูปภาพค่ะ										
 				</div>
 				<div id="dv-claim" class="hidden">
 					<strong class="margin-top-15">รายละเอียดสินค้าเคลม</strong>
 					<form id="claim_info">
 						<div class="form-group">
-							<label for="textarea" class="text-danger">กรุณาระบุอาการของสินค้าเคลมให้ชัดเจน *</label>
+							<label for="textarea" class="text-danger">* กรุณาระบุอาการของสินค้าเคลมให้ชัดเจน</label>
 							<textarea id="claim_description" type="text" class=" fixed form-control required" rows="5" value=""></textarea>				
-							<label for="input" class="text-danger">กรุณาแนบภาพสินค้าเคลม *</label>
+							<label for="input" class="text-danger">* กรุณาแนบภาพสินค้าเคลม (ควรมีภาพบาร์โค้ดของ Remax Thailand)</label>
 							<input id="file1" type="file" class="margin-bottom-10" placeholder="">
 							<input id="file2" type="file" class="margin-bottom-10" placeholder="">
 							<input id="file3" type="file" class="margin-bottom-10" placeholder="">
@@ -207,7 +207,7 @@
 				<div id="dv-track" class="hidden">
 					<div class="well">
 						<p>ท่านสามารถจัดส่งสินค้ามาเคลมตามที่อยู่นี้</p>
-						<b class="text-danger"><u>เมื่อได้รับการตรวจสอบข้อมูลจากเจ้าหน้าที่ และเป็นไปตามเงื่อนไข</u><b>
+						<p><b class="text-danger"><u>เมื่อได้รับการตรวจสอบข้อมูลจากเจ้าหน้าที่ และเป็นไปตามเงื่อนไข</u><b></p>
 						<p>สินค้าที่ส่งเคลมต้องแพ็คในบรรจุภัณฑ์ที่ปลอดภัยเพื่อป้องกันสินค้าเสียหายระหว่างการขนส่ง </p>
 						<p>ส่งมาตามที่อยู่บริษัท ระบุหน้ากล่อง (แผนกเคลมสินค้า)</p>
 						<p><b>Remax Thailand</b></p>
@@ -227,7 +227,7 @@
 						<i class="fa fa-cog fa-spin"></i> กำลังส่งข้อมูลเข้าระบบ กรุณารอสักครู่ค่ะ
 						</div>
 					</div>
-				 </div>
+				</div>
 				
 			</div> <!-- modal-body -->     
 		</div>
