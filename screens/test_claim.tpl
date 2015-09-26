@@ -160,6 +160,75 @@
 					</form>
 				</div>
 				
+				<div id="dv-claim_info" class="panel panel-default hidden">
+					<div class="panel-heading">รายละเอียด</div>
+					<div class="panel-body">
+						<div id="claim-Massage" role="alert" class="alert alert-success text-center"></div>
+						<p id="claim-ClaimDate" class="text-right"></p>
+						<p id="claim-ClaimNo"></p>
+						<p id="claim-ClaimStatus"></p>
+						<p id="claim-ProductName"></p>
+						<p id="claim-Barcode"></p>
+						<p id="claim-Description"></p>
+						<div class="row">
+							 <div class="col-xs-3 col-md-3 img0">
+								<a target="_blank" href="">
+								<img src="" class="img-responsive img-rounded">
+								</a>
+							</div>
+							<div class="col-xs-3 col-md-3 img1">
+								<a target="_blank" href="">
+								<img src="" class="img-responsive img-rounded">
+								</a>
+							</div>
+							<div class="col-xs-3 col-md-3 img2">
+								<a target="_blank" href="">
+								<img src="" class="img-responsive img-rounded">
+								</a>
+							</div>
+							<div class="col-xs-3 col-md-3 img3">
+								<a target="_blank" href="">
+								<img src="" class="img-responsive img-rounded">
+								</a>
+							</div>
+						</div>
+						<p class="margin-top-15"><strong>ที่อยู่</strong></p>
+						<div class="margin-left-5">
+							<p id="sum-name"></p>
+							<p id="sum-address"></p>
+							<p id="sum-address2"></p>
+							<p id="sum-location"></p>
+							<p id="sum-tel"></p>
+							<p id="sum-email"></p>
+						</div>
+					 </div>
+				</div>
+				
+				<div id="dv-track" class="hidden">
+					<div class="well">
+						<p>ท่านสามารถจัดส่งสินค้ามาเคลมตามที่อยู่นี้</p>
+						<b class="text-danger"><u>เมื่อได้รับการตรวจสอบข้อมูลจากเจ้าหน้าที่ และเป็นไปตามเงื่อนไข</u><b>
+						<p>สินค้าที่ส่งเคลมต้องแพ็คในบรรจุภัณฑ์ที่ปลอดภัยเพื่อป้องกันสินค้าเสียหายระหว่างการขนส่ง </p>
+						<p>ส่งมาตามที่อยู่บริษัท ระบุหน้ากล่อง (แผนกเคลมสินค้า)</p>
+						<p><b>Remax Thailand</b></p>
+						<p><b>200/38   ลภาวัน 17  ต.บางรักน้อย  อ.เมือง จ.นนทบุรี  11000</b></p>
+						<p><b>โทร  081-828-8833</b></p>
+						<p class="text-danger">* กรุณาระบุเลขที่การเคลม พร้อมสินค้าเคลมที่ส่งมา</p>
+					</div>				
+				</div>
+				<div id="form-loading" class="row hidden">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10">	    
+						<div class="alert alert-info text-center margin-bottom-10">			
+						<div class="progress margin-bottom-5">
+							<div id="progress" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+								<span class="sr-only"></span>
+							</div>
+						</div>
+						<i class="fa fa-cog fa-spin"></i> กำลังส่งข้อมูลเข้าระบบ กรุณารอสักครู่ค่ะ
+						</div>
+					</div>
+				 </div>
+				
 			</div> <!-- modal-body -->     
 		</div>
     </div>

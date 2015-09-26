@@ -63,9 +63,12 @@ $(function() {
 	});
 		
 	$("#btn-claim").click(function(){
+		$('#txt-barcode').val("");
 		$('#tabbarcode').show();
 		$('.alert').hide();
-		$('.tab-warranty-info').hide();
+		$('#tab-warranty-info').hide();
+		$('#dv-claim').hide();
+		$('#dv-claim_info').hide();
 		$('#claimModal').modal();
 	});
 
