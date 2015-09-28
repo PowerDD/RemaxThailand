@@ -33,7 +33,7 @@
 							<input id="password" class="form-control" type="password" placeholder="รหัสผ่าน">
 						</div>
 						<div class="text-center">
-							<span id="btn-login" class="btn btn-warning">ลงชื่อเข้าใช้</span>
+							<span id="btn-login" class="btn btn-warning form-control">ลงชื่อเข้าใช้</span>
 						</div>
 					</form>
 					<div class="text-center">
