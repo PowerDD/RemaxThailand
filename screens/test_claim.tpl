@@ -44,7 +44,7 @@
 					</form>
 					<div class="text-center">
 						<p></p>
-						<b id="message" class="text-red">&nbsp</b>
+						<b id="message" class="text-danger">&nbsp</b>
 					</div>
 				</div>	
 				
