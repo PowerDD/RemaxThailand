@@ -100,6 +100,7 @@ $(function() {
 		$('#username, #password').val("");
 		$('#tablogin').show();
 		$('#tabbarcode').hide();
+		$('.modal-title').html('ส่งข้อมูลสินค้าเคลม');
 		
 		$('#txt-barcode').val("");
 		$('.alert-claim').hide();
@@ -399,6 +400,7 @@ function login() {
 		password: $('#password').val(),
 	}, function(data) {
 		if (data.success) {
+			$('#message').show();
 			$('#message').html( '<i class="fa fa-spinner fa-pulse"></i> กำลังเข้าสู่ระบบ กรุณารอสักครู่ค่ะ' ).addClass('text-light-blue').removeClass('text-red');
 			//$.cookie('memberKey', data.memberKey, { expires: 1, secure: true });
 			$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.name +')');
