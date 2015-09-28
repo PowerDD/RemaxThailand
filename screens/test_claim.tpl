@@ -189,7 +189,7 @@
 						</div>						
 						<div class="form-group">
 							<div class="text-center">
-								<span id="btn-claim_next" class="btn btn-info">ต่อไป  <i class="fa fa-warning"></i></span>
+								<span id="btn-claim_next" class="btn btn-info">ต่อไป  <i class="fa fa-arrow-right"></i></span>
 							</div>
 						</div>
 					</form>
