@@ -29,17 +29,17 @@
 						<div class="form-group">
 							<div class="col-sm-6 col-md-offset-3">
 								<input id="username" class="form-control" type="text" placeholder="ชื่อผู้ใช้">
-							<div>
+							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-sm-6 col-md-offset-3">
 								<input id="password" class="form-control" type="password" placeholder="รหัสผ่าน">
-							<div>	
+							</div>	
 						</div>
 						<div class="form-group">
 							<div class="col-sm-6 col-md-offset-3">
 								<span id="btn-login" class="btn btn-info form-control">ลงชื่อเข้าใช้</span>
-							<div>
+							</div>
 						</div>
 					</form>
 					<div class="text-center">
