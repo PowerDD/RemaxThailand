@@ -51,7 +51,7 @@
 				<div id="tabbarcode" class= "hidden">
 					<form class="form-horizontal" role="form">
 					<div class="form-group">
-						<img class="img-responsive no-radius" src="http://src.powerdd.com/img/web/88888888/warranty/barcode.png">
+						<img class="img-responsive no-radius" align="middle" src="http://src.powerdd.com/img/web/88888888/warranty/barcode.png">
 					</div>
 						<div class="form-group">
 							<div class="col-sm-6 col-md-offset-3 margin-top-15">						
