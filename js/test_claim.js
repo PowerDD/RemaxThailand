@@ -20,13 +20,13 @@ $(function() {
 		if ( !$(this).hasClass('disabled') ) {
 			$('#message').show();
 			if ( $.trim($('#username').val()) == '' ) {
-				$('#message').html( '<i class="fa fa-warning"></i> กรุณากรอกชื่อผู้ใช้ด้วยค่ะ' ).addClass('text-danger').removeClass('text-light-blue');
+				$('#message').html( '<i class="fa fa-warning"></i> กรุณากรอกชื่อผู้ใช้ด้วยค่ะ' ).addClass('text-danger').removeClass('text-primary');
 			}
 			else if ( $('#password').val() == '' ) {
-				$('#message').html( '<i class="fa fa-warning"></i> กรุณากรอกรหัสผ่านด้วยค่ะ' ).addClass('text-danger').removeClass('text-light-blue');
+				$('#message').html( '<i class="fa fa-warning"></i> กรุณากรอกรหัสผ่านด้วยค่ะ' ).addClass('text-danger').removeClass('text-primary');
 			}
 			else {
-				$('#message').html( '<i class="fa fa-spinner fa-pulse"></i> กำลังตรวจสอบข้อมูล กรุณารอสักครู่ค่ะ' ).addClass('text-light-blue').removeClass('text-danger');
+				$('#message').html( '<i class="fa fa-spinner fa-pulse"></i> กำลังตรวจสอบข้อมูล กรุณารอสักครู่ค่ะ' ).addClass('text-primary').removeClass('text-danger');
 				$('#btn-login').addClass('disabled');
 				$('#username, #password').attr('disabled', 'disabled');
 				login();
@@ -402,22 +402,22 @@ function login() {
 	}, function(data) {
 		if (data.success) {
 			if(data.correct){
-				$('#message').html( '<i class="fa fa-spinner fa-pulse"></i> กำลังเข้าสู่ระบบ กรุณารอสักครู่ค่ะ' ).addClass('text-light-blue').removeClass('text-danger');
-				//$.cookie('memberKey', data.memberKey, { expires: 1, secure: true });
+				$('#message').html( '<i class="fa fa-spinner fa-pulse"></i> กำลังเข้าสู่ระบบ กรุณารอสักครู่ค่ะ' ).addClass('text-primary').removeClass('text-danger');
+				//$.cookie('memberKey', data.memberKey, { expires: 1, secure: true }); 
 				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.name +')');
 				$('#tablogin').hide();
 				$('#tabbarcode').show();
 			}else{
 				$('#btn-login').removeClass('disabled');
 				$('#username, #password').removeAttr('disabled');
-				$('#message').html( '<i class="fa fa-warning"></i> ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้องค่ะ' ).addClass('text-danger').removeClass('text-light-blue');
+				$('#message').html( '<i class="fa fa-warning"></i> ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้องค่ะ' ).addClass('text-danger').removeClass('text-primary');
 			}
 			
 		}
 		else {
 			$('#btn-login').removeClass('disabled');
 			$('#username, #password').removeAttr('disabled');
-			$('#message').html( '<i class="fa fa-warning"></i> ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้องค่ะ' ).addClass('text-danger').removeClass('text-light-blue');
+			$('#message').html( '<i class="fa fa-warning"></i> ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้องค่ะ' ).addClass('text-danger').removeClass('text-primary');
 		}
 	});
 }; 
