@@ -51,10 +51,10 @@
 				<div id="tabbarcode" class= "hidden">
 					<form class="form-horizontal" role="form">
 					<div class="form-group">
-						<img class="img-responsive no-radius" align="middle" src="http://src.powerdd.com/img/web/88888888/warranty/barcode.png">
+						<img class="img-responsive no-radius center-block" src="http://src.powerdd.com/img/web/88888888/warranty/barcode.png">
 					</div>
 						<div class="form-group">
-							<div class="col-sm-6 col-md-offset-3 margin-top-15">						
+							<div class="col-sm-6 col-md-offset-3">						
 								<input id="txt-barcode" type="text" class="form-control required" maxlength="16" placeholder="บาร์โค้ด">
 							</div>
 						</div>
@@ -176,6 +176,25 @@
 					</form>
 				</div>
 				
+				<div id="dv-lineat" class="hidden">	
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<div class="text-center">
+								<p>กรุณา Add Line ID Remax Service เพื่อยืนยันงานเคลม</p>
+								<p>และรับที่อยู่ในการจัดส่ง</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<img class="img-responsive no-radius center-block" src="http://src.powerdd.com/img/web/88888888/warranty/qr_remaxservice.png">
+						</div>						
+						<div class="form-group">
+							<div class="text-center">
+								<span id="btn-claim_next" class="btn btn-info">ต่อไป  <i class="fa fa-warning"></i></span>
+							</div>
+						</div>
+					</form>
+				</div>
+				
 				<div id="dv-claim_info" class="panel panel-default hidden">
 					<div class="panel-heading">รายละเอียด</div>
 					<div class="panel-body">
@@ -220,7 +239,7 @@
 					 </div>
 				</div>
 				
-				<div id="dv-track" class="hidden">
+				<!--<div id="dv-track" class="hidden">
 					<div class="well">
 						<p>ท่านสามารถจัดส่งสินค้ามาเคลมตามที่อยู่นี้</p>
 						<b class="text-danger"><u>เมื่อได้รับการตรวจสอบข้อมูลจากเจ้าหน้าที่ และเป็นไปตามเงื่อนไข</u></b>
@@ -231,7 +250,8 @@
 						<p><b>โทร  081-828-8833</b></p>
 						<p class="text-danger">* กรุณาระบุเลขที่การเคลม พร้อมสินค้าเคลมที่ส่งมา</p>
 					</div>				
-				</div>
+				</div>-->
+				
 				<div id="form-loading" class="row hidden">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10">	    
 						<div class="alert alert-info text-center margin-bottom-10">			

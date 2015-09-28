@@ -71,7 +71,7 @@ $(function() {
 			$('#dv-claim').hide();
 			$('#form-success').hide();
 			$('#dv-claim_info').hide();
-			$('#dv-track').hide();
+			//$('#dv-track').hide();
 			$('#alert-trackno').hide();	
 			$('#form-loading').hide();
 			$("#tab-warranty-load").show();
@@ -108,11 +108,15 @@ $(function() {
 		$('#tab-warranty-info').hide();
 		$('#dv-claim').hide();
 		$('#dv-claim_info').hide();
-		$('#dv-track').hide(); 
+		//$('#dv-track').hide(); 
 		$('#form-loading').hide();
+		$('#dv-lineat').hide();		
 		$('#claimModal').modal();
+	}); 
+	
+	$("#btn-claim_next").click(function(){
+		$('#dv-claim_info').show();
 	});
-
 });
 function warrantyInfo(chkBarcode){
 	var barcode_info = ((typeof chkBarcode != 'undefined' && chkBarcode != '') ? $.trim(chkBarcode) : $.trim($('#txt-barcode').val()));
@@ -333,7 +337,7 @@ function addClaim(){
 		sellNo: sellNo
 	}, function(data){
 			if (data.success) {
-				$('#claim-Massage').html(' * กรุณานำเลขที่การเคลมอ้างอิงกับเจ้าหน้าที่เพื่อติดตามสถานะงานเคลมที่ Line ID: @remaxserive ค่ะ').addClass('text-success');
+				$('#claim-Massage').html(' * กรุณานำเลขที่การเคลมอ้างอิงกับเจ้าหน้าที่เพื่อติดตามสถานะงานเคลมที่ Line @remaxserive ค่ะ').addClass('text-success');
 				$('#claim-ClaimNo').html('<b>เลขที่การเคลม: </b>'+ data.result[0].claimNo);
 				//$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+ (data.result[0].status == 'CI' ? ' <u>ตรวจสอบข้อมูล </u>' : '-')).addClass('text-danger');
 				$('#claim-ProductName').html($('#tab-ProductName').html());
@@ -370,8 +374,9 @@ function addClaim(){
 				}
 				
 				$('#form-loading').hide();
-				$('#dv-claim_info').show();
-				$('#dv-track').show();
+				$('#dv-lineat').show();
+				//$('#dv-claim_info').show();
+				//$('#dv-track').show();
 				
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
