@@ -281,9 +281,9 @@ function upload(file, index){
 
 function submitClaim(){
 	var isComplete = true;
-	if ($('#claim_description').val() != '' ||  
-		$('#file1').val() != '' || 
-		$('#file2').val() != '' || 
+	if ($('#claim_description').val() != '' &&  
+		$('#file1').val() != '' && 
+		$('#file2').val() != '' && 
 		$('#file3').val() != '' ){
 			$('#customer_address .txt-require').each(function(){
 				$(this).val( $.trim($(this).val()) );
