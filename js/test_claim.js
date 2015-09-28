@@ -401,8 +401,7 @@ function login() {
 		if (data.success) {
 			$('#message').html( '<i class="fa fa-spinner fa-pulse"></i> กำลังเข้าสู่ระบบ กรุณารอสักครู่ค่ะ' ).addClass('text-light-blue').removeClass('text-red');
 			//$.cookie('memberKey', data.memberKey, { expires: 1, secure: true });
-			var title = $('#modal-title').html();
-			$('.modal-title').html(title+' ('+'คุณ'+ data.name +')');
+			$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.name +')');
 			$('#tablogin').hide();
 			$('#tabbarcode').show();
 		}
