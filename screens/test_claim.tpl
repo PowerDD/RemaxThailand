@@ -26,15 +26,11 @@
 			
 				<div id="tablogin">
 					<form class="form-horizontal" role="form">
-						<div class="form-group">
-							<div class="col-sm-6 col-md-offset-3 margin-top-15">
-								<input id="username" class="form-control" type="text" placeholder="ชื่อผู้ใช้">
-							</div>
+						<div class="col-sm-6 col-md-offset-3 margin-top-15">
+							<input id="username" class="form-control" type="text" placeholder="ชื่อผู้ใช้">
 						</div>
-						<div class="form-group">
-							<div class="col-sm-6 col-md-offset-3 margin-top-15">
-								<input id="password" class="form-control" type="password" placeholder="รหัสผ่าน">
-							</div>
+						<div class="col-sm-6 col-md-offset-3 margin-top-15">
+							<input id="password" class="form-control" type="password" placeholder="รหัสผ่าน">
 						</div>
 						<div class="form-group">
 							<div class="text-center">
@@ -48,7 +44,7 @@
 					</div>
 				</div>	
 				
-				<div id="tabbarcode" class= "hidden wait">
+				<div id="tabbarcode" class= "hidden">
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
 							<div class="col-sm-6 col-md-offset-3 margin-top-15">						

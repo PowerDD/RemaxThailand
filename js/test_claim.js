@@ -96,6 +96,7 @@ $(function() {
 	$("#btn-claim").click(function(){
 		$('#btn-login').removeClass('disabled');
 		$('#username, #password').removeAttr('disabled');
+		$('#message').hide();
 		$('#username, #password').val("");
 		$('#tablogin').show();
 		
