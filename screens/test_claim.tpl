@@ -27,13 +27,19 @@
 				<div id="tablogin">
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
-							<input id="username" class="form-control margin-top-5" type="text" placeholder="ชื่อผู้ใช้">
+							<div class="col-sm-6 col-md-offset-3">
+								<input id="username" class="form-control" type="text" placeholder="ชื่อผู้ใช้">
+							<div>
 						</div>
 						<div class="form-group">
-							<input id="password" class="form-control margin-top-5" type="password" placeholder="รหัสผ่าน">
+							<div class="col-sm-6 col-md-offset-3">
+								<input id="password" class="form-control" type="password" placeholder="รหัสผ่าน">
+							<div>	
 						</div>
 						<div class="form-group">
-							<span id="btn-login" class="btn btn-info form-control margin-top-5">ลงชื่อเข้าใช้</span>
+							<div class="col-sm-6 col-md-offset-3">
+								<span id="btn-login" class="btn btn-info form-control">ลงชื่อเข้าใช้</span>
+							<div>
 						</div>
 					</form>
 					<div class="text-center">
