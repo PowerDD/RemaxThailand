@@ -99,7 +99,7 @@ $(function() {
 		$('#message').hide();
 		$('#username, #password').val("");
 		$('#tablogin').show();
-		
+		$('#tabbarcode').hide();
 		
 		$('#txt-barcode').val("");
 		$('.alert-claim').hide();
@@ -131,7 +131,7 @@ function warrantyInfo(chkBarcode){
 					$('#tab-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.barcode);
 					var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
 					var sellDateMM = moment(data.result.sellDate).locale('th').format('MMMM'); 
-					$('#tab-SellDate').html(sellDateMM+' '+sellDateYearTH);
+					//$('#tab-SellDate').html(sellDateMM+' '+sellDateYearTH);
 					var expireDateYearTH = parseInt(moment(data.result.expireDate).lang('th').format('YYYY'))+543;
 					var expireDateMM = moment(data.result.expireDate).locale('th').format('MMMM');
 					if(data.result.warranty == 0){
@@ -139,7 +139,7 @@ function warrantyInfo(chkBarcode){
 						$('#tab-warrantyStatus').removeClass('text-success');
 						$('#tab-warrantyStatus').removeClass('text-danger');
 						$('#tab-warrantyStatus').addClass('text-warning');
-						$('#tab-ExpireDate').html('');
+						//$('#tab-ExpireDate').html('');
 						$('#tab-warranty-info').removeClass('panel-success');
 						$('#tab-warranty-info').removeClass('panel-danger');
 						$('#tab-warranty-info').addClass('panel-warning');
@@ -151,7 +151,7 @@ function warrantyInfo(chkBarcode){
 						$('#tab-warrantyStatus').removeClass('text-success');
 						$('#tab-warrantyStatus').removeClass('text-warning');
 						$('#tab-warrantyStatus').addClass('text-danger');
-						$('#tab-ExpireDate').html(expireDateMM+' '+expireDateYearTH);
+						//$('#tab-ExpireDate').html(expireDateMM+' '+expireDateYearTH);
 						$('#tab-warranty-info').removeClass('panel-success');
 						$('#tab-warranty-info').removeClass('panel-warning');
 						$('#tab-warranty-info').addClass('panel-danger');
@@ -163,7 +163,7 @@ function warrantyInfo(chkBarcode){
 						$('#tab-warrantyStatus').removeClass('text-danger');
 						$('#tab-warrantyStatus').removeClass('text-warning');
 						$('#tab-warrantyStatus').addClass('text-success');							
-						$('#tab-ExpireDate').html(expireDateMM+' '+expireDateYearTH);
+						//$('#tab-ExpireDate').html(expireDateMM+' '+expireDateYearTH);
 						$('#tab-warranty-info').removeClass('panel-danger');
 						$('#tab-warranty-info').removeClass('panel-warning');
 						$('#tab-warranty-info').addClass('panel-success');
