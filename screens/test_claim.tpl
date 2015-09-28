@@ -20,9 +20,26 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title">* กรุณากรอกเลขบาร์โค้ด  Remax Thailand จากบรรจุภัณฑ์สินค้า</h4>
+				<h4 id="modal-title" class="modal-title">ส่งข้อมูลสินค้าเคลม</h4>
 			</div>
-			<div class="modal-body">			
+			<div class="modal-body">
+			
+				<div id="login">
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<input id="username" class="form-control" type="text" placeholder="ชื่อผู้ใช้">
+						</div>
+						<div class="form-group">
+							<input id="password" class="form-control" type="password" placeholder="รหัสผ่าน">
+						</div>
+						<div class="form-group">
+							<div class="text-center">
+								<span id="btn-login" class="btn btn-warning">ลงชื่อเข้าใช้</span>
+							</div>
+						</div>
+					</form>
+				</div>	
+				
 				<div id="tabbarcode">
 					<form class="form-horizontal" role="form">
 						<div class="form-group">

@@ -2,6 +2,8 @@ var shop = '09A3C5B1-EBF7-443E-B620-48D3B648294E';
 var apiKey = 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8'
 var apiKeyPower = 'BE12B369-0963-40AD-AA40-D68A7516A37B'
 
+var apiKey24 = '91ADEBD2-1A72-4616-B8C7-8659A3618197'
+
 var fileCount = 0;
 var fileProgress = {};
 var fileName = '';
@@ -11,6 +13,33 @@ var claimInfo;
 var sellNo = "";
 
 $(function() {
+	$('#btn-login').removeClass('disabled');
+	$('#username, #password').removeAttr('disabled');
+
+	$(document).on('click', '#btn-login', function(){
+		if ( !$(this).hasClass('disabled') ) {
+			if ( $.trim($('#username').val()) == '' ) {
+				$('#message').html( '<i class="fa fa-warning"></i> กรุณากรอกชื่อผู้ใช้ด้วยค่ะ' ).addClass('text-red').removeClass('text-light-blue');
+			}
+			else if ( $('#password').val() == '' ) {
+				$('#message').html( '<i class="fa fa-warning"></i> กรุณากรอกรหัสผ่านด้วยค่ะ' ).addClass('text-red').removeClass('text-light-blue');
+			}
+			else {
+				$('#message').html( '<i class="fa fa-spinner fa-pulse"></i> กำลังตรวจสอบข้อมูล กรุณารอสักครู่ค่ะ' ).addClass('text-light-blue').removeClass('text-red');
+				$('#btn-login').addClass('disabled');
+				$('#username, #password').attr('disabled', 'disabled');
+				login();
+			}
+		}
+	});
+
+	$(document).on('keydown', '#username, #password', function(e){
+		var key = e.charCode || e.keyCode || 0;
+		if (key == 13) {
+			$('#btn-login').click();
+		}
+	});
+	
 	loadProvince();
 	$('#txt-tel').ForceNumericOnly();
 	$('#txt-zipcode').ForceNumericOnly();
@@ -71,7 +100,8 @@ $(function() {
 		$('#tab-warranty-info').hide();
 		$('#dv-claim').hide();
 		$('#dv-claim_info').hide();
-		$('#dv-track').hide();
+		$('#dv-track').hide(); 
+		$('#form-loading').hide();
 		$('#claimModal').modal();
 	});
 
@@ -356,3 +386,21 @@ function convertDataToArray(sign, data) {
 		return arr;
 	}
 };
+
+function login() {
+	$.post('http://24fin-api.azurewebsites.net/member/login', {apiKey: apiKey24,
+		username: $.trim($('#username').val()),
+		password: $('#password').val(),
+	}, function(data) {
+		if (data.success) {
+			$('#message').html( '<i class="fa fa-spinner fa-pulse"></i> กำลังเข้าสู่ระบบ กรุณารอสักครู่ค่ะ' ).addClass('text-light-blue').removeClass('text-red');
+			//$.cookie('memberKey', data.memberKey, { expires: 1, secure: true });
+			$('#modal-title').html(title+' ('+'คุณ'+ data.name +')');
+		}
+		else {
+			$('#btn-login').removeClass('disabled');
+			$('#username, #password').removeAttr('disabled');
+			$('#message').html( '<i class="fa fa-warning"></i> ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้องค่ะ' ).addClass('text-red').removeClass('text-light-blue');
+		}
+	});
+}; 
