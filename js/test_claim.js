@@ -101,7 +101,6 @@ $(function() {
 		
 		
 		$('#txt-barcode').val("");
-		$('#tabbarcode').show();
 		$('.alert-claim').hide();
 		$('#tab-warranty-info').hide();
 		$('#dv-claim').hide();
