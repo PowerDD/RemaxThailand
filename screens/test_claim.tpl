@@ -32,8 +32,8 @@
 						<div class="col-sm-6 col-md-offset-3 margin-top-15">
 							<input id="password" class="form-control" type="password" placeholder="รหัสผ่าน">
 						</div>
-						<div class="text-center">
-							<span id="btn-login" class="btn btn-warning form-control">ลงชื่อเข้าใช้</span>
+						<div class="col-sm-6 col-md-offset-3 margin-top-15">
+							<span id="btn-login" class="btn btn-info form-control">ลงชื่อเข้าใช้</span>
 						</div>
 					</form>
 					<div class="text-center">
