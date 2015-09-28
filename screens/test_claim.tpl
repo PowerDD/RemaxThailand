@@ -24,7 +24,7 @@
 			</div>
 			<div class="modal-body">
 			
-				<div id="login">
+				<div id="tablogin">
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
 							<div class="col-sm-6 col-md-offset-3 margin-top-15">
@@ -48,7 +48,7 @@
 					</div>
 				</div>	
 				
-				<div id="tabbarcode">
+				<div id="tabbarcode" class= "hidden wait">
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
 							<div class="col-sm-6 col-md-offset-3 margin-top-15">						

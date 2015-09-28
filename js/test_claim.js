@@ -94,6 +94,12 @@ $(function() {
 	});
 		
 	$("#btn-claim").click(function(){
+		$('#btn-login').removeClass('disabled');
+		$('#username, #password').removeAttr('disabled');
+		$('#username, #password').val("");
+		$('#tablogin').show();
+		
+		
 		$('#txt-barcode').val("");
 		$('#tabbarcode').show();
 		$('.alert-claim').hide();
@@ -397,6 +403,8 @@ function login() {
 			//$.cookie('memberKey', data.memberKey, { expires: 1, secure: true });
 			var title = $('#modal-title').html();
 			$('.modal-title').html(title+' ('+'คุณ'+ data.name +')');
+			$('#tablogin').hide();
+			$('#tabbarcode').show();
 		}
 		else {
 			$('#btn-login').removeClass('disabled');
