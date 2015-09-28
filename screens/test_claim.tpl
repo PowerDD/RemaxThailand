@@ -20,17 +20,21 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 id="modal-title" class="modal-title">ส่งข้อมูลสินค้าเคลม</h4>
+				<h4 class="modal-title">ส่งข้อมูลสินค้าเคลม</h4>
 			</div>
 			<div class="modal-body">
 			
 				<div id="login">
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
-							<input id="username" class="form-control" type="text" placeholder="ชื่อผู้ใช้">
+							<div class="col-sm-6 col-md-offset-3 margin-top-15">
+								<input id="username" class="form-control" type="text" placeholder="ชื่อผู้ใช้">
+							</div>
 						</div>
 						<div class="form-group">
-							<input id="password" class="form-control" type="password" placeholder="รหัสผ่าน">
+							<div class="col-sm-6 col-md-offset-3 margin-top-15">
+								<input id="password" class="form-control" type="password" placeholder="รหัสผ่าน">
+							</div>
 						</div>
 						<div class="form-group">
 							<div class="text-center">
@@ -38,6 +42,10 @@
 							</div>
 						</div>
 					</form>
+					<div class="text-center">
+						<p></p>
+						<b id="message" class="text-red">&nbsp</b>
+					</div>
 				</div>	
 				
 				<div id="tabbarcode">

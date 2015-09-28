@@ -395,7 +395,8 @@ function login() {
 		if (data.success) {
 			$('#message').html( '<i class="fa fa-spinner fa-pulse"></i> กำลังเข้าสู่ระบบ กรุณารอสักครู่ค่ะ' ).addClass('text-light-blue').removeClass('text-red');
 			//$.cookie('memberKey', data.memberKey, { expires: 1, secure: true });
-			$('#modal-title').html(title+' ('+'คุณ'+ data.name +')');
+			var title = $('#modal-title').html();
+			$('.modal-title').html(title+' ('+'คุณ'+ data.name +')');
 		}
 		else {
 			$('#btn-login').removeClass('disabled');
