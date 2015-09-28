@@ -137,7 +137,7 @@ function warrantyInfo(chkBarcode){
 					var expireDateYearTH = parseInt(moment(data.result.expireDate).lang('th').format('YYYY'))+543;
 					var expireDateMM = moment(data.result.expireDate).locale('th').format('MMMM');
 					if(data.result.warranty == 0){
-						$('#tab-warrantyStatus').html('<b><u>สินค้าไม่มีประกัน</u><b>');
+						$('#tab-warrantyStatus').html('<b>สถานะ : </b><b><u>สินค้าไม่มีประกัน</u><b>');
 						$('#tab-warrantyStatus').removeClass('text-success');
 						$('#tab-warrantyStatus').removeClass('text-danger');
 						$('#tab-warrantyStatus').addClass('text-warning');
@@ -149,7 +149,7 @@ function warrantyInfo(chkBarcode){
 						$('#tabbarcode').show();
 					}
 					else if(data.result.warranty > 0 && data.result.daysRemaining <= 0){					
-						$('#tab-warrantyStatus').html('<b><u>หมดประกัน</u><b>');
+						$('#tab-warrantyStatus').html('<b>สถานะ : </b><b><u>หมดประกัน</u><b>');
 						$('#tab-warrantyStatus').removeClass('text-success');
 						$('#tab-warrantyStatus').removeClass('text-warning');
 						$('#tab-warrantyStatus').addClass('text-danger');
@@ -161,7 +161,7 @@ function warrantyInfo(chkBarcode){
 						$('#tabbarcode').show();
 					}
 					else{
-						$('#tab-warrantyStatus').html('<b><u>อยู่ในประกัน</u><b>');
+						$('#tab-warrantyStatus').html('<b>สถานะ : </b><b><u>อยู่ในประกัน</u><b>');
 						$('#tab-warrantyStatus').removeClass('text-danger');
 						$('#tab-warrantyStatus').removeClass('text-warning');
 						$('#tab-warrantyStatus').addClass('text-success');							
@@ -281,11 +281,10 @@ function upload(file, index){
 
 function submitClaim(){
 	var isComplete = true;
-	if ($('#claim_description').val() != '' &&  
+	if ($('#claim_description').val() != '' ||  
 		$('#file1').val() != '' || 
 		$('#file2').val() != '' || 
-		$('#file3').val() != '' ||
-		$('#file4').val() != ''){
+		$('#file3').val() != '' ){
 			$('#customer_address .txt-require').each(function(){
 				$(this).val( $.trim($(this).val()) );
 				if ( $(this).val() == '' ) {
