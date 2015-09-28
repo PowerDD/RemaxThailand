@@ -24,16 +24,12 @@
 			</div>
 			<div class="modal-body">
 			
-				<div id="tablogin">
+				<div id="tablogin" class="col-sm-6 col-md-offset-3 margin-top-15">
 					<form class="form-horizontal" role="form">
-						<div class="col-sm-6 col-md-offset-3 margin-top-15">
-							<input id="username" class="form-control" type="text" placeholder="ชื่อผู้ใช้">
-						</div>
-						<div class="col-sm-6 col-md-offset-3 margin-top-15">
-							<input id="password" class="form-control" type="password" placeholder="รหัสผ่าน">
-						</div>
-						<div class="col-sm-6 col-md-offset-3 margin-top-15">
-							<span id="btn-login" class="btn btn-info form-control">ลงชื่อเข้าใช้</span>
+						<div class="form-group">
+							<input id="username" class="form-control margin-top-5" type="text" placeholder="ชื่อผู้ใช้">
+							<input id="password" class="form-control margin-top-5" type="password" placeholder="รหัสผ่าน">
+							<span id="btn-login" class="btn btn-info form-control margin-top-5">ลงชื่อเข้าใช้</span>
 						</div>
 					</form>
 					<div class="text-center">
