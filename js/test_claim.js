@@ -303,7 +303,7 @@ function submitClaim(){
 			}
 	}else{
 		$("#alert-claim_info").fadeIn();		
-		setTimeout('$("#alert-claim_info").fadeOut()',3000);
+		setTimeout('$("#alert-claim_info").fadeOut()',4000);
 		window.scrollTo(0, 0);
 	}
 };
@@ -402,7 +402,7 @@ function login() {
 		if (data.success) {
 			if(data.correct){
 				$('#message').html( '<i class="fa fa-spinner fa-pulse"></i> กำลังเข้าสู่ระบบ กรุณารอสักครู่ค่ะ' ).addClass('text-primary').removeClass('text-danger');
-				//$.cookie('memberKey', data.memberKey, { expires: 1, secure: true }); 
+				//$.cookie('memberKey', data.memberKey, { expires: 365, secure: true }); 
 				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.name +')');
 				$('#tablogin').hide();
 				$('#tabbarcode').show();

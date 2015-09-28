@@ -50,9 +50,12 @@
 				
 				<div id="tabbarcode" class= "hidden">
 					<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<img class="img-responsive no-radius" id="btn-claim" align="right" src="http://src.powerdd.com/img/web/88888888/warranty/claimclick.png">
+					</div>
 						<div class="form-group">
 							<div class="col-sm-6 col-md-offset-3 margin-top-15">						
-								<input id="txt-barcode" type="text" class="form-control required" maxlength="16" placeholder="Barcode">
+								<input id="txt-barcode" type="text" class="form-control required" maxlength="16" placeholder="บาร์โค้ด">
 							</div>
 						</div>
 						<div class="form-group">
@@ -80,7 +83,7 @@
 					 </div>
 				</div>
 				
-				<div id="alert-claim_info" role="alert" class="alert alert-claim alert-danger text-center hidden margin-bottom-30"> กรุณาระบุอาการของสินค้าเคลม และแนบรูปภาพค่ะ										
+				<div id="alert-claim_info" role="alert" class="alert alert-claim alert-danger text-center hidden margin-bottom-30"> กรุณาระบุอาการของสินค้าเคลม และแนบรูปภาพให้ครบถ้วนค่ะ										
 				</div>
 				<div id="dv-claim" class="hidden">
 					<strong class="margin-top-15">รายละเอียดสินค้าเคลม</strong>
