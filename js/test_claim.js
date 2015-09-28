@@ -115,6 +115,7 @@ $(function() {
 	}); 
 	
 	$("#btn-claim_next").click(function(){
+		$('#dv-lineat').hide();
 		$('#dv-claim_info').show();
 	});
 });
@@ -372,7 +373,7 @@ function addClaim(){
 				else {
 					for(i=0; i<=3; i++) modal.find('.img'+i).hide();
 				}
-				
+				simpleLog();
 				$('#form-loading').hide();
 				$('#dv-lineat').show();
 				//$('#dv-claim_info').show();
@@ -425,3 +426,17 @@ function login() {
 		}
 	});
 }; 
+
+function simpleLog(){
+	$.post('http://api-test.powerdd.com/webclient/simplelog', {
+		name: 'userClaim',
+		value: $('#username').val()
+	}, function(data){
+			if (data.success) {
+				$('#dv-claim_info').hide();
+				$('#dv-track').hide();
+				$('#alert-trackno').show();
+				window.scrollTo(0, 0);				
+			}
+	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
+};
