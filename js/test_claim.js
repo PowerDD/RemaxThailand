@@ -429,6 +429,7 @@ function login() {
 
 function simpleLog(){
 	$.post('http://api-test.powerdd.com/webclient/simplelog', {
+		apiKey: apiKeyPower,
 		name: 'userClaim',
 		value: $('#username').val()
 	}, function(data){
