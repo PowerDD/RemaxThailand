@@ -9,6 +9,7 @@ var fileProgress = {};
 var fileName = '';
 var allProgress = 0;
 var chkClaim = false;
+var loadAdressComplete = false;
 var claimInfo;
 var claimNo = "";
 var sellNo = "";
@@ -171,18 +172,21 @@ function warrantyInfo(chkBarcode){
 						$('#tabbarcode').show();
 					}
 					else{
-						$('#tab-warrantyStatus').html('<b>สถานะ : </b><b><u>อยู่ในประกัน</u><b>');
-						$('#tab-warrantyStatus').removeClass('text-danger');
-						$('#tab-warrantyStatus').removeClass('text-warning');
-						$('#tab-warrantyStatus').addClass('text-success');							
-						//$('#tab-ExpireDate').html(expireDateMM+' '+expireDateYearTH);
-						$('#tab-warranty-info').removeClass('panel-danger');
-						$('#tab-warranty-info').removeClass('panel-warning');
-						$('#tab-warranty-info').addClass('panel-success');
+						if(loadAdressComplete){
+							$('#tab-warrantyStatus').html('<b>สถานะ : </b><b><u>อยู่ในประกัน</u><b>');
+							$('#tab-warrantyStatus').removeClass('text-danger');
+							$('#tab-warrantyStatus').removeClass('text-warning');
+							$('#tab-warrantyStatus').addClass('text-success');							
+							//$('#tab-ExpireDate').html(expireDateMM+' '+expireDateYearTH);
+							$('#tab-warranty-info').removeClass('panel-danger');
+							$('#tab-warranty-info').removeClass('panel-warning');
+							$('#tab-warranty-info').addClass('panel-success');
+							
+							$('#dv-claim').show();
+							$('#imgClaim_2').show();						
+							window.scrollTo(0, 0);
+						}else{loadAdress();}
 						
-						$('#dv-claim').show();
-						$('#imgClaim_2').show();						
-						window.scrollTo(0, 0);
 					}
 					$('#tab-warranty-info').show();					
 					$("#tab-warranty-load").hide();
@@ -482,6 +486,7 @@ function loadAdress(){
 					$('#txt-zipcode').val(data.result[0].zipcode);
 					$('#txt-tel').val(data.result[0].tel);
 					$('#txt-email').val(data.result[0].email);
+					loadAdressComplete = true;
 				}		
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
