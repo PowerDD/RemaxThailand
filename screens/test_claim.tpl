@@ -190,7 +190,7 @@
 				<div id="dv-lineat" class="hidden">	
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
-						<img class="img-responsive no-radius center-block margin-bottom-10" src="https://res.cloudinary.com/powerdd/image/upload/v1443500976/8888888888888-3.png">
+						<img class="img-responsive no-radius center-block margin-bottom-10" src="https://res.cloudinary.com/powerdd/image/upload/v1443535445/0000-3.png">
 							<div class="text-center">
 								<p>กรุณานำเลขที่การเคลม ใช้ในการติดตามสถานะงาน</p>
 								<p id="claimNo3"></p>
@@ -201,10 +201,14 @@
 						</div>						
 						<div class="form-group">
 							<div class="text-center">								
-								<span id="btn-done" type="button" class="btn btn-info" data-dismiss="modal">เสร็จสิ้น</span>
+								<span id="btn-done" type="button" class="btn btn-info">เสร็จสิ้น</span>
 							</div>
 						</div>
 					</form>
+				</div>
+				
+				<div id="dv-done" class="hidden">	
+					<img class="img-responsive no-radius center-block" src="https://res.cloudinary.com/powerdd/image/upload/v1443535445/0000-4.png">
 				</div>
 				
 				<div id="dv-claim_info" class="panel panel-default hidden">

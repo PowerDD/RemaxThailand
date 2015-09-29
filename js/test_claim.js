@@ -123,6 +123,11 @@ $(function() {
 		$('#dv-lineat').show();
 		$('#dv-claim_info').hide();
 	});
+	
+	$("#btn-done").click(function(){
+		$('#dv-lineat').hide();
+		$('#dv-done').show();
+	});
 });
 function warrantyInfo(chkBarcode){
 	loadAdress();
