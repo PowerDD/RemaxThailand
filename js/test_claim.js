@@ -101,6 +101,7 @@ $(function() {
 		$('#username, #password').val("");
 		$('#tablogin').show();
 		$('#tabbarcode').hide();
+		$('#imgClaim_2').hide();
 		$('.modal-title').html('ส่งข้อมูลสินค้าเคลม');
 		
 		$('#txt-barcode').val("");
@@ -176,6 +177,7 @@ function warrantyInfo(chkBarcode){
 						$('#tab-warranty-info').addClass('panel-success');
 						
 						$('#dv-claim').show();
+						$('#imgClaim_2').show();						
 						window.scrollTo(0, 0);
 					}
 					$('#tab-warranty-info').show();					
@@ -285,11 +287,44 @@ function upload(file, index){
 };
 
 function submitClaim(){
+	// var isComplete = true;
+	// if ($('#claim_description').val() != '' &&  
+		// $('#file1').val() != '' && 
+		// $('#file2').val() != '' && 
+		// $('#file3').val() != '' &&
+		// $('#file4').val() != ''){
+			// $('#customer_address .txt-require').each(function(){
+				// $(this).val( $.trim($(this).val()) );
+				// if ( $(this).val() == '' ) {
+					// $(this).parents('.form-group').addClass('has-error');
+					// $(this).focus();
+					// isComplete = false;
+					// return false;
+				// }
+				// else {
+					// $(this).parents('.form-group').removeClass('has-error');
+				// }
+			// });
+
+			// if (isComplete) {
+				// uploadFile();
+			// }
+	// }else{
+		// $("#alert-claim_info").fadeIn();		
+		// setTimeout('$("#alert-claim_info").fadeOut()',4000);
+		// window.scrollTo(0, 0);
+	// }
+	
 	var isComplete = true;
-	if ($('#claim_description').val() != '' &&  
-		$('#file1').val() != '' && 
-		$('#file2').val() != '' && 
-		$('#file3').val() != '' ){
+	$('#claim_info .txt-require').each(function(){
+		$(this).val( $.trim($(this).val()) );
+		if ($(this).val() == '' ){
+			$(this).parents('.form-group').addClass('has-error');
+					$(this).focus();
+					isComplete = false;
+					return false;
+		}
+		else {		
 			$('#customer_address .txt-require').each(function(){
 				$(this).val( $.trim($(this).val()) );
 				if ( $(this).val() == '' ) {
@@ -302,14 +337,11 @@ function submitClaim(){
 					$(this).parents('.form-group').removeClass('has-error');
 				}
 			});
-
-			if (isComplete) {
-				uploadFile();
-			}
-	}else{
-		$("#alert-claim_info").fadeIn();		
-		setTimeout('$("#alert-claim_info").fadeOut()',4000);
-		window.scrollTo(0, 0);
+		}
+	});
+	
+	if (isComplete) {
+		uploadFile();
 	}
 };
 
@@ -373,7 +405,6 @@ function addClaim(){
 				else {
 					for(i=0; i<=3; i++) modal.find('.img'+i).hide();
 				}
-				simpleLog();
 				$('#form-loading').hide();
 				$('#dv-lineat').show();
 				//$('#dv-claim_info').show();
@@ -403,7 +434,7 @@ function convertDataToArray(sign, data) {
 function login() {
 	$.post('http://24fin-api.azurewebsites.net/member/login', {apiKey: apiKey24,
 		username: $.trim($('#username').val()),
-		password: $('#password').val(),
+		password: $('#password').val()
 	}, function(data) {
 		if (data.success) {
 			if(data.correct){

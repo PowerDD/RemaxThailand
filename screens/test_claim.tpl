@@ -51,7 +51,7 @@
 				<div id="tabbarcode" class= "hidden">
 					<form class="form-horizontal" role="form">
 					<div class="form-group">
-						<img class="img-responsive no-radius center-block" src="https://res.cloudinary.com/powerdd/image/upload/v1443500976/8888888888888-1.png">
+						<img class="img-responsive no-radius center-block margin-bottom-10" src="https://res.cloudinary.com/powerdd/image/upload/v1443500976/8888888888888-1.png">
 					</div>
 					<div class="form-group">
 						<img class="img-responsive no-radius center-block" src="http://src.powerdd.com/img/web/88888888/warranty/barcode.png">
@@ -89,23 +89,24 @@
 				<div id="alert-claim_info" role="alert" class="alert alert-claim alert-danger text-center hidden margin-bottom-30"> กรุณาระบุอาการของสินค้าเคลม และแนบรูปภาพให้ครบถ้วนค่ะ										
 				</div>
 				<div id="dv-claim" class="hidden">
+				<img id="imgClaim_2" class="img-responsive no-radius center-block margin-bottom-10 hidden" src="https://res.cloudinary.com/powerdd/image/upload/v1443500976/8888888888888-1.png">
 					<strong class="margin-top-15">รายละเอียดสินค้าเคลม</strong>
 					<form id="claim_info">
 						<div class="form-group">
-							<label for="textarea" class="text-danger">* กรุณาระบุอาการของสินค้าเคลมให้ชัดเจน</label>
+							<label for="textarea" class="text-danger">* กรุณาระบุอาการเสียของสินค้าเคลมให้ชัดเจน</label>
 							<textarea id="claim_description" type="text" class=" fixed form-control required" rows="5" value=""></textarea>				
 							<label for="input" class="text-danger required">* รูปบรรจุภัณฑ์พร้อมสติ๊กเกอร์สีฟ้า</label>
 							<input type="file" id="file1" class="margin-bottom-10" placeholder="">
 							<label for="input" class="text-danger required">* รูปบรรจุภัณฑ์พร้อมบาร์โค้ด Remax Thailand</label>
 							<input type="file" id="file2" class="margin-bottom-10" placeholder="">
-							<label for="input" class="text-danger required">* รูปสินค้า</label>
+							<label for="input" class="text-danger required">* รูปสินค้า 1</label>
 							<input type="file" id="file3" class="margin-bottom-10" placeholder="">
-							<label for="input">อื่นๆ</label>
+							<label for="input" class="text-danger required">* รูปสินค้า 2</label>
 							<input type="file" id="file4" class="margin-bottom-10" placeholder="">
 						</div>
 					</form>
 
-					<strong class="margin-top-15">ที่อยู่</strong>
+					<strong class="margin-top-15">ที่อยู่ที่ใช้ในการส่งสินค้าคืน</strong>
 					<form id="customer_address" class="form-horizontal" role="form">
 						<div class="form-group">
 							<label class="col-sm-3 control-label" for="txt-name">ชื่อ</label>
@@ -182,6 +183,7 @@
 				<div id="dv-lineat" class="hidden">	
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
+						<img class="img-responsive no-radius center-block margin-bottom-10" src="https://res.cloudinary.com/powerdd/image/upload/v1443500976/8888888888888-3.png">
 							<div class="text-center">
 								<p>กรุณา Add Line ID Remax Service เพื่อยืนยันงานเคลม</p>
 								<p>และรับที่อยู่ในการจัดส่ง</p>
@@ -239,7 +241,12 @@
 							<p id="sum-tel"></p>
 							<p id="sum-email"></p>
 						</div>
-					 </div>
+					</div>
+					<div class="form-group">
+						<div class="text-center">
+							<span id="btn-done" type="button" class="btn btn-info" data-dismiss="modal">เสร็จสิ้น</span>
+						</div>
+					</div>
 				</div>
 				
 				<!--<div id="dv-track" class="hidden">
