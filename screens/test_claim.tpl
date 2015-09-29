@@ -74,6 +74,7 @@
 				<div id="tab-warranty-not_exist" role="alert" class="alert alert-claim alert-danger text-center hidden margin-bottom-30"> ไม่พบข้อมูลค่ะ										
 				</div>
 				<div id="tab-warranty-info" class="panel panel-success hidden">
+				<img id="imgClaim_2" class="img-responsive no-radius center-block margin-bottom-10 hidden" src="https://res.cloudinary.com/powerdd/image/upload/v1443500976/8888888888888-2.png">
 					<div class="panel-heading">ผลการตรวจสอบ
 					</div>
 					<div class="panel-body">
@@ -88,20 +89,19 @@
 				
 				<div id="alert-claim_info" role="alert" class="alert alert-claim alert-danger text-center hidden margin-bottom-30"> กรุณาระบุอาการของสินค้าเคลม และแนบรูปภาพให้ครบถ้วนค่ะ										
 				</div>
-				<div id="dv-claim" class="hidden">
-				<img id="imgClaim_2" class="img-responsive no-radius center-block margin-bottom-10 hidden" src="https://res.cloudinary.com/powerdd/image/upload/v1443500976/8888888888888-2.png">
+				<div id="dv-claim" class="hidden">				
 					<strong class="margin-top-15">รายละเอียดสินค้าเคลม</strong>
 					<form id="claim_info">
 						<div class="form-group">
 							<label for="textarea" class="text-danger">* กรุณาระบุอาการเสียของสินค้าเคลมให้ชัดเจน</label>
-							<textarea id="claim_description" type="text" class=" fixed form-control txt-required" rows="5" value=""></textarea>				
-							<label for="input" class="text-danger txt-required">* รูปบรรจุภัณฑ์พร้อมสติ๊กเกอร์สีฟ้า</label>
+							<textarea id="claim_description" type="text" class=" fixed form-control txt-require" rows="5" value=""></textarea>				
+							<label for="input" class="text-danger txt-require">* รูปบรรจุภัณฑ์พร้อมสติ๊กเกอร์สีฟ้า</label>
 							<input type="file" id="file1" class="margin-bottom-10" placeholder="">
-							<label for="input" class="text-danger txt-required">* รูปบรรจุภัณฑ์พร้อมบาร์โค้ด Remax Thailand</label>
+							<label for="input" class="text-danger txt-require">* รูปบรรจุภัณฑ์พร้อมบาร์โค้ด Remax Thailand</label>
 							<input type="file" id="file2" class="margin-bottom-10" placeholder="">
-							<label for="input" class="text-danger txt-required">* รูปสินค้า 1</label>
+							<label for="input" class="text-danger txt-require">* รูปสินค้า 1</label>
 							<input type="file" id="file3" class="margin-bottom-10" placeholder="">
-							<label for="input" class="text-danger txt-required">* รูปสินค้า 2</label>
+							<label for="input" class="text-danger txt-require">* รูปสินค้า 2</label>
 							<input type="file" id="file4" class="margin-bottom-10" placeholder="">
 						</div>
 					</form>
