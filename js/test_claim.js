@@ -311,19 +311,19 @@ function submitClaim(){
 			}
 	}else{
 		if ($('#claim_description').val() == ''){
-			$(this).focus();
+			$('#claim_description').focus();
 		}else if ($('#file1').val() == ''){
-			$(this).focus();
+			$('#file1').focus();
 		}else if ($('#file2').val() == ''){
-			$(this).focus();
+			$('#file2').focus();
 		}else if ($('#file3').val() == ''){
-			$(this).focus();
+			$('#file3').focus();
 		}else if ($('#file4').val() == ''){
-			$(this).focus();
+			$('#file4').focus();
 		}
 		
-		// $("#alert-claim_info").fadeIn();		
-		// setTimeout('$("#alert-claim_info").fadeOut()',4000);
+		$("#alert-claim_info").fadeIn();		
+		setTimeout('$("#alert-claim_info").fadeOut()',4000);
 		// window.scrollTo(0, 0);
 	}
 	
