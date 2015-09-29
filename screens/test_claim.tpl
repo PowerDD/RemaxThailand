@@ -25,6 +25,7 @@
 			<div class="modal-body">
 			
 				<div id="tablogin">
+					<p>กรุณาเข้าสู่ระบบ</p>
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
 							<div class="col-sm-6 col-md-offset-3">
@@ -42,6 +43,7 @@
 							</div>
 						</div>
 					</form>
+					<a href="https://24fin-backend.azurewebsites.net">สมัครสมาชิก</a>
 					<div class="text-center">
 						<p></p>
 						<b id="message" class="text-danger">&nbsp</b>
