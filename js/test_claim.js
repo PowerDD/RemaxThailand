@@ -485,9 +485,11 @@ function loadAdress(){
 					$('#txt-sub_district').val(data.result[0].subDistrict);
 					$('#txt-zipcode').val(data.result[0].zipcode);
 					$('#txt-tel').val(data.result[0].tel);
-					$('#txt-email').val(data.result[0].email);
-					loadAdressComplete = true;
+					$('#txt-email').val(data.result[0].email);					
 				}		
 			}
+			if($('#province :selected').html() == '' && $('#district :selected').html() == ''){
+				loadAdress();
+			}else{loadAdressComplete = true;}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
