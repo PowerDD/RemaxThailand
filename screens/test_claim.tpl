@@ -92,9 +92,7 @@
 						<p id="tab-warrantyStatus"></p>
 					 </div>
 				</div>
-				
-				<div id="alert-claim_info" role="alert" class="alert alert-claim alert-danger text-center hidden margin-bottom-30"> กรุณาระบุอาการของสินค้าเคลม และแนบรูปภาพให้ครบถ้วนค่ะ										
-				</div>
+							
 				<div id="dv-claim" class="hidden">				
 					<strong class="margin-top-15">รายละเอียดสินค้าเคลม</strong>
 					<form id="claim_info">
@@ -111,6 +109,9 @@
 							<input type="file" id="file4" class="margin-bottom-10 txt-require" placeholder="">
 						</div>
 					</form>
+					
+					<div id="alert-claim_info" role="alert" class="alert alert-claim alert-danger text-center hidden margin-bottom-30"> กรุณาระบุอาการของสินค้าเคลม และแนบรูปภาพให้ครบถ้วนค่ะ										
+					</div>
 
 					<strong class="margin-top-15">ที่อยู่ที่ใช้ในการส่งสินค้าคืน</strong>
 					<form id="customer_address" class="form-horizontal" role="form">
