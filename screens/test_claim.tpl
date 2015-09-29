@@ -192,8 +192,8 @@
 						<div class="form-group">
 						<img class="img-responsive no-radius center-block margin-bottom-10" src="https://res.cloudinary.com/powerdd/image/upload/v1443500976/8888888888888-3.png">
 							<div class="text-center">
-								<p>กรุณา Add Line ID Remax Service เพื่อยืนยันงานเคลม</p>
-								<p>และรับที่อยู่ในการจัดส่ง</p>
+								<p>กรุณานำเลขที่การเคลม ใช้ในการติดตามสถานะงาน</p>
+								<p id="claimNo3"></p>
 							</div>
 						</div>
 						<div class="form-group">

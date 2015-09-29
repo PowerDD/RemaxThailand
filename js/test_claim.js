@@ -10,6 +10,7 @@ var fileName = '';
 var allProgress = 0;
 var chkClaim = false;
 var claimInfo;
+var claimNo = "";
 var sellNo = "";
 
 $(function() {
@@ -117,6 +118,7 @@ $(function() {
 	}); 
 	
 	$("#btn-claim_next").click(function(){
+		$('#claimNo3').html('<b>เลขที่การเคลม: </b><h3>'+ claimNo +'</h3>');
 		$('#dv-lineat').show();
 		$('#dv-claim_info').hide();
 	});
@@ -357,8 +359,10 @@ function addClaim(){
 		usernameClaim: $('#username').val()
 	}, function(data){
 			if (data.success) {
+				claimNo = data.result[0].claimNo;
+				$('#claim-Massage').hide();
 				//$('#claim-Massage').html(' * กรุณานำเลขที่การเคลมอ้างอิงกับเจ้าหน้าที่เพื่อติดตามสถานะงานเคลมที่ Line @remaxserive ค่ะ').addClass('text-success');
-				$('#claim-ClaimNo').html('<b>เลขที่การเคลม: </b>'+ data.result[0].claimNo);
+				$('#claim-ClaimNo').html('<b>เลขที่การเคลม: </b>'+ '<h3>' + claimNo + '</h3>');
 				//$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+ (data.result[0].status == 'CI' ? ' <u>ตรวจสอบข้อมูล </u>' : '-')).addClass('text-danger');
 				$('#claim-ProductName').html($('#tab-ProductName').html());
 				$('#claim-Barcode').html($('#tab-Barcode').html());
