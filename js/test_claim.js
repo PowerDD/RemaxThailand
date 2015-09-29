@@ -122,6 +122,7 @@ $(function() {
 	});
 });
 function warrantyInfo(chkBarcode){
+	loadAdress();
 	var barcode_info = ((typeof chkBarcode != 'undefined' && chkBarcode != '') ? $.trim(chkBarcode) : $.trim($('#txt-barcode').val()));
 	$.post('http://api-test.powerdd.com/warranty/info', {
 		apiKey: apiKeyPower,
@@ -356,7 +357,7 @@ function addClaim(){
 		usernameClaim: $('#username').val()
 	}, function(data){
 			if (data.success) {
-				$('#claim-Massage').html(' * กรุณานำเลขที่การเคลมอ้างอิงกับเจ้าหน้าที่เพื่อติดตามสถานะงานเคลมที่ Line @remaxserive ค่ะ').addClass('text-success');
+				//$('#claim-Massage').html(' * กรุณานำเลขที่การเคลมอ้างอิงกับเจ้าหน้าที่เพื่อติดตามสถานะงานเคลมที่ Line @remaxserive ค่ะ').addClass('text-success');
 				$('#claim-ClaimNo').html('<b>เลขที่การเคลม: </b>'+ data.result[0].claimNo);
 				//$('#claim-ClaimStatus').html('<b>สถานะ : </b>'+ (data.result[0].status == 'CI' ? ' <u>ตรวจสอบข้อมูล </u>' : '-')).addClass('text-danger');
 				$('#claim-ProductName').html($('#tab-ProductName').html());
@@ -428,7 +429,7 @@ function login() {
 				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.name +')');
 				$('#tablogin').hide();
 				$('#tabbarcode').show();
-				loadAdress();
+				
 			}else{
 				$('#btn-login').removeClass('disabled');
 				$('#username, #password').removeAttr('disabled');
