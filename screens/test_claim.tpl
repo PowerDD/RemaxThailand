@@ -192,7 +192,6 @@
 						<div class="form-group">
 						<img class="img-responsive no-radius center-block margin-bottom-10" src="https://res.cloudinary.com/powerdd/image/upload/v1443535445/0000-3.png">
 							<div class="text-center">
-								<p>กรุณานำเลขที่การเคลม ใช้ในการติดตามสถานะงาน</p>
 								<p id="claimNo3"></p>
 							</div>
 						</div>
