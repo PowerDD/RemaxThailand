@@ -472,11 +472,11 @@ function loadAdress(){
 					$('#txt-nickname').val(data.result[0].nickname);
 					$('#txt-address').val(data.result[0].address);
 					$('#txt-address2').val(data.result[0].address2);
-					$('#province').val(data.result[0].province);
-					$('#district').val(data.result[0].district);
+					$('#province :selected').html(data.result[0].province),
+					$('#district :selected').html(data.result[0].district),
 					$('#txt-sub_district').val(data.result[0].subDistrict);
-					$('#txt-zipcode').val(data.result[0].firstname);
-					$('#txt-tel').val(data.result[0].zipcode);
+					$('#txt-zipcode').val(data.result[0].zipcode);
+					$('#txt-tel').val(data.result[0].tel);
 					$('#txt-email').val(data.result[0].email);
 				}		
 			}
