@@ -287,44 +287,12 @@ function upload(file, index){
 };
 
 function submitClaim(){
-	// var isComplete = true;
-	// if ($('#claim_description').val() != '' &&  
-		// $('#file1').val() != '' && 
-		// $('#file2').val() != '' && 
-		// $('#file3').val() != '' &&
-		// $('#file4').val() != ''){
-			// $('#customer_address .txt-require').each(function(){
-				// $(this).val( $.trim($(this).val()) );
-				// if ( $(this).val() == '' ) {
-					// $(this).parents('.form-group').addClass('has-error');
-					// $(this).focus();
-					// isComplete = false;
-					// return false;
-				// }
-				// else {
-					// $(this).parents('.form-group').removeClass('has-error');
-				// }
-			// });
-
-			// if (isComplete) {
-				// uploadFile();
-			// }
-	// }else{
-		// $("#alert-claim_info").fadeIn();		
-		// setTimeout('$("#alert-claim_info").fadeOut()',4000);
-		// window.scrollTo(0, 0);
-	// }
-	
 	var isComplete = true;
-	$('#claim_info .txt-require').each(function(){
-		$(this).val( $.trim($(this).val()) );
-		if ($(this).val() == '' ){
-			$(this).parents('.form-group').addClass('has-error');
-					$(this).focus();
-					isComplete = false;
-					return false;
-		}
-		else {		
+	if ($('#claim_description').val() != '' &&  
+		$('#file1').val() != '' && 
+		$('#file2').val() != '' && 
+		$('#file3').val() != '' &&
+		$('#file4').val() != ''){
 			$('#customer_address .txt-require').each(function(){
 				$(this).val( $.trim($(this).val()) );
 				if ( $(this).val() == '' ) {
@@ -337,12 +305,17 @@ function submitClaim(){
 					$(this).parents('.form-group').removeClass('has-error');
 				}
 			});
-		}
-	});
-	
-	if (isComplete) {
-		uploadFile();
+
+			if (isComplete) {
+				uploadFile();
+			}
+	}else{
+		$(this).focus();
+		// $("#alert-claim_info").fadeIn();		
+		// setTimeout('$("#alert-claim_info").fadeOut()',4000);
+		// window.scrollTo(0, 0);
 	}
+	
 };
 
 function addClaim(){
