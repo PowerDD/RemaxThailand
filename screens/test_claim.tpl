@@ -200,8 +200,8 @@
 							<img class="img-responsive no-radius center-block" src="http://src.powerdd.com/img/web/88888888/warranty/qr_remaxservice.png">
 						</div>						
 						<div class="form-group">
-							<div class="text-center">
-								<span id="btn-claim_next" class="btn btn-info">ต่อไป  <i class="fa fa-arrow-right"></i></span>
+							<div class="text-center">								
+								<span id="btn-done" type="button" class="btn btn-info" data-dismiss="modal">เสร็จสิ้น</span>
 							</div>
 						</div>
 					</form>
@@ -251,7 +251,7 @@
 					</div>
 					<div class="form-group">
 						<div class="text-center">
-							<span id="btn-done" type="button" class="btn btn-info" data-dismiss="modal">เสร็จสิ้น</span>
+							<span id="btn-claim_next" class="btn btn-info">ต่อไป  <i class="fa fa-arrow-right"></i></span>
 						</div>
 					</div>
 				</div>

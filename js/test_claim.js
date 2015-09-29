@@ -116,8 +116,8 @@ $(function() {
 	}); 
 	
 	$("#btn-claim_next").click(function(){
-		$('#dv-lineat').hide();
-		$('#dv-claim_info').show();
+		$('#dv-lineat').show();
+		$('#dv-claim_info').hide();
 	});
 });
 function warrantyInfo(chkBarcode){
@@ -390,8 +390,7 @@ function addClaim(){
 					for(i=0; i<=3; i++) modal.find('.img'+i).hide();
 				}
 				$('#form-loading').hide();
-				$('#dv-lineat').show();
-				//$('#dv-claim_info').show();
+				$('#dv-claim_info').show();
 				//$('#dv-track').show();
 				
 			}
