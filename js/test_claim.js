@@ -91,6 +91,7 @@ $(function() {
 	});
 	
 	$("#btn-submit_claiminfo").click(function(){
+		$('#imgClaim_2').hide();
 		submitClaim();
 	});
 		
@@ -427,6 +428,7 @@ function login() {
 				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.name +')');
 				$('#tablogin').hide();
 				$('#tabbarcode').show();
+				loadAdress();
 			}else{
 				$('#btn-login').removeClass('disabled');
 				$('#username, #password').removeAttr('disabled');
@@ -453,6 +455,29 @@ function simpleLog(){
 				$('#dv-track').hide();
 				$('#alert-trackno').show();
 				window.scrollTo(0, 0);				
+			}
+	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
+};
+
+function loadAdress(){
+	$.post('http://api-test.powerdd.com/claim/customerAddress', {
+		apiKey: apiKeyPower,
+		username: $('#username').val()
+	}, function(data){
+			if (data.success) {
+				if(data.result.length != 0){
+					$('#txt-firstname').val(data.result[0].firstname);
+					$('#txt-lastname').val(data.result[0].lastname);
+					$('#txt-nickname').val(data.result[0].nickname);
+					$('#txt-address').val(data.result[0].address);
+					$('#txt-address2').val(data.result[0].address2);
+					$('#province').val(data.result[0].province);
+					$('#district').val(data.result[0].district);
+					$('#txt-sub_district').val(data.result[0].subDistrict);
+					$('#txt-zipcode').val(data.result[0].firstname);
+					$('#txt-tel').val(data.result[0].zipcode);
+					$('#txt-email').val(data.result[0].email);
+				}		
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
