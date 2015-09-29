@@ -24,9 +24,9 @@
 			</div>
 			<div class="modal-body">
 			
-				<div id="tablogin">
-					<p>กรุณาเข้าสู่ระบบ</p>
+				<div id="tablogin">				
 					<form class="form-horizontal" role="form">
+					<p>กรุณาเข้าสู่ระบบ</p>
 						<div class="form-group">
 							<div class="col-sm-6 col-md-offset-3">
 								<input id="username" class="form-control" type="text" placeholder="ชื่อผู้ใช้">
@@ -42,8 +42,8 @@
 								<span id="btn-login" class="btn btn-info form-control">ลงชื่อเข้าใช้</span>
 							</div>
 						</div>
-					</form>
-					<a href="https://24fin-backend.azurewebsites.net">สมัครสมาชิก</a>
+					<a href="https://24fin-backend.azurewebsites.net" target="_blank">สมัครสมาชิก</a>
+					</form>			
 					<div class="text-center">
 						<p></p>
 						<b id="message" class="text-danger">&nbsp</b>
