@@ -351,7 +351,8 @@ function addClaim(){
 		email: $('#txt-email').val(), 
 		images: fileName,
 		lastShop: $('#lastShop').html(),
-		sellNo: sellNo
+		sellNo: sellNo,
+		usernameClaim: $('#username').val()
 	}, function(data){
 			if (data.success) {
 				$('#claim-Massage').html(' * กรุณานำเลขที่การเคลมอ้างอิงกับเจ้าหน้าที่เพื่อติดตามสถานะงานเคลมที่ Line @remaxserive ค่ะ').addClass('text-success');
