@@ -13,6 +13,7 @@ var loadAdressComplete = false;
 var claimInfo;
 var claimNo = "";
 var sellNo = "";
+var _username = "";
 
 $(function() {
 	
@@ -132,8 +133,8 @@ $(function() {
 		$('#dv-done').show();
 	});
 });
-function warrantyInfo(chkBarcode){
-	loadAdress( $('#username').val() );
+function warrantyInfo(chkBarcode){	
+	loadAdress();
 	var barcode_info = ((typeof chkBarcode != 'undefined' && chkBarcode != '') ? $.trim(chkBarcode) : $.trim($('#txt-barcode').val()));
 	$.post('http://api-test.powerdd.com/warranty/info', {
 		apiKey: apiKeyPower,
@@ -477,10 +478,13 @@ function simpleLog(){
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
 
-function loadAdress(username){
+function loadAdress(){
+	if ($('#username').val() != '' && typeof $('#username').val() != 'undefined'){
+		_username = $('#username').val();
+	}
 	$.post('http://api-test.powerdd.com/claim/customerAddress', {
 		apiKey: apiKeyPower,
-		username: username
+		username: _username
 	}, function(data){
 			if (data.success) {
 				if(data.result.length != 0){
