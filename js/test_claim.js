@@ -133,7 +133,7 @@ $(function() {
 	});
 });
 function warrantyInfo(chkBarcode){
-	loadAdress();
+	loadAdress( $('#username').val() );
 	var barcode_info = ((typeof chkBarcode != 'undefined' && chkBarcode != '') ? $.trim(chkBarcode) : $.trim($('#txt-barcode').val()));
 	$.post('http://api-test.powerdd.com/warranty/info', {
 		apiKey: apiKeyPower,
@@ -477,10 +477,10 @@ function simpleLog(){
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
 
-function loadAdress(){
+function loadAdress(username){
 	$.post('http://api-test.powerdd.com/claim/customerAddress', {
 		apiKey: apiKeyPower,
-		username: $('#username').val()
+		username: username
 	}, function(data){
 			if (data.success) {
 				if(data.result.length != 0){
@@ -527,6 +527,7 @@ function checkUser(memberKey){
 	}, function(data){
 		if (data.success) {
 			if(data.correct){
+				loadAdress(data.result[0][0].username);
 				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.result[0][0].name +')');
 				$('#tablogin').hide();
 				$('#tabbarcode').show();
