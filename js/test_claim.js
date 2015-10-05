@@ -531,7 +531,8 @@ function checkUser(memberKey){
 	}, function(data){
 		if (data.success) {
 			if(data.correct){
-				loadAdress(data.result[0][0].username);
+				_username = data.result[0][0].username;
+				loadAdress();
 				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.result[0][0].name +')');
 				$('#tablogin').hide();
 				$('#tabbarcode').show();
