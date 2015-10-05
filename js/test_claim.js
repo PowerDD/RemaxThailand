@@ -504,6 +504,7 @@ function loadAdress(){
 			if($('#province :selected').html() == '' && $('#district :selected').html() == ''){
 				loadAdress();
 			}else{loadAdressComplete = true;}
+			window.scrollTo(0, 0);
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
 function setCookie(cname, cvalue, exphr) {
