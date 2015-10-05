@@ -104,11 +104,7 @@ $(function() {
 		$('#message').hide();
 		$('#username, #password').val("");
 		
-		if (typeof getCookie('memberKey') == 'undefined' && getCookie('memberKey') == ''){
-			$('#tablogin').hide;
-		} else{
-			$('#tablogin').show;
-		}
+		checkUser(getCookie("memberKey"));
 		
 		$('#tabbarcode').hide();
 		$('#imgClaim_2').hide();
@@ -438,7 +434,8 @@ function convertDataToArray(sign, data) {
 };
 
 function login() {
-	$.post('http://24fin-api.azurewebsites.net/member/login', {apiKey: apiKey24,
+	$.post('http://24fin-api.azurewebsites.net/member/login', {
+		apiKey: apiKey24,
 		username: $.trim($('#username').val()),
 		password: $('#password').val()
 	}, function(data) {
@@ -521,4 +518,27 @@ function getCookie(cname) {
         if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
     }
     return "";
+};
+ 
+function checkUser(memberKey){  	
+	$.post('http://24fin-api.azurewebsites.net/member/info/auth', {
+		apiKey: apiKey24,
+		authKey: memberKey
+	}, function(data){
+		if (data.success) {
+			if(data.correct){
+				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.result[0].name +')');
+				$('#tablogin').hide();
+				$('#tabbarcode').show();
+					
+			}else{
+				$('#tablogin').show();
+			}
+				
+		}
+		else {
+			$('#tablogin').show();
+		}
+	});
+
 };
