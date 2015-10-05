@@ -16,9 +16,9 @@ var sellNo = "";
 
 $(function() {
 	if (typeof getCookie('memberKey') == 'undefined' && getCookie('memberKey') == ''){
-		$('#tablogin').show;
-	} else{
 		$('#tablogin').hide;
+	} else{
+		$('#tablogin').show;
 	}
 	
 	$('#btn-login').removeClass('disabled');
