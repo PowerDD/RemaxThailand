@@ -6,10 +6,11 @@
 		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-top-10 margin-bottom-10">
 			<img class="img-responsive no-radius" align="left" src="https://lh3.googleusercontent.com/_zUj5OVFSaw5VbeEP_1wqkbm832zhzygZL4g78AXWBw=w250-no">
 	    </div> 
-		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-top-10 margin-bottom-10"> 
-			<a id="warranty_feq" href="javascript:void(0)">
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-top-10 margin-bottom-10" align="right"> 
+			<!--<a id="warranty_feq" href="javascript:void(0)">
 				<img class="img-responsive no-radius" id="btn-claim" align="right" src="http://src.powerdd.com/img/web/88888888/warranty/claimclick.png">
-			</a>
+			</a>-->
+			<span class="btn btn-primary" type="button" id="btn-claim">ส่งข้อมูลการเคลม</span>
 	    </div>
 	</div>
 </div>
@@ -24,7 +25,7 @@
 			</div>
 			<div class="modal-body">
 			
-				<div id="tablogin">				
+				<div id="tablogin" class="hidden">				
 					<form class="form-horizontal" role="form">
 						<div class="text-center">		
 							<p>กรุณาเข้าสู่ระบบ</p>
