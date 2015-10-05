@@ -444,7 +444,7 @@ function login() {
 		if (data.success) {
 			if(data.correct){
 				$('#message').html( '<i class="fa fa-spinner fa-pulse"></i> กำลังเข้าสู่ระบบ กรุณารอสักครู่ค่ะ' ).addClass('text-primary').removeClass('text-danger');
-				setCookie("memberKey", data.memberKey, 1);
+				setCookie("memberKey", data.authKey, 1);
 				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.name +')');
 				$('#tablogin').hide();
 				$('#tabbarcode').show();
@@ -504,9 +504,9 @@ function loadAdress(){
 			}else{loadAdressComplete = true;}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
-function setCookie(cname, cvalue, exdays) {
+function setCookie(cname, cvalue, exphr) {
     var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    d.setTime(d.getTime() + (exphr*60*60*1000));
     var expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
 };
