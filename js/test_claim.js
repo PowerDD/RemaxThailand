@@ -15,7 +15,7 @@ var claimNo = "";
 var sellNo = "";
 
 $(function() {
-	if (typeof $.cookie('memberKey') == 'undefined' && $.cookie('memberKey') == ''){
+	if (typeof getCookie('memberKey') == 'undefined' && getCookie('memberKey') == ''){
 		$('#tablogin').show;
 	} else{
 		$('#tablogin').hide;
@@ -444,7 +444,7 @@ function login() {
 		if (data.success) {
 			if(data.correct){
 				$('#message').html( '<i class="fa fa-spinner fa-pulse"></i> กำลังเข้าสู่ระบบ กรุณารอสักครู่ค่ะ' ).addClass('text-primary').removeClass('text-danger');
-				$.cookie('memberKey', data.memberKey, { expires: 1, secure: true }); 
+				setCookie("memberKey", data.memberKey, 1);
 				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.name +')');
 				$('#tablogin').hide();
 				$('#tabbarcode').show();
