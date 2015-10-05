@@ -15,11 +15,6 @@ var claimNo = "";
 var sellNo = "";
 
 $(function() {
-	if (typeof getCookie('memberKey') == 'undefined' && getCookie('memberKey') == ''){
-		$('#tablogin').hide;
-	} else{
-		$('#tablogin').show;
-	}
 	
 	$('#btn-login').removeClass('disabled');
 	$('#username, #password').removeAttr('disabled');
@@ -108,7 +103,13 @@ $(function() {
 		$('#username, #password').removeAttr('disabled');
 		$('#message').hide();
 		$('#username, #password').val("");
-		$('#tablogin').show();
+		
+		if (typeof getCookie('memberKey') == 'undefined' && getCookie('memberKey') == ''){
+			$('#tablogin').hide;
+		} else{
+			$('#tablogin').show;
+		}
+		
 		$('#tabbarcode').hide();
 		$('#imgClaim_2').hide();
 		$('.modal-title').html('ส่งข้อมูลสินค้าเคลม');
@@ -520,15 +521,4 @@ function getCookie(cname) {
         if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
     }
     return "";
-};
-
-function checkLogin() {
-    var user = getCookie("memberKey");
-    if (user != "") {
-        $('#tablogin').hide();
-    } else {
-        if (user != "" && user != null) {
-            $('#tablogin').show();
-        }
-    }
 };
