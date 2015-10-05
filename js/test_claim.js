@@ -106,8 +106,6 @@ $(function() {
 		$('#message').hide();
 		$('#username, #password').val("");
 		
-		checkUser(getCookie("memberKey"));
-		
 		$('#tabbarcode').hide();
 		$('#imgClaim_2').hide();
 		$('.modal-title').html('ส่งข้อมูลสินค้าเคลม');
@@ -122,6 +120,8 @@ $(function() {
 		$('#dv-lineat').hide();	
 		$('#dv-done').hide();			
 		$('#claimModal').modal();
+		
+		checkUser(getCookie("memberKey"));
 	}); 
 	
 	$("#btn-claim_next").click(function(){
