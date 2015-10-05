@@ -521,3 +521,14 @@ function getCookie(cname) {
     }
     return "";
 };
+
+function checkLogin() {
+    var user = getCookie("memberKey");
+    if (user != "") {
+        $('#tablogin').hide();
+    } else {
+        if (user != "" && user != null) {
+            $('#tablogin').show();
+        }
+    }
+};
