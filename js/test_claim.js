@@ -193,12 +193,13 @@ function warrantyInfo(chkBarcode){
 							
 							$('#dv-claim').show();
 							$('#imgClaim_2').show();						
-							window.scrollTo(0, 0);
+
 						}else{loadAdress();}
 						
 					}
 					$('#tab-warranty-info').show();					
 					$("#tab-warranty-load").hide();
+					 $('#claimModal').animate({ scrollTop: 0 }, 'fast');
 				}						
 			}
 			
@@ -341,7 +342,6 @@ function submitClaim(){
 		
 		$("#alert-claim_info").fadeIn();		
 		setTimeout('$("#alert-claim_info").fadeOut()',4000);
-		// window.scrollTo(0, 0);
 	}
 	
 };
@@ -472,8 +472,7 @@ function simpleLog(){
 			if (data.success) {
 				$('#dv-claim_info').hide();
 				$('#dv-track').hide();
-				$('#alert-trackno').show();
-				window.scrollTo(0, 0);				
+				$('#alert-trackno').show();			
 			}
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
@@ -504,7 +503,6 @@ function loadAdress(){
 			if($('#province :selected').html() == '' && $('#district :selected').html() == ''){
 				loadAdress();
 			}else{loadAdressComplete = true;}
-			window.scrollTo(0, 0);
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
 function setCookie(cname, cvalue, exphr) {
@@ -540,8 +538,7 @@ function checkUser(memberKey){
 					
 			}else{
 				$('#tablogin').show();
-			}
-				
+			}				
 		}
 		else {
 			$('#tablogin').show();
