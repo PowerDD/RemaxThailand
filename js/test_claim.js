@@ -200,7 +200,7 @@ function warrantyInfo(chkBarcode){
 					}
 					$('#tab-warranty-info').show();					
 					$("#tab-warranty-load").hide();
-					 $('#claimModal').animate({ scrollTop: 0 }, 'fast');
+					$('#claimModal').animate({ scrollTop: 0 }, 'fast');
 				}						
 			}
 			
@@ -254,7 +254,7 @@ function loadZipCode(){
 };
 
 function uploadFile(){
-	window.scrollTo(0 ,0);
+	$('#claimModal').animate({ scrollTop: 0 }, 'fast');
 	$('#dv-claim').hide();
 	$('#tab-warranty-info').hide();
 	$('#form-loading').fadeIn();
@@ -270,7 +270,7 @@ function uploadFile(){
 		}
 	}
 
-	if ( fileCount == 0 ) register();
+	if ( fileCount == 0 ) addClaim();
 };
 
 function upload(file, index){	
