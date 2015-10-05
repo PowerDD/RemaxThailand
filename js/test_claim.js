@@ -524,7 +524,8 @@ function getCookie(cname) {
     return "";
 };
  
-function checkUser(memberKey){  	
+function checkUser(memberKey){ 
+	$('#tab-warranty-load').show(); 	
 	$.post('http://24fin-api.azurewebsites.net/member/info/auth', {
 		apiKey: apiKey24,
 		authKey: memberKey
@@ -535,13 +536,16 @@ function checkUser(memberKey){
 				loadAdress();
 				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.result[0][0].name +')');
 				$('#tablogin').hide();
+				$('#tab-warranty-load').hide(); 
 				$('#tabbarcode').show();
 					
 			}else{
+				$('#tab-warranty-load').hide(); 
 				$('#tablogin').show();
 			}				
 		}
 		else {
+			$('#tab-warranty-load').hide(); 
 			$('#tablogin').show();
 		}
 	});
