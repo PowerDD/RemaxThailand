@@ -10,7 +10,7 @@
 			<!--<a id="warranty_feq" href="javascript:void(0)">
 				<img class="img-responsive no-radius" id="btn-claim" align="right" src="http://src.powerdd.com/img/web/88888888/warranty/claimclick.png">
 			</a>-->
-			<span class="btn btn-primary btn-lg" type="button" id="btn-claim">ส่งข้อมูลการเคลม</span>
+			<span class="btn btn-primary btn-lg" type="button" id="btn-claim">ส่งเคลม</span>
 	    </div>
 	</div>
 </div>
