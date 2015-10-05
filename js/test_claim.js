@@ -118,7 +118,8 @@ $(function() {
 		$('#dv-claim_info').hide();
 		//$('#dv-track').hide(); 
 		$('#form-loading').hide();
-		$('#dv-lineat').hide();		
+		$('#dv-lineat').hide();	
+		$('#dv-done').hide();			
 		$('#claimModal').modal();
 	}); 
 	

@@ -58,7 +58,7 @@
 				<div id="tabbarcode" class= "hidden">
 					<form class="form-horizontal" role="form">
 					<div class="form-group">
-						<img class="img-responsive no-radius center-block margin-bottom-10" src="https://res.cloudinary.com/powerdd/image/upload/v1443500976/8888888888888-1.png">
+						<img class="img-responsive no-radius center-block margin-bottom-10" src="http://src.powerdd.com/img/web/88888888/warranty/claim_1.png">
 					</div>
 					<div class="form-group">
 						<img class="img-responsive no-radius center-block" src="http://src.powerdd.com/img/web/88888888/warranty/barcode.png">
@@ -80,7 +80,7 @@
 				</div>
 				<div id="tab-warranty-not_exist" role="alert" class="alert alert-claim alert-danger text-center hidden margin-bottom-30"> ไม่พบข้อมูลค่ะ										
 				</div>
-				<img id="imgClaim_2" class="img-responsive no-radius center-block margin-bottom-10 margin-top-10 hidden" src="https://res.cloudinary.com/powerdd/image/upload/v1443500976/8888888888888-2.png">
+				<img id="imgClaim_2" class="img-responsive no-radius center-block margin-bottom-10 margin-top-10 hidden" src="http://src.powerdd.com/img/web/88888888/warranty/claim_2.png">
 				<div id="tab-warranty-info" class="panel panel-success hidden">
 					<div class="panel-heading">ผลการตรวจสอบ
 					</div>
@@ -191,7 +191,7 @@
 				<div id="dv-lineat" class="hidden">	
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
-						<img class="img-responsive no-radius center-block margin-bottom-10" src="https://res.cloudinary.com/powerdd/image/upload/v1443535445/0000-3.png">
+						<img class="img-responsive no-radius center-block margin-bottom-10" src="http://src.powerdd.com/img/web/88888888/warranty/claim_3.png">
 							<div class="text-center">
 								<p id="claimNo3"></p>
 							</div>
@@ -208,7 +208,7 @@
 				</div>
 				
 				<div id="dv-done" class="hidden">	
-					<img class="img-responsive no-radius center-block" src="https://res.cloudinary.com/powerdd/image/upload/v1443535445/0000-4.png">
+					<img class="img-responsive no-radius center-block" src="http://src.powerdd.com/img/web/88888888/warranty/claim_done.png">
 				</div>
 				
 				<div id="dv-claim_info" class="panel panel-default hidden">
