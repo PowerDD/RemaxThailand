@@ -100,6 +100,7 @@ $(function() {
 	});
 		
 	$("#btn-claim").click(function(){
+		$('#claimModal').animate({ scrollTop: 0 }, 'fast');
 		$('#btn-login').removeClass('disabled');
 		$('#username, #password').removeAttr('disabled');
 		$('#message').hide();
