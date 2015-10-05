@@ -527,7 +527,7 @@ function checkUser(memberKey){
 	}, function(data){
 		if (data.success) {
 			if(data.correct){
-				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.result[0].name +')');
+				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.result[0][0]name +')');
 				$('#tablogin').hide();
 				$('#tabbarcode').show();
 					
