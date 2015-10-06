@@ -46,7 +46,7 @@
 								<span id="btn-login" class="btn btn-info form-control">ลงชื่อเข้าใช้</span>
 							</div>
 						</div>
-						<div class="form-group">
+						<div class="form-group padding-10">
 							<div class="checkbox pull-left">
 								<label>
 									<input id="remember" type="checkbox"> คงอยู่ในระบบ</input>

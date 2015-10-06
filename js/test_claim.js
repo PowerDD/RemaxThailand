@@ -136,6 +136,10 @@ $(function() {
 		$('#dv-lineat').hide();
 		$('#dv-done').show();
 	});
+	
+	$("#btn-logout_claim").click(function(){
+		logout();
+	});
 });
 function warrantyInfo(chkBarcode){	
 	loadAdress();
