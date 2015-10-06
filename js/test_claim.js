@@ -118,9 +118,11 @@ $(function() {
 		//$('#dv-track').hide(); 
 		$('#form-loading').hide();
 		$('#dv-lineat').hide();	
-		$('#dv-done').hide();			
+		$('#dv-done').hide(); 
+		$('#btn-logout_claim').hide(); 
 		$('#claimModal').modal();
 		
+		$('#tab-warranty-load').show();
 		checkUser(getCookie("memberKey"));
 	}); 
 	
@@ -440,7 +442,10 @@ function login() {
 	$.post('http://24fin-api.azurewebsites.net/member/login', {
 		apiKey: apiKey24,
 		username: $.trim($('#username').val()),
-		password: $('#password').val()
+		password: $('#password').val(),
+		remember: $( "#remember:checked" ).map(function() {
+                    return 1;
+                }).get()
 	}, function(data) {
 		if (data.success) {
 			if(data.correct){
@@ -448,6 +453,7 @@ function login() {
 				setCookie("memberKey", data.authKey, 1);
 				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.name +')');
 				$('#tablogin').hide();
+				$('#btn-logout_claim').show();
 				$('#tabbarcode').show();
 				
 			}else{
@@ -462,6 +468,17 @@ function login() {
 			$('#username, #password').removeAttr('disabled');
 			$('#message').html( '<i class="fa fa-warning"></i> ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้องค่ะ' ).addClass('text-danger').removeClass('text-primary');
 		}
+	});
+}; 
+
+function logout() {
+	$.post('http://24fin-api.azurewebsites.net/member/logout', {
+		apiKey: apiKey24,
+		authKey: getCookie("memberKey")
+	}, function(data) {
+		if (data.success) {
+			$("#btn-barcode").click();			
+		}		
 	});
 }; 
 
@@ -526,7 +543,7 @@ function getCookie(cname) {
 };
  
 function checkUser(memberKey){ 
-	$('#tab-warranty-load').show(); 	
+	 	
 	$.post('http://24fin-api.azurewebsites.net/member/info/auth', {
 		apiKey: apiKey24,
 		authKey: memberKey
@@ -538,6 +555,7 @@ function checkUser(memberKey){
 				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.result[0][0].name +')');
 				$('#tablogin').hide();
 				$('#tab-warranty-load').hide(); 
+				$('#btn-logout_claim').show();
 				$('#tabbarcode').show();
 					
 			}else{

@@ -20,6 +20,7 @@
     <div class="modal-dialog modal-md" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<h4 class="modal-title">ส่งข้อมูลการเคลม</h4>
 			</div>                    	
@@ -44,6 +45,11 @@
 							<div class="col-sm-6 col-md-offset-3">
 								<span id="btn-login" class="btn btn-info form-control">ลงชื่อเข้าใช้</span>
 							</div>
+						</div>
+						<div class="checkbox pull-left">
+							<label>
+								<input id="remember" type="checkbox"> คงอยู่ในระบบ
+							</label>
 						</div>
 						<div class="text-center">
 							<a href="https://24fin-backend.azurewebsites.net" target="_blank">สมัครสมาชิก</a>
@@ -76,7 +82,7 @@
 					</form>
 				</div>
 				
-				<div id="tab-warranty-load" class="alert-claim text-center hidden margin-bottom-30"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ
+				<div id="tab-warranty-load"  role="alert"  class="alert alert-claim alert-info text-center hidden margin-bottom-30"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ
 				</div>
 				<div id="tab-warranty-not_exist" role="alert" class="alert alert-claim alert-danger text-center hidden margin-bottom-30"> ไม่พบข้อมูลค่ะ										
 				</div>
@@ -286,7 +292,11 @@
 					</div>
 				</div>
 				
-			</div> <!-- modal-body -->     
+			</div> <!-- modal-body --> 
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default btn-xs" data-dismiss="modal">ปิด</button>
+				<button id="btn-logout_claim" type="button" class="btn btn-danger btn-xs hidden">ออกจากระบบ</button>
+			 </div>
 		</div>
     </div>
 </div>
