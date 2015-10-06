@@ -554,7 +554,7 @@ function checkUser(memberKey){
 	}, function(data){
 		if (data.success) {
 			if(data.correct){
-				if(data.result[0].length != 0 ){
+				if(data.result[0].length > 0 ){
 					console.log(data.result[0].length);
 					//_username = data.result[0][0].username;
 					loadAdress();
