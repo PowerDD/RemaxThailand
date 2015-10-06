@@ -451,7 +451,7 @@ function login() {
 		apiKey: apiKey24,
 		username: $.trim($('#username').val()),
 		password: $('#password').val(), 
-		remember: ($("#remember").is(':checked'))? 1 : 0;
+		remember: ($("#remember").is(':checked'))? 1 : 0
 	}, function(data) {
 		if (data.success) {
 			if(data.correct){
