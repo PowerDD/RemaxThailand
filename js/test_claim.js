@@ -554,7 +554,7 @@ function checkUser(memberKey){
 	}, function(data){
 		if (data.success) {
 			if(data.correct){
-				if(data.result[0][0].username.length != 0){
+				if(data.result.length != 0){
 					_username = data.result[0][0].username;
 					loadAdress();
 					$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.result[0][0].name +')');
