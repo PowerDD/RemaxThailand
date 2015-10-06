@@ -76,7 +76,7 @@
 					</form>
 				</div>
 				
-				<div id="tab-warranty-load" role="alert" class="alert-claim text-center hidden margin-bottom-30"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ
+				<div id="tab-warranty-load" class="alert-claim text-center hidden margin-bottom-30"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ
 				</div>
 				<div id="tab-warranty-not_exist" role="alert" class="alert alert-claim alert-danger text-center hidden margin-bottom-30"> ไม่พบข้อมูลค่ะ										
 				</div>
