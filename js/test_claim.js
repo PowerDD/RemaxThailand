@@ -458,7 +458,7 @@ function login() {
 		if (data.success) {
 			if(data.correct){
 				$('#message').html( '<i class="fa fa-spinner fa-pulse"></i> กำลังเข้าสู่ระบบ กรุณารอสักครู่ค่ะ' ).addClass('text-primary').removeClass('text-danger');
-				setCookie("memberKey", data.authKey, 0);
+				setCookie("memberKey", data.authKey, 1);
 				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.name +')');
 				$('#tablogin').hide();
 				$('#btn-logout_claim').show();
