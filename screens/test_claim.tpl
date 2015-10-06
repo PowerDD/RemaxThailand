@@ -46,13 +46,15 @@
 								<span id="btn-login" class="btn btn-info form-control">ลงชื่อเข้าใช้</span>
 							</div>
 						</div>
-						<div class="checkbox pull-left">
-							<label>
-								<input id="remember" type="checkbox"> คงอยู่ในระบบ
-							</label>
-						</div>
-						<div class="text-center">
-							<a href="https://24fin-backend.azurewebsites.net" target="_blank">สมัครสมาชิก</a>
+						<div class="form-group">
+							<div class="checkbox pull-left">
+								<label>
+									<input id="remember" type="checkbox"> คงอยู่ในระบบ</input>
+								</label>
+							</div>
+							<div class="pull-right">
+								<a href="https://24fin-backend.azurewebsites.net" target="_blank">สมัครสมาชิก</a>
+							</div>
 						</div>
 					</form>			
 					<div class="text-center">
