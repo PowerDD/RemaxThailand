@@ -554,14 +554,18 @@ function checkUser(memberKey){
 	}, function(data){
 		if (data.success) {
 			if(data.correct){
-				_username = data.result[0][0].username;
-				loadAdress();
-				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.result[0][0].name +')');
-				$('#tablogin').hide();
-				$('#tab-warranty-load').hide(); 
-				$('#btn-logout_claim').show();
-				$('#tabbarcode').show();
-					
+				if(data.result[0][0].username.length != 0){
+					_username = data.result[0][0].username;
+					loadAdress();
+					$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.result[0][0].name +')');
+					$('#tablogin').hide();
+					$('#tab-warranty-load').hide(); 
+					$('#btn-logout_claim').show();
+					$('#tabbarcode').show();
+				}else{
+					$('#tab-warranty-load').hide(); 
+					$('#tablogin').show();
+				}					
 			}else{
 				$('#tab-warranty-load').hide(); 
 				$('#tablogin').show();
