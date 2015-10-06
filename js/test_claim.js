@@ -555,7 +555,8 @@ function checkUser(memberKey){
 		if (data.success) {
 			if(data.correct){
 				if(data.result.length != 0){
-					_username = data.result[0][0].username;
+					console.log(data.result.length);
+					//_username = data.result[0][0].username;
 					loadAdress();
 					$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.result[0][0].name +')');
 					$('#tablogin').hide();
