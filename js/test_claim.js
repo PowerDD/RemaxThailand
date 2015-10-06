@@ -100,30 +100,7 @@ $(function() {
 	});
 		
 	$("#btn-claim").click(function(){
-		$('#claimModal').animate({ scrollTop: 0 }, 'fast');
-		$('#btn-login').removeClass('disabled');
-		$('#username, #password').removeAttr('disabled');
-		$('#message').hide();
-		$('#username, #password').val("");
-		
-		$('#tabbarcode').hide();
-		$('#imgClaim_2').hide();
-		$('.modal-title').html('ส่งข้อมูลสินค้าเคลม');
-		
-		$('#txt-barcode').val("");
-		$('.alert-claim').hide();
-		$('#tab-warranty-info').hide();
-		$('#dv-claim').hide();
-		$('#dv-claim_info').hide();
-		//$('#dv-track').hide(); 
-		$('#form-loading').hide();
-		$('#dv-lineat').hide();	
-		$('#dv-done').hide(); 
-		$('#btn-logout_claim').hide(); 
-		$('#claimModal').modal();
-		
-		$('#tab-warranty-load').show();
-		checkUser(getCookie("memberKey"));
+		claimClick();
 	}); 
 	
 	$("#btn-claim_next").click(function(){
@@ -141,6 +118,33 @@ $(function() {
 		logout();
 	});
 });
+
+function claimClick(){
+	$('#claimModal').animate({ scrollTop: 0 }, 'fast');
+	$('#btn-login').removeClass('disabled');
+	$('#username, #password').removeAttr('disabled');
+	$('#message').hide();
+	$('#username, #password').val("");
+	
+	$('#tabbarcode').hide();
+	$('#imgClaim_2').hide();
+	$('.modal-title').html('ส่งข้อมูลสินค้าเคลม');
+	
+	$('#txt-barcode').val("");
+	$('.alert-claim').hide();
+	$('#tab-warranty-info').hide();
+	$('#dv-claim').hide();
+	$('#dv-claim_info').hide();
+	//$('#dv-track').hide(); 
+	$('#form-loading').hide();
+	$('#dv-lineat').hide();	
+	$('#dv-done').hide(); 
+	$('#btn-logout_claim').hide(); 
+	$('#claimModal').modal();
+	
+	$('#tab-warranty-load').show();
+	checkUser(getCookie("memberKey"));
+}
 function warrantyInfo(chkBarcode){	
 	loadAdress();
 	var barcode_info = ((typeof chkBarcode != 'undefined' && chkBarcode != '') ? $.trim(chkBarcode) : $.trim($('#txt-barcode').val()));
@@ -454,7 +458,7 @@ function login() {
 		if (data.success) {
 			if(data.correct){
 				$('#message').html( '<i class="fa fa-spinner fa-pulse"></i> กำลังเข้าสู่ระบบ กรุณารอสักครู่ค่ะ' ).addClass('text-primary').removeClass('text-danger');
-				setCookie("memberKey", data.authKey, 1);
+				setCookie("memberKey", data.authKey, 0);
 				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.name +')');
 				$('#tablogin').hide();
 				$('#btn-logout_claim').show();
@@ -481,7 +485,7 @@ function logout() {
 		authKey: getCookie("memberKey")
 	}, function(data) {
 		if (data.success) {
-			$("#btn-barcode").click();			
+			claimClick();			
 		}		
 	});
 }; 
