@@ -90,6 +90,8 @@
 				</div>
 				<div id="tab-warranty-not_exist" role="alert" class="alert alert-claim alert-danger text-center hidden margin-bottom-30"> ไม่พบข้อมูลค่ะ										
 				</div>
+				<div id="alert-barcode_exist" role="alert" class="alert alert-claim alert-danger text-center hidden margin-bottom-30"><i class="fa fa-exclamation-triangle"></i>    สินค้านี้ได้ส่งข้อมูลการเคลมมาแล้ว กรุณาติดต่อสอบถามได้ที่ Line @remaxservice										
+				</div>
 				<img id="imgClaim_2" class="img-responsive no-radius center-block margin-bottom-10 margin-top-10 hidden" src="http://src.powerdd.com/img/web/88888888/warranty/claim_2.png">
 				<div id="tab-warranty-info" class="panel panel-success hidden">
 					<div class="panel-heading">ผลการตรวจสอบ
@@ -190,6 +192,12 @@
 							<label class="col-sm-3 control-label" for="txt-name">อีเมล</label>
 							<div class="col-sm-6">
 							<input id="txt-email" class="form-control txt-input" type="text" placeholder="อีเมล"></input>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label" for="txt-name">Line ID</label>
+							<div class="col-sm-6">
+							<input id="txt-lineid" class="form-control txt-input" type="text" placeholder="Line ID"></input>
 							</div>
 						</div>
 						<div class="form-group text-center">

@@ -69,7 +69,8 @@ $(function() {
 			$('#file2').val('');
 			$('#file3').val('');
 			$('#file4').val('');
-			warrantyInfo(); 
+			
+			$('#alert-barcode_exist').hide();
 			$("#tab-warranty-not_exist").hide();
 			$("#tab-warranty-info").hide();
 			$('#dv-claim').hide();
@@ -81,6 +82,7 @@ $(function() {
 			$("#tab-warranty-load").show();
 			
 			$('#tabbarcode').hide();
+			barcodeExist();
 		}
 	});
 	$("#txt-barcode").keyup(function(event){ 
@@ -120,6 +122,7 @@ $(function() {
 });
 
 function claimClick(){
+	$('#alert-barcode_exist').hide();
 	$('#claimModal').animate({ scrollTop: 0 }, 'fast');
 	$('#btn-login').removeClass('disabled');
 	$('#username, #password').removeAttr('disabled');
@@ -358,8 +361,7 @@ function submitClaim(){
 	
 };
 
-function addClaim(){
-	 
+function addClaim(){	 
 	$.post('http://api-test.powerdd.com/claim/add', {
 		apiKey: apiKeyPower,
 		shop: shop,
@@ -381,7 +383,8 @@ function addClaim(){
 		images: fileName,
 		lastShop: $('#lastShop').html(),
 		sellNo: sellNo,
-		usernameClaim: $('#username').val()
+		usernameClaim: $('#username').val(),
+		customerLineId: $('#txt-lineid').val()
 	}, function(data){
 			if (data.success) {
 				claimNo = data.result[0].claimNo;
@@ -548,8 +551,7 @@ function getCookie(cname) {
     return "";
 };
  
-function checkUser(memberKey){ 
-	 	
+function checkUser(memberKey){ 	 	
 	$.post('http://24fin-api.azurewebsites.net/member/info/auth', {
 		apiKey: apiKey24,
 		authKey: memberKey
@@ -557,8 +559,7 @@ function checkUser(memberKey){
 		if (data.success) {
 			if(data.correct){
 				if(data.result[0].length > 0 ){
-					console.log(data.result[0].length);
-					//_username = data.result[0][0].username;
+					_username = data.result[0][0].username;
 					loadAdress();
 					$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.result[0][0].name +')');
 					$('#tablogin').hide();
@@ -577,6 +578,25 @@ function checkUser(memberKey){
 		else {
 			$('#tab-warranty-load').hide(); 
 			$('#tablogin').show();
+		}
+	});
+};
+
+function barcodeExist(){	 
+	$.post('http://api-test.powerdd.com/claim/add', {
+		apiKey: apiKeyPower,
+		barcode: $.trim($('#txt-barcode').val()
+	}, function(data){
+		if (data.success) {
+			if (data.result[0].exist) {
+				$('#alert-barcode_exist').show();
+			}else{
+				$('#alert-barcode_exist').hide();
+				warrantyInfo(); 
+			}
+		}else{
+			$('#alert-barcode_exist').hide();
+			warrantyInfo(); 
 		}
 	});
 
