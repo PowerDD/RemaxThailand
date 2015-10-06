@@ -583,9 +583,9 @@ function checkUser(memberKey){
 };
 
 function barcodeExist(){	 
-	$.post('http://api-test.powerdd.com/claim/add', {
+	$.post('http://api-test.powerdd.com/claim/barcodeExist', {
 		apiKey: apiKeyPower,
-		barcode: $.trim($('#txt-barcode').val()
+		barcode: $.trim($('#txt-barcode').val())
 	}, function(data){
 		if (data.success) {
 			if (data.result[0].exist) {
