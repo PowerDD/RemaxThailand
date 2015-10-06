@@ -450,10 +450,8 @@ function login() {
 	$.post('http://24fin-api.azurewebsites.net/member/login', {
 		apiKey: apiKey24,
 		username: $.trim($('#username').val()),
-		password: $('#password').val(),
-		remember: $( "#remember:checked" ).map(function() {
-                    return 1;
-                }).get()
+		password: $('#password').val(), 
+		remember: $("#remember").is(':checked')? 1 : 0;
 	}, function(data) {
 		if (data.success) {
 			if(data.correct){
