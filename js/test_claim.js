@@ -589,6 +589,7 @@ function barcodeExist(){
 	}, function(data){
 		if (data.success) {
 			if (data.result[0].exist) {
+				$('#tab-warranty-load').hide();
 				$('#alert-barcode_exist').show();
 			}else{
 				$('#alert-barcode_exist').hide();
