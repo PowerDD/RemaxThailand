@@ -383,7 +383,7 @@ function addClaim(){
 		images: fileName,
 		lastShop: $('#lastShop').html(),
 		sellNo: sellNo,
-		usernameClaim: $('#username').val(),
+		usernameClaim: _username,
 		customerLineId: $('#txt-lineid').val()
 	}, function(data){
 			if (data.success) {
