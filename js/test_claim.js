@@ -525,7 +525,8 @@ function loadAdress(){
 					$('#txt-sub_district').val(data.result[0].subDistrict);
 					$('#txt-zipcode').val(data.result[0].zipcode);
 					$('#txt-tel').val(data.result[0].tel);
-					$('#txt-email').val(data.result[0].email);					
+					$('#txt-email').val(data.result[0].email);	
+					$('#txt-lineid').val(data.result[0].customerLineId);					
 				}		
 			}
 			if($('#province :selected').html() == '' && $('#district :selected').html() == ''){
