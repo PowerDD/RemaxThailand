@@ -404,8 +404,9 @@ function addClaim(){
 					var mobile = $('#txt-tel').val();
 					$('#sum-tel').html('เบอร์โทร '+ mobile.substr(0, 3)+'-'+mobile.substr(3, 4)+'-'+mobile.substr(7, 3) );
 				}else{$('#sum-tel').html('เบอร์โทร '+$('#txt-tel').val())}
-				$('#sum-email').html($('#txt-email').val() != '' ? 'อีเมล '+$('#txt-email').val() : '')
-				
+				$('#sum-email').html($('#txt-email').val() != '' ? 'อีเมล '+$('#txt-email').val() : '') 
+				$('#sum-lineid').html($('#txt-lineid').val() != '' ? 'Line ID '+$('#txt-lineid').val() : '')
+
 				var modal = $('#dv-claim_info');
 				var file = convertDataToArray('|', fileName);
 				if (typeof file != 'undefined') {

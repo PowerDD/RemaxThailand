@@ -269,6 +269,7 @@
 							<p id="sum-location"></p>
 							<p id="sum-tel"></p>
 							<p id="sum-email"></p>
+							<p id="sum-lineid"></p>
 						</div>
 					</div>
 					<div class="form-group">
