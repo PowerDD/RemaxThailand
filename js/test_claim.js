@@ -311,6 +311,7 @@ function upload(file, index){
 			if ( json.success ) {
 				fileName += json.filename + '|';
 				if (allProgress == 100){
+					allProgress = 0;
 					addClaim();
 				}
 			}
