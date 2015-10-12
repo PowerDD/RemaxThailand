@@ -13,6 +13,7 @@ var loadAdressComplete = false;
 var claimInfo;
 var claimNo = "";
 var sellNo = "";
+var sellPrice = 0;
 var _username = "";
 
 $(function() {
@@ -164,6 +165,7 @@ function warrantyInfo(chkBarcode){
 					$('#barcode').html(data.result.barcode);
 					$('#lastShop').html(data.result.shop);
 					sellNo = data.result.sellNo;
+					sellPrice = data.result.sellPrice;
 					$('#tab-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.productName);
 					$('#tab-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.barcode);
 					var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
@@ -384,6 +386,7 @@ function addClaim(){
 		images: fileName,
 		lastShop: $('#lastShop').html(),
 		sellNo: sellNo,
+		sellPrice: sellNo,
 		usernameClaim: _username,
 		customerLineId: $('#txt-lineid').val()
 	}, function(data){
