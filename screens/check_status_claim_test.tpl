@@ -16,8 +16,7 @@
 				</div>
 			</form>
 		</div>
-	</div>
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
 		<div id="alert-load" role="alert" class="alert alert-info text-center hidden margin-bottom-30"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ</div>
 		<div id="alert-not_exist" role="alert" class="alert alert-danger text-center hidden margin-bottom-30"> ไม่พบข้อมูลค่ะ										
 		</div>
@@ -67,6 +66,5 @@
 				</div>
 			 </div>
 		</div>
-		
 	</div>
 </div>
