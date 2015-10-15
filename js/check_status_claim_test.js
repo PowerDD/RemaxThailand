@@ -26,7 +26,7 @@ $(function() {
 			$("#alert-load").show(); 
 		}
 	}); 
-};
+});
 
 function checkClaim(){
 	$.post(apiUrl+'/claim/info', {
