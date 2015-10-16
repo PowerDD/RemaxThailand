@@ -140,3 +140,19 @@ function claimInformation(data){
 	$('#dv-claim_info').show(); 
 	chkClaim = false;
 };
+
+function convertDataToArray(sign, data) {
+	if (data == null) {
+		var arr = [];
+		return arr;
+	}
+	else if ( data.indexOf(sign) != -1) {
+		var sp = data.split(sign);
+		for(i=0; i<sp.length; i++) sp[i] = sp[i].trim();
+		return sp;
+	}
+	else {
+		var arr = [data];
+		return arr;
+	}
+};
