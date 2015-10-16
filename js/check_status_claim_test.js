@@ -36,7 +36,9 @@ function checkClaim(){
 		barcode: '',	
 		claimdate_from: '',
 		claimdate_to: '',	
-		status: ''
+		status: '',
+		firstname: '',
+		lineid: ''
 	}, function(data){
 			if (data.success) {
 				claimInfo = data.result[0];
