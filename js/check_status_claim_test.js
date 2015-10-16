@@ -89,6 +89,9 @@ function claimInformation(data){
 		if (moment(claimInfo.receiveDate).lang('th').format('YYYY') != '1900'){
 			YearReceiveDate = parseInt(moment(claimInfo.receiveDate).lang('th').format('YYYY'))+543;
 			DateReceiveDate = moment(claimInfo.receiveDate).locale('th').format('DD MMMM');
+		}else{
+			YearReceiveDate = '';
+			DateReceiveDate = '';
 		}
 	}
 	
@@ -98,6 +101,9 @@ function claimInformation(data){
 		if (moment(claimInfo.sentDate).lang('th').format('YYYY') != '1900'){
 			YearSentDate = parseInt(moment(claimInfo.sentDate).lang('th').format('YYYY'))+543;
 			DateSentDate = moment(claimInfo.sentDate).locale('th').format('DD MMMM');
+		}else{
+			YearSentDate = '';
+			DateSentDate = '';
 		}		
 	}
 	
