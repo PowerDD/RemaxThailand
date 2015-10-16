@@ -1,6 +1,9 @@
 var apiUrl = 'http://api-test.powerdd.com';
+//var apiUrl = 'http://api.powerdd.com';
 var shop = '09A3C5B1-EBF7-443E-B620-48D3B648294E';
+//var shop = 'POWERDDH-8888-8888-B620-48D3B6489999';
 var apiKeyPower = 'BE12B369-0963-40AD-AA40-D68A7516A37B';
+
 var claimInfo;
 var chkClaim = false;
 
@@ -83,15 +86,19 @@ function claimInformation(data){
 	var YearReceiveDate;
 	var DateReceiveDate;
 	if( typeof claimInfo.receiveDate != 'undefined' && claimInfo.receiveDate != ''){
-		YearReceiveDate = parseInt(moment(claimInfo.receiveDate).lang('th').format('YYYY'))+543;
-		DateReceiveDate = moment(claimInfo.receiveDate).locale('th').format('DD MMMM');
+		if (moment(claimInfo.receiveDate).lang('th').format('YYYY') != '1900'){
+			YearReceiveDate = parseInt(moment(claimInfo.receiveDate).lang('th').format('YYYY'))+543;
+			DateReceiveDate = moment(claimInfo.receiveDate).locale('th').format('DD MMMM');
+		}
 	}
 	
 	var YearSentDate;
 	var DateSentDate;
 	if( typeof claimInfo.sentDate != 'undefined' && claimInfo.sentDate != ''){
-		YearSentDate = parseInt(moment(claimInfo.sentDate).lang('th').format('YYYY'))+543;
-		DateSentDate = moment(claimInfo.sentDate).locale('th').format('DD MMMM');
+		if (moment(claimInfo.sentDate).lang('th').format('YYYY') != '1900'){
+			YearSentDate = parseInt(moment(claimInfo.sentDate).lang('th').format('YYYY'))+543;
+			DateSentDate = moment(claimInfo.sentDate).locale('th').format('DD MMMM');
+		}		
 	}
 	
 	$('#claim-ClaimDate').html('<font size="1"><b>วันที่ส่งข้อมูล : </b>'+ DateMM+' '+YearTH+'</font>');
