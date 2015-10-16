@@ -50,7 +50,7 @@ function checkClaim(){
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
 
-function productInfo(){
+function productInfo(barcode_info){
 	$.post(apiUrl+'/warranty/info', {
 		apiKey: apiKeyPower,
 		barcode: barcode_info
@@ -134,11 +134,7 @@ function claimInformation(data){
 		for(i=0; i<=3; i++) modal.find('.img'+i).hide();
 	}
 	
-	$('#tab-warranty-load').hide();
+	$('#alert-load').hide();
 	$('#dv-claim_info').show();
-	if (claimInfo.status == 'AP') {
-		$('#dv-track').show();
-	}
-	$('#btn-submit_trackno').button('default').html('ยืนยันข้อมูล');
 	chkClaim = false;
 };

@@ -1,8 +1,6 @@
 <div class="pinBox pinWell padding-10">
 	<h1 class="page-header font-28 margin-top-10">ตรวจสอบสถานะการเคลม</h1>
-	
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<div id="tabclaimno">
+		<div id="dv-claimno">
 			<form class="form-horizontal" role="form">
 				<div class="form-group">
 					<div class="col-sm-6 col-md-offset-3 margin-top-15">
@@ -17,7 +15,8 @@
 			</form>
 		</div>
 
-		<div id="alert-load" role="alert" class="alert alert-info text-center hidden margin-bottom-30"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ</div>
+		<div id="alert-load" role="alert" class="alert alert-info text-center hidden margin-bottom-30"><i class="fa fa-spinner fa-pulse"></i> กรุณารอสักครู่ค่ะ
+		</div>
 		<div id="alert-not_exist" role="alert" class="alert alert-danger text-center hidden margin-bottom-30"> ไม่พบข้อมูลค่ะ										
 		</div>
 		
@@ -66,5 +65,4 @@
 				</div>
 			 </div>
 		</div>
-	</div>
 </div>
