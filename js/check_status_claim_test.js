@@ -103,7 +103,7 @@ function claimInformation(data){
 			DateSentDate = moment(claimInfo.sentDate).locale('th').format('DD MMMM');
 		}else{
 			YearSentDate = '';
-			DateSentDate = '';
+			DateSentDate = ''; 
 		}		
 	}
 	
