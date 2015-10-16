@@ -135,6 +135,6 @@ function claimInformation(data){
 	}
 	
 	$('#alert-load').hide();
-	$('#dv-claim_info').show();
+	$('#dv-claim_info').show(); 
 	chkClaim = false;
 };

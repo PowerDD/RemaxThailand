@@ -5,7 +5,7 @@
 				<div class="form-group">
 					<div class="col-sm-6 col-md-offset-3 margin-top-15">
 						<input id="txt-claimno" type="text" class="form-control required" placeholder="เลขที่เคลม">
-					</div>
+					</div> 
 				</div>
 				<div class="form-group">
 					<div class="text-center">
