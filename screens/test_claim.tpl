@@ -1,6 +1,6 @@
 <div class="pinBox pinWell padding-10 col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	<h1 class="page-header font-28 margin-top-10">ตรวจสอบสถานะการเคลม</h1>			
-	<div id="tablogin" class="hidden">				
+	<div id="tablogin" class="">				
 		<form class="form-horizontal" role="form">
 			<div class="text-center">		
 				<p>กรุณาเข้าสู่ระบบ</p>
