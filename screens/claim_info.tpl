@@ -1,5 +1,5 @@
 <div class="pinBox pinWell padding-10 col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	<h1 class="page-header font-28 margin-top-10">ตรวจสอบสถานะการเคลม</h1>
+	<h1 id="hTitle" class="page-header font-28 margin-top-10">ส่งข้อมูลสินค้าเคลม</h1>
 	<div class="col-sm-6 col-md-offset-3">
 	<div id="tablogin" class="hidden">				
 		<form class="form-horizontal" role="form">

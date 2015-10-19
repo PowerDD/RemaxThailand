@@ -18,6 +18,7 @@ var sellPrice = 0;
 var _username = "";
 
 $(function() {
+	$('#hTitle').html('ส่งข้อมูลสินค้าเคลม');
 	$('#tab-warranty-load').show();
 	checkUser();
 	$('#btn-login').removeClass('disabled');
@@ -437,7 +438,7 @@ function login() {
 			if(data.correct){
 				$('#message').html( '<i class="fa fa-spinner fa-pulse"></i> กำลังเข้าสู่ระบบ กรุณารอสักครู่ค่ะ' ).addClass('text-primary').removeClass('text-danger');
 				setCookie("memberKey", data.authKey, 365);
-				$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.name +')');
+				$('#hTitle').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.name +')');
 				$('#tablogin').hide();
 				$('#btn-logout_claim').show();
 				$('#tabbarcode').show();
@@ -539,7 +540,7 @@ function checkUser(){
 				if(data.result[0].length > 0 ){
 					_username = data.result[0][0].username;
 					loadAdress();
-					$('.modal-title').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.result[0][0].name +')');
+					$('#hTitle').html('ส่งข้อมูลสินค้าเคลม ('+'คุณ'+ data.result[0][0].name +')');
 					$('#tablogin').hide();
 					$('#tab-warranty-load').hide(); 
 					$('#btn-logout_claim').show();
