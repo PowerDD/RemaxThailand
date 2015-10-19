@@ -18,6 +18,7 @@ var sellPrice = 0;
 var _username = "";
 
 $(function() {
+	$('#tab-warranty-load').show();
 	checkUser();
 	$('#btn-login').removeClass('disabled');
 	$('#username, #password').removeAttr('disabled');
@@ -528,8 +529,7 @@ function getCookie(cname) {
     return "";
 };
  
-function checkUser(){ 	 
-	$('#tab-warranty-load').show();	
+function checkUser(){ 	 	
 	$.post('http://24fin-api.azurewebsites.net/member/info/auth', {
 		apiKey: apiKey24,
 		authKey: getCookie("memberKey")
