@@ -140,7 +140,7 @@ function warrantyInfo(chkBarcode){
 					$('#lastShop').html(data.result.shop);
 					sellNo = data.result.sellNo;
 					sellPrice = data.result.sellPrice;
-					sellDate = data.result.sellDate;
+					sellDate = moment(data.result.sellDate).lang('en').format('MM/DD/YYYY');
 					console.log(sellDate);
 					$('#tab-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.productName);
 					$('#tab-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.barcode);
