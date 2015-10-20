@@ -141,7 +141,7 @@ function warrantyInfo(chkBarcode){
 					sellNo = data.result.sellNo;
 					sellPrice = data.result.sellPrice;
 					sellDate = moment(data.result.sellDate).lang('en').format('MM/DD/YYYY');
-					console.log(sellDate);
+
 					$('#tab-ProductName').html('<b>ชื่อสินค้า : </b>'+data.result.productName);
 					$('#tab-Barcode').html('<b>หมายเลข Barcode : </b>'+data.result.barcode);
 					var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
@@ -365,7 +365,8 @@ function addClaim(){
 		sellPrice: sellPrice,
 		usernameClaim: _username,
 		customerLineId: $('#txt-lineid').val(),
-		claimType: ''
+		claimType: '',
+		sellDate: sellDate
 	}, function(data){
 			if (data.success) {
 				claimNo = data.result[0].claimNo;
