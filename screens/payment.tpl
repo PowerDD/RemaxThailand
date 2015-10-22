@@ -12,7 +12,7 @@
 
 	    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 		<p>&nbsp;</p>
-		หลังจากโอนเงินเรียบร้อยแล้ว กรุณาส่งภาพถ่ายหลักฐานเอกสารการโอนเงิน มาที่<ul><li>Line ID <b>@RemaxThailand</b><br><img width="150" class="img-responsive margin-bottom-5" src="https://24fin-backend.azurewebsites.net/images/line-remaxthailand.png" style="border-radius:0px"></li><li>ส่ง MMS มาที่เบอร์ 081-828-8833</li></li><li>ส่งอีเมลมาที่ <a href="mailto:sales@remaxthailand.co.th ">sales@remaxthailand.co.th</a></li></ul>
+		หลังจากโอนเงินเรียบร้อยแล้ว กรุณาส่งภาพถ่ายหลักฐานเอกสารการโอนเงิน มาที่<ul><li>Line ID <b>@RemaxThailand</b><br><img width="150" class="img-responsive margin-bottom-5" src="https://24fin-backend.azurewebsites.net/images/line-remaxthailand.png" style="border-radius:0px"></li><li>ส่ง MMS มาที่เบอร์ 081-267-3388</li></li><li>ส่งอีเมลมาที่ <a href="mailto:sales@remaxthailand.co.th ">sales@remaxthailand.co.th</a></li></ul>
 	    </div>
 
 	</div>
