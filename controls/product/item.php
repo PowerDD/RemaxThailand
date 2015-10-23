@@ -20,9 +20,6 @@ if (isset($id)) {
 	$context  = stream_context_create($options);
 	$result = json_decode(file_get_contents($url, false, $context), true);
 
-	print_r($result);
-	exit;
-
 	$smarty->assign('product', $result['result'] );
 	$smarty->assign('id', $id );
 
