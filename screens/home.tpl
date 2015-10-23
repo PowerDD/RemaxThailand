@@ -3,7 +3,7 @@
 	<div class="pinItem">
     <div class="pinBox pinWell margin-bottom-15">
       <a href="{$system_url}/register">
-        <img src="http://src.powerdd.com/img/web/88888888/box/dealer_regis.jpg"  class="img-responsive">
+        <img src="https://img.powerdd.com/img/web/box/dealer_regis.jpg"  class="img-responsive">
       </a>
       <div class="message text-center">สมัครตัวแทนจำหน่าย</div>
     </div>
@@ -33,7 +33,7 @@
 			<div class="pinItem">
 				<div class="pinBox pinWell margin-bottom-15">
 					<a href="{$system_url}/product/category/{$category.url[idx]}">
-						<img src="http://src.powerdd.com/img/category/88888888/{$category.url[idx]}/1.jpg" class="img-responsive">
+						<img src="https://img.powerdd.com/category/{$category.url[idx]}/1.jpg" class="img-responsive">
 					</a>
 					<div class="message text-center margin-top-5">{$category.name[idx]}</div>
 				</div>
