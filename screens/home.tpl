@@ -3,7 +3,7 @@
 	<div class="pinItem">
     <div class="pinBox pinWell margin-bottom-15">
       <a href="{$system_url}/register">
-        <img src="https://img.powerdd.com/img/web/box/dealer_regis.jpg"  class="img-responsive">
+        <img src="https://img.powerdd.com/web/box/dealer_regis.jpg"  class="img-responsive">
       </a>
       <div class="message text-center">สมัครตัวแทนจำหน่าย</div>
     </div>
@@ -84,7 +84,7 @@
 <div class="modal fade" id="newsModal" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-ิbody">
+      <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/6aaedhZzAlcwqryAWHKR2a_45lMFGEDJ3ppYoLlgL6k=w1500-no">
 	<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/FSmXAMywZRza7w9GwIy4rwJpwIjsfGZViHPVTVayoN0=w1500-no">
