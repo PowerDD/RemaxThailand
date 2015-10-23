@@ -1,6 +1,6 @@
 <div class="pinItem">
 	<div class="pinBox pinWell margin-bottom-15">
-	<img src="http://src.powerdd.com/img/web/88888888/box/check_remax_product.jpg" class="img-responsive">
+	<img src="https://img.powerdd.com/web/box/check_remax_product.jpg" class="img-responsive">
 		<div class="text-center">
 			<div id="check_remax_product" class="padding-10">
 				<form class="form-horizontal">
