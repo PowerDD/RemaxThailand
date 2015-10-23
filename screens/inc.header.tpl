@@ -43,7 +43,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="{$system_url}" class="navbar-brand"><img src="http://src.powerdd.com/img/web/88888888/logo/remax.png"></a>
+				<a href="{$system_url}" class="navbar-brand"><img src="https://img.powerdd.com/web/logo/remax.png"></a>
 			</div>
 
 			<div class="navbar-collapse collapse" id="navbar">
