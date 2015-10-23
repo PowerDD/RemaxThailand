@@ -2,14 +2,14 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-4 col-md-4 margin-bottom-15">
 		
-			<img src="{if $product.cover != ''}http://api.powerdd.com/img/remax/product/{$product.shop}/{$product.sku}/500/500/{$product.cover}{else}http://src.powerdd.com/img/product/88888888/default.jpg{/if}"
+			<img src="{if $product.cover != ''}https://api.powerdd.com/img/remax/product/{$product.sku}/500/500/{$product.cover}{else}http://src.powerdd.com/img/product/88888888/default.jpg{/if}"
 			alt="{$product.name}" class="img-thumbnail img_box_shadow" id="img_main"  data-zoom-image="{if $id_cover != ''}xxx{else}yyy{/if}">
 
 			{if $product.cover != '' && $product.image|count > 1}
 				<div class="row">
 					{section name=idx loop=$product.image}
 						<div class="col-xs-3 col-sm-3 col-md-3">
-							<img src="http://api.powerdd.com/img/remax/product/{$product.shop}/{$product.sku}/100/100/{$product.image[idx]}" alt="{$product.name}" class="pointer img-thumbnail img_small_list{if $product.image[idx] == $product.cover} active{/if}">
+							<img src="https://api.powerdd.com/img/remax/product/{$product.sku}/100/100/{$product.image[idx]}" alt="{$product.name}" class="pointer img-thumbnail img_small_list{if $product.image[idx] == $product.cover} active{/if}">
 						</div>
 					{/section}
 				</div>
@@ -48,9 +48,9 @@
 				{/if}
 				{if $product.standard != ''}
 					<div class="col-xs-12 text-center">
-						{if $product.standard|strpos:'CE' !== false}<img src="http://src.powerdd.com/img/web/88888888/icon/logo-ce.png">{/if}
-						{if $product.standard|strpos:'FCC' !== false}<img src="http://src.powerdd.com/img/web/88888888/icon/logo-fcc.png"?\>{/if}
-						{if $product.standard|strpos:'RoHS' !== false}<img src="http://src.powerdd.com/img/web/88888888/icon/logo-rohs.png">{/if}
+						{if $product.standard|strpos:'CE' !== false}<img src="https://img.powerdd.com/img/web/icon/logo-ce.png">{/if}
+						{if $product.standard|strpos:'FCC' !== false}<img src="https://img.powerdd.com/img/web/icon/logo-fcc.png"?\>{/if}
+						{if $product.standard|strpos:'RoHS' !== false}<img src="https://img.powerdd.com/img/web/icon/logo-rohs.png">{/if}
 					</div>
 				{/if}
 			</div>
@@ -164,7 +164,7 @@
 							<div class="row margin-top-15">
 								{section name=idx loop=$product.imageDetail}
 									<div class="col-sm-12">
-										<img src="http://api.powerdd.com/img/remax/product/{$product.shop}/{$product.sku}/{$product.imageDetail[idx]}" alt="{$product.name}" class="img-responsive no-radius">
+										<img src="http://api.powerdd.com/img/remax/product/{$product.sku}/{$product.imageDetail[idx]}" alt="{$product.name}" class="img-responsive no-radius">
 									</div>
 								{/section}
 							</div>

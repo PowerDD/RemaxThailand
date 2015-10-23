@@ -6,7 +6,7 @@ $ex = explode('/', $HTTP_URI);
 $id = $ex[3];
 if (isset($id)) {
 
-	$url = 'http://api.powerdd.com/product/info';
+	$url = 'https://api.powerdd.com/product/info';
 	$data = array('apiKey' => 'BE12B369-0963-40AD-AA40-D68A7516A37B','shop' => 'POWERDDH-8888-8888-B620-48D3B6489999', 'type' => 'item', 'value' => $id);
 
 	$options = array(
