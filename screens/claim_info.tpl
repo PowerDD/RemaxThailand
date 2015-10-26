@@ -43,10 +43,10 @@
 	<div id="tabbarcode" class= "hidden">
 		<form class="form-horizontal" role="form">
 		<div class="form-group">
-			<img class="img-responsive no-radius center-block margin-bottom-10" src="http://src.powerdd.com/img/web/88888888/warranty/claim_1.png">
+			<img class="img-responsive no-radius center-block margin-bottom-10" src="http://img.powerdd.com/web/warranty/claim_1.png">
 		</div>
 		<div class="form-group">
-			<img class="img-responsive no-radius center-block" src="http://src.powerdd.com/img/web/88888888/warranty/barcode.png">
+			<img class="img-responsive no-radius center-block" src="http://img.powerdd.com/web/warranty/barcode.png">
 		</div>
 			<div class="form-group">
 				<div class="col-sm-6 col-md-offset-3">						
@@ -67,7 +67,7 @@
 	</div>
 	<div id="alert-barcode_exist" role="alert" class="alert alert-claim alert-danger text-center hidden margin-bottom-30"><i class="fa fa-exclamation-triangle"></i>    สินค้านี้ได้ส่งข้อมูลการเคลมมาแล้ว กรุณาติดต่อสอบถามได้ที่ Line @remaxservice										
 	</div>
-	<img id="imgClaim_2" class="img-responsive no-radius center-block margin-bottom-10 margin-top-10 hidden" src="http://src.powerdd.com/img/web/88888888/warranty/claim_2.png">
+	<img id="imgClaim_2" class="img-responsive no-radius center-block margin-bottom-10 margin-top-10 hidden" src="http://img.powerdd.com/web/warranty/claim_2.png">
 	<div id="tab-warranty-info" class="panel panel-success hidden">
 		<div class="panel-heading">ผลการตรวจสอบ
 		</div>
@@ -184,13 +184,13 @@
 	<div id="dv-lineat" class="hidden">	
 		<form class="form-horizontal" role="form">
 			<div class="form-group">
-			<img class="img-responsive no-radius center-block margin-bottom-10" src="http://src.powerdd.com/img/web/88888888/warranty/claim_3.png">
+			<img class="img-responsive no-radius center-block margin-bottom-10" src="http://img.powerdd.com/web/warranty/claim_3.png">
 				<div class="text-center">
 					<p id="claimNo3"></p>
 				</div>
 			</div>
 			<div class="form-group">
-				<img class="img-responsive no-radius center-block" src="http://src.powerdd.com/img/web/88888888/warranty/qr_remaxservice.png">
+				<img class="img-responsive no-radius center-block" src="http://img.powerdd.com/web/warranty/qr_remaxservice.png">
 			</div>						
 			<div class="form-group">
 				<div class="text-center">								
@@ -201,7 +201,7 @@
 	</div>
 	
 	<div id="dv-done" class="hidden">	
-		<img class="img-responsive no-radius center-block" src="http://src.powerdd.com/img/web/88888888/warranty/claim_done.png">
+		<img class="img-responsive no-radius center-block" src="http://img.powerdd.com/web/warranty/claim_done.png">
 	</div>
 	
 	<div id="dv-claim_info" class="panel panel-default hidden">
