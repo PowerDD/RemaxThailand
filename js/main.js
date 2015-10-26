@@ -176,7 +176,7 @@ function getPoint(isCheck){
 };
 
 function checkRemaxProduct(){
-	$.post('http://api.powerdd.com/warranty/remax', {
+	$.post('https://api.powerdd.com/warranty/remax', {
 		apiKey: 'BE12B369-0963-40AD-AA40-D68A7516A37B',
 		barcode: $.trim($('#txt-remax_barcode').val())
 	}, function(data){
@@ -204,7 +204,7 @@ function checkRemaxProduct(){
 };
 
 function warrantyInfo(){
-	$.post('http://api.powerdd.com/warranty/info', {
+	$.post('https://api.powerdd.com/warranty/info', {
 		apiKey: 'BE12B369-0963-40AD-AA40-D68A7516A37B',
 		barcode: $.trim($('#txt-barcode_box').val())
 	}, function(data){
