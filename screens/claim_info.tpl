@@ -86,7 +86,7 @@
 		<form id="claim_info">
 			<div class="form-group">
 				<label for="textarea" class="text-danger">* กรุณาระบุอาการเสียของสินค้าเคลมให้ชัดเจน</label>
-				<textarea id="claim_description" type="text" class=" fixed form-control txt-require" rows="5" value=""></textarea>				
+				<textarea maxlength="200" id="claim_description" type="text" class=" fixed form-control txt-require" rows="5" value=""></textarea>				
 				<label for="input" class="text-danger ">* รูปบรรจุภัณฑ์พร้อมสติ๊กเกอร์สีฟ้า</label>
 				<input type="file" id="file1" class="margin-bottom-10 txt-require" placeholder="">
 				<label for="input" class="text-danger">* รูปบรรจุภัณฑ์พร้อมบาร์โค้ด Remax Thailand</label>
