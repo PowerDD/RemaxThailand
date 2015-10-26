@@ -48,7 +48,8 @@ switch($filename) {
 	case 'member/barcode' : $title = 'Scan Barcode'; break;
 	case 'member/profile' : $title = 'ข้อมูลร้านค้า'; break;
 	case 'product/category' : $title = 'หมวดหมู่สินค้า'; break;
-	case 'product/payment' : $title = 'วิธีการชำระเงิน'; break;	
+	case 'payment' : $title = 'วิธีการชำระเงิน'; break;	
+	case 'claim_info' : $title = 'ข้อมูลการเคลม'; break;	
 }
 $smarty->assign('title', $title);
 $smarty->assign('description', $title);

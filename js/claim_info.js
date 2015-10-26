@@ -3,7 +3,7 @@ var apiKey = 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8';
 var apiKeyPower = 'BE12B369-0963-40AD-AA40-D68A7516A37B';
 var apiKey24 = '91ADEBD2-1A72-4616-B8C7-8659A3618197';
 //var apiUrl = 'https://api-test.powerdd.com';
-var apiUrl = 'http://api.powerdd.com';
+var apiUrl = 'https://api.powerdd.com';
 
 var fileCount = 0;
 var fileProgress = {};
