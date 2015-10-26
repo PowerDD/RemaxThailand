@@ -207,16 +207,16 @@ function warrantyInfo(chkBarcode){
 
 
 function loadProvince(){
-	$.post('http://power-api-test.azurewebsites.net/province/list', {
-		apiKey: apiKey
+	$.post(apiUrl+'/province/list', {
+		apiKey: apiKeyPower
 	}, function(data){
 			if (data.success) {
 				var html = '';
 				for( i=0; i<data.result.length; i++ ) {
 					var result = data.result[i];
-					html += '<option value="'+ result.ID +'"'+ 
-						((result.Name == $('#province').attr('data-selected') || ($('#province').attr('data-selected') == '' && result.ID == '1')) ? ' selected' : '')
-						+'>'+ result.Name +'</option>';
+					html += '<option value="'+ result.id +'"'+ 
+						((result.name == $('#province').attr('data-selected') || ($('#province').attr('data-selected') == '' && result.id == '1')) ? ' selected' : '')
+						+'>'+ result.name +'</option>';
 				}
 				$('#province').html( html );
 				loadDistrict()				
@@ -224,17 +224,17 @@ function loadProvince(){
 	}, 'json').fail( function(xhr, textStatus, errorThrown) { console.log(xhr.statusText); });
 };
 function loadDistrict(){
-	$.post('http://power-api-test.azurewebsites.net/province/district', {
-		apiKey: apiKey,
+	$.post(apiUrl+'/province/district', {
+		apiKey: apiKeyPower,
 		province: $('#province').val(),
 	}, function(data){
 			if (data.success) {
 				var html = '';
 				for( i=0; i<data.result.length; i++ ) {
 					var result = data.result[i];
-					html += '<option value="'+ result.ID +'" data-zipcode="'+ result.Zipcode +'"'+ 
-						((result.ID == $('#district').attr('data-selected') && result.Zipcode == $('#district').attr('data-zipcode')) ? ' selected' : '')
-						+'>'+ result.Name +'</option>';
+					html += '<option value="'+ result.id +'" data-zipcode="'+ result.zipcode +'"'+ 
+						((result.id == $('#district').attr('data-selected') && result.zipcode == $('#district').attr('data-zipcode')) ? ' selected' : '')
+						+'>'+ result.name +'</option>';
 				}
 				$('#district').html( html );
 					loadZipCode();			
