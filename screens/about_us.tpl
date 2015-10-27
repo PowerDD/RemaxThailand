@@ -42,7 +42,7 @@
 		<br />
 		<table width="100%" class="margin-top-15">
 			<tr>
-				<td><img width="150" class="img-responsive margin-bottom-5" src="https://24fin-backend.azurewebsites.net/images/line-remaxthailand.png" style="border-radius:0px"></td>
+				<td><img width="150" class="img-responsive margin-bottom-5" src="https://img.powerdd.com/web/contact/line-remaxthailand.png" style="border-radius:0px"></td>
 				<td valign="top">
 					<div class="margin-left-5">Line ID : <b>@RemaxThailand</b><br /><br />
 					กรุณา Add Line เพื่อสอบถามข้อมูล และรับสิทธิพิเศษต่างๆ รวมทั้งแจ้งการชำระเงินเพื่อยืนยันคำสั่งซื้อค่ะ
