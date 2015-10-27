@@ -4,7 +4,7 @@
 	<div class="row">
 
 	    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-		<img class="img-responsive no-radius margin-top-15" src="https://src.24fin.com/images/remaxthai/remax-shop-1.jpg">
+		<img class="img-responsive no-radius margin-top-15" src="https://img.powerdd.com/web/shop/remax-shop-1.jpg">
 	    </div>
 
 	    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -37,7 +37,7 @@
 
 		<p class="justify">&nbsp; &nbsp; &nbsp; &nbsp; บริษัทเป็นผู้ผลิตและ จำหน่ายสินค้าจำหน่าย  Accessories Smartphone ไม่ว่าจะเป็น Leather Case, Protector Screen  Guard, Power Bank, Audio Series, Cable/Charger   โดยเน้นการออกแบบสินค้าให้โดดเด่นสวยงาม  ทันสมัยและคุณภาพดี  ให้ความสำคัญการรับประกันหลังการขาย  เพื่อสร้างความมั่นใจแก่ผู้บริโภค  มีสาขาและตัวแทนจำหน่ายกระจายอยู่ทั้งในและต่างประเทศ และมีตัวแทนอย่างเป็นทางการกระจายอยู่แต่ละทวีป   ได้แก่  Switzerland, Canada, Russia Egypt, Czech, Israel,Hungary, Dubai, Saudi Arabia, Vietnam และในประเทศไทย <strong>Remax (Thailand)</strong> เป็นตัวแทนที่ได้รับการแต่งตั้งอย่างเป็นทางการ ให้นำเข้าและจัดจำหน่ายสินค้าภายใต้ตราสินค้า <strong>REMAX</strong></p>
 
-		<p><img class="img-responsive no-radius margin-top-15" src="https://src.24fin.com/images/remaxthai/shop.jpg"></p>
+		<p><img class="img-responsive no-radius margin-top-15" src="https://img.powerdd.com/web/shop/shop.jpg"></p>
 
 		<br />
 		<table width="100%" class="margin-top-15">
@@ -53,7 +53,7 @@
 	    </div>
 
 	    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-		<img class="img-responsive no-radius margin-top-15" src="https://src.24fin.com/images/remaxthai/remax-shop-2.jpg">
+		<img class="img-responsive no-radius margin-top-15" src="https://img.powerdd.com/web/shop/remax-shop-2.jpg">
 
 		<p>&nbsp; &nbsp; &nbsp; &nbsp;<img class="img-responsive" src="{$system_url}/images/coc"></p>
 
