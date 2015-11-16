@@ -8,6 +8,7 @@ if (isset($id)) {
 
 	$url = 'https://api.powerdd.com/product/info';
 	$data = array('apiKey' => 'BE12B369-0963-40AD-AA40-D68A7516A37B','shop' => 'POWERDDH-8888-8888-B620-48D3B6489999', 'type' => 'item', 'value' => $id);
+	print_r($data);
 
 	$options = array(
 		'http' => array(
