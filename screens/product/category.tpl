@@ -3,7 +3,7 @@
 		<div class="pinItem">
 			<div class="pinBox pinWell margin-bottom-15"> 
 				<a href="/product/item/{$product[idx].product}/{$product[idx].name}">
-					<img class="img-responsive img-popover" width="500" src="{if $product[idx].image != ''}https://api.powerdd.com/img/remax/product/{$product[idx].sku}/300/300/{$product[idx].image}{else}http://img.powerdd.com/product/default.jpg{/if}">
+					<img class="img-responsive img-popover" width="500" src="{if $product[idx].image != ''}https://api.powerdd.com/img/remax/product/{$product[idx].sku}/300/300/{$product[idx].image}{else}https://img.powerdd.com/product/default.jpg{/if}">
 				</a>
 				<div class="message">
 					<div class="margin-top-5 margin-bottom-5"><div class="text-center">{if $product[idx].isNew == 1}<img src="https://img.powerdd.com/web/gif/new.gif"> {/if}<b class="text-info">
