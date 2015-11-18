@@ -7,7 +7,7 @@
 		<p>&nbsp;</p>
 		<span class="text-info">กรุณาชำระเงินภายใน 48 ชั่วโมง หลังจากยืนยันคำสั่งซื้อเรียบร้อยแล้ว โดยโอนเงินมาที่บัญชี</span>
 		<br>&nbsp;
-		<img class="img-responsive" src="https://img.powerdd.com/web/bank/remaxthailand-box.jpg" style="border-radius:0px">
+		<img class="img-responsive" src="https://img.powerdd.com/web/bank/remaxthailand-bank.png" style="border-radius:0px">
 	    </div>
 
 	    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
