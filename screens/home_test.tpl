@@ -14,7 +14,7 @@
 			<a href="{$system_url}/shop_register">
 				<img src="https://img.powerdd.com/web/box/shop_register.jpg"  class="img-responsive">
 			</a>
-			<div class="message text-center">สมัครตัวแทนจำหน่าย</div>
+			<div class="message text-center">สนใจเปิดช็อป</div>
 		</div>
 	</div>
 
