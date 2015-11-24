@@ -71,7 +71,7 @@
 				<input id="address" type="text" class="form-control required" placeholder="ที่อยู่">
 			</div>
 			<div class="form-group col-sm-3">
-				<label for="input">แนบภาพถ่ายหน้าร้าน (ถ้ามี)</label>
+				<label for="input">แนบภาพถ่ายหน้าร้าน</label>
 				<input id="file1" type="file" class="form-control" placeholder="">
 			</div>
 			<div class="form-group col-sm-3">
