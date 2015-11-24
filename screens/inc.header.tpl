@@ -88,7 +88,7 @@
 						</ul>
 					</li>
 				{else}
-					<li><a href="https://24fin-backend.azurewebsites.net">เข้าสู่ระบบ/สมัครสมาชิก</a></li>
+					<li><a href="https://24fin-backend.azurewebsites.net">เข้าสู่ระบบ/สมัครสมาชิกใหม่</a></li>
 				{/if}
 				</ul>
 			</div><!--/.nav-collapse -->
