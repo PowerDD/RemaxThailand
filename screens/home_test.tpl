@@ -40,7 +40,7 @@
 	<div class="pinItem">
 		<div class="pinBox pinWell margin-bottom-15">
 			<a href="{$system_url}/home_test">
-				<img src="https://img.powerdd.com/web/category/clearance/1.jpg"  class="img-responsive">
+				<img src="https://img.powerdd.com/category/clearance/1.jpg"  class="img-responsive">
 			</a>
 			<div class="message text-center">Clearance</div>
 		</div>
