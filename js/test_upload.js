@@ -93,7 +93,7 @@ function upload(file, index){
 	fd.append("mobile", '0876733414');
 	fd.append("tags", 'test' );
 	var xhr = new XMLHttpRequest();
-	xhr.open('POST', 'http://upload.remaxthailand.co.th', true);
+	xhr.open('POST', 'https://upload.remaxthailand.co.th', true);
 
 	xhr.upload.onprogress = function(e) {
 		if (e.lengthComputable) {
