@@ -1,3 +1,11 @@
+var shop = '09A3C5B1-EBF7-443E-B620-48D3B648294E';
+//var shop = 'POWERDDH-8888-8888-B620-48D3B6489999';
+var apiKey = 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8';
+var apiKeyPower = 'BE12B369-0963-40AD-AA40-D68A7516A37B';
+var apiKey24 = '91ADEBD2-1A72-4616-B8C7-8659A3618197';
+var apiUrl = 'https://api-test.powerdd.com';
+//var apiUrl = 'https://api.powerdd.com';
+
 var fileCount = 0;
 var fileProgress = {};
 var fileName = '';
@@ -6,7 +14,7 @@ var allProgress = 0;
 $(function() {
 
 	$('#mobile').ForceNumericOnly();
-	loadProvince();
+	//loadProvince();
 	//renderTime();
 
 	$(document).on('click', '#btn-register', function(evt){
@@ -120,26 +128,23 @@ function upload(file, index){
 }
 
 function register(){
-	var json = {};
-	json.Firstname = $.trim($('#firstname').val());
-	json.Lastname = $.trim($('#lastname').val());
-	json.Nickname = $.trim($('#nickname').val());
-	json.Province = $('#province :selected').val();
-	json.Phone = $.trim($('#mobile').val());
-	json.TimeToContact = $('#time :selected').val();
-	json.Address = $.trim($('#address').val());
-	json.Profile = $.trim($('#history').val());
-	json.Reason = $.trim($('#reason').val());
-	json.Expect = $.trim($('#expect').val());
-	json.Comment = $.trim($('#comment').val());
 	if ( fileName != '' ) json.PictureUrl = fileName;
-	$.post('http://power-api-test.azurewebsites.net/dealer/register', {
-		apiKey: 'PELI09WG-RNL0-3B0R-A2GD-1GRL6XZ2GVQ8',
-		value: JSON.stringify(json),
+	$.post(apiUrl + '/register/shop/register', {
+		apiKey: apiKeyPower,
+		firstname: $('#firstname').val(),
+		lastname: $('#lastname').val(),
+		nickname: $('#nickname').val(),
+		time: $('#time selected').val(),
+		mobile: $('#address').val(),
+		address: $('#address').val(),
+		images: fileName
 	}, function(data){
 		if(data.success) {
-			$('#form-loading').slideUp();
-			$('#form-success').slideDown();
+			if(data.result[0].success){
+				$('#form-loading').slideUp();
+				$('#form-success').slideDown();
+			}
+			
 		}
 	});
 }
