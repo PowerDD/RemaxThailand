@@ -99,7 +99,7 @@ function upload(file, index){
 	fd.append("file", file);
 	fd.append("index", index);
 	fd.append("mobile", $.trim($('#mobile').val()));
-	fd.append("tags", 'dealer,'+$.trim($('#firstname').val())+','+$.trim($('#lastname').val())+','+$('#province :selected').val()+','+$.trim($('#mobile').val()) );
+	fd.append("tags", 'shop,'+$.trim($('#firstname').val())+','+$.trim($('#lastname').val())+','+$.trim($('#mobile').val()) );
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', 'https://powerupload.azurewebsites.net', true);
 
