@@ -109,7 +109,6 @@ function upload(file, index){
 			fileProgress[index] = percentComplete;
 			allProgress = (fileProgress[1]+fileProgress[2]+fileProgress[3]+fileProgress[4])/fileCount;
 			$('#progress').css('width', allProgress+'%').attr('aria-valuenow', allProgress);
-			//console.log(percentComplete + '% uploaded -> total = ' + (allProgress/fileCount) );
 		}
 	};
 
@@ -128,7 +127,6 @@ function upload(file, index){
 }
 
 function register(){
-	if ( fileName != '' ) json.PictureUrl = fileName;
 	$.post(apiUrl + '/register/shop/register', {
 		apiKey: apiKeyPower,
 		firstname: $('#firstname').val(),
