@@ -83,6 +83,7 @@ function uploadFile(){
 		fileProgress[i] = 0;
 		if (typeof document.getElementById('file'+i).files[0] != 'undefined') {
 			upload(document.getElementById('file'+i).files[0], i);
+			console.log(document.getElementById('file'+i).files[0], i);
 			fileCount++;
 		}
 	}
@@ -95,7 +96,7 @@ function upload(file, index){
 	fd.append("file", file);
 	fd.append("index", index);
 	fd.append("mobile", $.trim($('#mobile').val()));
-	fd.append("tags", 'shop,'+$.trim($('#firstname').val())+','+$.trim($('#lastname').val())+','+'-'+','+$.trim($('#mobile').val()) );
+	fd.append("tags", 'registerShop,'+$.trim($('#firstname').val())+','+$.trim($('#lastname').val())+','+'-'+','+$.trim($('#mobile').val()) );
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', 'https://powerupload.azurewebsites.net', true);
 
