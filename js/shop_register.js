@@ -1,5 +1,5 @@
 var apiKey = 'BE12B369-0963-40AD-AA40-D68A7516A37B';
-var apiUrl = 'https://api-test.powerdd.com';
+var apiUrl = 'api-test.powerdd.com';
 //var apiUrl = 'https://api.powerdd.com';
 
 var fileCount = 0;
