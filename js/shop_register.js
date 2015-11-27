@@ -148,13 +148,14 @@ function upload(file, index){
     
     xhr.onload = function() {
 		if (this.status == 200) {
-			var json = JSON.parse(this.response);
+			console.log(this.response);
+			/*var json = JSON.parse(this.response);
 			if ( json.success ) {
 				fileName += json.filename + '|';
 				if (allProgress == 100){
 					register();
 				}
-			}
+			}*/
 		};
 		console.log(this.statusText);
     };
