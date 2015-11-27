@@ -83,20 +83,19 @@ function uploadFile(){
 		fileProgress[i] = 0;
 		if (typeof document.getElementById('file'+i).files[0] != 'undefined') {
 			upload(document.getElementById('file'+i).files[0], i);
-			console.log(document.getElementById('file'+i).files[0], i);
 			fileCount++;
 		}
 	}
 
 	if ( fileCount == 0 ) register();
-}
+};
 
 function upload(file, index){	
-	var fd = new FormData();
+	/*var fd = new FormData();
 	fd.append("file", file);
 	fd.append("index", index);
 	fd.append("mobile", $.trim($('#mobile').val()));
-	fd.append("tags", 'registerShop,'+$.trim($('#firstname').val())+','+$.trim($('#lastname').val())+','+'-'+','+$.trim($('#mobile').val()) );
+	fd.append("tags", 'registerShop,'+$.trim($('#firstname').val())+','+$.trim($('#lastname').val())+','+$.trim($('#mobile').val()) );
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', 'https://powerupload.azurewebsites.net', true);
 
@@ -120,7 +119,47 @@ function upload(file, index){
 			}
 		};
 	};
-	xhr.send(fd);
+	xhr.send(fd);*/
+	
+	//$('div.progress').show();
+    var formData = new FormData();
+	formData.append("index", index);
+	formData.append("mobile", $.trim($('#mobile').val()));
+	formData.append("type", 'register' );
+	formData.append("dir", 'shop' );
+    formData.append('myFile', file);
+    
+    var xhr = new XMLHttpRequest();
+    
+	xhr.open('POST', 'https://upload.remaxthailand.co.th', true);
+    
+    xhr.upload.onprogress = function(e) {
+      if (e.lengthComputable) {
+			var percentComplete = (e.loaded / e.total) * 100;
+			fileProgress[index] = percentComplete;
+			allProgress = (fileProgress[1]+fileProgress[2]+fileProgress[3]+fileProgress[4])/fileCount;
+			$('#progress').css('width', allProgress+'%').attr('aria-valuenow', allProgress);
+      }
+    };
+    
+    xhr.onerror = function(e) {
+		console.log('An error occurred while submitting the form. Maybe your file is too big');
+    };
+    
+    xhr.onload = function() {
+		if (this.status == 200) {
+			var json = JSON.parse(this.response);
+			if ( json.success ) {
+				fileName += json.filename + '|';
+				if (allProgress == 100){
+					register();
+				}
+			}
+		};
+		console.log(this.statusText);
+    };
+    
+    xhr.send(formData);
 }
 
 function register(){
