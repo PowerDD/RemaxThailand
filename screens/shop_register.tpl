@@ -3,13 +3,14 @@
 	<div class="row">
 
 	    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<img class="img-responsive no-radius" src="https://img.powerdd.com/web/shop/shop_register1.jpg">
-		<!--<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/FSmXAMywZRza7w9GwIy4rwJpwIjsfGZViHPVTVayoN0=w1500-no">
-		<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/gTsFwWfjGKbvNBnEUzRWIvWEMujhpZkE35D3hqMLNl8=w1500-no">
-		<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/vcAEkL-EDwmeCuZxDaOgUruVbQtDI_gV_3G9K-g6bpM=w1500-no">
-		<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/JZ7TTgN65CchcqUv8TDYlMA8fl4JuacSZdaqCfv884k=w1500-no">
-		<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/N_YmKolIZqXYCKmuJhUxS-CNzRrPpnmKa2O2FrNqxQ4=w1500-no">
-		<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/pVBCQ31_o1-3TPVv-iL0X0AGVkySnLlee_n2WRmYilI=w1500-no">-->
+		<img class="img-responsive no-radius" src="https://img.powerdd.com/web/shop/shop_reg1.jpg">
+		<img class="img-responsive no-radius" src="https://img.powerdd.com/web/shop/shop_reg2.jpg">
+		<img class="img-responsive no-radius" src="https://img.powerdd.com/web/shop/shop_reg3.jpg">
+		<img class="img-responsive no-radius" src="https://img.powerdd.com/web/shop/shop_reg4.jpg">
+		<img class="img-responsive no-radius" src="https://img.powerdd.com/web/shop/shop_reg5.jpg">
+		<img class="img-responsive no-radius" src="https://img.powerdd.com/web/shop/shop_reg6.jpg">
+		<img class="img-responsive no-radius" src="https://img.powerdd.com/web/shop/shop_reg7.jpg">
+		<img class="img-responsive no-radius" src="https://img.powerdd.com/web/shop/shop_reg8.jpg">
 	    </div>
 
 	</div>
