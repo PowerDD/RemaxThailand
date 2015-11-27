@@ -91,37 +91,6 @@ function uploadFile(){
 };
 
 function upload(file, index){	
-	/*var fd = new FormData();
-	fd.append("file", file);
-	fd.append("index", index);
-	fd.append("mobile", $.trim($('#mobile').val()));
-	fd.append("tags", 'registerShop,'+$.trim($('#firstname').val())+','+$.trim($('#lastname').val())+','+$.trim($('#mobile').val()) );
-	var xhr = new XMLHttpRequest();
-	xhr.open('POST', 'https://powerupload.azurewebsites.net', true);
-
-	xhr.upload.onprogress = function(e) {
-		if (e.lengthComputable) {
-			var percentComplete = (e.loaded / e.total) * 100;
-			fileProgress[index] = percentComplete;
-			allProgress = (fileProgress[1]+fileProgress[2]+fileProgress[3]+fileProgress[4])/fileCount;
-			$('#progress').css('width', allProgress+'%').attr('aria-valuenow', allProgress);
-		}
-	};
-
-	xhr.onload = function() {
-		if (this.status == 200) {
-			var json = JSON.parse(this.response);
-			if ( json.success ) {
-				fileName += json.filename + '|';
-				if (allProgress == 100){
-					register();
-				}
-			}
-		};
-	};
-	xhr.send(fd);*/
-	
-	//$('div.progress').show();
     var formData = new FormData();
 	formData.append("index", index);
 	formData.append("mobile", $.trim($('#mobile').val()));
@@ -169,7 +138,7 @@ function register(){
 		lastname: $('#lastname').val(),
 		nickname: $('#nickname').val(),
 		time: $('#time :selected').html(),
-		mobile: $('#address').val(),
+		mobile: $('#mobile').val(),
 		address: $('#address').val(),
 		images: fileName
 	}, function(data) {
