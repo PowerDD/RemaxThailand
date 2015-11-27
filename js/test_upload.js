@@ -95,7 +95,8 @@ function upload(file, index){
     
     var xhr = new XMLHttpRequest();
     
-    xhr.open('post', '/', true);
+    //xhr.open('post', '/', true);
+	xhr.open('POST', 'https://upload.remaxthailand.co.th', true);
     
     xhr.upload.onprogress = function(e) {
       if (e.lengthComputable) {
