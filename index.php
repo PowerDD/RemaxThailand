@@ -49,7 +49,8 @@ switch($filename) {
 	case 'member/profile' : $title = 'ข้อมูลร้านค้า'; break;
 	case 'product/category' : $title = 'หมวดหมู่สินค้า'; break;
 	case 'payment' : $title = 'วิธีการชำระเงิน'; break;	
-	case 'claim_info' : $title = 'ข้อมูลการเคลม'; break;	
+	case 'claim_info' : $title = 'ข้อมูลการเคลม'; break; 
+	case 'shop_register' : $title = 'สนใจเปิดช็อป'; break;	
 }
 $smarty->assign('title', $title);
 $smarty->assign('description', $title);
