@@ -86,7 +86,38 @@ function uploadFile(){
 	if ( fileCount == 0 ) register();
 }
 
-function upload(file, index){	
+function upload(file, index){
+
+	$('div.progress').show();
+    var formData = new FormData();
+    //var file = document.getElementById('myFile').files[0];
+    formData.append('myFile', file);
+    
+    var xhr = new XMLHttpRequest();
+    
+    xhr.open('post', '/', true);
+    
+    xhr.upload.onprogress = function(e) {
+      if (e.lengthComputable) {
+        var percentage = (e.loaded / e.total) * 100;
+        $('div.progress div.bar').css('width', percentage + '%');
+		console.log('loaded = '+e.loaded+' / ' + e.total );
+      }
+    };
+    
+    xhr.onerror = function(e) {
+		console.log('An error occurred while submitting the form. Maybe your file is too big');
+      //showInfo('An error occurred while submitting the form. Maybe your file is too big');
+    };
+    
+    xhr.onload = function() {
+		console.log(this.statusText);
+      //showInfo(this.statusText);
+    };
+    
+    xhr.send(formData);
+
+	/*
 	var fd = new FormData();
 	fd.append("file", file);
 	fd.append("index", index);
@@ -117,6 +148,8 @@ function upload(file, index){
 		};
 	};
 	xhr.send(fd);
+
+	*/
 }
 
 function register(){
