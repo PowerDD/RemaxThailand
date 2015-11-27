@@ -100,9 +100,13 @@ function upload(file, index){
     
     xhr.upload.onprogress = function(e) {
       if (e.lengthComputable) {
-        var percentage = (e.loaded / e.total) * 100;
+        /*var percentage = (e.loaded / e.total) * 100;
         $('div.progress div.bar').css('width', percentage + '%');
-		console.log('loaded = '+e.loaded+' / ' + e.total );
+		console.log('loaded = '+e.loaded+' / ' + e.total );*/
+			var percentComplete = (e.loaded / e.total) * 100;
+			fileProgress[index] = percentComplete;
+			allProgress = (fileProgress[1]+fileProgress[2]+fileProgress[3]+fileProgress[4])/fileCount;
+			$('#progress').css('width', allProgress+'%').attr('aria-valuenow', allProgress);
       }
     };
     
