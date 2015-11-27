@@ -90,6 +90,10 @@ function upload(file, index){
 
 	$('div.progress').show();
     var formData = new FormData();
+	formData.append("index", index);
+	formData.append("mobile", '0876733414');
+	formData.append("type", 'register' );
+	formData.append("dir", 'shop' );
     //var file = document.getElementById('myFile').files[0];
     formData.append('myFile', file);
     
