@@ -144,19 +144,17 @@ function upload(file, index){
     
     xhr.onerror = function(e) {
 		console.log('An error occurred while submitting the form. Maybe your file is too big');
-		uploadFile();
     };
     
     xhr.onload = function() {
 		if (this.status == 200) {
-			console.log(this.response);
-			/*var json = JSON.parse(this.response);
+			var json = JSON.parse(this.response);
 			if ( json.success ) {
 				fileName += json.filename + '|';
 				if (allProgress == 100){
 					register();
 				}
-			}*/
+			}
 		};
 		console.log(this.statusText);
     };
