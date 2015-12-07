@@ -176,19 +176,26 @@ function getPoint(isCheck){
 };
 
 function checkRemaxProduct(){
-	$.post('https://api.powerdd.com/warranty/remax', {
+	$.post('https://api.remaxthailand.co.th/warranty/remax', {
 		apiKey: 'BE12B369-0963-40AD-AA40-D68A7516A37B',
 		barcode: $.trim($('#txt-remax_barcode').val())
 	}, function(data){
 		if (data.success) {
 			if(data.result.length != 0 ){
-				var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
-				var sellDateMM = moment(data.result.sellDate).locale('th').format('MMMM');
-				$('#ProductName').html(data.result.productName);
-				$('#SellDate').html('จำหน่ายเมื่อ : '+sellDateMM+' '+sellDateYearTH);
-				$('#product-info').fadeIn();
-				$("#product-load").hide();
-				$(".back-remax_barcode").show();
+				if(!data.result.noSN){
+					var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
+					var sellDateMM = moment(data.result.sellDate).locale('th').format('MMMM');
+					$('#ProductName').html(data.result.productName);
+					$('#SellDate').html('จำหน่ายเมื่อ : '+sellDateMM+' '+sellDateYearTH);
+					$('#product-info').fadeIn();
+					$("#product-load").hide();
+					$(".back-remax_barcode").show();
+				}else{
+					$('#remax_nosn').show();
+					$("#product-load").hide();
+					$(".back-remax_barcode").show();
+				}
+				
 			}else{
 				$('#remax_not_exist').show();
 				$("#product-load").hide();
