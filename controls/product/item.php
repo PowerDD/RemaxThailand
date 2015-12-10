@@ -21,7 +21,7 @@ if (isset($id)) {
 	$result = json_decode(file_get_contents($url, false, $context), true);
 
 	$smarty->assign('product', $result['result'] );
-	
+	$smarty->assign('id', $id );
 
 	$smarty->assign('title', $result['result']['name'] );
 	$smarty->assign('description', implode("\n",$result['result']['detail']) );
