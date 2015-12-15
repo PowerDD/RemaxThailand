@@ -273,7 +273,7 @@ function upload(file, index){
 	fd.append("mobile", $.trim($('#txt-tel').val()));
 	fd.append("tags", 'claim,'+$.trim($('#txt-firstname').val())+','+$.trim($('#txt-lastname').val())+','+$('#province :selected').html()+','+$.trim($('#txt-tel').val()) );
 	var xhr = new XMLHttpRequest();
-	xhr.open('POST', 'https://powerupload.azurewebsites.net', true);
+	xhr.open('POST', 'https://upload.remaxthailand.co.th', true);
 
 	xhr.upload.onprogress = function(e) {
 		if (e.lengthComputable) {
