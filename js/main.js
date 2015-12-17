@@ -176,7 +176,7 @@ function getPoint(isCheck){
 };
 
 function checkRemaxProduct(){
-	$.post('https://api.remaxthailand.co.th/warranty/remax', {
+	$.post('https://api.powerdd.com/warranty/remax', {
 		apiKey: 'BE12B369-0963-40AD-AA40-D68A7516A37B',
 		barcode: $.trim($('#txt-remax_barcode').val())
 	}, function(data){
