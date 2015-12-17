@@ -7,7 +7,7 @@
 	<footer>
 	    <div class="row">
 	    	<div class="row text-center">
-			<img class="img-responsive center-block" src="https://img.powerdd.com/web/logo/dbd.png">
+			<img class="img-responsive center-block" src="https://img.remaxthailand.co.th/web/logo/dbd.png">
 		</div>
 		<div class="col-lg-12 text-center margin-top-10">
 		    <p>Copyright &copy; 2015 Remax (Thailand) All rights reserved.</p>
