@@ -42,7 +42,7 @@
 			<div class="pinItem">
 				<div class="pinBox pinWell margin-bottom-15">
 					<a href="{$system_url}/product/category/{$category.url[idx]}">
-						<img src="https://img.remaxthailand.co.th/category/{$category.url[idx]}/1.jpg" class="img-responsive">
+						<img src="https://img.remaxthailand.co.th/category/{$category.url[idx]}/1.jpg" class="img-responsive" title="{$category.name[idx]}">
 					</a>
 					<div class="message text-center margin-top-5">{$category.name[idx]}</div>
 				</div>
