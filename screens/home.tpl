@@ -3,7 +3,7 @@
 	<div class="pinItem">
 		<div class="pinBox pinWell margin-bottom-15">
 			<a href="{$system_url}/register">
-				<img src="https://img.remaxthailand.co.th/web/box/dealer_regis.jpg"  class="img-responsive">
+				<img src="https://src.remaxthailand.co.th/img/web/box/dealer_regis.jpg"  class="img-responsive">
 			</a>
 			<div class="message text-center">สมัครตัวแทนจำหน่าย</div>
 		</div>
@@ -12,7 +12,7 @@
 	<div class="pinItem">
 		<div class="pinBox pinWell margin-bottom-15">
 			<a href="{$system_url}/shop_register">
-				<img src="https://img.remaxthailand.co.th/web/box/shop_register.jpg"  class="img-responsive">
+				<img src="https://src.remaxthailand.co.th/img/web/box/shop_register.jpg"  class="img-responsive">
 			</a>
 			<div class="message text-center">สนใจเปิดช็อป</div>
 		</div>
@@ -23,7 +23,7 @@
 <!--
 	<div class="pinItem">
 		<div class="pinBox pinWell margin-bottom-15">
-			<img src="https://img.remaxthailand.co.th/category/reward_point/1.jpg" class="img-responsive pointer"  data-toggle="modal" data-target="#dv-check_point">
+			<img src="https://src.remaxthailand.co.th/img/category/reward_point/1.jpg" class="img-responsive pointer"  data-toggle="modal" data-target="#dv-check_point">
 			<div class="message text-center">ตรวจสอบคะแนนสะสม</div>
 		</div>
 	</div> // Comment by Dej 08092558 0940-->
@@ -31,7 +31,7 @@
 	<div class="pinItem">
 		<div class="pinBox pinWell margin-bottom-15">
 			<a href="{$system_url}/product/category/new">
-				<img src="https://img.remaxthailand.co.th/category/new_arrivals/1.jpg"  class="img-responsive">
+				<img src="https://src.remaxthailand.co.th/img/category/new_arrivals/1.jpg"  class="img-responsive">
 			</a>
 			<div class="message text-center">สินค้ามาใหม่</div>
 		</div>
@@ -42,7 +42,7 @@
 			<div class="pinItem">
 				<div class="pinBox pinWell margin-bottom-15">
 					<a href="{$system_url}/product/category/{$category.url[idx]}">
-						<img src="https://img.remaxthailand.co.th/category/{$category.url[idx]}/1.jpg" class="img-responsive" title="{$category.name[idx]}">
+						<img src="https://src.remaxthailand.co.th/img/category/{$category.url[idx]}/1.jpg" class="img-responsive" title="{$category.name[idx]}">
 					</a>
 					<div class="message text-center margin-top-5">{$category.name[idx]}</div>
 				</div>
