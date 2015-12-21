@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-4 col-md-4 margin-bottom-15">
 		
-			<img src="{if $product.cover != ''}https://img.remaxthailand.co.th/500x500/product/{$product.sku}/{$product.cover}{else}https://img.remaxthailand.co.th/img/product/default.jpg{/if}"
+			<img src="{if $product.cover != ''}https://img.remaxthailand.co.th/500x500/product/{$product.sku}/{$product.cover}{else}https://src.remaxthailand.co.th/img/product/default.jpg{/if}"
 			alt="{$product.name}" class="img-thumbnail img_box_shadow" id="img_main"  data-zoom-image="{if $id_cover != ''}xxx{else}yyy{/if}">
 
 			{if $product.cover != '' && $product.image|count > 1}
