@@ -269,7 +269,7 @@ function uploadFile(){
 function upload(file, index){	
 	var fd = new FormData();
 	fd.append("index", index);
-	fd.append("mobile", $.trim($('#mobile').val()));
+	fd.append("mobile", $.trim($('#txt-tel').val()));
 	fd.append("type", 'claim');
 	fd.append("dir", 'remax');
     fd.append('myFile', file);
@@ -392,7 +392,7 @@ function addClaim(){
 				$('#sum-email').html($('#txt-email').val() != '' ? 'อีเมล '+$('#txt-email').val() : '') 
 				$('#sum-lineid').html($('#txt-lineid').val() != '' ? 'Line ID '+$('#txt-lineid').val() : '')
 
-				var modal = $('#dv-claim_info');
+				/*var modal = $('#dv-claim_info');
 				var file = convertDataToArray('|', fileName);
 				if (typeof file != 'undefined') {
 					for(i=0; i<=3; i++) {
@@ -409,7 +409,7 @@ function addClaim(){
 				}
 				else {
 					for(i=0; i<=3; i++) modal.find('.img'+i).hide();
-				}
+				}*/
 				$('#form-loading').hide();
 				$('#dv-claim_info').show();
 				//$('#dv-track').show();
