@@ -214,7 +214,7 @@
 			<p id="claim-ProductName"></p>
 			<p id="claim-Barcode"></p>
 			<p id="claim-Description"></p>
-			<div class="row">
+			<!--<div class="row">
 				 <div class="col-xs-3 col-md-3 img0">
 					<a target="_blank" href="">
 					<img src="" class="img-responsive img-rounded">
@@ -235,7 +235,7 @@
 					<img src="" class="img-responsive img-rounded">
 					</a>
 				</div>
-			</div>
+			</div>-->
 			<p class="margin-top-15"><strong>ที่อยู่</strong></p>
 			<div class="margin-left-5">
 				<p id="sum-name"></p>
