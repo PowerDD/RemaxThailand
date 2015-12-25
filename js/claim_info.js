@@ -268,10 +268,12 @@ function uploadFile(){
 
 function upload(file, index){	
 	var fd = new FormData();
-	fd.append("file", file);
 	fd.append("index", index);
-	fd.append("mobile", $.trim($('#txt-tel').val()));
-	fd.append("tags", 'claim,'+$.trim($('#txt-firstname').val())+','+$.trim($('#txt-lastname').val())+','+$('#province :selected').html()+','+$.trim($('#txt-tel').val()) );
+	fd.append("mobile", $.trim($('#mobile').val()));
+	fd.append("type", 'claim');
+	fd.append("dir", 'remax');
+    fd.append('myFile', file);
+	
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', 'https://upload.remaxthailand.co.th', true);
 
