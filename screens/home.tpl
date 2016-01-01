@@ -91,23 +91,16 @@
 
 <!-- Modal -->
 <div class="modal fade" id="newsModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog modal-md" role="document">
     <div class="modal-content">
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/6aaedhZzAlcwqryAWHKR2a_45lMFGEDJ3ppYoLlgL6k=w1500-no">
-	<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/FSmXAMywZRza7w9GwIy4rwJpwIjsfGZViHPVTVayoN0=w1500-no">
-	<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/gTsFwWfjGKbvNBnEUzRWIvWEMujhpZkE35D3hqMLNl8=w1500-no">
-	<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/vcAEkL-EDwmeCuZxDaOgUruVbQtDI_gV_3G9K-g6bpM=w1500-no">
-	<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/JZ7TTgN65CchcqUv8TDYlMA8fl4JuacSZdaqCfv884k=w1500-no">
-	<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/N_YmKolIZqXYCKmuJhUxS-CNzRrPpnmKa2O2FrNqxQ4=w1500-no">
-	<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/pVBCQ31_o1-3TPVv-iL0X0AGVkySnLlee_n2WRmYilI=w1500-no">
-	<img class="img-responsive no-radius" src="https://lh3.googleusercontent.com/wr-0e-NG39HYedbiZugUu_LJM4FxfxZR3ZNT5O7kLWQ=w1500-no">
+	<img class="img-responsive no-radius" src="https://src.remaxthailand.co.th/img/web/box/2016.jpg">
       </div>
-      <div class="modal-footer">
+      <!--div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
         <a href="http://www.remaxthailand.co.th/register"><span class="btn btn-primary">สมัครตัวแทนจำหน่าย</span></a>
-      </div>
+      </div-->
     </div>
   </div>
 </div>
