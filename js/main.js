@@ -6,7 +6,7 @@ $(function() {
 	$('.img-popover').popover({ html: true, trigger: 'hover' });
 	isCheck = true;
 
-	$('#newsModal').modal('show');
+	//$('#newsModal').modal('show');
 
 	if ( $('#txt-search_point').length != 0 && Cookies.get('mobile') != undefined ){
 		$('#txt-search_point').val(Cookies.get('mobile'));
