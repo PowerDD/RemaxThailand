@@ -178,8 +178,6 @@ function getPoint(isCheck){
 };
 
 function checkRemaxProduct(){
-	$('#ProductName').html('');
-	$('#SellDate').html('');
 	$.post('https://api.remaxthailand.co.th/warranty/remax', {
 		apiKey: 'E64E8666-9A78-45E9-8801-E4C46F0C0E13',
 		barcode: $.trim($('#txt-remax_barcode').val())
@@ -194,18 +192,18 @@ function checkRemaxProduct(){
 						$('#product-info').fadeIn();
 						$("#product-load").hide();
 						$(".back-remax_barcode").show();
-						console.log('have');
+
 					}else{
 						if(data.result.noSN){
 							$('#remax_nosn').show();
 							$("#product-load").hide();
 							$(".back-remax_barcode").show();
-							console.log('noSN');
+
 						}else{
 							$('#remax_not_exist').show();
 							$("#product-load").hide();
 							$(".back-remax_barcode").show();
-							console.log('no');
+
 						}						
 					}			
 			}else{
@@ -213,12 +211,12 @@ function checkRemaxProduct(){
 					$('#remax_nosn').show();
 					$("#product-load").hide();
 					$(".back-remax_barcode").show();
-					console.log('noSN');
+
 				}else{
 					$('#remax_not_exist').show();
 					$("#product-load").hide();
 					$(".back-remax_barcode").show();
-					console.log('no');
+
 				}	
 			}
 		}else{
