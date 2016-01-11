@@ -184,20 +184,19 @@ function checkRemaxProduct(){
 	}, function(data){
 		if (data.success) {
 			if(data.result.length != 0 ){
-				if(!data.result.noSN){
-					var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
-					var sellDateMM = moment(data.result.sellDate).locale('th').format('MMMM');
-					$('#ProductName').html(data.result.productName);
-					$('#SellDate').html('จำหน่ายเมื่อ : '+sellDateMM+' '+sellDateYearTH);
-					$('#product-info').fadeIn();
-					$("#product-load").hide();
-					$(".back-remax_barcode").show();
-				}else{
-					$('#remax_nosn').show();
-					$("#product-load").hide();
-					$(".back-remax_barcode").show();
-				}
-				
+				if(data.result.sellDate.length != 0){
+						var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
+						var sellDateMM = moment(data.result.sellDate).locale('th').format('MMMM');
+						$('#ProductName').html(data.result.productName);
+						$('#SellDate').html('จำหน่ายเมื่อ : '+sellDateMM+' '+sellDateYearTH);
+						$('#product-info').fadeIn();
+						$("#product-load").hide();
+						$(".back-remax_barcode").show();
+					}else{
+						$('#remax_not_exist').show();
+						$("#product-load").hide();
+						$(".back-remax_barcode").show();
+					}			
 			}else{
 				$('#remax_not_exist').show();
 				$("#product-load").hide();
