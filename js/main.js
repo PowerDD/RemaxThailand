@@ -186,7 +186,7 @@ function checkRemaxProduct(){
 	}, function(data){
 		if (data.success) {
 			if(data.result.length != 0 ){
-				if(!data.result.noSN){
+				if(!data.result.noSN && typeof data.result.sellDate != 'undefined'){
 						var sellDateYearTH = parseInt(moment(data.result.sellDate).lang('th').format('YYYY'))+543;
 						var sellDateMM = moment(data.result.sellDate).locale('th').format('MMMM');
 						$('#ProductName').html(data.result.productName);
