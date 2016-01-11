@@ -196,7 +196,7 @@ function checkRemaxProduct(){
 						$(".back-remax_barcode").show();
 					}else{
 						if(data.result.noSN){
-							$('#remax_not_exist').show();
+							$('#remax_nosn').show();
 							$("#product-load").hide();
 							$(".back-remax_barcode").show();
 						}else{
@@ -207,7 +207,7 @@ function checkRemaxProduct(){
 					}			
 			}else{
 				if(data.result.noSN){
-					$('#remax_not_exist').show();
+					$('#remax_nosn').show();
 					$("#product-load").hide();
 					$(".back-remax_barcode").show();
 				}else{
