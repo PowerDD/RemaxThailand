@@ -180,8 +180,8 @@ function getPoint(isCheck){
 function checkRemaxProduct(){
 	$('#ProductName').html('');
 	$('#SellDate').html('');
-	$.post('https://api.powerdd.com/warranty/remax', {
-		apiKey: 'BE12B369-0963-40AD-AA40-D68A7516A37B',
+	$.post('https://api.remaxthailand.co.th/warranty/remax', {
+		apiKey: 'E64E8666-9A78-45E9-8801-E4C46F0C0E13',
 		barcode: $.trim($('#txt-remax_barcode').val())
 	}, function(data){
 		if (data.success) {
