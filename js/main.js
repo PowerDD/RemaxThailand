@@ -194,15 +194,18 @@ function checkRemaxProduct(){
 						$('#product-info').fadeIn();
 						$("#product-load").hide();
 						$(".back-remax_barcode").show();
+						console.log('have');
 					}else{
 						if(data.result.noSN){
 							$('#remax_nosn').show();
 							$("#product-load").hide();
 							$(".back-remax_barcode").show();
+							console.log('noSN');
 						}else{
 							$('#remax_not_exist').show();
 							$("#product-load").hide();
 							$(".back-remax_barcode").show();
+							console.log('no');
 						}						
 					}			
 			}else{
@@ -210,10 +213,12 @@ function checkRemaxProduct(){
 					$('#remax_nosn').show();
 					$("#product-load").hide();
 					$(".back-remax_barcode").show();
+					console.log('noSN');
 				}else{
 					$('#remax_not_exist').show();
 					$("#product-load").hide();
 					$(".back-remax_barcode").show();
+					console.log('no');
 				}	
 			}
 		}else{
